@@ -1,0 +1,28 @@
+/*
+Theme Name: Ovum - ML
+Theme URI: https://ovumdesign.it/
+Author: Ovum
+Author URI: https://ovumdesign.it/
+Description: Custom theme for ML
+Tags: blog, accessibility-ready, grid-layout, custom-header, custom-menu, flexible-header, block-styles
+Version: 1.0
+Requires at least: 6.3.1
+Tested up to: 6.4.1
+Requires PHP: 8.1.23
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ovum-ml
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// Variables
+@import "/assets/sass/variable/device";
+@import "/assets/sass/variable/colors";
+
+// Components
+@import "/assets/sass/component/header";
