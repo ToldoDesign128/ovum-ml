@@ -7,7 +7,7 @@
     <meta name="viewport" content="<?php echo esc_attr($viewport_content); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#1c1917">
+    <meta name="theme-color" content="#f3f4f6">
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <title>
         <?php if (is_archive()) {
@@ -46,12 +46,12 @@
         </div>
         <div id="menu" class="absolute hidden flex-col lg:justify-center justify-between top-0 right-0 w-full h-screen overflow-x-hidden bg-gray-950 z-30 transition-all duration-500">
             <!-- Menu Nav -->
-            <nav class="container w-full mx-auto px-10">
+            <nav class="container h-full w-full flex items-center mx-auto px-10">
                 <?php
                 wp_nav_menu(array(
                     'theme_location'    => 'primary',
                     'container'         =>  false,
-                    'menu_class'        => '2xl:text-6xl lg:text-5xl text-4xl',
+                    'menu_class'        => 'w-full 2xl:text-6xl lg:text-5xl text-4xl',
                     'orderby'           => 'menu_order',
                     'items_wrap'        => '<ol id="%1$s" class="%2$s">%3$s</ol>'
                 ));

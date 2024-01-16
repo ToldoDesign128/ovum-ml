@@ -493,15 +493,31 @@ video {
 .z-50 {
   z-index: 50;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.ml-2 {
+  margin-left: 0.5rem;
+}
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: flex;
 }
 .hidden {
   display: none;
+}
+.h-\[80vh\] {
+  height: 80vh;
+}
+.h-full {
+  height: 100%;
 }
 .h-screen {
   height: 100vh;
@@ -530,6 +546,13 @@ video {
 .scroll-smooth {
   scroll-behavior: smooth;
 }
+.border-t-2 {
+  border-top-width: 2px;
+}
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
 .bg-gray-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(3 7 18 / var(--tw-bg-opacity));
@@ -537,6 +560,10 @@ video {
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .py-5 {
   padding-top: 1.25rem;
@@ -548,6 +575,10 @@ video {
 }
 .font-semibold {
   font-weight: 600;
+}
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 .text-gray-800 {
   --tw-text-opacity: 1;
@@ -603,15 +634,17 @@ header #hamburgerButton button .ButtonBg {
   z-index: 0;
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-header #hamburgerButton:hover button p {
-  color: rgb(249, 250, 251);
-}
-header #hamburgerButton:hover button p#menuClose {
-  color: rgb(249, 250, 251);
-}
-header #hamburgerButton:hover button .ButtonBg {
-  transform: scale(100%);
-  background: rgb(3, 7, 18);
+@media (min-width : 1024px) {
+  header #hamburgerButton:hover button p, header #hamburgerButton :focus button p, header #hamburgerButton :active button p {
+    color: rgb(249, 250, 251);
+  }
+  header #hamburgerButton:hover button p#menuClose, header #hamburgerButton :focus button p#menuClose, header #hamburgerButton :active button p#menuClose {
+    color: rgb(249, 250, 251);
+  }
+  header #hamburgerButton:hover button .ButtonBg, header #hamburgerButton :focus button .ButtonBg, header #hamburgerButton :active button .ButtonBg {
+    transform: scale(100%);
+    background: rgb(3, 7, 18);
+  }
 }
 header #hamburgerButton.is-active {
   border: none;
@@ -648,11 +681,13 @@ header #menu nav ol li::after {
   background: rgb(249, 250, 251);
   transition: left 0.8s;
 }
-header #menu nav ol li:hover {
-  color: rgb(249, 250, 251);
-}
-header #menu nav ol li:hover::after {
-  left: 0;
+@media (min-width : 1024px) {
+  header #menu nav ol li:hover, header #menu nav ol li :focus, header #menu nav ol li :active {
+    color: rgb(249, 250, 251);
+  }
+  header #menu nav ol li:hover::after, header #menu nav ol li :focus::after, header #menu nav ol li :active::after {
+    left: 0;
+  }
 }
 header #menu nav ol li:before {
   content: "0" counter(item);
@@ -664,6 +699,29 @@ header #menu nav ol li:before {
 header .open {
   display: flex;
 }
+
+footer #credits a {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+footer #credits a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: rgb(249, 250, 251);
+  transition: left 0.8s;
+}
+@media (min-width : 1024px) {
+  footer #credits a:hover::after,
+  footer #credits a :focus::after,
+  footer #credits a :active::after {
+    left: 0;
+  }
+}
 @media (min-width: 1024px) {
   .lg\:w-3\/12 {
     width: 25%;
@@ -674,6 +732,10 @@ header .open {
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+  .lg\:hover\:text-gray-50:hover {
+    --tw-text-opacity: 1;
+    color: rgb(249 250 251 / var(--tw-text-opacity));
   }
   .lg\:hover\:text-gray-950:hover {
     --tw-text-opacity: 1;

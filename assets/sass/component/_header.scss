@@ -41,21 +41,25 @@ header {
       }
     }
 
-    &:hover {
-      button {
-        p {
-          color: $gray-50;
-
-          &#menuClose {
+    @media #{$lg} {
+      
+      &:hover,:focus,:active {
+        button {
+          p {
             color: $gray-50;
+  
+            &#menuClose {
+              color: $gray-50;
+            }
           }
-        }
-        .ButtonBg {
-          transform: scale(100%);
-          background: $gray-950;
+          .ButtonBg {
+            transform: scale(100%);
+            background: $gray-950;
+          }
         }
       }
     }
+
 
     &.is-active {
       border: none;
@@ -100,14 +104,17 @@ header {
             background: $gray-50;
             transition: left 0.8s;
           }
-
-          &:hover {
-            color: $gray-50;
-
-            &::after {
-                left: 0;
+          @media #{$lg} {
+            
+            &:hover,:focus,:active {
+              color: $gray-50;
+  
+              &::after {
+                  left: 0;
+              }
             }
           }
+
         }
         li:before {
           content: "0" counter(item);
