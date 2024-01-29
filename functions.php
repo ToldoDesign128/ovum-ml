@@ -98,16 +98,16 @@ function remove_content_editor()
 }
 
 /*ADD ACF Option Page*/
-// if (function_exists('acf_add_options_page')) {
-// 	acf_add_options_page(array(
-// 		'page_title'    => 'Link',
-// 		'menu_title'   => 'Link',
-// 		'menu_slug'    => 'link-settings',
-// 		'capability'   => 'edit_posts',
-// 		'icon_url'      => 'dashicons-admin-links',
-// 		'redirect'      => true
-// 	));
-// }
+if (function_exists('acf_add_options_page')) {
+	acf_add_options_page(array(
+		'page_title'    => 'Footer',
+		'menu_title'   => 'Footer',
+		'menu_slug'    => 'footer-settings',
+		'capability'   => 'edit_posts',
+		'icon_url'      => 'dashicons-admin-links',
+		'redirect'      => true
+	));
+}
 
 // Add style and script
 function add_theme_scripts()
@@ -117,3 +117,7 @@ function add_theme_scripts()
 	wp_enqueue_script('script', get_template_directory_uri() . '/main.min.js', array('jquery'), 1.1, true);
 }
 add_action('wp_enqueue_scripts', 'add_theme_scripts');
+
+//CPT
+require dirname(__FILE__) . '/functions-parts/cpt-mele.php';
+require dirname(__FILE__) . '/functions-parts/cpt-uva.php';
