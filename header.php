@@ -26,14 +26,9 @@
             <div class="container flex mx-auto py-5 px-10 justify-between items-center">
                 <!-- Logo -->
                 <?php
-                $custom_logo_id = get_theme_mod('custom_logo');
-                $logo = wp_get_attachment_image_src($custom_logo_id, 'medium');
-                if (has_custom_logo()) {
-                    echo '<a  href="' . home_url() . '"><img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '" class="max-h-12"></a>';
-                } else {
-                    echo '<a href="' . home_url() . '" class="lg:w-3/12 w-auto font-semibold text-gray-800 lg:hover:text-gray-950 transition-all duration-300">' . get_bloginfo('name') . '</a>';
-                };
+                echo '<a  href="' . home_url() . '"><img src="' . get_template_directory_uri() . '/assets/img/Logo-ML.svg" alt="' . get_bloginfo('name') . '" class="h-full w-full max-h-12"></a>';
                 ?>
+
                 <!-- Hamburgher -->
                 <div id="hamburgerButton">
                     <button title="Menu Button">

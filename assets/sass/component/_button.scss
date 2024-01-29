@@ -1,0 +1,25 @@
+.button{
+    cursor: pointer;
+    overflow-x: hidden;
+    position: relative;
+    span{
+        width: 150%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-120%);
+        border-radius: 0 100px 100px 0;
+        transition: all .8s cubic-bezier(.215, .61, .355, 1);
+        mix-blend-mode: multiply;
+    }
+
+    @media #{$lg} {
+        &:hover{
+            span{
+                transform: translateX(0%);
+            }
+        }
+    }
+}
