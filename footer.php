@@ -1,3 +1,26 @@
+<!-- Button Info -->
+<div id="infoBtn" class="hideBtn fixed right-10 z-30">
+    <?php
+    $footer_cta = get_field('footer_cta', 'option');
+    // Get sub field values.
+    $footer_cta_button = $footer_cta['pulsante'];
+
+    $footer_cta_button_url = $footer_cta_button['url'];
+    $footer_cta_button_title = $footer_cta_button['title'];
+    $footer_cta_button_target = $footer_cta_button['target'] ? $footer_cta_button['target'] : '_self';
+
+    ?>
+    <a class="block text-gray-50 bg-gray-950 px-4 py-4 my-4" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
+        <?php echo esc_html($footer_cta_button_title); ?>
+        <span class="bg-gray-800"></span>
+    </a>
+</div>
+
+<!-- Sfumatura -->
+<span class="fixed bottom-0 left-0 w-full lg:h-24 md:h-20 h-16 z-10" style="
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);">
+</span>
+
 <!-- CTA -->
 <section class="w-full lg:my-40">
     <div class="container mx-auto px-10">
@@ -26,7 +49,7 @@
     </div>
 </section>
 
-<footer class="w-full bg-gray-950">
+<footer id="footer" class=" relative w-full bg-gray-950 z-40">
     <section class="relative container flex flex-col text-gray-50 mx-auto py-5 px-10">
         <!-- Footer sezione 1 -->
         <div class="w-full flex lg:py-28">

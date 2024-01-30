@@ -6,7 +6,7 @@ require('mix-tailwindcss');
 mix.sass('assets/sass/style.scss', 'style.css')
   .tailwind('tailwind.config.js');
 
-mix.combine(['assets/js/animation.js','assets/js/hamburger.js','assets/js/scrollTop.js' ], 'main.js')
+mix.combine(['assets/js/animation.js','assets/js/hamburger.js','assets/js/scrollTop.js', 'assets/js/infoBtn.js' ], 'main.js')
   .minify('main.js');
 
 mix.webpackConfig({

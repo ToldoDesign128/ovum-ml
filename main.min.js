@@ -7,15 +7,19 @@ jQuery("#hamburgerButton").click(function () {
   });
 var btn = jQuery('#ScrollTopBtn');
 
-jQuery(window).scroll(function() {
-  if (jQuery(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
-});
-
 btn.on('click', function(e) {
   e.preventDefault();
   jQuery('html, body').animate({scrollTop:0}, '300');
+});
+var scroll_offset = 300;
+
+jQuery(window).scroll(function () {
+    var selettore = jQuery(window);
+    if (jQuery('#infoBtn').length) {
+        if (selettore.scrollTop() > scroll_offset) {
+            jQuery('#infoBtn').addClass('revealed');
+        } else {
+            jQuery('#infoBtn').removeClass('revealed');
+        }
+    }
 });
