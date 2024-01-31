@@ -1,0 +1,12 @@
+.repeater {
+  counter-reset: item;
+  list-style-type: none;
+
+  li:before {
+    content: "0" counter(item);
+    counter-increment: item;
+    font-size: 15px;
+    margin-right: 0.6rem;
+    vertical-align: top;
+  }
+}

@@ -12,7 +12,7 @@
     ?>
     <a class="block text-gray-50 bg-gray-950 px-4 py-4 my-4" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
         <?php echo esc_html($footer_cta_button_title); ?>
-        <span class="bg-gray-800"></span>
+        <span class="bg-gray-800 mix-blend-multiply"></span>
     </a>
 </div>
 
@@ -42,7 +42,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10
             <p class="lg:text-xl text-lg py-4"><?php echo esc_html($footer_cta_testo); ?></p>
             <a class="button text-gray-950 bg-gray-100 px-8 py-4 my-4" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
                 <?php echo esc_html($footer_cta_button_title); ?>
-                <span class="bg-gray-400"></span>
+                <span class="bg-gray-400 mix-blend-multiply"></span>
             </a>
 
         </div>
@@ -183,7 +183,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10
         <div class="absolute block top-36 right-10">
             <a id="ScrollTopBtn" class="button block h-11 w-11 text-gray-950 bg-gray-100 px-4 py-4 my-4">
                 <img class="rotate-90 w-5" src="<?php echo get_template_directory_uri() . '/assets/img/acf/arrow-small-left.svg'; ?>" alt="">
-                <span class="bg-gray-400"></span>
+                <span class="bg-gray-400 mix-blend-multiply"></span>
             </a>
         </div>
 
