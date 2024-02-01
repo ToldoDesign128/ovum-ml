@@ -112,7 +112,12 @@ if (function_exists('acf_add_options_page')) {
 // Add style and script
 function add_theme_scripts()
 {
+
+	wp_enqueue_style('swiper-style', "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
+
 	wp_enqueue_style('style', get_stylesheet_uri());
+
+	wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), 1.1, true);
 
 	wp_enqueue_script('script', get_template_directory_uri() . '/main.min.js', array('jquery'), 1.1, true);
 }
@@ -121,3 +126,4 @@ add_action('wp_enqueue_scripts', 'add_theme_scripts');
 //CPT
 require dirname(__FILE__) . '/functions-parts/cpt-mele.php';
 require dirname(__FILE__) . '/functions-parts/cpt-uva.php';
+require dirname(__FILE__) . '/functions-parts/cpt-testimonials.php';

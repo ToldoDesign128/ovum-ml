@@ -21,7 +21,7 @@
 
 <body <?php body_class("scroll-smooth"); ?>>
 
-    <header class="w-full fixed z-50">
+    <header class="w-full fixed bg-white z-50">
         <div class="relative z-40">
             <div class="container flex mx-auto py-5 px-10 justify-between items-center">
                 <!-- Logo -->
