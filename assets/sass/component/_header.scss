@@ -1,10 +1,27 @@
 header {
+  #logo-header {
+    .logo-payoff {
+      opacity: 0;
+      transform: translateX(-120%);
+      transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    @media #{$lg} {
+      &:hover {
+        .logo-payoff {
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+    }
+  }
+
   #hamburgerButton {
     border: 1px solid $gray-950;
     border-radius: 100%;
 
     button {
-      padding: 1.4rem 0.9rem;
+      padding: 1.4rem 1rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -19,6 +36,7 @@ header {
         transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
       #menuOpen {
+        margin-top: 3px;
         display: block;
       }
       #menuClose {
@@ -42,12 +60,13 @@ header {
     }
 
     @media #{$lg} {
-      
-      &:hover,:focus,:active {
+      &:hover,
+      :focus,
+      :active {
         button {
           p {
             color: $gray-50;
-  
+
             &#menuClose {
               color: $gray-50;
             }
@@ -55,11 +74,11 @@ header {
           .ButtonBg {
             transform: scale(100%);
             background: $gray-950;
+            opacity: 1;
           }
         }
       }
     }
-
 
     &.is-active {
       border: none;
@@ -71,11 +90,19 @@ header {
         #menuClose {
           display: block;
         }
+        .ButtonBg {
+          transform: scale(0%);
+          background: transparent;
+          opacity: 0;
+        }
       }
     }
   }
 
   #menu {
+    transform: translateY(-120%);
+    transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+
     nav {
       ol {
         counter-reset: item;
@@ -90,7 +117,7 @@ header {
           border-bottom: 2px solid $gray-600;
           transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-          a{
+          a {
             padding: 1rem 0;
           }
 
@@ -105,21 +132,22 @@ header {
             transition: left 0.8s;
           }
           @media #{$lg} {
-            
-            &:hover,:focus,:active {
+            &:hover,
+            :focus,
+            :active {
               color: $gray-50;
-  
+
               &::after {
-                  left: 0;
+                left: 0;
               }
             }
           }
-
         }
         li:before {
           content: "0" counter(item);
           counter-increment: item;
           font-size: 1rem;
+          font-family: 'Anybody';
           margin-right: 0.6rem;
           vertical-align: top;
         }
@@ -127,7 +155,11 @@ header {
     }
   }
 
-  .open {
-    display: flex;
+  #menu.open {
+    transform: translateY(0%);
+  }
+
+  .hide-logo {
+    opacity: 0;
   }
 }

@@ -21,17 +21,20 @@
 
 <body <?php body_class("scroll-smooth"); ?>>
 
-    <header class="w-full fixed bg-white z-50">
+    <header class="font-primary w-full absolute z-50">
         <div class="relative z-40">
-            <div class="container flex mx-auto py-5 px-10 justify-between items-center">
+            <div class="container flex mx-auto py-5 lg:px-10 px-4 justify-between items-center">
                 <!-- Logo -->
                 <?php
-                echo '<a  href="' . home_url() . '"><img src="' . get_template_directory_uri() . '/assets/img/Logo-ML.svg" alt="' . get_bloginfo('name') . '" class="h-full w-full max-h-12"></a>';
+                echo    '<a id="logo-header" href="' . home_url() . '" class="flex">
+                            <img src="' . get_template_directory_uri() . '/assets/img/logo.svg" alt="' . get_bloginfo('name') . '" class="h-full w-full max-h-12">
+                            <img src="' . get_template_directory_uri() . '/assets/img/payoff.svg" alt="' . get_bloginfo('name') . '" class="logo-payoff h-full w-full max-h-6 ml-4">
+                        </a>';
                 ?>
 
                 <!-- Hamburgher -->
                 <div id="hamburgerButton">
-                    <button title="Menu Button">
+                    <button title="Menu Button" class="font-secondary">
                         <p id="menuOpen">Menu</p>
                         <p id="menuClose">Chiudi <span>X</span></p>
                         <span class="ButtonBg"></span>
@@ -39,14 +42,14 @@
                 </div>
             </div>
         </div>
-        <div id="menu" class="absolute hidden flex-col lg:justify-center justify-between top-0 right-0 w-full h-screen overflow-x-hidden bg-gray-950 z-30 transition-all duration-500">
+        <div id="menu" class="absolute flex-col lg:justify-center justify-between top-0 right-0 w-full h-screen overflow-x-hidden bg-gray-950 z-30 transition-all duration-500">
             <!-- Menu Nav -->
-            <nav class="container h-full w-full flex items-center mx-auto px-10">
+            <nav class="container h-full w-full flex items-center mx-auto lg:px-10 px-4">
                 <?php
                 wp_nav_menu(array(
                     'theme_location'    => 'primary',
                     'container'         =>  false,
-                    'menu_class'        => 'w-full 2xl:text-6xl lg:text-5xl text-4xl',
+                    'menu_class'        => 'w-full 2xl:text-6xl lg:text-5xl text-4xl font-light',
                     'orderby'           => 'menu_order',
                     'items_wrap'        => '<ol id="%1$s" class="%2$s">%3$s</ol>'
                 ));

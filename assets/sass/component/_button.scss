@@ -51,8 +51,27 @@
     }
   }
 
+  @media #{$only-mobile} {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    
+    a{
+      span{
+        display: none;
+      }
+    }
+  }
+
   &.revealed {
     bottom: 2vh;
     opacity: 1;
+
+    @media #{$only-mobile} {
+    bottom: 0;      
+    }
   }
 }

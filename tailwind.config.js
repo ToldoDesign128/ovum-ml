@@ -16,6 +16,10 @@ module.exports = {
       "/template-parts/*.{html,js,php}",
   ],
     theme: {
+      fontFamily: {
+        'primary': ['Paralucent', 'system-ui'],
+        'secondary': ['Anybody', 'system-ui'],
+      },
       extend: {},
     },
     plugins: [],

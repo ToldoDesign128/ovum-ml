@@ -1,1 +1,59 @@
+.swiper.swiperScroller {
+  height: 300px;
 
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+  }
+  .swiper-button-prev {
+    left: 1rem;
+  }
+  .swiper-button-next {
+    left: 10%;
+    right: auto;
+  }
+}
+
+.swiper.swiperScrollerSponsor {
+  height: 150px;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    left: 10%;
+    right: auto;
+  }
+}
+
+.swiper.swiperTestimonial {
+  height: 100%;
+  width: 750px;
+  margin: 0 auto;
+
+  @media #{$only-mobile} {
+    width: 100%;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    left: 5%;
+    right: auto;
+
+    @media #{$only-mobile} {
+        left: 10%;
+      }
+  }
+}
