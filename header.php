@@ -10,11 +10,7 @@
     <meta name="theme-color" content="#f3f4f6">
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <title>
-        <?php if (is_archive()) {
-            echo get_the_archive_title();
-        } else {
-            echo the_title();
-        }  ?>
+        <?php the_title();?>
     </title>
     <?php wp_head(); ?>
 </head>
@@ -23,7 +19,7 @@
 
     <header class="font-primary w-full absolute z-50">
         <div class="relative z-40">
-            <div class="container flex mx-auto py-5 lg:px-10 px-4 justify-between items-center">
+            <div class="container flex mx-auto py-5 lg:px-10 px-[26px] justify-between items-center">
                 <!-- Logo -->
                 <?php
                 echo    '<a id="logo-header" href="' . home_url() . '" class="flex">
@@ -44,7 +40,7 @@
         </div>
         <div id="menu" class="absolute flex-col lg:justify-center justify-between top-0 right-0 w-full h-screen overflow-x-hidden bg-gray-950 z-30 transition-all duration-500">
             <!-- Menu Nav -->
-            <nav class="container h-full w-full flex items-center mx-auto lg:px-10 px-4">
+            <nav class="container h-full w-full flex items-center mx-auto lg:px-10 px-[26px]">
                 <?php
                 wp_nav_menu(array(
                     'theme_location'    => 'primary',

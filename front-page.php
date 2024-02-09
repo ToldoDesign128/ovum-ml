@@ -7,8 +7,8 @@ $page_id = get_queried_object_id(); ?>
     </video>
     <div class="container h-screen mx-auto flex flex-col lg:justify-center justify-between items-center">
         <span class="w-full h-28"></span>
-        <h1 class="font-primary xl:w-1/2 lg:w-2/3 lg:text-8xl md:text-6xl text-5xl font-light text-center text-gray-950 z-10 py-6 lg:px-0 px-4"><?php echo esc_html(get_field('home_titolo_sezione_1', $page_id)); ?></h1>
-        <div class="lg:w-fit w-full flex lg:flex-row flex-col justify-between text-center text-lg py-6 lg:px-0 px-4 lg:mb-0 mb-12">
+        <h1 class="font-primary xl:w-1/2 lg:w-2/3 lg:text-8xl md:text-6xl text-5xl font-light text-center text-gray-950 z-10 py-6 lg:px-0 px-[26px]"><?php echo esc_html(get_field('home_titolo_sezione_1', $page_id)); ?></h1>
+        <div class="lg:w-fit w-full flex lg:flex-row flex-col justify-between text-center text-lg py-6 lg:px-0 px-[26px] lg:mb-0 mb-12">
             <?php
             $pulsante_hero = get_field('home_pulsante_1_sezione_1', $page_id);
             if ($pulsante_hero) :
@@ -38,7 +38,7 @@ $page_id = get_queried_object_id(); ?>
 <!-- Sezione 2 -->
 <section class="container mx-auto">
     <!-- sponsor -->
-    <div class="w-full flex flex-wrap justify-between font-primary py-8 lg:px-10 px-4">
+    <div class="w-full flex flex-wrap justify-between font-primary py-8 lg:px-10 px-[26px]">
         <?php
         $titolo_sez_2 = get_field('home_titolo_sezione_2', $page_id);
         if ($titolo_sez_2) :
@@ -107,7 +107,7 @@ $page_id = get_queried_object_id(); ?>
 
     </div>
     <!-- Blocco benefici -->
-    <div class="w-full flex flex-col font-primary font-light lg:px-10 px-4 lg:pt-16">
+    <div class="w-full flex flex-col font-primary font-light lg:px-10 px-[26px] lg:pt-16">
         <?php
         $titolo_2_sez_2 = get_field('home_titolo_2_sezione_2', $page_id);
         if ($titolo_2_sez_2) :
@@ -161,7 +161,7 @@ $page_id = get_queried_object_id(); ?>
 <!-- Sezione 3 -->
 <section class="container mx-auto">
     <!-- titolo sezione 3 -->
-    <div class="w-full flex flex-col font-primary font-light lg:px-10 px-4 lg:py-8 py-4">
+    <div class="w-full flex flex-col font-primary font-light lg:px-10 px-[26px] lg:py-8 py-4">
         <?php
         $titolo_sez_3 = get_field('home_titolo_sezione_3', $page_id);
         if ($titolo_sez_3) :
@@ -171,7 +171,7 @@ $page_id = get_queried_object_id(); ?>
         <?php endif; ?>
     </div>
     <!-- testo sezione 3 -->
-    <div class="w-full flex justify-between font-primary font-light lg:px-10 px-4 lg:py-8 py-4">
+    <div class="w-full flex justify-between font-primary font-light lg:px-10 px-[26px] lg:py-8 py-4">
         <div class="lg:w-2/5 w-full text-lg">
             <?php the_field('home_testo_sezione_3', $page_id); ?>
         </div>
@@ -189,7 +189,7 @@ $page_id = get_queried_object_id(); ?>
         <?php endif; ?>
     </div>
     <!-- Repeater sezione 3 -->
-    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-10 px-4 lg:py-8 py-4">
+    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-10 px-[26px] lg:py-8 py-4">
         <?php
         if (have_rows('home_repeater_sezione_3')) :
             while (have_rows('home_repeater_sezione_3')) : the_row();
@@ -207,7 +207,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Repeater sezione 3 mobile -->
     <div class="swiper lg:hidden w-full swiperScroller">
-        <ol class="repeater swiper-wrapper w-full font-primary font-light px-4 py-4">
+        <ol class="repeater swiper-wrapper w-full font-primary font-light px-[26px] py-4">
             <?php
             if (have_rows('home_repeater_sezione_3')) :
                 while (have_rows('home_repeater_sezione_3')) : the_row();
@@ -231,7 +231,7 @@ $page_id = get_queried_object_id(); ?>
     </div>
 
     <!-- Pulsante mobile -->
-    <div class="w-full lg:hidden flex px-4 py-8">
+    <div class="w-full lg:hidden flex px-[26px] py-8">
         <?php
         $pulsante_sez_3 = get_field('home_pulsante_sezione_3', $page_id);
         if ($pulsante_sez_3) :
@@ -248,49 +248,6 @@ $page_id = get_queried_object_id(); ?>
 
 </section>
 <!-- Sezione testimonianze -->
-<section class="container mx-auto px-4 mt-16">
-    <p class="w-full text-center lg:text-5xl text-3xl font-primary font-light lg:py-8 py-0">Cosa dicono i nostri clienti</p>
-    <div class="swiper swiperTestimonial">
-        <div class="swiper-wrapper">
-            <?php
-            $loop = new WP_Query(array(
-                'post_type'         => 'testimonials',
-                'post_status'       => 'publish',
-                'orderby'           => 'date',
-                'order'             => 'DESC',
-                'posts_per_page'    => 999,
-            ));
-    
-            while ($loop->have_posts()) : $loop->the_post(); ?>
-
-                <div class="swiper-slide font-primary font-light flex flex-col items-center">
-                    <?php
-                    $recensione_testo = get_field('testo_recensione');
-                    if ($recensione_testo) :
-                    ?>
-                        <p class="text-center lg:text-3xl text-2xl border-b-2 border-gray-300 py-8"><?php echo esc_html($recensione_testo) ?></p>
-                    <?php endif;
-                    $recensione_nome = get_field('nome_e_cognome');
-                    if ($recensione_nome) :
-                    ?>
-                        <p class="self-end text-lg font-medium pt-8"><?php echo esc_html($recensione_nome) ?></p>
-                    <?php endif;
-                    $recensione_ruolo = get_field('ruolo_e_nome_della_ditta');
-                    if ($recensione_ruolo) :
-                    ?>
-                        <p class="self-end text-[16px]"><?php echo esc_html($recensione_ruolo) ?></p>
-                    <?php endif; ?>
-                </div>
-
-            <?php endwhile; ?>
-    
-        </div>
-        <div class="swiper-button-prev">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/arrow-small-left.svg" class="h-12 w-full" alt="">
-        </div>
-        <div class="swiper-button-next">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/arrow-small-left.svg" class="h-12 w-full rotate-180" alt="">
-        </div>
-    </div>
-</section>
+<?php get_template_part("template-parts/testimonianze"); ?>
+<!-- Footer -->
 <?php get_footer(); ?>

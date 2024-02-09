@@ -15,6 +15,23 @@
   }
 }
 
+.swiper.swiperScrollerSingle {
+  height: 140px;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+  }
+  .swiper-button-prev {
+    left: 1rem;
+  }
+  .swiper-button-next {
+    left: 10%;
+    right: auto;
+  }
+}
+
 .swiper.swiperScrollerSponsor {
   height: 150px;
 
@@ -53,7 +70,40 @@
     right: auto;
 
     @media #{$only-mobile} {
-        left: 10%;
-      }
+      left: 10%;
+    }
+  }
+}
+
+.swiper.swiperGallery {
+  height: 500px;
+
+  @media #{$only-mobile} {
+    height: 350px;
+  }
+}
+
+.swiper.swiperRepeater {
+  height: 250px;
+  width: 100%;
+
+  @media #{$only-mobile} {
+    height: 350px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    left: 5%;
+    right: auto;
+
+    @media #{$only-mobile} {
+      left: 10%;
+    }
   }
 }

@@ -97,6 +97,18 @@ const swiperScroller = new Swiper('.swiperScroller', {
   }
 });
 
+// Mobile Sroller Single
+const swiperScrollerSingle = new Swiper('.swiperScrollerSingle', {
+  // Optional parameters
+  loop: false,
+   
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
 // Mobile Sroller Sponsor
 const swiperScrollerSponsor = new Swiper('.swiperScrollerSponsor', {
   // Optional parameters
@@ -113,6 +125,31 @@ const swiperScrollerSponsor = new Swiper('.swiperScrollerSponsor', {
 const swiperTestimonial = new Swiper('.swiperTestimonial', {
   // Optional parameters
   loop: false,
+   
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
+// Single Gallery
+const swiperGallery = new Swiper('.swiperGallery', {
+  // Optional parameters
+  loop: false,
+   
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
+// Single Repeater
+const swiperRepeater = new Swiper('.swiperRepeater', {
+  // Optional parameters
+  loop: false,
+  slidesPerView: 3,
    
   // Navigation arrows
   navigation: {

@@ -13,7 +13,7 @@ module.exports = {
       "page-uva.php",
       "single-mele.php",
       "single-uva.php",
-      "/template-parts/*.{html,js,php}",
+      "template-parts/testimonianze.php",
   ],
     theme: {
       fontFamily: {
