@@ -1,5 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@150,500&display=swap);
 @import url(https://use.typekit.net/voi4dmh.css);
-@import url(https://fonts.googleapis.com/css2?family=Anybody:wght@500&display=swap);
 /*
 Theme Name: Ovum - ML
 Theme URI: https://ovumdesign.it/
@@ -471,6 +471,11 @@ video {
     max-width: 1536px;
   }
 }
+@media (min-width: 1920px){
+  .container{
+    max-width: 1920px;
+  }
+}
 .fixed{
   position: fixed;
 }
@@ -563,6 +568,9 @@ video {
 .mb-16{
   margin-bottom: 4rem;
 }
+.mb-\[10px\]{
+  margin-bottom: 10px;
+}
 .mb-\[14px\]{
   margin-bottom: 14px;
 }
@@ -571,6 +579,9 @@ video {
 }
 .mb-\[30px\]{
   margin-bottom: 30px;
+}
+.mb-\[40px\]{
+  margin-bottom: 40px;
 }
 .mb-\[60px\]{
   margin-bottom: 60px;
@@ -596,15 +607,6 @@ video {
 .mt-\[60px\]{
   margin-top: 60px;
 }
-.mb-\[10px\]{
-  margin-bottom: 10px;
-}
-.mb-\[175px\]{
-  margin-bottom: 175px;
-}
-.mb-\[40px\]{
-  margin-bottom: 40px;
-}
 .block{
   display: block;
 }
@@ -628,6 +630,9 @@ video {
 }
 .h-28{
   height: 7rem;
+}
+.h-\[14px\]{
+  height: 14px;
 }
 .h-\[2px\]{
   height: 2px;
@@ -653,9 +658,6 @@ video {
 }
 .h-screen{
   height: 100vh;
-}
-.h-\[14px\]{
-  height: 14px;
 }
 .max-h-12{
   max-height: 3rem;
@@ -684,9 +686,6 @@ video {
 }
 .w-4{
   width: 1rem;
-}
-.w-5{
-  width: 1.25rem;
 }
 .w-6{
   width: 1.5rem;
@@ -737,6 +736,9 @@ video {
 }
 .items-start{
   align-items: flex-start;
+}
+.items-end{
+  align-items: flex-end;
 }
 .items-center{
   align-items: center;
@@ -797,10 +799,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
-.bg-gray-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
 .bg-gray-300{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
@@ -832,9 +830,9 @@ video {
 .p-\[15px\]{
   padding: 15px;
 }
-.px-12{
-  padding-left: 3rem;
-  padding-right: 3rem;
+.px-11{
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
 }
 .px-8{
   padding-left: 2rem;
@@ -843,10 +841,6 @@ video {
 .px-\[10px\]{
   padding-left: 10px;
   padding-right: 10px;
-}
-.px-\[16px\]{
-  padding-left: 16px;
-  padding-right: 16px;
 }
 .px-\[26px\]{
   padding-left: 26px;
@@ -896,27 +890,22 @@ video {
   padding-top: 18px;
   padding-bottom: 18px;
 }
-.py-\[60px\]{
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.px-11{
-  padding-left: 2.75rem;
-  padding-right: 2.75rem;
-}
-.py-\[120px\]{
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
 .py-\[40px\]{
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.py-\[60px\]{
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .pb-\[20px\]{
   padding-bottom: 20px;
 }
 .pb-\[30px\]{
   padding-bottom: 30px;
+}
+.pb-\[40px\]{
+  padding-bottom: 40px;
 }
 .pl-4{
   padding-left: 1rem;
@@ -942,11 +931,11 @@ video {
 .pt-4{
   padding-top: 1rem;
 }
-.pt-5{
-  padding-top: 1.25rem;
-}
 .pt-8{
   padding-top: 2rem;
+}
+.pt-\[10px\]{
+  padding-top: 10px;
 }
 .pt-\[124px\]{
   padding-top: 124px;
@@ -956,9 +945,6 @@ video {
 }
 .pt-\[70px\]{
   padding-top: 70px;
-}
-.pt-\[10px\]{
-  padding-top: 10px;
 }
 .text-center{
   text-align: center;
@@ -997,6 +983,9 @@ video {
 .text-\[18px\]{
   font-size: 18px;
 }
+.text-\[20px\]{
+  font-size: 20px;
+}
 .text-\[22px\]{
   font-size: 22px;
 }
@@ -1005,6 +994,12 @@ video {
 }
 .text-\[40px\]{
   font-size: 40px;
+}
+.text-\[50px\]{
+  font-size: 50px;
+}
+.text-\[8px\]{
+  font-size: 8px;
 }
 .text-lg{
   font-size: 1.125rem;
@@ -1018,12 +1013,6 @@ video {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.text-\[50px\]{
-  font-size: 50px;
-}
-.text-\[20px\]{
-  font-size: 20px;
-}
 .font-bold{
   font-weight: 700;
 }
@@ -1032,9 +1021,6 @@ video {
 }
 .font-medium{
   font-weight: 500;
-}
-.font-thin{
-  font-weight: 100;
 }
 .uppercase{
   text-transform: uppercase;
@@ -1066,20 +1052,17 @@ video {
 .leading-\[45px\]{
   line-height: 45px;
 }
-.leading-3{
-  line-height: .75rem;
-}
-.leading-\[50px\]{
-  line-height: 50px;
-}
-.leading-\[px\]{
-  line-height: px;
-}
 .tracking-\[\.44px\]{
   letter-spacing: .44px;
 }
 .tracking-\[0\.32px\]{
   letter-spacing: 0.32px;
+}
+.tracking-tighter{
+  letter-spacing: -0.05em;
+}
+.tracking-\[\.32px\]{
+  letter-spacing: .32px;
 }
 .text-gray-400{
   --tw-text-opacity: 1;
@@ -1092,9 +1075,6 @@ video {
 .text-gray-950{
   --tw-text-opacity: 1;
   color: rgb(3 7 18 / var(--tw-text-opacity));
-}
-.text-\[px\]{
-  color: px;
 }
 .mix-blend-multiply{
   mix-blend-mode: multiply;
@@ -1292,7 +1272,7 @@ header #hamburgerButton {
   border-radius: 100%;
 }
 header #hamburgerButton button {
-  padding: 1.4rem 1rem;
+  padding: 1.25rem 0.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1302,7 +1282,6 @@ header #hamburgerButton button {
 header #hamburgerButton button p {
   color: rgb(3, 7, 18);
   text-transform: uppercase;
-  font-size: 0.8rem;
   z-index: 1;
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -1325,7 +1304,7 @@ header #hamburgerButton button .ButtonBg {
   border-radius: 100%;
   background: rgb(3, 7, 18);
   z-index: 0;
-  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 @media (min-width : 1024px) {
   header #hamburgerButton:hover button p,
@@ -1360,6 +1339,11 @@ header #hamburgerButton.is-active button .ButtonBg {
   background: transparent;
   opacity: 0;
 }
+@media (min-width : 1024px) {
+  header #hamburgerButton button {
+    padding: 1.5rem 0.7rem;
+  }
+}
 header #menu {
   transform: translateY(-120%);
   transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1369,16 +1353,17 @@ header #menu nav ol {
   list-style-type: none;
 }
 header #menu nav ol li {
-  padding: 2rem 0;
+  padding: 30px 0;
   color: rgb(75, 85, 99);
   position: relative;
   overflow: hidden;
-  line-height: 0.5;
-  border-bottom: 2px solid rgb(75, 85, 99);
+  line-height: 56px;
+  border-bottom: 1px solid rgb(75, 85, 99);
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 header #menu nav ol li a {
   padding: 1rem 0;
+  margin-left: 30px;
 }
 header #menu nav ol li::after {
   content: "";
@@ -1386,7 +1371,7 @@ header #menu nav ol li::after {
   bottom: 0;
   left: -100%;
   width: 100%;
-  height: 2px;
+  height: 1px;
   background: rgb(249, 250, 251);
   transition: left 0.8s;
 }
@@ -1405,10 +1390,22 @@ header #menu nav ol li::after {
 header #menu nav ol li:before {
   content: "0" counter(item);
   counter-increment: item;
-  font-size: 1rem;
-  font-family: "Anybody";
-  margin-right: 0.6rem;
-  vertical-align: top;
+  position: absolute;
+  top: 14px;
+  left: 0;
+  font-size: 10px;
+  font-family: "Anybody", sans-serif;
+}
+@media (min-width : 1024px) {
+  header #menu nav ol li:before {
+    font-size: 12px;
+    top: 9px;
+  }
+}
+@media (min-width : 1920px) {
+  header #menu nav ol li:before {
+    top: 0px;
+  }
 }
 header #menu.open {
   transform: translateY(0%);
@@ -1465,6 +1462,25 @@ footer #FooterLink a::after, footer #credits a::after {
 .img-clip {
   -webkit-clip-path: polygon(0 50px, 0 100%, calc(100% - 50px) 100%, 100% calc(100% - 50px), 100% 0, 50px 0);
   clip-path: polygon(0 50px, 0 100%, calc(100% - 50px) 100%, 100% calc(100% - 50px), 100% 0, 50px 0);
+}
+
+:root {
+  --swiper-theme-color: $gray-800;
+  --swiper-navigation-sides-offset: 10%;
+}
+
+.swiper {
+  width: 100%;
+  height: 650px;
+}
+.swiper .swiper-wrapper .swiper-slide img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  content: "";
 }
 
 .swiper.swiperScroller {
@@ -1544,11 +1560,55 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 
 .swiper.swiperGallery {
-  height: 500px;
+  height: 650px;
+}
+.swiper.swiperGallery .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width : 1024px) {
   .swiper.swiperGallery {
     height: 350px;
+  }
+}
+
+.swiper.swiperGallery2 {
+  height: 780px;
+  width: 100%;
+}
+.swiper.swiperGallery2 .swiper-wrapper {
+  height: 720px;
+}
+.swiper.swiperGallery2 .swiper-wrapper .swiper-slide {
+  width: auto !important;
+}
+.swiper.swiperGallery2 .swiper-wrapper .swiper-slide img {
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width : 1024px) {
+  .swiper.swiperGallery2 {
+    height: 350px;
+  }
+}
+.swiper.swiperGallery2 .swiper-button-next,
+.swiper.swiperGallery2 .swiper-button-prev {
+  top: auto;
+  bottom: 0;
+}
+.swiper.swiperGallery2 .swiper-button-prev {
+  left: 35px;
+}
+.swiper.swiperGallery2 .swiper-button-next {
+  left: 5%;
+  right: auto;
+}
+@media (max-width : 1024px) {
+  .swiper.swiperGallery2 .swiper-button-next {
+    left: 10%;
   }
 }
 
@@ -1578,38 +1638,12 @@ footer #FooterLink a::after, footer #credits a::after {
     left: 10%;
   }
 }
-
-:root {
-  --swiper-theme-color: $gray-800;
-  --swiper-navigation-sides-offset: 10%;
-}
-
-.swiper {
-  width: 100%;
-  height: 650px;
-}
-.swiper .swiper-wrapper .swiper-slide img {
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.swiper .swiper-button-next::after, .swiper .swiper-button-prev::after {
-  content: "";
-}
 @media (min-width: 768px){
   .md\:h-20{
     height: 5rem;
   }
-  .md\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
   .md\:text-6xl{
     font-size: 3.75rem;
-    line-height: 1;
-  }
-  .md\:text-7xl{
-    font-size: 4.5rem;
     line-height: 1;
   }
   .md\:text-\[50px\]{
@@ -1654,6 +1688,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:mb-\[175px\]{
     margin-bottom: 175px;
   }
+  .lg\:mb-\[20px\]{
+    margin-bottom: 20px;
+  }
   .lg\:mb-\[35px\]{
     margin-bottom: 35px;
   }
@@ -1668,12 +1705,6 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:mt-8{
     margin-top: 2rem;
-  }
-  .lg\:mb-\[10px\]{
-    margin-bottom: 10px;
-  }
-  .lg\:mb-\[20px\]{
-    margin-bottom: 20px;
   }
   .lg\:block{
     display: block;
@@ -1783,25 +1814,21 @@ footer #FooterLink a::after, footer #credits a::after {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  .lg\:py-5{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
   .lg\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+  .lg\:py-\[120px\]{
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   .lg\:py-\[50px\]{
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .lg\:py-\[18px\]{
-    padding-top: 18px;
-    padding-bottom: 18px;
-  }
-  .lg\:py-\[120px\]{
-    padding-top: 120px;
-    padding-bottom: 120px;
+  .lg\:py-\[10px\]{
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .lg\:pb-16{
     padding-bottom: 4rem;
@@ -1821,9 +1848,6 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:pr-\[15\%\]{
     padding-right: 15%;
   }
-  .lg\:pt-0{
-    padding-top: 0px;
-  }
   .lg\:pt-16{
     padding-top: 4rem;
   }
@@ -1833,11 +1857,11 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:pt-\[213px\]{
     padding-top: 213px;
   }
-  .lg\:pt-\[50px\]{
-    padding-top: 50px;
-  }
   .lg\:pt-\[30px\]{
     padding-top: 30px;
+  }
+  .lg\:pt-\[50px\]{
+    padding-top: 50px;
   }
   .lg\:text-left{
     text-align: left;
@@ -1858,10 +1882,6 @@ footer #FooterLink a::after, footer #credits a::after {
     font-size: 3rem;
     line-height: 1;
   }
-  .lg\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
-  }
   .lg\:text-7xl{
     font-size: 4.5rem;
     line-height: 1;
@@ -1869,6 +1889,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:text-8xl{
     font-size: 6rem;
     line-height: 1;
+  }
+  .lg\:text-\[10px\]{
+    font-size: 10px;
   }
   .lg\:text-\[16px\]{
     font-size: 16px;
@@ -1896,6 +1919,10 @@ footer #FooterLink a::after, footer #credits a::after {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
   .lg\:leading-\[22px\]{
     line-height: 22px;
   }
@@ -1914,11 +1941,11 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:leading-\[80px\]{
     line-height: 80px;
   }
-  .lg\:leading-3{
-    line-height: .75rem;
+  .lg\:leading-\[\]{
+    line-height: ;
   }
-  .lg\:leading-\[px\]{
-    line-height: px;
+  .lg\:leading-\[10px\]{
+    line-height: 10px;
   }
   .lg\:tracking-\[0\.4px\]{
     letter-spacing: 0.4px;
@@ -1947,20 +1974,17 @@ footer #FooterLink a::after, footer #credits a::after {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
-  .xl\:text-7xl{
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-  .xl\:text-\[50px\]{
-    font-size: 50px;
-  }
-  .xl\:text-\[75px\]{
-    font-size: 75px;
-  }
 }
 @media (min-width: 1536px){
-  .\32xl\:text-6xl{
-    font-size: 3.75rem;
-    line-height: 1;
+  .\32xl\:text-\[70px\]{
+    font-size: 70px;
+  }
+}
+@media (min-width: 1920px){
+  .\33xl\:pb-\[147px\]{
+    padding-bottom: 147px;
+  }
+  .\33xl\:text-\[100px\]{
+    font-size: 100px;
   }
 }

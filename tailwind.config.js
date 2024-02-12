@@ -18,9 +18,13 @@ module.exports = {
     theme: {
       fontFamily: {
         'primary': ['Paralucent', 'system-ui'],
-        'secondary': ['Anybody', 'system-ui'],
+        'secondary': ['Anybody', 'system-ui']
       },
-      extend: {},
+      extend: {
+        screens: {
+          '3xl': '1920px',
+        },
+      },
     },
     plugins: [],
   }

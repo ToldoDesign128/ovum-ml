@@ -119,11 +119,11 @@ $page_id = get_queried_object_id(); ?>
         $gallery_sez_2 = get_field('prodotto_uva_galleria_sezione_2');
         $size = 'full'; // (thumbnail, medium, large, full or custom size)
         if ($gallery_sez_2) : ?>
-            <div class="swiper my-12 py-12 swiperGallery">
+            <div class="swiper my-12 py-12 w-full swiperGallery">
                 <!-- Slider container -->
-                <ul class="swiper-wrapper w-full bg-gray-200 img-clip">
+                <ul class="swiper-wrapper">
                     <?php foreach ($gallery_sez_2 as $image_id) : ?>
-                        <li class="swiper-slide">
+                        <li class="swiper-slide img-clip">
                             <?php echo wp_get_attachment_image($image_id, $size); ?>
                         </li>
                     <?php endforeach; ?>
@@ -243,9 +243,185 @@ $page_id = get_queried_object_id(); ?>
     </div>
 </section>
 <!-- Gallery -->
-<section></section>
+<section class="container lg:px-10 px-[26px] swiper swiperGallery2">
+    <?php if (have_rows('prodotto_uva_galleria_video')) : ?>
+        <ul class="swiper-wrapper">
+            <?php while (have_rows('prodotto_uva_galleria_video')) : the_row();
+                $gallery_sellector = get_sub_field('gallery_selector');
+                $gallery_image = get_sub_field('immagine_galleria');
+
+                if ($gallery_sellector == 'Immagine') { ?>
+                    <li class="swiper-slide">
+                        <img src="<?php echo esc_url($gallery_image['url']); ?>" />
+                    </li>
+                <?php
+                } else {
+                ?>
+                    <li class="swiper-slide">
+                        <?php the_sub_field('video_galleria'); ?>
+                    </li>
+                <?php
+                }
+                ?>
+            <?php endwhile; ?>
+        </ul>
+    <?php endif; ?>
+    <!-- Slider button -->
+    <div class="swiper-button-prev">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
+            <path d="m19,11.5H6.265l4.617-4.617-.707-.707-4.717,4.717c-.61.61-.61,1.604,0,2.214l4.718,4.718.707-.707-4.617-4.617h12.734v-1Z" />
+        </svg>
+    </div>
+    <div class="swiper-button-next rotate-180">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
+            <path d="m19,11.5H6.265l4.617-4.617-.707-.707-4.717,4.717c-.61.61-.61,1.604,0,2.214l4.718,4.718.707-.707-4.617-4.617h12.734v-1Z" />
+        </svg>
+    </div>
+</section>
 <!-- Scheda Tecnica -->
-<section></section>
+<section class="w-full">
+    <div class="container w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
+        <h5><?php echo esc_html(get_field('prodotto_uva_titolo_scheda_tecnica')); ?></h5>
+        <div class="flex flex-row justify-end">
+            <?php
+            $link = get_field('prodotto_uva_pulsante_1_scheda_tecnica');
+            if ($link) :
+                $link_url = $link['url'];
+                $link_title = $link['title'];
+                $link_target = $link['target'] ? $link['target'] : '_self';
+            ?>
+                <a class="button" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+            <?php endif;
+            $link = get_field('prodotto_uva_pulsante_2_scheda_tecnica');
+            if ($link) :
+                $link_url = $link['url'];
+                $link_title = $link['title'];
+                $link_target = $link['target'] ? $link['target'] : '_self';
+            ?>
+                <a class="button" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+            <?php endif; ?>
+        </div>
+        <h6 class="">
+            <?php $icona_accordion = get_sub_field('prodotto_uva_icona_scheda_tecnica', $page_id); ?>
+            <img class="w-6 mr-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icona_accordion . '.svg'; ?>" alt="">
+            <?php echo esc_html(get_field('prodotto_uva_titolo_repeater_scheda_tecnica')); ?>
+        </h6>
+        <!-- Scheda tecnica -->
+        <?php if (have_rows('prodotto_uva_gruppo_scheda_tecnica')) : ?>
+            <?php while (have_rows('prodotto_uva_gruppo_scheda_tecnica')) : the_row();
+
+                $scheda_valore_1 = get_sub_field('pressione_lavoro');
+                $scheda_valore_2 = get_sub_field('impulsi_al_minuto');
+                $scheda_valore_3 = get_sub_field('potenza_trattrice_richiesta');
+                $scheda_valore_4 = get_sub_field('portata_compressore');
+                $scheda_valore_5 = get_sub_field('portata_minima_impianto_idraulico');
+                $scheda_valore_6 = get_sub_field('velocita_avanzamento');
+                $scheda_valore_7 = get_sub_field('numero_testate');
+                $scheda_valore_8 = get_sub_field('dischi_per_testata');
+                $scheda_valore_9 = get_sub_field('larghezza_testata');
+                $scheda_valore_10 = get_sub_field('larghezza_telaio');
+                $scheda_valore_11 = get_sub_field('movimenti_idraulici');
+                $scheda_valore_12 = get_sub_field('corsa_piantone_principale');
+                $scheda_valore_13 = get_sub_field('inclianzione_piantone_principale');
+                $scheda_valore_14 = get_sub_field('nodo_seconda_porzione');
+                $scheda_valore_15 = get_sub_field('sfilo_secondo_braccio');
+                $scheda_valore_16 = get_sub_field('regolazione_distanza_testate');
+                $scheda_valore_17 = get_sub_field('cilindri_regolazione_testate');
+                $scheda_valore_18 = get_sub_field('valvole_idrauliche_aggiuntive');
+            ?>
+                <div class="w-full flex flex-wrap">
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">PRESSIONE LAVORO</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_1); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">IMPULSI AL MINUTO</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_2); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">POTENZA TRATTRICE RICHIESTA</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_3); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">PORTATA COMPRESSORE</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_4); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">PORTATA MINIMA IMPIANTO IDRAULICO</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_5); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">VELOCITÀ AVANZAMENTO</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_6); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">NUMERO TESTATE</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_7); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">DISCHI PER TESTATA</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_8); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">LARGHEZZA TESTATA</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_9); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">LARGHEZZA TELAIO</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_10); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">MOVIMENTI IDRAULICI</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_11); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">CORSA PIANTONE PRINCIPALE</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_12); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">INCLIANZIONE PIANTONE PRINCIPALE</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_13); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">NODO SECONDA PORZIONE</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_14); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">SFILO SECONDO BRACCIO</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_15); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">REGOLAZIONE DISTANZA TESTATE</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_16); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">CILINDRI REGOLAZIONE TESTATE</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_17); ?></p>
+                    </div>
+                    <div class="w-full flex flex-row items-center lg:py-[10px] border-b  border-gray-950">
+                        <p class="w-1/2 lg:text-[10px] lg:leading-[10px] font-secondary font-medium">VALVOLE IDRAULICHE AGGIUNTIVE</p>
+                        <p class="w-1/2 lg:text-[16px] lg:leading-[22px] tracking-[.32px]"><?php echo esc_html($scheda_valore_18); ?></p>
+                    </div>
+
+                </div>
+        <?php
+            endwhile;
+        endif; ?>
+        <!-- Optional -->
+        <?php
+        $hero = get_field('hero');
+        if ($hero) : ?>
+            <div id="hero">
+                <img src="<?php echo esc_url($hero['image']['url']); ?>" alt="<?php echo esc_attr($hero['image']['alt']); ?>" />
+                <div class="content">
+                    <?php echo $hero['caption']; ?>
+                    <a href="<?php echo esc_url($hero['link']['url']); ?>"><?php echo esc_html($hero['link']['title']); ?></a>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
+
+</section>
 <!-- Altre configurazioni -->
 <section class="w-full py-12">
     <!--Cosa distingue il modello -->

@@ -30,7 +30,7 @@
 
                 <!-- Hamburgher -->
                 <div id="hamburgerButton">
-                    <button title="Menu Button" class="font-secondary">
+                    <button title="Menu Button" class="lg:text-[10px] text-[8px] font-secondary font-medium uppercase">
                         <p id="menuOpen">Menu</p>
                         <p id="menuClose">Chiudi <span>X</span></p>
                         <span class="ButtonBg"></span>
@@ -40,12 +40,12 @@
         </div>
         <div id="menu" class="absolute flex-col lg:justify-center justify-between top-0 right-0 w-full h-screen overflow-x-hidden bg-gray-950 z-30 transition-all duration-500">
             <!-- Menu Nav -->
-            <nav class="container h-full w-full flex items-center mx-auto lg:px-10 px-[26px]">
+            <nav class="container h-full w-full flex items-end mx-auto 3xl:pb-[147px] pb-[40px] lg:px-10 px-[26px]">
                 <?php
                 wp_nav_menu(array(
                     'theme_location'    => 'primary',
                     'container'         =>  false,
-                    'menu_class'        => 'w-full 2xl:text-6xl lg:text-5xl text-4xl font-light',
+                    'menu_class'        => 'w-full 3xl:text-[100px] 2xl:text-[70px] text-[50px] font-light',
                     'orderby'           => 'menu_order',
                     'items_wrap'        => '<ol id="%1$s" class="%2$s">%3$s</ol>'
                 ));
