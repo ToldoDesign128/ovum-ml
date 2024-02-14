@@ -1,5 +1,7 @@
-<?php get_header();
+<?php 
 /* Template Name: Contatti */
+
+get_header();
 $page_id = get_queried_object_id(); ?>
 <main class="contatti">
     <section class="container mx-auto flex flex-row flex-wrap font-primary font-light lg:px-10 px-[26px] lg:pt-[213px] pt-[124px]">

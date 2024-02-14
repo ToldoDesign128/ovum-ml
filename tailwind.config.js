@@ -9,12 +9,15 @@ module.exports = {
     "page.php",
     "page-about.php",
     "page-contatti.php",
-    "page-mele.php",
-    "page-uva.php",
+    "archive-mele.php",
+    "archive-uva.php",
     "single-mele.php",
     "single-uva.php",
     "template-parts/testimonianze.php",
     "template-parts/releated-post-uva.php",
+    "template-parts/releated-post-mela.php",
+    "template-parts/repeater-uva.php",
+    "template-parts/repeater-mele.php",
   ],
   theme: {
     fontFamily: {
