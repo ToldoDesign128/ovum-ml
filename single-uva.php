@@ -116,14 +116,14 @@ $page_id = get_queried_object_id(); ?>
     <div class="container mx-auto lg:px-10 px-[26px]">
         <?php
         $gallery_sez_2 = get_field('prodotto_uva_galleria_sezione_2');
-        $size = 'full'; // (thumbnail, medium, large, full or custom size)
         if ($gallery_sez_2) : ?>
             <div class="swiper w-full swiperGallery">
                 <!-- Slider container -->
                 <ul class="swiper-wrapper">
-                    <?php foreach ($gallery_sez_2 as $image_id) : ?>
-                        <li class="swiper-slide img-clip">
-                            <?php echo wp_get_attachment_image($image_id, $size); ?>
+                    <?php foreach ($gallery_sez_2 as $image) : ?>
+                        <li class="swiper-slide relative img-clip">
+                            <img src="<?php echo esc_url($image['sizes']['full-size']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <p class="lg:block hidden absolute font-secondary uppercase lg:text-[10px] lg:leading-[10px] lg:bottom-[26px] lg:left-[50%] translate-x-[-50%]"><?php echo esc_html($image['caption']); ?></p>
                         </li>
                     <?php endforeach; ?>
                 </ul>
@@ -667,49 +667,8 @@ $page_id = get_queried_object_id(); ?>
     </div>
 </section>
 <!-- Prodotti corelati -->
-<section class="w-full lg:py-[150px] py-[60px]">
-    <p class="text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px]">Prodotti correlati</p>
-    <div class="swiper lg:pt-[90px] pt-[30px] swiperReleatedPost">
-        <?php
-        $related_query = new WP_Query(array(
-            'post_type' => 'uva',
-            'category__in' => wp_get_post_categories(get_the_ID()),
-            'post__not_in' => array(get_the_ID()),
-            'posts_per_page' => 3,
-            'orderby' => 'date',
-        ));
+<?php get_template_part("template-parts/releated-post-uva"); ?>
 
-        if ($related_query->have_posts()) { ?>
-
-            <div class="swiper-wrapper">
-
-                <?php while ($related_query->have_posts()) { ?>
-                    <?php $related_query->the_post(); ?>
-
-                    <div class="swiper-slide">
-                        <?php the_title() ?>
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('post-thumb-small'); ?>
-                        </a>
-                    </div>
-
-                <?php } ?>
-            </div>
-            <?php wp_reset_postdata(); ?>
-        <?php } ?>
-        <!-- Slider button -->
-        <div class="swiper-button-prev">
-            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
-                <path d="m19,11.5H6.265l4.617-4.617-.707-.707-4.717,4.717c-.61.61-.61,1.604,0,2.214l4.718,4.718.707-.707-4.617-4.617h12.734v-1Z" />
-            </svg>
-        </div>
-        <div class="swiper-button-next rotate-180">
-            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
-                <path d="m19,11.5H6.265l4.617-4.617-.707-.707-4.717,4.717c-.61.61-.61,1.604,0,2.214l4.718,4.718.707-.707-4.617-4.617h12.734v-1Z" />
-            </svg>
-        </div>
-    </div>
-</section>
 <!-- Testimonianze -->
 <?php get_template_part("template-parts/testimonianze"); ?>
 <!-- Footer -->

@@ -26,6 +26,9 @@ if (!function_exists('ovum_ml_setup')) :
 			'secondary' => __('Secondary Menu', 'ovum_ml'),
 		));
 
+		// Add full size image 
+		add_image_size( 'full-size', 2000, 2000 );
+
 		/**
 		 * Enable support for the following post formats:
 		 * aside, gallery, quote, image, and video
