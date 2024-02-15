@@ -209,6 +209,7 @@
     .swiper-slide {
       width: 416px !important;
       height: 605px !important;
+      max-height: 605px;
 
       img {
         object-fit: cover;
@@ -216,6 +217,44 @@
     }
   }
 
+  @media #{$only-mobile} {
+    height: 580px;
+    .swiper-wrapper {
+      .swiper-slide {
+        width: calc(100% - 26px) !important;
+        height: 495px !important;
+        max-height: 495px;
+      }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    bottom: 0;
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    left: 35px;
+    right: auto;
+  }
+}
+
+.swiper.swiperHomeMele {
+  height: 670px;
+  .swiper-wrapper {
+    height: calc(100% - 60px);
+    .swiper-slide {
+      height: 100%;
+      width: calc((1280px / 3) - 20px) !important;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
   @media #{$only-mobile} {
     height: 580px;
     .swiper-wrapper {

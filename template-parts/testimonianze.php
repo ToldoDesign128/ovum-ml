@@ -10,7 +10,7 @@
                 'order'             => 'DESC',
                 'posts_per_page'    => 999,
             ));
-    
+
             while ($loop->have_posts()) : $loop->the_post(); ?>
 
                 <div class="swiper-slide font-primary font-light flex flex-col items-center">
@@ -33,13 +33,17 @@
                 </div>
 
             <?php endwhile; ?>
-    
+
         </div>
-        <div class="swiper-button-prev">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/arrow-small-left.svg" class="h-12 w-full" alt="">
+        <div class="swiper-button-prev  rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+            </svg>
         </div>
         <div class="swiper-button-next">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/arrow-small-left.svg" class="h-12 w-full rotate-180" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+            </svg>
         </div>
     </div>
 </section>

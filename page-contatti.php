@@ -6,7 +6,7 @@ $page_id = get_queried_object_id(); ?>
 <main class="contatti">
     <section class="container mx-auto flex flex-row flex-wrap font-primary font-light lg:px-10 px-[26px] lg:pt-[213px] pt-[124px]">
         <!-- Contatti -->
-        <div class="lg:w-1/2 w-full flex flex-wrap">
+        <div class="lg:w-1/2 w-full flex flex-wrap items-start content-start">
             <h1 class="w-full lg:text-[75px] text-[40px] lg:leading-[80px] leading-[45px] lg:mb-[50px] mb-[20px]"><?php echo the_title(); ?></h1>
             <div class="lg:w-7/12 w-full">
                 <?php
@@ -46,7 +46,7 @@ $page_id = get_queried_object_id(); ?>
 
                 $contatti_orari = get_field('contatti_orari');
                 if ($contatti_orari) : ?>
-                    <h3 class="lg:text-[36px] text-[22px] leading-[28px]">Orari</h3>
+                    <h3 class="lg:text-[36px] text-[22px] leading-[28px] lg:mb-[20px]">Orari</h3>
                     <p class="lg:mb-[35px] mb-[30px] text-[18px] leading-[24px]"><?php echo esc_html($contatti_orari); ?></p>
                 <?php endif; ?>
 
@@ -61,6 +61,9 @@ $page_id = get_queried_object_id(); ?>
         <!-- Form -->
         <div class="lg:w-1/2 w-full flex flex-col lg:mt-0 mt-[60px]">
             <h2 class="lg:text-[36px] text-[28px] lg:leading-[44px] leading-[32px]">Richiedi informazioni</h2>
+            <div>
+                <?php gravity_form( 1, false, false, false, '', false );?>
+            </div>
         </div>
     </section>
     <!-- Rivenditori -->

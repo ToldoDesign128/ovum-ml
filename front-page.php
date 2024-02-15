@@ -97,11 +97,15 @@ $page_id = get_queried_object_id(); ?>
                 endif;
                 ?>
             </div>
-            <div class="swiper-button-prev">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/arrow-small-left.svg" alt="">
+            <div class="swiper-button-prev  rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                </svg>
             </div>
             <div class="swiper-button-next">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/arrow-small-left.svg" class="rotate-180" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                </svg>
             </div>
         </div>
 
@@ -204,7 +208,6 @@ $page_id = get_queried_object_id(); ?>
             endwhile;
         endif; ?>
     </ol>
-
     <!-- Repeater sezione 3 mobile -->
     <div class="swiper lg:hidden w-full swiperScroller">
         <ol class="repeater swiper-wrapper w-full font-primary font-light px-[26px] py-4">
@@ -222,14 +225,17 @@ $page_id = get_queried_object_id(); ?>
                 endwhile;
             endif; ?>
         </ol>
-        <div class="swiper-button-prev">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/arrow-small-left.svg" class="h-12 w-full" alt="">
+        <div class="swiper-button-prev  rotate-180">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+            </svg>
         </div>
         <div class="swiper-button-next">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/arrow-small-left.svg" class="h-12 w-full rotate-180" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+            </svg>
         </div>
     </div>
-
     <!-- Pulsante mobile -->
     <div class="w-full lg:hidden flex px-[26px] py-8">
         <?php
@@ -245,7 +251,210 @@ $page_id = get_queried_object_id(); ?>
             </a>
         <?php endif; ?>
     </div>
+</section>
+<!-- Sezione Mele -->
+<section class="mt-[30px]">
+    <div class="container font-primary font-light mx-auto lg:px-10 px-[26px]">
+        <p class="w-[14ch] lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Mele e meleti</p>
+        <span class="block w-full h-px bg-gray-600"></span>
 
+        <div class="w-full flex justify-between font-primary font-light pt-[25px]">
+            <div class="lg:w-2/5 w-full text-lg">
+                <p>Una linea per le mele, sviluppata insieme ai produttori sulle loro esigenze economiche e funzionali. Alte prestazioni, consumi bassi, maneggevolezza e personalizzazione grazie al sistema brevettato, alla struttura dei telai e alla costruzione modulare.</p>
+            </div>
+            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-8 py-4" href="mele">
+                Guarda tutto
+                <span class="bg-gray-300 mix-blend-multiply"></span>
+            </a>
+        </div>
+    </div>
+    <!-- Loop Mele -->
+    <div class="lg:pt-[90px] pt-[40px] lg:pl-10 pl-[26px]">
+        <div class="swiper swiperHomeMele">
+            <div class="swiper-wrapper">
+                <?php
+                $loop = new WP_Query(array(
+                    'post_type'         => 'mele',
+                    'post_status'       => 'publish',
+                    'orderby'           => 'date',
+                    'order'             => 'DESC',
+                    'posts_per_page'    => 999,
+                ));
+                while ($loop->have_posts()) : $loop->the_post(); ?>
+                    <div class="swiper-slide">
+                        <a href="<?php echo the_permalink(); ?>" class="h-full block img-clip relative group bg-gray-950 mb-[30px]">
+                            <div class="absolute top-px left-px img-clip bg-white group" style="height: calc(100% - 2px); width: calc(100% - 2px);">
+                                <div class="img-clip lg:h-[297px] h-[229px] overflow-hidden lg:mb-[26px] mb-[20px] mx-[10px] mt-[10px]">
+                                    <?php the_post_thumbnail('post-thumb-small'); ?>
+                                </div>
+                                <div class="absolute lg:block hidden top-[285px] right-[10px] h-[30px] w-[30px] rotate-[135deg] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
+                                        <path d="m19,11.5H6.265l4.617-4.617-.707-.707-4.717,4.717c-.61.61-.61,1.604,0,2.214l4.718,4.718.707-.707-4.617-4.617h12.734v-1Z" />
+                                    </svg>
+                                </div>
+                                <div class="lg:px-[26px] px-[20px]">
+                                    <div class="lg:text-[36px] text-[22px] lg:leading-[44px] leading-[28px]">
+                                        <?php the_title() ?>
+                                    </div>
+                                    <?php if ('prodotto_mela_sottotitolo_hero') :
+                                        $sottotitolo_hero = get_field('prodotto_mela_sottotitolo_hero') ?>
+                                        <p class="lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] font-light"><?php echo esc_html($sottotitolo_hero) ?></p>
+                                    <?php endif; ?>
+                                    <div class="lg:mt-[26px] mt-[23px]">
+                                        <?php if (have_rows('prodotto_mela_gruppo_scheda_tecnica')) : ?>
+                                            <?php while (have_rows('prodotto_mela_gruppo_scheda_tecnica')) : the_row();
+                                                $scheda_releated_1 = get_sub_field('numero_testate');
+                                                $scheda_releated_2 = get_sub_field('dischi_per_testata');
+                                                $scheda_releated_3 = get_sub_field('larghezza_testata');
+                                                $scheda_releated_4 = get_sub_field('movimenti_idraulici');
+                                            ?>
+                                                <div class="w-full flex flex-wrap">
+                                                    <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">NUMERO TESTATE</p>
+                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_1); ?></p>
+                                                    </div>
+                                                    <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">DISCHI PER TESTATA</p>
+                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_2); ?></p>
+                                                    </div>
+                                                    <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TESTATA</p>
+                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_3); ?></p>
+                                                    </div>
+                                                    <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">MOVIMENTI IDRAULICI</p>
+                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_4); ?></p>
+                                                    </div>
+                                                </div>
+                                        <?php
+                                            endwhile;
+                                        endif; ?>
+                                    </div>
+                                    <p class="uppercase font-secondary font-medium lg:text-[12px] text-[10px] lg:leading-[13px] leading-[10px] opacity-50 lg:pt-[26px] pt-[20px]">MELA</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                <?php
+                endwhile;
+                wp_reset_postdata(); ?>
+            </div>
+            <!-- Slider button -->
+            <div class="swiper-button-prev  rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Sezione Uva -->
+<section class="lg:my-[150px] my-[60px]">
+    <div class="container font-primary font-light mx-auto lg:px-10 px-[26px]">
+        <p class="w-[14ch] lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Uva e vigneto</p>
+        <span class="block w-full h-px bg-gray-600"></span>
+
+        <div class="w-full flex justify-between font-primary font-light pt-[25px]">
+            <div class="lg:w-2/5 w-full text-lg">
+                <p>Sviluppata in collaborazione con i viticoltori, la linea uva risponde a tutte le esigenze di pergole, spalliere e tendoni. Per agire efficacemente su tutte le varietà con alte prestazioni, consumi bassi e facilità d’uso, dal pre fioritura alla vendemmia.</p>
+            </div>
+            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-8 py-4" href="uva">
+                Guarda tutto
+                <span class="bg-gray-300 mix-blend-multiply"></span>
+            </a>
+        </div>
+    </div>
+    <!-- Loop Uva -->
+    <div class="lg:pt-[90px] pt-[40px] lg:pl-10 pl-[26px]">
+        <div class="swiper swiperHomeMele">
+            <div class="swiper-wrapper">
+                <?php
+                $loop = new WP_Query(array(
+                    'post_type'         => 'uva',
+                    'post_status'       => 'publish',
+                    'orderby'           => 'date',
+                    'order'             => 'DESC',
+                    'posts_per_page'    => 999,
+                ));
+                while ($loop->have_posts()) : $loop->the_post(); ?>
+                    <div class="swiper-slide">
+                        <a href="<?php echo the_permalink(); ?>" class="h-full block img-clip relative group bg-gray-950 mb-[30px]">
+                            <div class="absolute top-px left-px img-clip bg-white group" style="height: calc(100% - 2px); width: calc(100% - 2px);">
+                                <div class="img-clip lg:h-[297px] h-[229px] overflow-hidden lg:mb-[26px] mb-[20px] mx-[10px] mt-[10px]">
+                                    <?php the_post_thumbnail('post-thumb-small'); ?>
+                                </div>
+                                <div class="absolute lg:block hidden top-[285px] right-[10px] h-[30px] w-[30px] rotate-[135deg] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
+                                        <path d="m19,11.5H6.265l4.617-4.617-.707-.707-4.717,4.717c-.61.61-.61,1.604,0,2.214l4.718,4.718.707-.707-4.617-4.617h12.734v-1Z" />
+                                    </svg>
+                                </div>
+                                <div class="lg:px-[26px] px-[20px]">
+                                    <div class="lg:text-[36px] text-[22px] lg:leading-[44px] leading-[28px]">
+                                        <?php the_title() ?>
+                                    </div>
+                                    <?php if ('prodotto_uva_sottotitolo_hero') :
+                                        $sottotitolo_uva = get_field('prodotto_uva_sottotitolo_hero') ?>
+                                        <p class="lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] font-light"><?php echo esc_html($sottotitolo_uva) ?></p>
+                                    <?php endif; ?>
+                                    <div class="lg:mt-[26px] mt-[23px]">
+                                        <?php if (have_rows('prodotto_uva_gruppo_scheda_tecnica')) : ?>
+                                            <?php while (have_rows('prodotto_uva_gruppo_scheda_tecnica')) : the_row();
+                                                $scheda_uva_1 = get_sub_field('numero_testate');
+                                                $scheda_uva_2 = get_sub_field('dischi_per_testata');
+                                                $scheda_uva_3 = get_sub_field('larghezza_testata');
+                                                $scheda_uva_4 = get_sub_field('movimenti_idraulici');
+                                            ?>
+                                                <div class="w-full flex flex-wrap">
+                                                    <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">NUMERO TESTATE</p>
+                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_1); ?></p>
+                                                    </div>
+                                                    <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">DISCHI PER TESTATA</p>
+                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_2); ?></p>
+                                                    </div>
+                                                    <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TESTATA</p>
+                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_3); ?></p>
+                                                    </div>
+                                                    <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">MOVIMENTI IDRAULICI</p>
+                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_4); ?></p>
+                                                    </div>
+                                                </div>
+                                        <?php
+                                            endwhile;
+                                        endif; ?>
+                                    </div>
+                                    <p class="uppercase font-secondary font-medium lg:text-[12px] text-[10px] lg:leading-[13px] leading-[10px] opacity-50 lg:pt-[26px] pt-[20px]">UVA</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                <?php
+                endwhile;
+                wp_reset_postdata(); ?>
+            </div>
+            <!-- Slider button -->
+            <div class="swiper-button-prev  rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                </svg>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Sezione testimonianze -->
 <?php get_template_part("template-parts/testimonianze"); ?>

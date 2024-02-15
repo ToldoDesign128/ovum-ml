@@ -17,7 +17,7 @@
 </div>
 
 <!-- Sfumatura -->
-<span class="fixed lg:block hidden bottom-0 left-0 w-full lg:h-24 md:h-20 h-16 z-10" style="
+<span class="fixed lg:block hidden bottom-0 left-0 w-full lg:h-16 md:h-10 h-12 z-10" style="
 background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);">
 </span>
 
@@ -61,7 +61,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10
         <div class="w-full flex lg:flex-row flex-col lg:py-[120px] py-[40px]">
             <h6 class="lg:w-2/3 w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] font-light"><?php echo esc_html(get_field('footer_frase', 'option')); ?></h6>
             <!-- form -->
-            <div class="lg:w-1/3 w-full"></div>
+            <div class="lg:w-1/3 w-full">
+                <?php // gravity_form( 2, false, false, false, '', false ); ?>
+            </div>
         </div>
         <!-- Footer sezione 2 -->
         <div id="FooterLink" class="w-full flex flex-wrap lg:pb-16 lg:py-0 py-4">
@@ -186,7 +188,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10
             </p>
         </div>
         <!-- Return top button -->
-        <div class="absolute lg:block hidden top-36 right-10">
+        <div class="absolute lg:block hidden top-[120px] right-10">
             <a id="ScrollTopBtn" class="button block h-11 w-11 text-gray-950 bg-gray-100 p-[15px]">
                 <img class="rotate-90 w-auto h-[14px]" src="<?php echo get_template_directory_uri() . '/assets/img/acf/arrow-small-left.svg'; ?>" alt="">
                 <span class="bg-gray-400 mix-blend-multiply"></span>

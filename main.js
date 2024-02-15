@@ -174,3 +174,15 @@ const swiperReleatedPost= new Swiper('.swiperReleatedPost', {
     prevEl: '.swiper-button-prev',
   }
 });
+
+// Single Home Mele
+const swiperHomeMele= new Swiper('.swiperHomeMele', {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
