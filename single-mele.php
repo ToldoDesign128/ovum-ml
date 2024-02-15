@@ -202,7 +202,7 @@ $page_id = get_queried_object_id(); ?>
                 ?>
             </div>
             <div class="accordion-box-img lg:h-[500px] lg:w-1/2 w-full h-[300px] relative overflow-hidden lg:order-2 order-1">
-                <div class="image-box absolute lg:top-[-50%] top-0 left-0">
+                <div class="image-box absolute  top-0 left-0">
                     <?php
                     if (have_rows('prodotto_mela_accordion_sezione_3', $page_id)) :
                         while (have_rows('prodotto_mela_accordion_sezione_3', $page_id)) : the_row();
@@ -617,7 +617,7 @@ $page_id = get_queried_object_id(); ?>
                 ?>
             </div>
             <div class="accordion-box-img lg:w-1/2 w-full lg:h-[500px] h-[300px] relative overflow-hidden lg:order-2 order-1">
-                <div class="image-box absolute lg:top-[-50%] top-0 left-0">
+                <div class="image-box absolute  top-0 left-0">
                     <?php
                     if (have_rows('prodotto_mela_accordion_sezione_3', $page_id)) :
                         while (have_rows('prodotto_mela_accordion_sezione_3', $page_id)) : the_row();
