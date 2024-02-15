@@ -97,12 +97,15 @@ $page_id = get_queried_object_id(); ?>
                 endif;
                 ?>
             </div>
-            <div class="swiper-button-prev  rotate-180">
+            <!-- Slider button -->
+            <div class="swiper-button-prev rotate-180 group">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
+                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
             </div>
-            <div class="swiper-button-next">
+            <div class="swiper-button-next group">
+                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
@@ -120,7 +123,7 @@ $page_id = get_queried_object_id(); ?>
             <span class="w-full h-[2px] bg-gray-600"></span>
         <?php endif; ?>
         <div class="accordion-section w-full flex lg:flex-row flex-col lg:py-16 py-0 pt-16">
-            <div class="accordion-box lg:w-1/2 w-full lg:pr-[15%] lg:py-0 py-8 lg:order-1 order-2">
+            <div class="accordion-box flex flex-col justify-end lg:w-1/2 w-full lg:pr-[15%] lg:py-0 py-8 lg:order-1 order-2">
                 <?php
                 if (have_rows('home_accordion_sezione_2', $page_id)) :
                     while (have_rows('home_accordion_sezione_2', $page_id)) : the_row();
@@ -143,7 +146,7 @@ $page_id = get_queried_object_id(); ?>
                 endif;
                 ?>
             </div>
-            <div class="accordion-box-img lg:w-1/2 w-full lg:h-auto h-[300px] relative overflow-hidden lg:order-2 order-1">
+            <div class="accordion-box-img lg:w-1/2 w-full lg:h-[500px] h-[300px] relative overflow-hidden lg:order-2 order-1">
                 <div class="image-box absolute lg:top-[-50%] top-0 left-0">
                     <?php
                     if (have_rows('home_accordion_sezione_2', $page_id)) :
@@ -225,12 +228,15 @@ $page_id = get_queried_object_id(); ?>
                 endwhile;
             endif; ?>
         </ol>
-        <div class="swiper-button-prev  rotate-180">
+        <!-- Slider button -->
+        <div class="swiper-button-prev rotate-180 group">
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
+            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
         </div>
-        <div class="swiper-button-next">
+        <div class="swiper-button-next group">
+            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
@@ -341,12 +347,14 @@ $page_id = get_queried_object_id(); ?>
                 wp_reset_postdata(); ?>
             </div>
             <!-- Slider button -->
-            <div class="swiper-button-prev  rotate-180">
+            <div class="swiper-button-prev rotate-180 group">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
+                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
             </div>
-            <div class="swiper-button-next">
+            <div class="swiper-button-next group">
+                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
@@ -443,12 +451,14 @@ $page_id = get_queried_object_id(); ?>
                 wp_reset_postdata(); ?>
             </div>
             <!-- Slider button -->
-            <div class="swiper-button-prev  rotate-180">
+            <div class="swiper-button-prev rotate-180 group">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
+                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
             </div>
-            <div class="swiper-button-next">
+            <div class="swiper-button-next group">
+                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>

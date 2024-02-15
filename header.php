@@ -10,7 +10,11 @@
     <meta name="theme-color" content="#f3f4f6">
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <title>
-        <?php the_title();?>
+        <?php if (is_archive()) {
+            echo the_archive_title();
+        } else {
+            echo the_title();
+        }  ?>
     </title>
     <?php wp_head(); ?>
 </head>

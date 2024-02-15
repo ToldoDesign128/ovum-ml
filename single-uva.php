@@ -104,12 +104,15 @@ $page_id = get_queried_object_id(); ?>
                 </li>
             <?php endif; ?>
         </ul>
-        <div class="swiper-button-prev  rotate-180">
+        <!-- Slider button -->
+        <div class="swiper-button-prev rotate-180 group">
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
+            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
         </div>
-        <div class="swiper-button-next">
+        <div class="swiper-button-next group">
+            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
@@ -134,12 +137,14 @@ $page_id = get_queried_object_id(); ?>
                     <?php endforeach; ?>
                 </ul>
                 <!-- Slider button -->
-                <div class="swiper-button-prev  rotate-180">
+                <div class="swiper-button-prev rotate-180 group">
                     <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                         <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                     </svg>
+                    <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
                 </div>
-                <div class="swiper-button-next">
+                <div class="swiper-button-next group">
+                    <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                         <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                     </svg>
@@ -173,7 +178,7 @@ $page_id = get_queried_object_id(); ?>
         </div>
         <!-- Accordion -->
         <div class="accordion-section w-full flex lg:flex-row flex-col lg:pt-[90px] pt-[40px]">
-            <div class="accordion-box lg:w-1/2 w-full lg:pr-[15%] lg:py-0 py-8 lg:order-1 order-2">
+            <div class="accordion-box flex flex-col justify-end lg:w-1/2 w-full lg:pr-[15%] lg:py-0 py-8 lg:order-1 order-2">
                 <?php
                 if (have_rows('prodotto_uva_accordion_sezione_3', $page_id)) :
                     while (have_rows('prodotto_uva_accordion_sezione_3', $page_id)) : the_row();
@@ -196,7 +201,7 @@ $page_id = get_queried_object_id(); ?>
                 endif;
                 ?>
             </div>
-            <div class="accordion-box-img lg:w-1/2 w-full lg:h-auto h-[300px] relative overflow-hidden lg:order-2 order-1">
+            <div class="accordion-box-img lg:w-1/2 w-full lg:h-[500px] h-[300px] relative overflow-hidden lg:order-2 order-1">
                 <div class="image-box absolute lg:top-[-50%] top-0 left-0">
                     <?php
                     if (have_rows('prodotto_uva_accordion_sezione_3', $page_id)) :
@@ -239,12 +244,14 @@ $page_id = get_queried_object_id(); ?>
         </ul>
     <?php endif; ?>
     <!-- Slider button -->
-    <div class="swiper-button-prev  rotate-180">
+    <div class="swiper-button-prev rotate-180 group">
         <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
             <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
         </svg>
+        <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
     </div>
-    <div class="swiper-button-next">
+    <div class="swiper-button-next group">
+        <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
         <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
             <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
         </svg>
@@ -427,7 +434,7 @@ $page_id = get_queried_object_id(); ?>
                         <?php
                         $template_path = get_template_directory_uri();
                         if ($scheda_optional_1 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -436,7 +443,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">RADIATORE OLIO</p>
                         <?php
                         if ($scheda_optional_2 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -445,7 +452,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">RADIATORE OLIO</p>
                         <?php
                         if ($scheda_optional_3 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -454,7 +461,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">PIANTONE INCLINABILE</p>
                         <?php
                         if ($scheda_optional_4 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -463,7 +470,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">PIANTONE LUNGHEZZA DIVERSA</p>
                         <?php
                         if ($scheda_optional_5 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -472,7 +479,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">BRACCIO LUNGHEZZA DIVERSA</p>
                         <?php
                         if ($scheda_optional_6 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -481,7 +488,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">TESTATA A 3 DISCHI E 3 DISCHI “SPEZZATI”</p>
                         <?php
                         if ($scheda_optional_7 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -490,7 +497,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">TESTATA 2 DISCHI GRANDI (900MM)</p>
                         <?php
                         if ($scheda_optional_8 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -499,7 +506,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">CARRELLO DI RIMESSAGGIO</p>
                         <?php
                         if ($scheda_optional_9 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -508,7 +515,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">CARRELLO DI RIMESSAGGIO</p>
                         <?php
                         if ($scheda_optional_10 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -517,7 +524,7 @@ $page_id = get_queried_object_id(); ?>
                         <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">UTILIZZO SU MELETO</p>
                         <?php
                         if ($scheda_optional_11 == 'Si') {
-                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                            echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                         } else {
                             echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                         }; ?>
@@ -534,7 +541,7 @@ $page_id = get_queried_object_id(); ?>
                                 <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium"><?php echo esc_html($extra_optional_title); ?></p>
                                 <?php
                                 if ($extra_optional_value == 'Si') {
-                                    echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check-double.svg" alt="">';
+                                    echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
                                 } else {
                                     echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
                                 }; ?>
@@ -586,7 +593,7 @@ $page_id = get_queried_object_id(); ?>
         </div>
         <!-- Accordion -->
         <div class="accordion-section w-full flex lg:flex-row flex-col lg:pt-[90px] pt-[40px]">
-            <div class="accordion-box lg:w-1/2 w-full lg:pr-[15%] lg:pt-0 pt-8 lg:order-1 order-2">
+            <div class="accordion-box flex flex-col justify-end lg:w-1/2 w-full lg:pr-[15%] lg:pt-0 pt-8 lg:order-1 order-2">
                 <?php
                 if (have_rows('prodotto_uva_-_accordion_altre_configurazioni', $page_id)) :
                     while (have_rows('prodotto_uva_-_accordion_altre_configurazioni', $page_id)) : the_row();
@@ -609,7 +616,7 @@ $page_id = get_queried_object_id(); ?>
                 endif;
                 ?>
             </div>
-            <div class="accordion-box-img lg:w-1/2 w-full lg:h-auto h-[300px] relative overflow-hidden lg:order-2 order-1">
+            <div class="accordion-box-img lg:w-1/2 w-full lg:h-[500px] h-[300px] relative overflow-hidden lg:order-2 order-1">
                 <div class="image-box absolute lg:top-[-50%] top-0 left-0">
                     <?php
                     if (have_rows('prodotto_uva_accordion_sezione_3', $page_id)) :
