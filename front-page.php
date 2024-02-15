@@ -5,9 +5,9 @@ $page_id = get_queried_object_id(); ?>
     <video class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop>
         <source src="<?php echo get_template_directory_uri() . '/assets/img/video.mp4'; ?>" type="video/mp4">
     </video>
-    <div class="container h-screen mx-auto flex flex-col lg:justify-center justify-between items-center">
+    <div class="lg:max-w-screen-xl h-screen mx-auto flex flex-col lg:justify-center justify-between items-center">
         <span class="w-full h-28"></span>
-        <h1 class="font-primary xl:w-1/2 lg:w-2/3 lg:text-8xl md:text-6xl text-5xl font-light text-center text-gray-950 z-10 py-6 lg:px-0 px-[26px]"><?php echo esc_html(get_field('home_titolo_sezione_1', $page_id)); ?></h1>
+        <h1 class="font-primary xl:w-1/2 lg:w-2/3 lg:text-[100px] lg:leading-[100px] text-[50px] leading-[56px] font-light text-center text-gray-950 z-10 py-6 lg:px-0 px-[26px]"><?php echo esc_html(get_field('home_titolo_sezione_1', $page_id)); ?></h1>
         <div class="lg:w-fit w-full flex lg:flex-row flex-col justify-between text-center text-lg py-6 lg:px-0 px-[26px] lg:mb-0 mb-12">
             <?php
             $pulsante_hero = get_field('home_pulsante_1_sezione_1', $page_id);
@@ -36,7 +36,7 @@ $page_id = get_queried_object_id(); ?>
     </div>
 </section>
 <!-- Sezione 2 -->
-<section class="container mx-auto">
+<section class="lg:max-w-screen-xl mx-auto">
     <!-- sponsor -->
     <div class="w-full flex flex-wrap justify-between font-primary py-8 lg:px-10 px-[26px]">
         <?php
@@ -60,7 +60,7 @@ $page_id = get_queried_object_id(); ?>
                         $link_sez_2_title = $link_sez_2['title'];
                         $link_sez_2_target = $link_sez_2['target'] ? $link_sez_2['target'] : '_self'; ?>
 
-                        <a class="w-auto flex items-center lg:mr-0 mr-16" href="<?php echo esc_url($link_sez_2_url); ?>" target="<?php echo esc_attr($link_sez_2_target); ?>">
+                        <a class="lg:w-1/3 flex items-center lg:mr-0 mr-16" href="<?php echo esc_url($link_sez_2_url); ?>" target="<?php echo esc_attr($link_sez_2_target); ?>">
                             <img class="w-8 lg:mx-4 mx-0 mr-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icona_sez_2 . '.svg'; ?>" alt="">
                             <p class="lg:text-3xl text-2xl font-bold text-gray-950 lg:hover:text-gray-600 transition-all duration-300"><?php echo esc_html($testo_sez_2); ?></p>
                         </a>
@@ -102,10 +102,10 @@ $page_id = get_queried_object_id(); ?>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
-                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+                <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
             </div>
             <div class="swiper-button-next group">
-                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+                <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
@@ -120,7 +120,7 @@ $page_id = get_queried_object_id(); ?>
         if ($titolo_2_sez_2) :
         ?>
             <p class="w-full lg:text-5xl text-3xl text-gray-950 lg:py-12 py-6 pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_2_sez_2); ?></p>
-            <span class="w-full h-[2px] bg-gray-600"></span>
+            <span class="w-full h-px bg-gray-600"></span>
         <?php endif; ?>
         <div class="accordion-section w-full flex lg:flex-row flex-col lg:py-16 py-0 pt-16">
             <div class="accordion-box flex flex-col justify-end lg:w-1/2 w-full lg:pr-[15%] lg:py-0 py-8 lg:order-1 order-2">
@@ -166,7 +166,7 @@ $page_id = get_queried_object_id(); ?>
     </div>
 </section>
 <!-- Sezione 3 -->
-<section class="container mx-auto">
+<section class="lg:max-w-screen-xl mx-auto">
     <!-- titolo sezione 3 -->
     <div class="w-full flex flex-col font-primary font-light lg:px-10 px-[26px] lg:py-8 py-4">
         <?php
@@ -174,7 +174,7 @@ $page_id = get_queried_object_id(); ?>
         if ($titolo_sez_3) :
         ?>
             <p class="max-w-[18ch] lg:text-5xl text-3xl text-gray-950 lg:py-12 py-6 pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
-            <span class="w-full h-[2px] bg-gray-600"></span>
+            <span class="w-full h-px bg-gray-600"></span>
         <?php endif; ?>
     </div>
     <!-- testo sezione 3 -->
@@ -233,10 +233,10 @@ $page_id = get_queried_object_id(); ?>
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
-            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
         </div>
         <div class="swiper-button-next group">
-            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
@@ -260,7 +260,7 @@ $page_id = get_queried_object_id(); ?>
 </section>
 <!-- Sezione Mele -->
 <section class="mt-[30px]">
-    <div class="container font-primary font-light mx-auto lg:px-10 px-[26px]">
+    <div class="lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
         <p class="w-[14ch] lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Mele e meleti</p>
         <span class="block w-full h-px bg-gray-600"></span>
 
@@ -275,7 +275,7 @@ $page_id = get_queried_object_id(); ?>
         </div>
     </div>
     <!-- Loop Mele -->
-    <div class="lg:pt-[90px] pt-[40px] lg:pl-10 pl-[26px]">
+    <div class="lg:pt-[90px] pt-[40px] mla lg:pl-10 pl-[26px]">
         <div class="swiper swiperHomeMele">
             <div class="swiper-wrapper">
                 <?php
@@ -351,10 +351,10 @@ $page_id = get_queried_object_id(); ?>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
-                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+                <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
             </div>
             <div class="swiper-button-next group">
-                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+                <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
@@ -364,7 +364,7 @@ $page_id = get_queried_object_id(); ?>
 </section>
 <!-- Sezione Uva -->
 <section class="lg:my-[150px] my-[60px]">
-    <div class="container font-primary font-light mx-auto lg:px-10 px-[26px]">
+    <div class="lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
         <p class="w-[14ch] lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Uva e vigneto</p>
         <span class="block w-full h-px bg-gray-600"></span>
 
@@ -379,7 +379,7 @@ $page_id = get_queried_object_id(); ?>
         </div>
     </div>
     <!-- Loop Uva -->
-    <div class="lg:pt-[90px] pt-[40px] lg:pl-10 pl-[26px]">
+    <div class="lg:pt-[90px] pt-[40px] mla lg:pl-10 pl-[26px]">
         <div class="swiper swiperHomeMele">
             <div class="swiper-wrapper">
                 <?php
@@ -455,10 +455,10 @@ $page_id = get_queried_object_id(); ?>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
-                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+                <span class="absolute left-0 bg-white h-6 w-0 lg:lg:group-hover:w-3 transition-[width] duration-300"></span>
             </div>
             <div class="swiper-button-next group">
-                <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+                <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>

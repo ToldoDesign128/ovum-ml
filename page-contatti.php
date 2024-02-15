@@ -4,7 +4,7 @@
 get_header();
 $page_id = get_queried_object_id(); ?>
 <main class="contatti">
-    <section class="container mx-auto flex flex-row flex-wrap font-primary font-light lg:px-10 px-[26px] lg:pt-[213px] pt-[124px]">
+    <section class="lg:max-w-screen-xl mx-auto flex flex-row flex-wrap font-primary font-light lg:px-10 px-[26px] lg:pt-[213px] pt-[124px]">
         <!-- Contatti -->
         <div class="lg:w-1/2 w-full flex flex-wrap items-start content-start">
             <h1 class="w-full lg:text-[75px] text-[40px] lg:leading-[80px] leading-[45px] lg:mb-[50px] mb-[20px]"><?php echo the_title(); ?></h1>
@@ -62,12 +62,12 @@ $page_id = get_queried_object_id(); ?>
         <div class="lg:w-1/2 w-full flex flex-col lg:mt-0 mt-[60px]">
             <h2 class="lg:text-[36px] text-[28px] lg:leading-[44px] leading-[32px]">Richiedi informazioni</h2>
             <div>
-                <?php gravity_form( 1, false, false, false, '', false );?>
+                <?php // gravity_form( 1, false, false, false, '', false );?>
             </div>
         </div>
     </section>
     <!-- Rivenditori -->
-    <section class="container mx-auto flex flex-col font-primary font-light lg:px-10 lg:pt-[114px] pt-[70px] lg:mb-[120px] mb-[60px]">
+    <section class="lg:max-w-screen-xl mx-auto flex flex-col font-primary font-light lg:px-10 lg:pt-[114px] pt-[70px] lg:mb-[120px] mb-[60px]">
         <h5 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] border-gray-800 border-b pb-[20px] lg:mx-0 mx-[26px]">I nostri Rivenditori</h5>
         <div class="lg:mt-8 mt-[30px] lg:px-0 px-[10px]">
             <div class="img-clip w-full lg:h-[720px] h-[580px] relative bg-gray-950">

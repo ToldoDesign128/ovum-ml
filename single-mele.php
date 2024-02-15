@@ -4,7 +4,7 @@
 $page_id = get_queried_object_id(); ?>
 <!-- hero -->
 <section class="hero lg:pt-[230px] pt-[94px]">
-    <div class="h-full max-h-min container flex flex-wrap justify-between items-center mx-auto lg:px-10 px-[26px]">
+    <div class="h-full max-h-min lg:max-w-screen-xl flex flex-wrap justify-between items-center mx-auto lg:px-10 px-[26px]">
         <div class="lg:w-1/2 w-full font-primary lg:pr-24 lg:order-1 order-2">
             <p class="uppercase text-sm font-secondary font-medium pb-[5px]">Mele</p>
             <h1 class="lg:text-[75px] lg:leading-[80px] text-[40px] leading-[50px] font-light"><?php the_title(); ?></h1>
@@ -42,7 +42,7 @@ $page_id = get_queried_object_id(); ?>
         </div>
     </div>
     <!-- Indicatori Desktop -->
-    <ul class="container lg:flex hidden justify-between font-secondary mx-auto lg:pt-[144px] pt-[60px] lg:px-10 px-[26px]">
+    <ul class="lg:max-w-screen-xl lg:flex hidden justify-between font-secondary mx-auto lg:pt-[144px] pt-[60px] lg:px-10 px-[26px]">
         <?php if ('prodotto_mela_pressione_hero') :
             $pressione = get_field('prodotto_mela_pressione_hero', $page_id) ?>
             <li class="w-auto uppercase">
@@ -109,10 +109,10 @@ $page_id = get_queried_object_id(); ?>
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
-            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
         </div>
         <div class="swiper-button-next group">
-            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
@@ -122,12 +122,12 @@ $page_id = get_queried_object_id(); ?>
 <!-- Sezione 2 -->
 <section class="w-full lg:pt-[150px] pt-[60px]">
     <!-- Gallery -->
-    <div class="container mx-auto lg:px-10 px-[26px]">
+    <div class="lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
         <?php
         $gallery_sez_2 = get_field('prodotto_mela_galleria_sezione_2');
         if ($gallery_sez_2) : ?>
             <div class="swiper w-full swiperGallery">
-                <!-- Slider container -->
+                <!-- Slider lg:max-w-screen-xl -->
                 <ul class="swiper-wrapper">
                     <?php foreach ($gallery_sez_2 as $image) : ?>
                         <li class="swiper-slide relative img-clip">
@@ -141,10 +141,10 @@ $page_id = get_queried_object_id(); ?>
                     <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                         <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                     </svg>
-                    <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+                    <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
                 </div>
                 <div class="swiper-button-next group">
-                    <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+                    <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                         <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                     </svg>
@@ -158,7 +158,7 @@ $page_id = get_queried_object_id(); ?>
 <!-- Sezione 3 -->
 <section class="w-full lg:pt-[120px] pt-[60px]">
     <!--Cosa distingue il modello -->
-    <div class="container w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
+    <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
         <?php
         $titolo_sez_3 = get_field('prodotto_mela_titolo_sezione_3', $page_id);
         if ($titolo_sez_3) :
@@ -220,7 +220,7 @@ $page_id = get_queried_object_id(); ?>
     </div>
 </section>
 <!-- Gallery -->
-<section class="container lg:mt-[150px] mt-[70px] lg:px-10 px-[10px] swiper swiperGallery2">
+<section class="lg:max-w-screen-xl lg:mt-[150px] mt-[70px] lg:px-10 px-[10px] swiper swiperGallery2">
     <?php if (have_rows('prodotto_mela_galleria_video')) : ?>
         <ul class="swiper-wrapper">
             <?php while (have_rows('prodotto_mela_galleria_video')) : the_row();
@@ -248,10 +248,10 @@ $page_id = get_queried_object_id(); ?>
         <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
             <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
         </svg>
-        <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+        <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
     </div>
     <div class="swiper-button-next group">
-        <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+        <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
         <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
             <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
         </svg>
@@ -259,7 +259,7 @@ $page_id = get_queried_object_id(); ?>
 </section>
 <!-- Scheda Tecnica -->
 <section id="scheda-tecnica" class="w-full lg:mt-[120px] mt-[70px]">
-    <div class="container w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
+    <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
         <h5 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] border-b border-gray-950 lg:pb-4 pb-[20px]"><?php echo esc_html(get_field('prodotto_mela_titolo_scheda_tecnica')); ?></h5>
         <div class="flex flex-row justify-end lg:pt-8">
             <?php
@@ -573,7 +573,7 @@ $page_id = get_queried_object_id(); ?>
 <!-- Altre configurazioni -->
 <section id="altre-configurazioni" class="w-full lg:pt-[120px] pt-[60px]">
     <!--Cosa distingue il modello -->
-    <div class="container w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
+    <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
         <?php
         $titolo_sez_6 = get_field('prodotto_mela_titolo_altre_configurazioni', $page_id);
         if ($titolo_sez_6) :

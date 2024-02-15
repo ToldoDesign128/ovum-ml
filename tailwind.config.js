@@ -7,7 +7,7 @@ module.exports = {
     "header.php",
     "index.php",
     "page.php",
-    "page-about.php",
+    "page-ml-macchine.php",
     "page-contatti.php",
     "archive-mele.php",
     "archive-uva.php",

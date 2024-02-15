@@ -27,7 +27,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10
 ?>
     <!-- CTA -->
     <section class="font-primary w-full lg:mb-[175px] mb-[40px]">
-        <div class="container mx-auto lg:px-10 px-[10px]">
+        <div class="lg:max-w-screen-xl mx-auto lg:px-10 px-[10px]">
             <div class="cta flex flex-col justify-center items-center text-gray-50 bg-gray-950 lg:text-left text-center lg:py-[50px] py-[60px] lg:px-0 px-11">
                 <?php
 
@@ -56,7 +56,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10
 }; ?>
 
 <footer id="footer" class="font-primary relative w-full bg-gray-950 z-40">
-    <section class="relative container flex flex-col text-gray-50 mx-auto lg:px-10 px-[26px]">
+    <section class="relative lg:max-w-screen-xl flex flex-col text-gray-50 mx-auto lg:px-10 px-[26px]">
         <!-- Footer sezione 1 -->
         <div class="w-full flex lg:flex-row flex-col lg:py-[120px] py-[40px]">
             <h6 class="lg:w-2/3 w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] font-light"><?php echo esc_html(get_field('footer_frase', 'option')); ?></h6>

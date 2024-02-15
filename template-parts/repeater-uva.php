@@ -1,5 +1,5 @@
 <!-- scroller repeater uva -->
-<section class="container mx-auto lg:pt-[92px] pt-[62px] lg:pl-10 pl-[26px]">
+<section class="lg:max-w-screen-xl mx-auto lg:pt-[92px] pt-[62px] lg:pl-10 pl-[26px]">
     <section class="swiper swiperRepeater">
         <ul class="swiper-wrapper">
             <?php
@@ -23,10 +23,10 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
-            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
         </div>
         <div class="swiper-button-next group">
-            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>

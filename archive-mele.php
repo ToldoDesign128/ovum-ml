@@ -8,7 +8,7 @@ get_header();
     <img class="absolute lg:block hidden top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_mele-header.jpg'; ?>">
     <img class="absolute lg:hidden block top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/mele_2.jpg'; ?>">
 
-    <div class="container h-screen mx-auto flex flex-col lg:justify-center justify-start items-center">
+    <div class="lg:max-w-screen-xl h-screen mx-auto flex flex-col lg:justify-center justify-start items-center">
         <h1 class="font-primary lg:w-[632px] w-[322px] lg:text-[75px] lg:leading-[80px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 lg:mt-0 mt-[124px]">
             <?php echo esc_html(get_field('mele_hero_titolo', 8)); ?>
         </h1>
@@ -22,8 +22,8 @@ get_header();
 <?php get_template_part("template-parts/repeater-mela"); ?>
 
 <!-- Loop Prodotti -->
-<section class="container w-full mx-auto lg:px-10 px-[26px] lg:mt-[130px] mt-[67px] lg:mb-[150px] mb-[60px]">
-    <div class="grid lg:grid-cols-3 grid-cols-1 gap-4">
+<section class="lg:max-w-screen-xl w-full mx-auto lg:px-10 px-[26px] lg:mt-[130px] mt-[67px] lg:mb-[150px] mb-[60px]">
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
         <?php
         $loop = new WP_Query(array(
             'post_type'         => 'mele',

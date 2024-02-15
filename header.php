@@ -23,7 +23,7 @@
 
     <header class="font-primary w-full absolute z-50">
         <div class="relative z-40">
-            <div class="container flex mx-auto py-5 lg:px-10 px-[26px] justify-between items-center">
+            <div class="lg:max-w-screen-xl flex mx-auto py-5 lg:px-10 px-[26px] justify-between items-center">
                 <!-- Logo -->
                 <?php
                 echo    '<a id="logo-header" href="' . home_url() . '" class="flex">
@@ -44,7 +44,7 @@
         </div>
         <div id="menu" class="absolute flex-col lg:justify-center justify-between top-0 right-0 w-full h-screen overflow-x-hidden bg-gray-950 z-30 transition-all duration-500">
             <!-- Menu Nav -->
-            <nav class="container h-full w-full flex items-end mx-auto 3xl:pb-[147px] pb-[40px] lg:px-10 px-[26px]">
+            <nav class="lg:max-w-screen-xl h-full w-full flex items-end mx-auto 3xl:pb-[147px] pb-[40px] lg:px-10 px-[26px]">
                 <?php
                 wp_nav_menu(array(
                     'theme_location'    => 'primary',

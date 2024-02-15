@@ -1,4 +1,4 @@
-<section class="container mx-auto px-[26px] lg:mb-[150px] mb-[60px]">
+<section class="lg:max-w-screen-xl mx-auto px-[26px] lg:mb-[150px] mb-[60px]">
     <p class="w-full text-center lg:text-[50px] text-[28px] lg:leading-[56px] leading-[32px] font-primary font-light lg:mb-[50px] mb-[60px]">Cosa dicono i nostri clienti</p>
     <div class="swiper swiperTestimonial">
         <div class="swiper-wrapper">
@@ -40,10 +40,10 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
-            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
         </div>
         <div class="swiper-button-next group">
-            <span class="absolute left-0 bg-white h-6 w-0 group-hover:w-3 transition-[width] duration-300"></span>
+            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
             <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                 <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
             </svg>
