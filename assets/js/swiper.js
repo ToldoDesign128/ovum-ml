@@ -1,12 +1,3 @@
-const swiper = new Swiper('.swiper', {
-
-  loop: true,
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-});
 // Mobile Sroller
 const swiperScroller = new Swiper('.swiperScroller', {
 
@@ -48,13 +39,33 @@ const swiperScrollerSponsor = new Swiper('.swiperScrollerSponsor', {
   }
 });
 // Testimonial
-const swiperTestimonial = new Swiper('.swiperTestimonial', {
+
+
+
+const swiperTestimonial = new Swiper(".swiperTestimonial", {
+
   loop: true,
 
+  grabCursor: true,
+
+  touchEventsTarget: "container",
+
+  effect: "fade",
+
+  fadeEffect: {
+
+    crossFade: true,
+
+  },
+
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
+
+    nextEl: ".swiper-button-next",
+
+    prevEl: ".swiper-button-prev",
+
+  },
+
 });
 // Single Gallery
 const swiperGallery = new Swiper('.swiperGallery', {

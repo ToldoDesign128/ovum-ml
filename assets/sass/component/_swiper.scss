@@ -1,193 +1,193 @@
 :root {
-  --swiper-theme-color: $gray-800;
-  --swiper-navigation-sides-offset: 10%;
+   --swiper-theme-color: $gray-800;
+   --swiper-navigation-sides-offset: 10%;
 }
 
 .swiper {
-  width: 100%;
-  height: 650px;
+   width: 100%;
+   height: 650px;
 
-  .swiper-wrapper {
-    .swiper-slide {
-      img {
-        height: 100%;
-        object-fit: contain;
+   .swiper-wrapper {
+      .swiper-slide {
+         img {
+            height: 100%;
+            object-fit: contain;
+         }
       }
-    }
-  }
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    content: "";
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    opacity: 1 !important;
-  }
+   }
+   .swiper-button-next::after,
+   .swiper-button-prev::after {
+      content: "";
+   }
+   .swiper-button-next,
+   .swiper-button-prev {
+      opacity: 1 !important;
+   }
 }
 
 .swiper.swiperScroller {
-  height: 300px;
+   height: 300px;
 }
 .swiper.swiperScroller2 {
-  height: 350px;
+   height: 350px;
 }
 
 .swiper.swiperScrollerSingle {
-  margin-left: 26px;
-  height: 180px;
-  width: 100%;
-  .swiper-slide {
-    width: auto !important;
-  }
+   margin-left: 26px;
+   height: 180px;
+   width: 100%;
+   .swiper-slide {
+      width: auto !important;
+   }
 }
 
 .swiper.swiperScrollerSponsor {
-  height: 150px;
+   height: 150px;
 }
 
 .swiper.swiperTestimonial {
-  height: 100%;
-  width: 750px;
-  margin: 0 auto;
+   height: 100%;
+   width: 750px;
+   margin: 0 auto;
 
-  @media #{$only-mobile} {
-    width: 100%;
-  }
+   @media #{$only-mobile} {
+      width: 100%;
+   }
 }
 
 .swiper.swiperGallery {
-  height: 650px;
-  .swiper-wrapper {
-    .swiper-slide {
-      img {
-        width: 100%;
-        object-fit: cover;
+   height: 650px;
+   .swiper-wrapper {
+      .swiper-slide {
+         img {
+            width: 100%;
+            object-fit: cover;
+         }
       }
-    }
-  }
+   }
 
-  @media #{$only-mobile} {
-    height: 350px;
+   @media #{$only-mobile} {
+      height: 350px;
 
-    .swiper-slide {
-      height: 300px;
-    }
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    top: var(--swiper-navigation-top-offset, 50%);
-  }
-  .swiper-button-prev {
-    left: var(--swiper-navigation-sides-offset, 10px);
-    right: auto;
-  }
-  .swiper-button-next {
-    right: var(--swiper-navigation-sides-offset, 10px);
-    left: auto;
-  }
+      .swiper-slide {
+         height: 300px;
+      }
+   }
+   .swiper-button-next,
+   .swiper-button-prev {
+      top: var(--swiper-navigation-top-offset, 50%);
+   }
+   .swiper-button-prev {
+      left: var(--swiper-navigation-sides-offset, 10px);
+      right: auto;
+   }
+   .swiper-button-next {
+      right: var(--swiper-navigation-sides-offset, 10px);
+      left: auto;
+   }
 }
 
 .swiper.swiperGallery2 {
-  height: 780px;
-  width: calc(97.9% - ((100vw - 1280px) / 2));
-  .swiper-wrapper {
-    height: 720px;
-    .swiper-slide {
-      width: auto !important;
+   height: 780px;
+   width: calc(97.9% - ((100vw - 1280px) / 2));
+   .swiper-wrapper {
+      height: 720px;
+      .swiper-slide {
+         width: auto !important;
 
-      img,
-      iframe {
-        display: block;
-        height: 100%;
-        object-fit: cover;
+         img,
+         iframe {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+         }
       }
-    }
-  }
+   }
 
-  @media #{$only-mobile} {
-    height: 350px;
-    .swiper-wrapper {
-      height: 300px;
-    }
-  }
+   @media #{$only-mobile} {
+      height: 350px;
+      .swiper-wrapper {
+         height: 300px;
+      }
+   }
 }
 
 .swiper.swiperRepeater {
-  height: 300px;
-  width: 100%;
+   height: 300px;
+   width: 100%;
 
-  .swiper-slide {
-    width: 27vw !important;
-  }
+   .swiper-slide {
+      width: 27vw !important;
+   }
 
-  @media #{$only-mobile} {
-    height: 350px;
-  }
-  @media #{$only-mobile} {
-    height: 240px;
-    .swiper-slide {
-      width: 90vw !important;
-    }
-  }
+   @media #{$only-mobile} {
+      height: 350px;
+   }
+   @media #{$only-mobile} {
+      height: 240px;
+      .swiper-slide {
+         width: 90vw !important;
+      }
+   }
 }
 
 .swiper.swiperReleatedPost {
-  height: 670px;
-  .swiper-wrapper {
-    height: calc(100% - 60px);
-    .swiper-slide {
-      height: 100%;
-      width: calc((1280px / 3) - 40px) !important;
-
-      img {
-        object-fit: cover;
-      }
-    }
-  }
-  @media #{$only-mobile} {
-    height: 580px;
-    .swiper-wrapper {
+   height: 670px;
+   .swiper-wrapper {
+      height: calc(100% - 60px);
       .swiper-slide {
-        width: calc(100% - 26px) !important;
-        height: 495px !important;
+         height: 100%;
+         width: calc((1280px / 3) - 40px) !important;
+
+         img {
+            object-fit: cover;
+         }
       }
-    }
-  }
+   }
+   @media #{$only-mobile} {
+      height: 580px;
+      .swiper-wrapper {
+         .swiper-slide {
+            width: calc(100% - 26px) !important;
+            height: 495px !important;
+         }
+      }
+   }
 }
 
 .swiper.swiperHomeMele {
-  height: 670px;
-  .swiper-wrapper {
-    height: calc(100% - 60px);
-    .swiper-slide {
-      height: 100%;
-      width: calc((1280px / 3) - 40px) !important;
-
-      img {
-        object-fit: cover;
-      }
-    }
-  }
-  @media #{$only-mobile} {
-    height: 580px;
-    .swiper-wrapper {
+   height: 670px;
+   .swiper-wrapper {
+      height: calc(100% - 60px);
       .swiper-slide {
-        width: calc(100% - 26px) !important;
-        height: 495px !important;
+         height: 100%;
+         width: calc((1280px / 3) - 40px) !important;
+
+         img {
+            object-fit: cover;
+         }
       }
-    }
-  }
+   }
+   @media #{$only-mobile} {
+      height: 580px;
+      .swiper-wrapper {
+         .swiper-slide {
+            width: calc(100% - 26px) !important;
+            height: 495px !important;
+         }
+      }
+   }
 }
 
 .swiper-button-next,
-  .swiper-button-prev {
-    top: auto;
-    bottom: 0;
-  }
-  .swiper-button-prev {
-    left: 0;
-  }
-  .swiper-button-next {
-    left: 27px;
-    right: auto;
-  }
+.swiper-button-prev {
+   top: auto;
+   bottom: 0;
+}
+.swiper-button-prev {
+   left: 0;
+}
+.swiper-button-next {
+   left: 27px;
+   right: auto;
+}

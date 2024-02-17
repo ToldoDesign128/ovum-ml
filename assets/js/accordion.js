@@ -42,8 +42,4 @@ accordionBtnTre.click(function imageTreToggle() {
 jQuery(document).ready(function () {
     activeAccordion();
     activeAccordionImage();
-    accordionToggle();
-    imageUnoToggle();
-    imageDueToggle();
-    imageTreToggle();
 });

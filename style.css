@@ -975,10 +975,6 @@ video {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.py-\[18px\]{
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
 .py-\[40px\]{
   padding-top: 40px;
   padding-bottom: 40px;
@@ -990,6 +986,9 @@ video {
 .py-\[60px\]{
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.pb-\[10vh\]{
+  padding-bottom: 10vh;
 }
 .pb-\[12px\]{
   padding-bottom: 12px;
@@ -1008,9 +1007,6 @@ video {
 }
 .pb-\[30px\]{
   padding-bottom: 30px;
-}
-.pb-\[40px\]{
-  padding-bottom: 40px;
 }
 .pl-6{
   padding-left: 1.5rem;
@@ -1065,12 +1061,6 @@ video {
 }
 .pt-\[94px\]{
   padding-top: 94px;
-}
-.pb-\[10\]{
-  padding-bottom: 10;
-}
-.pb-\[10vh\]{
-  padding-bottom: 10vh;
 }
 .text-center{
   text-align: center;
@@ -1941,9 +1931,6 @@ footer #FooterLink a::after, footer #credits a::after {
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .md\:text-\[50px\]{
-    font-size: 50px;
-  }
 }
 
 @media (min-width: 1024px){
@@ -2127,9 +2114,6 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:w-full{
     width: 100%;
-  }
-  .lg\:w-\[\]{
-    width: ;
   }
   .lg\:max-w-\[18ch\]{
     max-width: 18ch;
