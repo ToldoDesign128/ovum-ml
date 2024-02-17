@@ -1,6 +1,7 @@
 <?php
 /* Template Name: Uva */
-get_header(); ?>
+get_header(); 
+?>
 
 <!-- Hero -->
 <section class="hero h-screen relative">

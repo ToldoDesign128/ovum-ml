@@ -220,40 +220,42 @@ if ($titolo_sez_3) :
 <?php endif; ?>
 <!-- Gallery -->
 <?php if (have_rows('prodotto_mela_galleria_video')) : ?>
-    <section class="mlap lg:mt-[150px] mt-[70px] lg:px-0 px-[10px] swiper swiperGallery2">
-        <ul class="swiper-wrapper">
-            <?php while (have_rows('prodotto_mela_galleria_video')) : the_row();
-                $gallery_sellector = get_sub_field('gallery_selector');
-                $gallery_image = get_sub_field('immagine_galleria');
-
-                if ($gallery_sellector == 'Immagine') { ?>
-                    <li class="swiper-slide">
-                        <img src="<?php echo esc_url($gallery_image['url']); ?>" />
-                    </li>
-                <?php
-                } else {
-                ?>
-                    <li class="swiper-slide">
-                        <?php the_sub_field('video_galleria'); ?>
-                    </li>
-                <?php
-                }
-                ?>
-            <?php endwhile; ?>
-        </ul>
-        <!-- Slider button -->
-        <div class="arrow-container">
-            <div class="swiper-button-prev rotate-180">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-                </svg>
+    <section class="lg:mt-[150px] mt-[70px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+        <div class="swiper overflow-visible swiperGallery2">
+            <ul class="swiper-wrapper">
+                <?php while (have_rows('prodotto_mela_galleria_video')) : the_row();
+                    $gallery_sellector = get_sub_field('gallery_selector');
+                    $gallery_image = get_sub_field('immagine_galleria');
+    
+                    if ($gallery_sellector == 'Immagine') { ?>
+                        <li class="swiper-slide">
+                            <img src="<?php echo esc_url($gallery_image['url']); ?>" />
+                        </li>
+                    <?php
+                    } else {
+                    ?>
+                        <li class="swiper-slide">
+                            <?php the_sub_field('video_galleria'); ?>
+                        </li>
+                    <?php
+                    }
+                    ?>
+                <?php endwhile; ?>
+            </ul>
+            <!-- Slider button -->
+            <div class="arrow-container">
+                <div class="swiper-button-prev rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                        <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                        <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                    </svg>
+                </div>
+                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
             </div>
-            <div class="swiper-button-next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-                </svg>
-            </div>
-            <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
         </div>
     </section>
 <?php endif; ?>

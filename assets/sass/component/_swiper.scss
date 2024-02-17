@@ -89,7 +89,7 @@
 
 .swiper.swiperGallery2 {
    height: 780px;
-   width: calc(97.9% - ((100vw - 1280px) / 2));
+   width: 100%;
    .swiper-wrapper {
       height: 720px;
       .swiper-slide {
@@ -133,6 +133,7 @@
 
 .swiper.swiperReleatedPost {
    height: 670px;
+   width: 100%;
    .swiper-wrapper {
       height: calc(100% - 60px);
       .swiper-slide {
@@ -156,6 +157,7 @@
 }
 
 .swiper.swiperHomeMele {
+   width: 100%;
    height: 670px;
    .swiper-wrapper {
       height: calc(100% - 60px);

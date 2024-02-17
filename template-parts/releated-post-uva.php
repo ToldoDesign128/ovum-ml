@@ -1,7 +1,7 @@
 <section class="w-full lg:py-[150px] py-[60px]">
     <p class="font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] lg:mb-[90px] mb-[30px] lg:pl-10 pl-[26px]">Prodotti correlati</p>
-    <div class="mla lg:pl-10 pl-[26px]">
-        <div class="swiper swiperReleatedPost">
+    <div class="lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+        <div class="swiper overflow-visible swiperReleatedPost">
             <?php
             $related_query = new WP_Query(array(
                 'post_type' => 'uva',

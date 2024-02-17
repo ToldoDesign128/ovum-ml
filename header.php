@@ -19,7 +19,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class("scroll-smooth"); ?>>
+<body <?php body_class("scroll-smooth overflow-x-clip"); ?>>
 
     <header class="font-primary font-light w-full absolute z-50">
         <div class="relative z-40">
@@ -27,8 +27,8 @@
                 <!-- Logo -->
                 <?php
                 echo    '<a id="logo-header" href="' . home_url() . '" class="flex">
-                            <img src="' . get_template_directory_uri() . '/assets/img/logo.svg" alt="' . get_bloginfo('name') . '" class="h-full w-full max-h-12">
-                            <img src="' . get_template_directory_uri() . '/assets/img/payoff.svg" alt="' . get_bloginfo('name') . '" class="logo-payoff h-full w-full max-h-6 ml-4">
+                            <img src="' . get_template_directory_uri() . '/assets/img/logo.svg" alt="' . get_bloginfo('name') . '" class="h-full w-full max-h-[60px]">
+                            <img src="' . get_template_directory_uri() . '/assets/img/payoff.svg" alt="' . get_bloginfo('name') . '" class="logo-payoff h-full w-full max-h-8 ml-4">
                         </a>';
                 ?>
 

@@ -1,6 +1,6 @@
 <!-- scroller repeater uva -->
-<section class="mlap lg:pt-[92px] pt-[62px] lg:pl-0 pl-[26px]">
-    <div class="swiper swiperRepeater">
+<section class="lg:pt-[60px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+    <div class="swiper overflow-visible swiperRepeater">
         <ul class="swiper-wrapper">
             <?php
             if (have_rows('uva_repeater_archivio', 10)) :

@@ -120,8 +120,8 @@ $page_id = get_queried_object_id(); ?>
 <section class="lg:my-[120px] my-[60px]">
     <p class="w-full font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:px-10 px-[26px]">Le nostre defogliatrici</p>
     <!-- Loop Macchinari -->
-    <div class="mla lg:pt-[90px] pt-[40px] lg:pl-10 pl-[26px]">
-        <div class="swiper swiperHomeMele">
+    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+        <div class="swiper overflow-visible swiperHomeMele">
             <div class="swiper-wrapper">
                 <?php
                 $loop = new WP_Query(array(
