@@ -3,7 +3,7 @@ header {
     .logo-payoff {
       opacity: 0;
       transform: translateX(-120%);
-      transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .2s ease-in-out;
     }
 
     @media #{$lg} {
@@ -118,12 +118,13 @@ header {
         list-style-type: none;
 
         li {
-          padding: 30px 0;
-          color: $gray-600;
+          padding: 35px 0 22px 0;
+          color: white;
+          opacity: .20;
           position: relative;
           overflow: hidden;
           line-height: 56px;
-          border-bottom: 1px solid $gray-600;
+          border-bottom: 1px solid rgba(255, 255, 255, .20);
           transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 
           a {
@@ -137,15 +138,15 @@ header {
             bottom: 0;
             left: -100%;
             width: 100%;
-            height: 1px;
-            background: $gray-50;
+            height: 2px;
+            background: white;
             transition: left 0.8s;
           }
           @media #{$lg} {
             &:hover,
             :focus,
             :active {
-              color: $gray-50;
+              opacity: 1;
 
               &::after {
                 left: 0;
@@ -164,9 +165,6 @@ header {
 
           @media #{$lg} {
             font-size: 12px;
-            top: 9px;
-          }
-          @media #{$big} {
             top: 0px;
           }
         }

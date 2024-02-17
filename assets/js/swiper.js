@@ -1,8 +1,7 @@
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
+
   loop: true,
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -10,10 +9,19 @@ const swiper = new Swiper('.swiper', {
 });
 // Mobile Sroller
 const swiperScroller = new Swiper('.swiperScroller', {
-  // Optional parameters
+
   loop: false,
 
-  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+// Mobile Sroller Pagina Chi siamo
+const swiperScroller2 = new Swiper('.swiperScroller2', {
+
+  loop: false,
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -24,7 +32,6 @@ const swiperScrollerSingle = new Swiper('.swiperScrollerSingle', {
   slidesPerView: "auto",
   spaceBetween: 20,
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -32,10 +39,9 @@ const swiperScrollerSingle = new Swiper('.swiperScrollerSingle', {
 });
 // Mobile Sroller Sponsor
 const swiperScrollerSponsor = new Swiper('.swiperScrollerSponsor', {
-  // Optional parameters
+
   loop: true,
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -43,10 +49,8 @@ const swiperScrollerSponsor = new Swiper('.swiperScrollerSponsor', {
 });
 // Testimonial
 const swiperTestimonial = new Swiper('.swiperTestimonial', {
-  // Optional parameters
-  loop: false,
+  loop: true,
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -88,7 +92,7 @@ const swiperRepeater = new Swiper('.swiperRepeater', {
   }
 });
 // Single Releated Post
-const swiperReleatedPost= new Swiper('.swiperReleatedPost', {
+const swiperReleatedPost = new Swiper('.swiperReleatedPost', {
   // Optional parameters
   slidesPerView: "auto",
   spaceBetween: 20,
@@ -101,7 +105,7 @@ const swiperReleatedPost= new Swiper('.swiperReleatedPost', {
 });
 
 // Single Home Mele
-const swiperHomeMele= new Swiper('.swiperHomeMele', {
+const swiperHomeMele = new Swiper('.swiperHomeMele', {
   slidesPerView: "auto",
   spaceBetween: 20,
 

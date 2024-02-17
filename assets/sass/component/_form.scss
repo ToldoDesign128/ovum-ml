@@ -15,6 +15,10 @@
     font-size: 16px;
     line-height: 19px;
     font-weight: medium;
+
+    .gfield_required {
+      color: white;
+    }
   }
   input {
     color: white;
@@ -25,51 +29,31 @@
     border-bottom: 1px solid $gray-400;
     width: 100%;
 
-    &.gfield--type-name, &.gfield--type-email {
-      position: relative;
-      overflow: hidden;
-      transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: -100%;
-        width: 100%;
-        height: 1px;
-        background: $gray-50;
-        transition: left 0.8s;
-      }
-      @media #{$lg} {
-        &:hover,
-        :focus,
-        :active, {
-          &::after {
-            left: 0;
-            border: 0;
-            border-bottom: 1px solid $gray-400;
-          }
-        }
-      }
-    }
     @media #{$lg} {
-        &:hover,
-        &:focus,
-        &:active {
-          box-shadow: none !important;
-        }
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none !important;
       }
-  }
-  .ginput_lg:max-w-screen-xl_consent {
-    input {
-      background: transparent;
-      border: 1px solid white;
-      border-radius: 0;
-
-      &::before{
-        color: white;
+    
+      &:focus,
+      &:active {
+        box-shadow: none !important;
+        border-bottom: 2px solid $gray-400;
       }
     }
   }
+
+  #input_2_4_1 {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0;
+
+    &::before {
+      color: white;
+    }
+  }
+
   .gfield_consent_label {
     color: white;
     font-family: "Paralucent";
@@ -82,9 +66,35 @@
   }
   #gform_submit_button_2 {
     width: fit-content;
-    padding: 15px 30px;
+    padding: 19px 41px 16px 41px;
     color: $gray-950;
     background-color: white;
     border-radius: 0;
+  }
+  #input_2_1_3 {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      width: 100%;
+      height: 1px;
+      background: $gray-50;
+      transition: left 0.8s;
+    }
+    @media #{$lg} {
+      &:hover,
+      :focus,
+      :active {
+        &::after {
+          left: 0;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,12 @@
+.arrow-container {
+  #arrowAnimation {
+    transition: left .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .swiper-button-next:hover + #arrowAnimation {
+    left: 16px;
+  }  
+}
+
+.prev-animation{
+  left: 25px;
+}

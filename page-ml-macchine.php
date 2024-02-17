@@ -5,8 +5,9 @@ $page_id = get_queried_object_id(); ?>
     <img class="md:block hidden pt-[400px] w-full object-contain" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF.svg'; ?>">
     <img class="md:hidden block w-full object-contain" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_MOBILE.svg'; ?>">
 
-    <div class="absolute top-[160px] w-full">
+    <div class="hidden absolute top-[160px] w-full">
         <div class="lg:max-w-screen-xl mx-auto flex flex-col lg:justify-center justify-start items-center">
+
             <div class="flex flex-col items-center">
                 <h1 class="max-w-[13ch] w-full font-primary lg:text-[100px] lg:leading-[100px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_titolo_hero')); ?></h1>
                 <?php
@@ -25,6 +26,7 @@ $page_id = get_queried_object_id(); ?>
                     endwhile;
                 endif; ?>
             </div>
+
         </div>
     </div>
 </section>
@@ -56,61 +58,67 @@ $page_id = get_queried_object_id(); ?>
         $titolo_sez_3 = get_field('chi_siamo_titolo_sezione_3', $page_id);
         if ($titolo_sez_3) :
         ?>
-            <p class="max-w-[18ch] lg:text-5xl text-3xl text-gray-950 lg:pb-[50px] pb-[30px] pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
+            <p class="max-w-[18ch] lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 lg:pb-[22px] pb-[15px] pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
             <span class="w-full h-px bg-gray-600"></span>
         <?php endif; ?>
     </div>
     <!-- Repeater sezione 3 -->
-    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-10 px-[26px] lg:pt-[90px] ">
+    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-10 px-[26px] lg:pt-[52px] pt-[40px]">
         <?php
         if (have_rows('chi_siamo_repeater_sezione_3')) :
             while (have_rows('chi_siamo_repeater_sezione_3')) : the_row();
                 // Load sub field value.
                 $titolo_rep_sez_3 = get_sub_field('repeater_titolo_sezione_2');
-                $testo_rep_sez_3 = get_sub_field('repeater_testo_sezione_2'); ?>
-                <li class="lg:w-1/3 w-full py-4 lg:pr-24 pr-4">
-                    <p class="max-w-[16ch] lg:text-4xl text-2xl"><?php echo esc_html($titolo_rep_sez_3); ?></p>
-                    <p class="lg:text-lg text-lg lg:py-8 py-4"><?php echo esc_html($testo_rep_sez_3); ?></p>
-                </li>
+                $testo_rep_sez_3 = get_sub_field('repeater_testo_sezione_2');
+
+                if ($titolo_rep_sez_3) : ?>
+                    <li class="lg:w-1/3 w-full py-4 lg:pr-[65px] pr-4">
+                        <p class="max-w-[15ch] lg:text-[40px] lg:leading-[50px] text-[22px] leading-[28px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
+                        <p class="lg:text-[20px] lg:leading-[32px] text-[18px] leading-[24px] lg:py-[30px] py-[15px]"><?php echo esc_html($testo_rep_sez_3); ?></p>
+                    </li>
         <?php
+                endif;
             endwhile;
         endif; ?>
     </ol>
     <!-- Repeater sezione 3 mobile -->
-    <div class="swiper lg:hidden w-full h-full swiperScroller">
-        <ol class="repeater swiper-wrapper w-full font-primary font-light px-[26px] pt-[30px]">
-            <?php
-            if (have_rows('chi_siamo_repeater_sezione_3')) :
-                while (have_rows('chi_siamo_repeater_sezione_3')) : the_row();
-                    // Load sub field value.
-                    $titolo_rep_sez_3 = get_sub_field('repeater_titolo_sezione_2');
-                    $testo_rep_sez_3 = get_sub_field('repeater_testo_sezione_2'); ?>
-                    <li class="swiper-slide w-[90vw] py-4">
-                        <p class="max-w-[16ch] text-2xl"><?php echo esc_html($titolo_rep_sez_3); ?></p>
-                        <p class="max-w-[90vw] text-lg py-4"><?php echo esc_html($testo_rep_sez_3); ?></p>
-                    </li>
-            <?php
-                endwhile;
-            endif; ?>
-        </ol>
-        <!-- Slider button -->
-        <div class="swiper-button-prev rotate-180 group">
-            <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-            </svg>
-            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
-        </div>
-        <div class="swiper-button-next group">
-            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-            </svg>
+    <div class="px-[26px]">
+        <div class="swiper lg:hidden w-full swiperScroller2">
+            <ol class="repeater swiper-wrapper w-full font-primary font-light  py-4">
+                <?php
+                if (have_rows('chi_siamo_repeater_sezione_3')) :
+                    while (have_rows('chi_siamo_repeater_sezione_3')) : the_row();
+                        // Load sub field value.
+                        $titolo_rep_sez_3 = get_sub_field('repeater_titolo_sezione_2');
+                        $testo_rep_sez_3 = get_sub_field('repeater_testo_sezione_2'); ?>
+                        <li class="swiper-slide w-[90vw] py-4">
+                            <p class="max-w-[16ch] text-2xl"><?php echo esc_html($titolo_rep_sez_3); ?></p>
+                            <p class="max-w-[90vw] text-lg py-4"><?php echo esc_html($testo_rep_sez_3); ?></p>
+                        </li>
+                <?php
+                    endwhile;
+                endif; ?>
+            </ol>
+            <!-- Slider button -->
+            <div class="arrow-container">
+                <div class="swiper-button-prev rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                        <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                        <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                    </svg>
+                </div>
+                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+            </div>
         </div>
     </div>
 </section>
 <!-- Sezione Defogliatrici -->
 <section class="lg:my-[120px] my-[60px]">
-    <p class="w-full text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:px-10 px-[26px]">Le nostre defogliatrici</p>
+    <p class="w-full font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:px-10 px-[26px]">Le nostre defogliatrici</p>
     <!-- Loop Macchinari -->
     <div class="mla lg:pt-[90px] pt-[40px] lg:pl-10 pl-[26px]">
         <div class="swiper swiperHomeMele">
@@ -249,17 +257,18 @@ $page_id = get_queried_object_id(); ?>
                 wp_reset_postdata(); ?>
             </div>
             <!-- Slider button -->
-            <div class="swiper-button-prev rotate-180 group">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-                </svg>
-                <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
-            </div>
-            <div class="swiper-button-next group">
-                <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-                </svg>
+            <div class="arrow-container">
+                <div class="swiper-button-prev rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                        <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                        <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                    </svg>
+                </div>
+                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
             </div>
         </div>
     </div>

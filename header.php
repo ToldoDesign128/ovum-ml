@@ -21,7 +21,7 @@
 
 <body <?php body_class("scroll-smooth"); ?>>
 
-    <header class="font-primary w-full absolute z-50">
+    <header class="font-primary font-light w-full absolute z-50">
         <div class="relative z-40">
             <div class="lg:max-w-screen-xl flex mx-auto py-5 lg:px-10 px-[26px] justify-between items-center">
                 <!-- Logo -->
@@ -44,12 +44,12 @@
         </div>
         <div id="menu" class="absolute flex-col lg:justify-center justify-between top-0 right-0 w-full h-screen overflow-x-hidden bg-gray-950 z-30 transition-all duration-500">
             <!-- Menu Nav -->
-            <nav class="lg:max-w-screen-xl h-full w-full flex items-end mx-auto 3xl:pb-[147px] pb-[40px] lg:px-10 px-[26px]">
+            <nav class="lg:max-w-screen-xl h-full w-full flex items-end mx-auto 3xl:pb-[147px] pb-[10vh] lg:px-10 px-[26px]">
                 <?php
                 wp_nav_menu(array(
                     'theme_location'    => 'primary',
                     'container'         =>  false,
-                    'menu_class'        => 'w-full 3xl:text-[100px] 2xl:text-[70px] text-[50px] font-light',
+                    'menu_class'        => 'w-full lg:text-[100px] lg:leading-[100px] text-[50px] leading-[56px] font-light',
                     'orderby'           => 'menu_order',
                     'items_wrap'        => '<ol id="%1$s" class="%2$s">%3$s</ol>'
                 ));

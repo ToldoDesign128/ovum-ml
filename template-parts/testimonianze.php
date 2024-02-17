@@ -23,12 +23,12 @@
                     $recensione_nome = get_field('nome_e_cognome');
                     if ($recensione_nome) :
                     ?>
-                        <p class="self-end lg:text-lg text-[16px] lg:leading-[22px] font-medium pt-8"><?php echo esc_html($recensione_nome) ?></p>
+                        <p class="self-end lg:text-lg text-[16px] lg:leading-[22px] font-medium pt-8 mr-1"><?php echo esc_html($recensione_nome) ?></p>
                     <?php endif;
                     $recensione_ruolo = get_field('ruolo_e_nome_della_ditta');
                     if ($recensione_ruolo) :
                     ?>
-                        <p class="self-end lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px]"><?php echo esc_html($recensione_ruolo) ?></p>
+                        <p class="self-end lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] mr-1"><?php echo esc_html($recensione_ruolo) ?></p>
                     <?php endif; ?>
                 </div>
 
@@ -36,17 +36,18 @@
 
         </div>
         <!-- Slider button -->
-        <div class="swiper-button-prev rotate-180 group">
-            <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-            </svg>
-            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
-        </div>
-        <div class="swiper-button-next group">
-            <span class="absolute left-0 bg-white h-6 w-0 lg:group-hover:w-3 transition-[width] duration-300"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-            </svg>
+        <div class="arrow-container">
+            <div class="swiper-button-prev rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                    <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                </svg>
+            </div>
+            <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
         </div>
     </div>
 </section>

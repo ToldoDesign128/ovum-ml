@@ -488,11 +488,17 @@ video {
 .bottom-0{
   bottom: 0px;
 }
+.bottom-\[12px\]{
+  bottom: 12px;
+}
 .left-0{
   left: 0px;
 }
 .left-\[1px\]{
   left: 1px;
+}
+.left-\[21px\]{
+  left: 21px;
 }
 .left-px{
   left: 1px;
@@ -502,6 +508,9 @@ video {
 }
 .right-10{
   right: 2.5rem;
+}
+.right-20{
+  right: 5rem;
 }
 .right-\[10px\]{
   right: 10px;
@@ -587,6 +596,9 @@ video {
 .mb-\[14px\]{
   margin-bottom: 14px;
 }
+.mb-\[15px\]{
+  margin-bottom: 15px;
+}
 .mb-\[20px\]{
   margin-bottom: 20px;
 }
@@ -607,6 +619,9 @@ video {
 }
 .ml-4{
   margin-left: 1rem;
+}
+.mr-1{
+  margin-right: 0.25rem;
 }
 .mr-16{
   margin-right: 4rem;
@@ -656,20 +671,17 @@ video {
 .hidden{
   display: none;
 }
-.h-11{
-  height: 2.75rem;
-}
 .h-12{
   height: 3rem;
+}
+.h-14{
+  height: 3.5rem;
 }
 .h-28{
   height: 7rem;
 }
-.h-6{
-  height: 1.5rem;
-}
-.h-\[14px\]{
-  height: 14px;
+.h-5{
+  height: 1.25rem;
 }
 .h-\[229px\]{
   height: 229px;
@@ -679,9 +691,6 @@ video {
 }
 .h-\[30px\]{
   height: 30px;
-}
-.h-\[493px\]{
-  height: 493px;
 }
 .h-\[578px\]{
   height: 578px;
@@ -721,14 +730,14 @@ video {
   max-height: -moz-min-content;
   max-height: min-content;
 }
-.w-0{
-  width: 0px;
-}
 .w-1\/2{
   width: 50%;
 }
-.w-11{
-  width: 2.75rem;
+.w-14{
+  width: 3.5rem;
+}
+.w-3{
+  width: 0.75rem;
 }
 .w-4{
   width: 1rem;
@@ -763,8 +772,14 @@ video {
 .max-w-\[13ch\]{
   max-width: 13ch;
 }
+.max-w-\[15ch\]{
+  max-width: 15ch;
+}
 .max-w-\[16ch\]{
   max-width: 16ch;
+}
+.max-w-\[17ch\]{
+  max-width: 17ch;
 }
 .max-w-\[18ch\]{
   max-width: 18ch;
@@ -901,10 +916,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(3 7 18 / var(--tw-bg-opacity));
 }
-.bg-slate-950{
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 6 23 / var(--tw-bg-opacity));
-}
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -924,10 +935,6 @@ video {
   padding-left: 2.75rem;
   padding-right: 2.75rem;
 }
-.px-8{
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
 .px-\[10px\]{
   padding-left: 10px;
   padding-right: 10px;
@@ -943,10 +950,6 @@ video {
 .px-\[30px\]{
   padding-left: 30px;
   padding-right: 30px;
-}
-.py-0{
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 .py-4{
   padding-top: 1rem;
@@ -968,6 +971,10 @@ video {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.py-\[15px\]{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 .py-\[18px\]{
   padding-top: 18px;
   padding-bottom: 18px;
@@ -984,6 +991,15 @@ video {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.pb-\[12px\]{
+  padding-bottom: 12px;
+}
+.pb-\[13px\]{
+  padding-bottom: 13px;
+}
+.pb-\[15px\]{
+  padding-bottom: 15px;
+}
 .pb-\[20px\]{
   padding-bottom: 20px;
 }
@@ -995,9 +1011,6 @@ video {
 }
 .pb-\[40px\]{
   padding-bottom: 40px;
-}
-.pb-\[5px\]{
-  padding-bottom: 5px;
 }
 .pl-6{
   padding-left: 1.5rem;
@@ -1011,9 +1024,6 @@ video {
 .pr-4{
   padding-right: 1rem;
 }
-.pt-16{
-  padding-top: 4rem;
-}
 .pt-8{
   padding-top: 2rem;
 }
@@ -1023,6 +1033,9 @@ video {
 .pt-\[124px\]{
   padding-top: 124px;
 }
+.pt-\[17px\]{
+  padding-top: 17px;
+}
 .pt-\[20px\]{
   padding-top: 20px;
 }
@@ -1031,6 +1044,9 @@ video {
 }
 .pt-\[30px\]{
   padding-top: 30px;
+}
+.pt-\[34px\]{
+  padding-top: 34px;
 }
 .pt-\[400px\]{
   padding-top: 400px;
@@ -1049,6 +1065,12 @@ video {
 }
 .pt-\[94px\]{
   padding-top: 94px;
+}
+.pb-\[10\]{
+  padding-bottom: 10;
+}
+.pb-\[10vh\]{
+  padding-bottom: 10vh;
 }
 .text-center{
   text-align: center;
@@ -1094,6 +1116,9 @@ video {
 }
 .text-\[28px\]{
   font-size: 28px;
+}
+.text-\[36px\]{
+  font-size: 36px;
 }
 .text-\[40px\]{
   font-size: 40px;
@@ -1203,11 +1228,6 @@ video {
 .mix-blend-lighten{
   mix-blend-mode: lighten;
 }
-.transition-\[width\]{
-  transition-property: width;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1229,7 +1249,7 @@ video {
   height: auto;
   position: relative;
   overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.6s ease-in;
 }
 .accordion-section .accordion-box .accordion-item::after {
   content: "";
@@ -1239,7 +1259,7 @@ video {
   width: 100%;
   height: 2px;
   background: rgb(31, 41, 55);
-  transition: left 0.8s;
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 @media (min-width : 1024px) {
   .accordion-section .accordion-box .accordion-item:hover::after,
@@ -1251,7 +1271,7 @@ video {
 .accordion-section .accordion-box .accordion-item .accordion-text {
   width: 100%;
   cursor: auto;
-  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.6s ease-out;
   max-height: 0;
 }
 .accordion-section .accordion-box .accordion-item span {
@@ -1260,6 +1280,7 @@ video {
   left: 0;
 }
 .accordion-section .accordion-box .accordion-active {
+  height: 100%;
   cursor: auto;
 }
 .accordion-section .accordion-box .accordion-active::after {
@@ -1272,7 +1293,11 @@ video {
 }
 .accordion-section .accordion-box .accordion-active .accordion-text {
   padding: 1.6rem 0;
-  max-height: 300px;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  display: grid;
+  align-content: center;
+  height: 80%;
 }
 .accordion-section .accordion-box .accordion-active span {
   position: absolute;
@@ -1290,6 +1315,17 @@ video {
 }
 .accordion-section .accordion-box-img .image-box .image-active {
   display: block;
+}
+
+.arrow-container #arrowAnimation {
+  transition: left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.arrow-container .swiper-button-next:hover + #arrowAnimation {
+  left: 16px;
+}
+
+.prev-animation {
+  left: 25px;
 }
 
 .button {
@@ -1399,7 +1435,7 @@ video {
 header #logo-header .logo-payoff {
   opacity: 0;
   transform: translateX(-120%);
-  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.2s ease-in-out;
 }
 @media (min-width : 1024px) {
   header #logo-header:hover .logo-payoff {
@@ -1493,12 +1529,13 @@ header #menu nav ol {
   list-style-type: none;
 }
 header #menu nav ol li {
-  padding: 30px 0;
-  color: rgb(75, 85, 99);
+  padding: 35px 0 22px 0;
+  color: white;
+  opacity: 0.2;
   position: relative;
   overflow: hidden;
   line-height: 56px;
-  border-bottom: 1px solid rgb(75, 85, 99);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 header #menu nav ol li a {
@@ -1511,15 +1548,15 @@ header #menu nav ol li::after {
   bottom: 0;
   left: -100%;
   width: 100%;
-  height: 1px;
-  background: rgb(249, 250, 251);
+  height: 2px;
+  background: white;
   transition: left 0.8s;
 }
 @media (min-width : 1024px) {
   header #menu nav ol li:hover,
   header #menu nav ol li :focus,
   header #menu nav ol li :active {
-    color: rgb(249, 250, 251);
+    opacity: 1;
   }
   header #menu nav ol li:hover::after,
   header #menu nav ol li :focus::after,
@@ -1539,11 +1576,6 @@ header #menu nav ol li:before {
 @media (min-width : 1024px) {
   header #menu nav ol li:before {
     font-size: 12px;
-    top: 9px;
-  }
-}
-@media (min-width : 1920px) {
-  header #menu nav ol li:before {
     top: 0px;
   }
 }
@@ -1605,6 +1637,9 @@ footer #FooterLink a::after, footer #credits a::after {
   line-height: 19px;
   font-weight: medium;
 }
+#gform_2 .gfield_label .gfield_required {
+  color: white;
+}
 #gform_2 input {
   color: white;
   font-weight: 200;
@@ -1614,41 +1649,21 @@ footer #FooterLink a::after, footer #credits a::after {
   border-bottom: 1px solid rgb(156, 163, 175);
   width: 100%;
 }
-#gform_2 input.gfield--type-name, #gform_2 input.gfield--type-email {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-#gform_2 input.gfield--type-name::after, #gform_2 input.gfield--type-email::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -100%;
-  width: 100%;
-  height: 1px;
-  background: rgb(249, 250, 251);
-  transition: left 0.8s;
-}
 @media (min-width : 1024px) {
-  #gform_2 input.gfield--type-name:hover::after,
-  #gform_2 input.gfield--type-name :focus::after,
-  #gform_2 input.gfield--type-name :active::after, #gform_2 input.gfield--type-email:hover::after,
-  #gform_2 input.gfield--type-email :focus::after,
-  #gform_2 input.gfield--type-email :active::after {
-    left: 0;
-    border: 0;
-    border-bottom: 1px solid rgb(156, 163, 175);
-  }
   #gform_2 input:hover, #gform_2 input:focus, #gform_2 input:active {
     box-shadow: none !important;
   }
+  #gform_2 input:focus, #gform_2 input:active {
+    box-shadow: none !important;
+    border-bottom: 2px solid rgb(156, 163, 175);
+  }
 }
-#gform_2 .ginput_lg:max-w-screen-xl_consent input {
+#gform_2 #input_2_4_1 {
   background: transparent;
   border: 1px solid white;
   border-radius: 0;
 }
-#gform_2 .ginput_lg:max-w-screen-xl_consent input::before {
+#gform_2 #input_2_4_1::before {
   color: white;
 }
 #gform_2 .gfield_consent_label {
@@ -1664,10 +1679,33 @@ footer #FooterLink a::after, footer #credits a::after {
 #gform_2 #gform_submit_button_2 {
   width: -moz-fit-content;
   width: fit-content;
-  padding: 15px 30px;
+  padding: 19px 41px 16px 41px;
   color: rgb(3, 7, 18);
   background-color: white;
   border-radius: 0;
+}
+#gform_2 #input_2_1_3 {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#gform_2 #input_2_1_3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background: rgb(249, 250, 251);
+  transition: left 0.8s;
+}
+@media (min-width : 1024px) {
+  #gform_2 #input_2_1_3:hover::after,
+  #gform_2 #input_2_1_3 :focus::after,
+  #gform_2 #input_2_1_3 :active::after {
+    left: 0;
+  }
 }
 
 .repeater {
@@ -1678,9 +1716,9 @@ footer #FooterLink a::after, footer #credits a::after {
   content: "0" counter(item);
   counter-increment: item;
   font-size: 15px;
+  line-height: 16px;
   font-family: "Anybody";
   margin-right: 0.6rem;
-  vertical-align: top;
 }
 
 .img-clip {
@@ -1706,21 +1744,17 @@ footer #FooterLink a::after, footer #credits a::after {
 .swiper .swiper-button-prev::after {
   content: "";
 }
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  opacity: 1 !important;
+}
 
 .swiper.swiperScroller {
   height: 300px;
 }
-.swiper.swiperScroller .swiper-button-next,
-.swiper.swiperScroller .swiper-button-prev {
-  top: auto;
-  bottom: 0;
-}
-.swiper.swiperScroller .swiper-button-prev {
-  left: 26px;
-}
-.swiper.swiperScroller .swiper-button-next {
-  left: 66px;
-  right: auto;
+
+.swiper.swiperScroller2 {
+  height: 350px;
 }
 
 .swiper.swiperScrollerSingle {
@@ -1731,33 +1765,9 @@ footer #FooterLink a::after, footer #credits a::after {
 .swiper.swiperScrollerSingle .swiper-slide {
   width: auto !important;
 }
-.swiper.swiperScrollerSingle .swiper-button-next,
-.swiper.swiperScrollerSingle .swiper-button-prev {
-  top: auto;
-  bottom: 0;
-}
-.swiper.swiperScrollerSingle .swiper-button-prev {
-  left: 0;
-}
-.swiper.swiperScrollerSingle .swiper-button-next {
-  left: 36px;
-  right: auto;
-}
 
 .swiper.swiperScrollerSponsor {
   height: 150px;
-}
-.swiper.swiperScrollerSponsor .swiper-button-next,
-.swiper.swiperScrollerSponsor .swiper-button-prev {
-  top: auto;
-  bottom: 0;
-}
-.swiper.swiperScrollerSponsor .swiper-button-prev {
-  left: 0;
-}
-.swiper.swiperScrollerSponsor .swiper-button-next {
-  left: 36px;
-  right: auto;
 }
 
 .swiper.swiperTestimonial {
@@ -1769,18 +1779,6 @@ footer #FooterLink a::after, footer #credits a::after {
   .swiper.swiperTestimonial {
     width: 100%;
   }
-}
-.swiper.swiperTestimonial .swiper-button-next,
-.swiper.swiperTestimonial .swiper-button-prev {
-  top: auto;
-  bottom: 0;
-}
-.swiper.swiperTestimonial .swiper-button-prev {
-  left: 0;
-}
-.swiper.swiperTestimonial .swiper-button-next {
-  left: 36px;
-  right: auto;
 }
 
 .swiper.swiperGallery {
@@ -1798,23 +1796,23 @@ footer #FooterLink a::after, footer #credits a::after {
   .swiper.swiperGallery .swiper-slide {
     height: 300px;
   }
-  .swiper.swiperGallery .swiper-button-next,
-  .swiper.swiperGallery .swiper-button-prev {
-    top: auto;
-    bottom: 0;
-  }
-  .swiper.swiperGallery .swiper-button-prev {
-    left: 0;
-  }
-  .swiper.swiperGallery .swiper-button-next {
-    left: 36px;
-    right: auto;
-  }
+}
+.swiper.swiperGallery .swiper-button-next,
+.swiper.swiperGallery .swiper-button-prev {
+  top: var(--swiper-navigation-top-offset, 50%);
+}
+.swiper.swiperGallery .swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 10px);
+  right: auto;
+}
+.swiper.swiperGallery .swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
 }
 
 .swiper.swiperGallery2 {
   height: 780px;
-  width: 100%;
+  width: calc(97.9% - (100vw - 1280px) / 2);
 }
 .swiper.swiperGallery2 .swiper-wrapper {
   height: 720px;
@@ -1837,18 +1835,6 @@ footer #FooterLink a::after, footer #credits a::after {
     height: 300px;
   }
 }
-.swiper.swiperGallery2 .swiper-button-next,
-.swiper.swiperGallery2 .swiper-button-prev {
-  top: auto;
-  bottom: 0;
-}
-.swiper.swiperGallery2 .swiper-button-prev {
-  left: 35px;
-}
-.swiper.swiperGallery2 .swiper-button-next {
-  left: 70px;
-  right: auto;
-}
 
 .swiper.swiperRepeater {
   height: 300px;
@@ -1856,23 +1842,6 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 .swiper.swiperRepeater .swiper-slide {
   width: 27vw !important;
-}
-@media (max-width : 1024px) {
-  .swiper.swiperRepeater {
-    height: 350px;
-  }
-}
-.swiper.swiperRepeater .swiper-button-next,
-.swiper.swiperRepeater .swiper-button-prev {
-  top: auto;
-  bottom: 0;
-}
-.swiper.swiperRepeater .swiper-button-prev {
-  left: 0;
-}
-.swiper.swiperRepeater .swiper-button-next {
-  left: 36px;
-  right: auto;
 }
 @media (max-width : 1024px) {
   .swiper.swiperRepeater {
@@ -1884,13 +1853,14 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 
 .swiper.swiperReleatedPost {
-  height: 750px;
-  width: 100%;
+  height: 670px;
+}
+.swiper.swiperReleatedPost .swiper-wrapper {
+  height: calc(100% - 60px);
 }
 .swiper.swiperReleatedPost .swiper-wrapper .swiper-slide {
-  width: 416px !important;
-  height: 605px !important;
-  max-height: 605px;
+  height: 100%;
+  width: 386.6666666667px !important;
 }
 .swiper.swiperReleatedPost .swiper-wrapper .swiper-slide img {
   -o-object-fit: cover;
@@ -1903,20 +1873,7 @@ footer #FooterLink a::after, footer #credits a::after {
   .swiper.swiperReleatedPost .swiper-wrapper .swiper-slide {
     width: calc(100% - 26px) !important;
     height: 495px !important;
-    max-height: 495px;
   }
-}
-.swiper.swiperReleatedPost .swiper-button-next,
-.swiper.swiperReleatedPost .swiper-button-prev {
-  top: auto;
-  bottom: 0;
-}
-.swiper.swiperReleatedPost .swiper-button-prev {
-  left: 0;
-}
-.swiper.swiperReleatedPost .swiper-button-next {
-  left: 35px;
-  right: auto;
 }
 
 .swiper.swiperHomeMele {
@@ -1927,7 +1884,7 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 .swiper.swiperHomeMele .swiper-wrapper .swiper-slide {
   height: 100%;
-  width: 406.6666666667px !important;
+  width: 386.6666666667px !important;
 }
 .swiper.swiperHomeMele .swiper-wrapper .swiper-slide img {
   -o-object-fit: cover;
@@ -1942,22 +1899,28 @@ footer #FooterLink a::after, footer #credits a::after {
     height: 495px !important;
   }
 }
-.swiper.swiperHomeMele .swiper-button-next,
-.swiper.swiperHomeMele .swiper-button-prev {
+
+.swiper-button-next,
+.swiper-button-prev {
   top: auto;
   bottom: 0;
 }
-.swiper.swiperHomeMele .swiper-button-prev {
+
+.swiper-button-prev {
   left: 0;
 }
-.swiper.swiperHomeMele .swiper-button-next {
-  left: 35px;
+
+.swiper-button-next {
+  left: 27px;
   right: auto;
 }
 
 @media (min-width : 1024px) {
   .mla {
     margin-left: calc((100vw - 1280px) / 2);
+  }
+  .mlap {
+    margin-left: calc((100vw - 1280px) / 2 + 40px);
   }
 }
 
@@ -1969,9 +1932,6 @@ footer #FooterLink a::after, footer #credits a::after {
   .md\:block{
     display: block;
   }
-  .md\:grid{
-    display: grid;
-  }
   .md\:hidden{
     display: none;
   }
@@ -1980,9 +1940,6 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .md\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .md\:text-\[50px\]{
     font-size: 50px;
@@ -2044,6 +2001,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:mb-\[20px\]{
     margin-bottom: 20px;
   }
+  .lg\:mb-\[25px\]{
+    margin-bottom: 25px;
+  }
   .lg\:mb-\[26px\]{
     margin-bottom: 26px;
   }
@@ -2055,6 +2015,9 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:mb-\[50px\]{
     margin-bottom: 50px;
+  }
+  .lg\:mb-\[90px\]{
+    margin-bottom: 90px;
   }
   .lg\:mr-0{
     margin-right: 0px;
@@ -2083,6 +2046,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:mt-\[35px\]{
     margin-top: 35px;
   }
+  .lg\:mt-\[45px\]{
+    margin-top: 45px;
+  }
   .lg\:mt-\[60px\]{
     margin-top: 60px;
   }
@@ -2103,9 +2069,6 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:h-\[500px\]{
     height: 500px;
-  }
-  .lg\:h-\[603px\]{
-    height: 603px;
   }
   .lg\:h-\[718px\]{
     height: 718px;
@@ -2149,9 +2112,6 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:w-\[190px\]{
     width: 190px;
   }
-  .lg\:w-\[414px\]{
-    width: 414px;
-  }
   .lg\:w-\[416px\]{
     width: 416px;
   }
@@ -2167,6 +2127,9 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:w-full{
     width: 100%;
+  }
+  .lg\:w-\[\]{
+    width: ;
   }
   .lg\:max-w-\[18ch\]{
     max-width: 18ch;
@@ -2206,18 +2169,6 @@ footer #FooterLink a::after, footer #credits a::after {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-  .lg\:py-16{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-  .lg\:py-2{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  .lg\:py-4{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
   .lg\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -2230,6 +2181,10 @@ footer #FooterLink a::after, footer #credits a::after {
     padding-top: 150px;
     padding-bottom: 150px;
   }
+  .lg\:py-\[30px\]{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   .lg\:py-\[50px\]{
     padding-top: 50px;
     padding-bottom: 50px;
@@ -2240,14 +2195,11 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:pb-4{
     padding-bottom: 1rem;
   }
+  .lg\:pb-\[22px\]{
+    padding-bottom: 22px;
+  }
   .lg\:pb-\[25px\]{
     padding-bottom: 25px;
-  }
-  .lg\:pb-\[26px\]{
-    padding-bottom: 26px;
-  }
-  .lg\:pb-\[50px\]{
-    padding-bottom: 50px;
   }
   .lg\:pl-0{
     padding-left: 0px;
@@ -2260,6 +2212,9 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:pr-\[15\%\]{
     padding-right: 15%;
+  }
+  .lg\:pr-\[65px\]{
+    padding-right: 65px;
   }
   .lg\:pt-0{
     padding-top: 0px;
@@ -2278,6 +2233,9 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:pt-\[120px\]{
     padding-top: 120px;
+  }
+  .lg\:pt-\[140px\]{
+    padding-top: 140px;
   }
   .lg\:pt-\[144px\]{
     padding-top: 144px;
@@ -2305,6 +2263,9 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:pt-\[50px\]{
     padding-top: 50px;
+  }
+  .lg\:pt-\[52px\]{
+    padding-top: 52px;
   }
   .lg\:pt-\[90px\]{
     padding-top: 90px;
@@ -2384,9 +2345,6 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:leading-\[20px\]{
     line-height: 20px;
   }
-  .lg\:leading-\[21px\]{
-    line-height: 21px;
-  }
   .lg\:leading-\[22px\]{
     line-height: 22px;
   }
@@ -2398,6 +2356,9 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:leading-\[34px\]{
     line-height: 34px;
+  }
+  .lg\:leading-\[41px\]{
+    line-height: 41px;
   }
   .lg\:leading-\[44px\]{
     line-height: 44px;
@@ -2422,14 +2383,6 @@ footer #FooterLink a::after, footer #credits a::after {
     --tw-text-opacity: 1;
     color: rgb(75 85 99 / var(--tw-text-opacity));
   }
-  .group:hover .lg\:group-hover\:w-3{
-    width: 0.75rem;
-  }
-  @media (min-width: 1024px){
-    .group:hover .lg\:lg\:group-hover\:w-3{
-      width: 0.75rem;
-    }
-  }
 }
 
 @media (min-width: 1280px){
@@ -2438,17 +2391,8 @@ footer #FooterLink a::after, footer #credits a::after {
   }
 }
 
-@media (min-width: 1536px){
-  .\32xl\:text-\[70px\]{
-    font-size: 70px;
-  }
-}
-
 @media (min-width: 1920px){
   .\33xl\:pb-\[147px\]{
     padding-bottom: 147px;
-  }
-  .\33xl\:text-\[100px\]{
-    font-size: 100px;
   }
 }

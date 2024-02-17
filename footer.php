@@ -1,5 +1,5 @@
 <!-- Button Info -->
-<div id="infoBtn" class="font-primary hideBtn fixed right-10 z-30">
+<div id="infoBtn" class="font-primary font-light hideBtn fixed right-10 z-30">
     <?php
     $footer_cta = get_field('footer_cta', 'option');
     // Get sub field values.
@@ -10,16 +10,14 @@
     $footer_cta_button_target = $footer_cta_button['target'] ? $footer_cta_button['target'] : '_self';
 
     ?>
-    <a class="block text-gray-50 bg-gray-950 px-[26px] lg:py-4 py-6 lg:my-4 my-0" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
+    <a class="block text-gray-50 bg-gray-950 px-[30px] pt-[17px] pb-[13px] lg:my-4 my-0" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
         <?php echo esc_html($footer_cta_button_title); ?>
         <span class="bg-gray-800 mix-blend-multiply"></span>
     </a>
 </div>
 
 <!-- Sfumatura -->
-<span class="fixed lg:block hidden bottom-0 left-0 w-full lg:h-16 md:h-10 h-12 z-10" style="
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);">
-</span>
+<span class="fixed lg:block hidden bottom-0 left-0 w-full lg:h-16 md:h-10 h-12 z-10" style="background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"></span>
 
 <?php if (is_page_template('page-contatti.php')) { ?>
     <!-- Non stampo la CTA -->
@@ -42,9 +40,9 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10
                 $footer_cta_button_target = $footer_cta_button['target'] ? $footer_cta_button['target'] : '_self';
 
                 ?>
-                <h6 class="lg:text-5xl md:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] font-light py-4"><?php echo esc_html($footer_cta_title); ?></h6>
+                <h6 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] font-light py-4"><?php echo esc_html($footer_cta_title); ?></h6>
                 <p class="lg:text-xl text-[20px] lg:leading-[32px] leading-[24px] font-light py-4"><?php echo esc_html($footer_cta_testo); ?></p>
-                <a class="button lg:w-fit w-full text-gray-950 font-light bg-gray-100 px-[30px] py-[18px] my-4" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
+                <a class="button lg:w-fit w-full text-gray-950 font-light bg-gray-100 px-[30px] pt-[17px] pb-[13px] my-4" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
                     <?php echo esc_html($footer_cta_button_title); ?>
                     <span class="bg-gray-400 mix-blend-multiply"></span>
                 </a>
@@ -55,13 +53,13 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10
 <?php
 }; ?>
 
-<footer id="footer" class="font-primary relative w-full bg-gray-950 z-40">
+<footer id="footer" class="font-primary font-light relative w-full bg-gray-950 z-40">
     <section class="relative lg:max-w-screen-xl flex flex-col text-gray-50 mx-auto lg:px-10 px-[26px]">
         <!-- Footer sezione 1 -->
-        <div class="w-full flex lg:flex-row flex-col lg:py-[120px] py-[40px]">
-            <h6 class="lg:w-2/3 w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] font-light"><?php echo esc_html(get_field('footer_frase', 'option')); ?></h6>
+        <div class="w-full flex lg:flex-row flex-col justify-between lg:py-[120px] py-[40px]">
+            <h6 class="lg:w-7/12 w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] font-light"><?php echo esc_html(get_field('footer_frase', 'option')); ?></h6>
             <!-- form -->
-            <div class="lg:w-1/3 w-full">
+            <div class="lg:w-4/12 w-full">
                 <?php // gravity_form( 2, false, false, false, '', false ); ?>
             </div>
         </div>
@@ -187,15 +185,15 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10
                 <a href="#" class="lg:hover:text-gray-50">ExVoid</a>
             </p>
         </div>
-        <!-- Return top button -->
-        <div class="absolute lg:block hidden top-[120px] right-10">
-            <a id="ScrollTopBtn" class="button block h-11 w-11 text-gray-950 bg-gray-100 p-[15px]">
-                <img class="rotate-90 w-auto h-[14px]" src="<?php echo get_template_directory_uri() . '/assets/img/acf/arrow-small-left.svg'; ?>" alt="">
-                <span class="bg-gray-400 mix-blend-multiply"></span>
-            </a>
-        </div>
-
+        
     </section>
+    <!-- Return top button -->
+    <div class="absolute lg:block hidden top-[120px] right-20">
+        <a id="ScrollTopBtn" class="button block h-14 w-14 text-gray-950 bg-gray-100 p-[15px]">
+            <img class="rotate-90 w-full h-full" src="<?php echo get_template_directory_uri() . '/assets/img/acf/arrow-small-left.svg'; ?>" alt="">
+            <span class="bg-gray-400 mix-blend-multiply"></span>
+        </a>
+    </div>
 </footer>
 <?php wp_footer(); ?>
 </body>

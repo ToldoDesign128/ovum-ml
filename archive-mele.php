@@ -5,14 +5,14 @@ get_header();
 
 <!-- Hero -->
 <section class="hero h-screen relative">
-    <img class="absolute lg:block hidden top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_mele-header.jpg'; ?>">
-    <img class="absolute lg:hidden block top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/mele_2.jpg'; ?>">
+    <img class="absolute lg:block hidden top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_mele-header.jpg'; ?>" loading="lazy">
+    <img class="absolute lg:hidden block top-0 left-0 w-full h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/mele_2.jpg'; ?>" loading="lazy">
 
     <div class="lg:max-w-screen-xl h-screen mx-auto flex flex-col lg:justify-center justify-start items-center">
-        <h1 class="font-primary lg:w-[632px] w-[322px] lg:text-[75px] lg:leading-[80px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 lg:mt-0 mt-[124px]">
+        <h1 class="font-primary font-light lg:w-[632px] w-[322px] lg:text-[75px] lg:leading-[80px] text-[40px] leading-[45px] text-center text-gray-950 z-10 lg:mt-0 mt-[124px]">
             <?php echo esc_html(get_field('mele_hero_titolo', 8)); ?>
         </h1>
-        <p class="lg:w-[416px] w-[322px] font-primary text-center lg:text-[20px] leading-[32px] tracking-[.4px] text-gray-950 z-10 lg:mt-[35px] mt-[20px]">
+        <p class="lg:w-[416px] w-[322px] font-primary font-light text-center lg:text-[20px] leading-[32px] tracking-[.4px] text-gray-950 z-10 lg:mt-[35px] mt-[20px]">
             <?php echo wp_kses_post(get_field('mele_hero_text', 8)); ?>
         </p>
     </div>
@@ -46,12 +46,12 @@ get_header();
                         </svg>
                     </div>
                     <div class="lg:px-[26px] px-[20px]">
-                        <div class="lg:text-[36px] text-[22px] lg:leading-[44px] leading-[28px]">
+                        <div class="font-primary font-light lg:text-[36px] text-[22px] lg:leading-[44px] leading-[28px]">
                             <?php the_title() ?>
                         </div>
                         <?php if ('prodotto_mela_sottotitolo_hero') :
                             $sottotitolo_hero = get_field('prodotto_mela_sottotitolo_hero') ?>
-                            <p class="lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] font-light"><?php echo esc_html($sottotitolo_hero) ?></p>
+                            <p class="font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px]"><?php echo esc_html($sottotitolo_hero) ?></p>
                         <?php endif; ?>
                         <div class="lg:mt-[26px] mt-[23px]">
                             <?php if (have_rows('prodotto_mela_gruppo_scheda_tecnica')) : ?>
@@ -62,22 +62,30 @@ get_header();
                                     $scheda_releated_4 = get_sub_field('movimenti_idraulici');
                                 ?>
                                     <div class="w-full flex flex-wrap">
-                                        <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
-                                            <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">NUMERO TESTATE</p>
-                                            <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_1); ?></p>
-                                        </div>
-                                        <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
-                                            <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">DISCHI PER TESTATA</p>
-                                            <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_2); ?></p>
-                                        </div>
-                                        <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
-                                            <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TESTATA</p>
-                                            <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_3); ?></p>
-                                        </div>
-                                        <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
-                                            <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">MOVIMENTI IDRAULICI</p>
-                                            <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_4); ?></p>
-                                        </div>
+                                        <?php if ($scheda_releated_1) : ?>
+                                            <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">NUMERO TESTATE</p>
+                                                <p class="w-auto font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_1); ?></p>
+                                            </div>
+                                        <?php endif;
+                                         if ($scheda_releated_2) : ?>
+                                            <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">DISCHI PER TESTATA</p>
+                                                <p class="w-auto font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_2); ?></p>
+                                            </div>
+                                        <?php endif;
+                                         if ($scheda_releated_3) : ?>
+                                            <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TESTATA</p>
+                                                <p class="w-auto font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_3); ?></p>
+                                            </div>
+                                        <?php endif;
+                                         if ($scheda_releated_4) : ?>
+                                            <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
+                                                <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">MOVIMENTI IDRAULICI</p>
+                                                <p class="w-auto font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_4); ?></p>
+                                            </div>
+                                        <?php endif ?>
                                     </div>
                             <?php
                                 endwhile;
