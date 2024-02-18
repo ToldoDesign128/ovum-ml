@@ -485,8 +485,14 @@ video {
 .relative{
   position: relative;
 }
+.sticky{
+  position: sticky;
+}
 .bottom-0{
   bottom: 0px;
+}
+.bottom-\[-10vh\]{
+  bottom: -10vh;
 }
 .bottom-\[12px\]{
   bottom: 12px;
@@ -499,6 +505,9 @@ video {
 }
 .left-\[21px\]{
   left: 21px;
+}
+.left-\[32px\]{
+  left: 32px;
 }
 .left-px{
   left: 1px;
@@ -520,9 +529,6 @@ video {
 }
 .top-\[120px\]{
   top: 120px;
-}
-.top-\[160px\]{
-  top: 160px;
 }
 .top-\[1px\]{
   top: 1px;
@@ -739,6 +745,9 @@ video {
 .w-4{
   width: 1rem;
 }
+.w-5{
+  width: 1.25rem;
+}
 .w-6{
   width: 1.5rem;
 }
@@ -765,6 +774,9 @@ video {
 }
 .w-full{
   width: 100%;
+}
+.min-w-\[130px\]{
+  min-width: 130px;
 }
 .max-w-\[13ch\]{
   max-width: 13ch;
@@ -1011,6 +1023,9 @@ video {
 .pb-\[30px\]{
   padding-bottom: 30px;
 }
+.pb-\[52px\]{
+  padding-bottom: 52px;
+}
 .pl-6{
   padding-left: 1.5rem;
 }
@@ -1046,9 +1061,6 @@ video {
 }
 .pt-\[34px\]{
   padding-top: 34px;
-}
-.pt-\[400px\]{
-  padding-top: 400px;
 }
 .pt-\[40px\]{
   padding-top: 40px;
@@ -1311,17 +1323,19 @@ video {
   transition: left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .arrow-container .swiper-button-next:hover + #arrowAnimation {
-  left: 16px;
+  left: 25px;
 }
 
 .prev-animation {
-  left: 25px;
+  left: 41px;
 }
 
 .button {
   cursor: pointer;
   overflow-x: hidden;
   position: relative;
+  font-size: 18px;
+  line-height: 22px;
 }
 .button span {
   width: 150%;
@@ -1345,6 +1359,8 @@ video {
   bottom: -150px;
 }
 #infoBtn a {
+  font-size: 18px;
+  line-height: 22px;
   overflow-x: hidden;
   position: relative;
 }
@@ -1520,12 +1536,11 @@ header #menu nav ol {
 }
 header #menu nav ol li {
   padding: 35px 0 22px 0;
-  color: white;
-  opacity: 0.2;
+  color: rgb(55, 65, 81);
   position: relative;
   overflow: hidden;
   line-height: 56px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgb(55, 65, 81);
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 header #menu nav ol li a {
@@ -1546,7 +1561,7 @@ header #menu nav ol li::after {
   header #menu nav ol li:hover,
   header #menu nav ol li :focus,
   header #menu nav ol li :active {
-    opacity: 1;
+    color: white;
   }
   header #menu nav ol li:hover::after,
   header #menu nav ol li :focus::after,
@@ -1554,11 +1569,16 @@ header #menu nav ol li::after {
     left: 0;
   }
 }
+@media (min-width : 1920px) {
+  header #menu nav ol li {
+    padding: 50px 0 38px 0;
+  }
+}
 header #menu nav ol li:before {
   content: "0" counter(item);
   counter-increment: item;
   position: absolute;
-  top: 14px;
+  top: 20px;
   left: 0;
   font-size: 10px;
   font-family: "Anybody", sans-serif;
@@ -1566,7 +1586,13 @@ header #menu nav ol li:before {
 @media (min-width : 1024px) {
   header #menu nav ol li:before {
     font-size: 12px;
-    top: 0px;
+    top: 12px;
+  }
+}
+@media (min-width : 1920px) {
+  header #menu nav ol li:before {
+    font-size: 12px;
+    top: 14px;
   }
 }
 header #menu.open {
@@ -1719,6 +1745,7 @@ footer #FooterLink a::after, footer #credits a::after {
 :root {
   --swiper-theme-color: $gray-800;
   --swiper-navigation-sides-offset: 10%;
+  --swiper-navigation-size: 70px;
 }
 
 .swiper {
@@ -1894,6 +1921,8 @@ footer #FooterLink a::after, footer #credits a::after {
 
 .swiper-button-next,
 .swiper-button-prev {
+  height: 15px;
+  margin-top: 0;
   top: auto;
   bottom: 0;
 }
@@ -1903,7 +1932,7 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 
 .swiper-button-next {
-  left: 27px;
+  left: 43px;
   right: auto;
 }
 
@@ -2053,6 +2082,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:h-16{
     height: 4rem;
   }
+  .lg\:h-\[20vh\]{
+    height: 20vh;
+  }
   .lg\:h-\[297px\]{
     height: 297px;
   }
@@ -2171,10 +2203,6 @@ footer #FooterLink a::after, footer #credits a::after {
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  .lg\:py-\[50px\]{
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
   .lg\:pb-16{
     padding-bottom: 4rem;
   }
@@ -2186,6 +2214,9 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:pb-\[25px\]{
     padding-bottom: 25px;
+  }
+  .lg\:pb-\[55px\]{
+    padding-bottom: 55px;
   }
   .lg\:pl-0{
     padding-left: 0px;
@@ -2311,6 +2342,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:text-\[75px\]{
     font-size: 75px;
   }
+  .lg\:text-\[80px\]{
+    font-size: 80px;
+  }
   .lg\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -2380,5 +2414,11 @@ footer #FooterLink a::after, footer #credits a::after {
 @media (min-width: 1920px){
   .\33xl\:pb-\[147px\]{
     padding-bottom: 147px;
+  }
+  .\33xl\:text-\[100px\]{
+    font-size: 100px;
+  }
+  .\33xl\:leading-\[100px\]{
+    line-height: 100px;
   }
 }

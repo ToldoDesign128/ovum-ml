@@ -1,5 +1,5 @@
 <!-- Button Info -->
-<div id="infoBtn" class="font-primary font-light hideBtn fixed right-10 z-30">
+<div id="infoBtn" class="font-primary font-medium hideBtn fixed right-10 z-30">
     <?php
     $footer_cta = get_field('footer_cta', 'option');
     // Get sub field values.
@@ -10,7 +10,7 @@
     $footer_cta_button_target = $footer_cta_button['target'] ? $footer_cta_button['target'] : '_self';
 
     ?>
-    <a class="block text-gray-50 bg-gray-950 px-[30px] pt-[17px] pb-[13px] lg:my-4 my-0" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
+    <a class="min-w-[130px] block text-gray-50 bg-gray-950 px-[30px] pt-[17px] pb-[13px] lg:my-4 my-0" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
         <?php echo esc_html($footer_cta_button_title); ?>
         <span class="bg-gray-800 mix-blend-multiply"></span>
     </a>
@@ -26,7 +26,7 @@
     <!-- CTA -->
     <section class="font-primary w-full lg:mb-[175px] mb-[40px]">
         <div class="lg:max-w-screen-xl mx-auto lg:px-10 px-[10px]">
-            <div class="cta flex flex-col justify-center items-center text-gray-50 bg-gray-950 lg:text-left text-center lg:py-[50px] py-[60px] lg:px-0 px-11">
+            <div class="cta flex flex-col justify-center items-center text-gray-50 bg-gray-950 lg:text-left text-center lg:pt-[50px] pt-[60px] lg:pb-[55px] pb-[52px] lg:px-0 px-11">
                 <?php
 
                 $footer_cta = get_field('footer_cta', 'option');
@@ -41,8 +41,8 @@
 
                 ?>
                 <h6 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] font-light py-4"><?php echo esc_html($footer_cta_title); ?></h6>
-                <p class="lg:text-xl text-[20px] lg:leading-[32px] leading-[24px] font-light py-4"><?php echo esc_html($footer_cta_testo); ?></p>
-                <a class="button lg:w-fit w-full text-gray-950 font-light bg-gray-100 px-[30px] pt-[17px] pb-[13px] my-4" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
+                <p class="lg:text-[20px] lg:leading-[32px] text-[18px] leading-[24px] font-light py-4"><?php echo esc_html($footer_cta_testo); ?></p>
+                <a class="min-w-[130px] button font-medium lg:w-fit w-full text-gray-950 bg-gray-100 px-[30px] pt-[17px] pb-[13px] my-4" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
                     <?php echo esc_html($footer_cta_button_title); ?>
                     <span class="bg-gray-400 mix-blend-multiply"></span>
                 </a>

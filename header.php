@@ -49,7 +49,7 @@
                 wp_nav_menu(array(
                     'theme_location'    => 'primary',
                     'container'         =>  false,
-                    'menu_class'        => 'w-full lg:text-[100px] lg:leading-[100px] text-[50px] leading-[56px] font-light',
+                    'menu_class'        => 'w-full 3xl:text-[100px] 3xl:leading-[100px] lg:text-[80px] lg:leading-[80px] text-[50px] leading-[56px] font-light',
                     'orderby'           => 'menu_order',
                     'items_wrap'        => '<ol id="%1$s" class="%2$s">%3$s</ol>'
                 ));

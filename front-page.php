@@ -230,7 +230,7 @@ $page_id = get_queried_object_id(); ?>
 
                     </div>
 
-                    <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+                    <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
 
                 </div>
 
@@ -506,7 +506,7 @@ $page_id = get_queried_object_id(); ?>
 
                 </div>
 
-                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+                <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
 
             </div>
 
@@ -746,7 +746,7 @@ $page_id = get_queried_object_id(); ?>
 
                 </div>
 
-                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+                <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
 
             </div>
 
@@ -956,7 +956,7 @@ $page_id = get_queried_object_id(); ?>
 
                 </div>
 
-                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+                <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
 
             </div>
 

@@ -2,6 +2,10 @@
   cursor: pointer;
   overflow-x: hidden;
   position: relative;
+
+  font-size: 18px;
+  line-height: 22px;
+
   span {
     width: 150%;
     height: 100%;
@@ -23,10 +27,11 @@
   }
 }
 #infoBtn {
-
-    transition: all 0.8s ease;
-    bottom: -150px;
+  transition: all 0.8s ease;
+  bottom: -150px;
   a {
+    font-size: 18px;
+    line-height: 22px;
     overflow-x: hidden;
     position: relative;
     span {
@@ -58,9 +63,9 @@
     bottom: -100px;
     left: 0;
     right: 0;
-    
-    a{
-      span{
+
+    a {
+      span {
         display: none;
       }
     }
@@ -71,7 +76,7 @@
     opacity: 1;
 
     @media #{$only-mobile} {
-    bottom: 0;      
+      bottom: 0;
     }
   }
 }

@@ -2,33 +2,30 @@
 $page_id = get_queried_object_id(); ?>
 <!-- Hero -->
 <section class="relative">
-    <img class="md:block hidden pt-[400px] w-full object-contain" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF.svg'; ?>">
-    <img class="md:hidden block w-full object-contain" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_MOBILE.svg'; ?>">
+    <span class="sticky lg:block hidden top-0 left-0 w-full lg:h-[20vh] md:h-10 h-12 z-40" style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"></span>
 
-    <div class="hidden absolute top-[160px] w-full">
-        <div class="lg:max-w-screen-xl mx-auto flex flex-col lg:justify-center justify-start items-center">
+    <div class="w-full flex flex-col items-center">
 
-            <div class="flex flex-col items-center">
-                <h1 class="max-w-[13ch] w-full font-primary lg:text-[100px] lg:leading-[100px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_titolo_hero')); ?></h1>
-                <?php
-                if (have_rows('chi_siamo_repeater_hero')) :
-                    while (have_rows('chi_siamo_repeater_hero')) : the_row();
-                        // Load sub field value.
-                        $titolo_rep_hero = get_sub_field('repeater_titolo_hero');
-                ?>
-                        <div class="lg:w-2/3 w-full flex flex-row flex-wrap justify-between font-primary font-light">
-                            <p class="lg:w-4/12 w-full lg:text-[40px] lg:leading-[56px] text-[28px] leading-[32px]"><?php echo esc_html($titolo_rep_hero); ?></p>
-                            <div class="lg:w-6/12 w-full lg:text-20px lg:leading-[24px] text-16px leading-[20px]">
-                                <?php the_sub_field('repeater_testo_hero') ?>
-                            </div>
-                        </div>
-                <?php
-                    endwhile;
-                endif; ?>
-            </div>
-
-        </div>
+        <h1 class="max-w-[13ch] w-full font-primary lg:text-[100px] lg:leading-[100px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_titolo_hero')); ?></h1>
+        <?php
+        if (have_rows('chi_siamo_repeater_hero')) :
+            while (have_rows('chi_siamo_repeater_hero')) : the_row();
+                // Load sub field value.
+                $titolo_rep_hero = get_sub_field('repeater_titolo_hero');
+        ?>
+                <div class="lg:w-2/3 w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px]">
+                    <p class="lg:w-4/12 w-full lg:text-[40px] lg:leading-[44px] text-[28px] leading-[32px]"><?php echo esc_html($titolo_rep_hero); ?></p>
+                    <div class="lg:w-6/12 w-full lg:text-20px lg:leading-[24px] text-16px leading-[20px]">
+                        <?php the_sub_field('repeater_testo_hero') ?>
+                    </div>
+                </div>
+        <?php
+            endwhile;
+        endif; ?>
+        <h3 class="lg:w-2/3 w-full font-primary lg:text-[40px] lg:leading-[56px] text-[28px] leading-[32px] font-light text-center text-gray-950 lg:mt-[120px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_testo_hero')); ?></h3>
     </div>
+    <img class="md:block hidden sticky bottom-[-10vh] w-full object-contain z-10" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF.svg'; ?>">
+    <img class="md:hidden block sticky bottom-0 w-full object-contain z-10" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_MOBILE.svg'; ?>">
 </section>
 <!-- Sezione 2 -->
 <section class="lg:max-w-screen-xl mx-auto lg:mt-[150px] mt-[60px] lg:mb-[110px] mb-[30px]">
