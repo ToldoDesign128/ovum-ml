@@ -12,7 +12,7 @@ get_header();
         <h1 class="font-primary font-light lg:w-[632px] w-[322px] lg:text-[75px] lg:leading-[80px] text-[40px] leading-[45px] text-center text-gray-950 z-10 lg:mt-0 mt-[124px]">
             <?php echo esc_html(get_field('mele_hero_titolo', 8)); ?>
         </h1>
-        <p class="lg:w-[416px] w-[322px] font-primary font-light text-center lg:text-[20px] leading-[32px] tracking-[.4px] text-gray-950 z-10 lg:mt-[35px] mt-[20px]">
+        <p class="lg:w-[416px] w-[322px] font-primary font-light text-center body-copy text-gray-950 z-10 lg:mt-[35px] mt-[20px]">
             <?php echo wp_kses_post(get_field('mele_hero_text', 8)); ?>
         </p>
     </div>
@@ -22,7 +22,7 @@ get_header();
 <?php get_template_part("template-parts/repeater-mela"); ?>
 
 <!-- Loop Prodotti -->
-<section class="lg:max-w-screen-xl w-full mx-auto lg:px-10 px-[26px] lg:mt-[130px] mt-[67px] lg:mb-[150px] mb-[60px]">
+<section class="lg:max-w-screen-xl w-full mx-auto lg:px-10 px-[26px] lg:mt-[120px] mt-[67px] lg:mb-[150px] mb-[60px]">
     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
         <?php
         $loop = new WP_Query(array(
@@ -35,7 +35,7 @@ get_header();
 
         while ($loop->have_posts()) : $loop->the_post(); ?>
 
-            <a href="<?php echo the_permalink(); ?>" class="inline-block img-clip card-post relative group bg-gray-950 mb-[30px]">
+            <a href="<?php echo the_permalink(); ?>" class="inline-block img-clip card-post relative group bg-gray-950 lg:mb-[74px]">
                 <div class="img-clip card-content bg-white group">
                     <div class="img-clip lg:h-[297px] h-[229px] overflow-hidden lg:mb-[26px] mb-[20px] mx-[10px]">
                         <?php the_post_thumbnail('post-thumb-small'); ?>

@@ -18,7 +18,7 @@ $page_id = get_queried_object_id(); ?>
 
         <h1 class="font-primary xl:w-1/2 lg:w-2/3 lg:text-[100px] lg:leading-[100px] text-[50px] leading-[56px] font-light text-center text-gray-950 z-10 py-6 lg:px-0 px-[26px]"><?php echo esc_html(get_field('home_titolo_sezione_1', $page_id)); ?></h1>
 
-        <div class="lg:w-fit w-full flex lg:flex-row flex-col justify-between text-center text-lg py-6 lg:px-0 px-[26px] lg:mb-0 mb-12">
+        <div class="lg:w-fit w-full flex lg:flex-row flex-col justify-between text-center body-copy py-6 lg:px-0 px-[26px] lg:mb-0 mb-12">
 
             <?php
 
@@ -98,7 +98,7 @@ $page_id = get_queried_object_id(); ?>
 
             ?>
 
-                <p class="lg:max-w-[18ch] lg:text-2xl text-xl font-light text-gray-950"><?php echo esc_html($titolo_sez_2); ?></p>
+                <p class="lg:max-w-[18ch] heading-5 font-light text-gray-950"><?php echo esc_html($titolo_sez_2); ?></p>
 
             <?php endif; ?>
 
@@ -256,19 +256,20 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <p class="w-full lg:text-5xl text-3xl text-gray-950 lg:py-12 py-6 pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_2_sez_2); ?></p>
+            <p class="w-full heading-3 text-gray-950 lg:py-12 py-6 pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_2_sez_2); ?></p>
 
             <span class="w-full h-px bg-gray-600"></span>
 
         <?php endif; ?>
 
-        <div class="accordion-section w-full flex lg:flex-row flex-col lg:pt-16 pt-[34px]">
+        <?php if (have_rows('home_accordion_sezione_2', $page_id)) : ?>
 
-            <div class="accordion-box flex flex-col justify-end lg:w-1/2 w-full lg:pr-[15%] lg:py-0 py-8 lg:order-1 order-2">
+            <div class="accordion-section w-full flex lg:flex-row flex-col lg:justify-between lg:pt-16 pt-[34px]">
 
-                <?php
+                <div class="accordion-box flex flex-col justify-end lg:w-5/12 w-full lg:py-0 py-8 lg:order-1 order-2">
 
-                if (have_rows('home_accordion_sezione_2', $page_id)) :
+                    <?php
+
 
                     while (have_rows('home_accordion_sezione_2', $page_id)) : the_row();
 
@@ -278,15 +279,15 @@ $page_id = get_queried_object_id(); ?>
 
                         $titolo_accordion = get_sub_field('titolo_accordion_sezione_2', $page_id);
 
-                ?>
+                    ?>
 
                         <div class="accordion-item">
 
-                            <div class="flex pb-[12px]">
+                            <div class="flex lg:py-0 py-[20px]">
 
                                 <img class="w-6 mr-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icona_accordion . '.svg'; ?>" alt="">
 
-                                <p class="lg:text-2xl text-xl text-gray-950 py-4"><?php echo esc_html($titolo_accordion); ?></p>
+                                <p class="lg:text-[30px] lg:leading-[34px] text-[22px] leading-[28px] text-gray-950"><?php echo esc_html($titolo_accordion); ?></p>
 
                             </div>
 
@@ -300,47 +301,46 @@ $page_id = get_queried_object_id(); ?>
 
                         </div>
 
-                <?php
+                    <?php
 
                     endwhile;
-
-                endif;
-
-                ?>
-
-            </div>
-
-            <div class="accordion-box-img lg:w-1/2 w-full lg:h-[500px] h-[300px] relative overflow-hidden lg:order-2 order-1">
-
-                <div class="image-box absolute top-0 left-0">
-
-                    <?php
-
-                    if (have_rows('home_accordion_sezione_2', $page_id)) :
-
-                        while (have_rows('home_accordion_sezione_2', $page_id)) : the_row();
-
-                            $img_accordion = get_sub_field('immagine_accordion_sezione_3', $page_id);
-
-                    ?>
-
-                            <img class="image-box-item" src="<?php echo esc_url($img_accordion['url']); ?>" alt="<?php echo esc_attr($img_accordion['alt']); ?>" />
-
-                    <?php
-
-                        endwhile;
-
-                    endif;
 
                     ?>
 
                 </div>
 
+                <div class="accordion-box-img lg:w-1/2 w-full lg:h-[580px] h-[300px] relative overflow-hidden lg:order-2 order-1">
 
+                    <div class="image-box absolute top-0 left-0">
+
+                        <?php
+
+                        if (have_rows('home_accordion_sezione_2', $page_id)) :
+
+                            while (have_rows('home_accordion_sezione_2', $page_id)) : the_row();
+
+                                $img_accordion = get_sub_field('immagine_accordion_sezione_3', $page_id);
+
+                        ?>
+
+                                <img class="image-box-item" src="<?php echo esc_url($img_accordion['url']); ?>" alt="<?php echo esc_attr($img_accordion['alt']); ?>" />
+
+                        <?php
+
+                            endwhile;
+
+                        endif;
+
+                        ?>
+
+                    </div>
+
+
+
+                </div>
 
             </div>
-
-        </div>
+        <?php endif; ?>
 
 
 
@@ -364,7 +364,7 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <p class="max-w-[17ch] lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 pr-4 lg:mb-[25px] mb-[15px]" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
+            <p class="lg:w-8/12 w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 pr-4 lg:mb-[25px] mb-[15px]" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
 
             <span class="w-full h-px bg-gray-600"></span>
 
@@ -376,7 +376,7 @@ $page_id = get_queried_object_id(); ?>
 
     <div class="w-full flex justify-between font-primary font-light lg:px-10 px-[26px] lg:mt-[45px] mt-[20px]">
 
-        <div class="lg:w-2/5 w-full text-lg">
+        <div class="lg:w-1/2 w-full body-copy">
 
             <?php the_field('home_testo_sezione_3', $page_id); ?>
 
@@ -428,11 +428,11 @@ $page_id = get_queried_object_id(); ?>
 
                 if ($titolo_rep_sez_3) : ?>
 
-                    <li class="lg:w-1/3 w-full py-4 lg:pr-[65px] pr-4">
+                    <li class="lg:w-1/3 w-full lg:pb-8 lg:pr-[65px] pr-4">
 
                         <p class="max-w-[15ch] lg:text-[40px] lg:leading-[50px] text-[22px] leading-[28px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
 
-                        <p class="lg:text-[20px] lg:leading-[32px] text-[18px] leading-[24px] lg:py-[30px] py-[15px]"><?php echo esc_html($testo_rep_sez_3); ?></p>
+                        <p class="body-copy lg:py-[30px] py-[15px]"><?php echo esc_html($testo_rep_sez_3); ?></p>
 
                     </li>
 
@@ -468,9 +468,9 @@ $page_id = get_queried_object_id(); ?>
 
                         <li class="swiper-slide w-[90vw] py-4">
 
-                            <p class="max-w-[16ch] text-2xl"><?php echo esc_html($titolo_rep_sez_3); ?></p>
+                            <p class="max-w-[16ch] text-[22px] leading-[28px] tracking-[.44px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
 
-                            <p class="max-w-[90vw] text-lg py-4"><?php echo esc_html($testo_rep_sez_3); ?></p>
+                            <p class="max-w-[90vw] body-copy py-4"><?php echo esc_html($testo_rep_sez_3); ?></p>
 
                         </li>
 
@@ -532,7 +532,7 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <a class="lg:w-auto w-full button h-fit font-medium text-gray-950 text-center text-lg bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
+            <a class="lg:w-auto w-full button h-fit font-medium text-gray-950 text-center body-copy bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
 
                 <?php echo esc_html($pulsante_sez_3_title); ?>
 
@@ -548,11 +548,11 @@ $page_id = get_queried_object_id(); ?>
 
 <!-- Sezione Mele -->
 
-<section class="mt-[30px]">
+<section class="lg:mt-[88px] mt-[30px] overflow-x-clip">
 
     <div class="lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
 
-        <p class="w-[14ch] lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Mele e meleti</p>
+        <p class="w-8/12 lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Mele e meleti</p>
 
         <span class="block w-full h-px bg-gray-600"></span>
 
@@ -560,7 +560,7 @@ $page_id = get_queried_object_id(); ?>
 
         <div class="w-full flex justify-between font-primary font-light pt-[25px]">
 
-            <div class="lg:w-2/5 w-full text-lg">
+            <div class="lg:w-1/2 w-full body-copy">
 
                 <p>Una linea per le mele, sviluppata insieme ai produttori sulle loro esigenze economiche e funzionali. Alte prestazioni, consumi bassi, maneggevolezza e personalizzazione grazie al sistema brevettato, alla struttura dei telai e alla costruzione modulare.</p>
 
@@ -758,11 +758,11 @@ $page_id = get_queried_object_id(); ?>
 
 <!-- Sezione Uva -->
 
-<section class="lg:my-[150px] my-[60px]">
+<section class="lg:my-[150px] my-[60px] overflow-x-clip">
 
     <div class="lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
 
-        <p class="w-[14ch] lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Uva e vigneto</p>
+        <p class="w-8/12 lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Uva e vigneto</p>
 
         <span class="block w-full h-px bg-gray-600"></span>
 
@@ -770,7 +770,7 @@ $page_id = get_queried_object_id(); ?>
 
         <div class="w-full flex justify-between font-primary font-light pt-[25px]">
 
-            <div class="lg:w-2/5 w-full text-lg">
+            <div class="lg:w-1/2 w-full body-copy">
 
                 <p>Sviluppata in collaborazione con i viticoltori, la linea uva risponde a tutte le esigenze di pergole, spalliere e tendoni. Per agire efficacemente su tutte le varietà con alte prestazioni, consumi bassi e facilità d’uso, dal pre fioritura alla vendemmia.</p>
 

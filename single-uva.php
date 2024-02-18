@@ -3,10 +3,10 @@
 <?php get_header();
 $page_id = get_queried_object_id(); ?>
 <!-- hero -->
-<section class="hero lg:pt-[230px] pt-[94px]">
+<section class="hero lg:pt-[230px] pt-[94px] overflow-x-clip">
     <div class="h-full max-h-min lg:max-w-screen-xl flex flex-wrap justify-between items-center mx-auto lg:px-10 px-[26px]">
         <div class="lg:w-1/2 w-full font-primary lg:pr-24 lg:order-1 order-2">
-            <p class="uppercase text-sm font-secondary font-medium pb-[15px]">Uva</p>
+            <p class="uppercase lg:text-[12px] lg:leading-[13px] text-[10px] leading-[10px] font-secondary font-medium pb-[15px]">Uva</p>
             <h1 class="lg:text-[75px] lg:leading-[80px] text-[40px] leading-[50px] font-light"><?php the_title(); ?></h1>
             <?php if ('prodotto_uva_sottotitolo_hero') :
                 $sottotitolo_hero = get_field('prodotto_uva_sottotitolo_hero', $page_id) ?>
@@ -14,7 +14,7 @@ $page_id = get_queried_object_id(); ?>
             <?php endif; ?>
             <?php if ('prodotto_uva_testo_hero') :
                 $testo_hero = get_field('prodotto_uva_testo_hero', $page_id) ?>
-                <p class="lg:text-xl lg:leading-[32px] text-[16px] font-light tracking-[0.32px] leading-[22px] lg:pt-[35px] pt-[30px]"><?php echo esc_html($testo_hero) ?></p>
+                <p class="font-light body-copy lg:pt-[35px] pt-[30px]"><?php echo esc_html($testo_hero) ?></p>
                 <ul class="w-full lg:pt-[50px] pt-[30px]">
 
                     <?php endif;
@@ -24,7 +24,7 @@ $page_id = get_queried_object_id(); ?>
                         $icon_rep_hero = get_sub_field('repeater_hero_icona', $page_id);
                         $titolo_rep_hero = get_sub_field('repeater_hero_testo', $page_id); ?>
 
-                        <li class="lg:w-full font-light lg:text-xl lg:leading-[32px] text-[16px] tracking-[0.32px] leading-[22px] flex lg:pt-[14px] pt-[10px] lg:pr-24">
+                        <li class="lg:w-full font-light body-copy flex lg:pt-[14px] pt-[10px] lg:pr-24">
                             <img class="w-4 mr-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icon_rep_hero . '.svg'; ?>" alt="">
                             <?php echo esc_html($titolo_rep_hero) ?>
                         </li>
@@ -116,7 +116,7 @@ $page_id = get_queried_object_id(); ?>
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
             </div>
-            <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+            <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
         </div>
     </div>
 </section>
@@ -162,11 +162,11 @@ if ($titolo_sez_3) :
     <section class="w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
         <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
-            <p class="w-[14ch] lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_3); ?></p>
+            <p class="lg:w-8/12 w-full lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_3); ?></p>
             <span class="w-full h-px bg-gray-600"></span>
 
             <div class="w-full flex justify-between font-primary font-light pt-[25px]">
-                <div class="lg:w-2/5 w-full text-lg">
+                <div class="lg:w-1/2 w-full body-copy">
                     <?php the_field('prodotto_uva_testo_sezione_3', $page_id); ?>
                 </div>
                 <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px]" href="#scheda-tecnica">
@@ -177,17 +177,17 @@ if ($titolo_sez_3) :
             <?php
             if (have_rows('prodotto_uva_accordion_sezione_3', $page_id)) : ?>
                 <!-- Accordion -->
-                <div class="accordion-section w-full flex lg:flex-row flex-col lg:pt-[90px] pt-[40px]">
-                    <div class="accordion-box flex flex-col justify-end lg:w-1/2 w-full lg:pr-[15%] lg:py-0 py-8 lg:order-1 order-2">
+                <div class="accordion-section w-full flex lg:flex-row flex-col lg:justify-between lg:pt-16 pt-[34px]">
+                    <div class="accordion-box flex flex-col justify-end lg:w-5/12 w-full lg:py-0 py-8 lg:order-1 order-2">
                         <?php while (have_rows('prodotto_uva_accordion_sezione_3', $page_id)) : the_row();
 
                             $icona_accordion = get_sub_field('prodotto_uva_icona_accordion_1', $page_id);
                             $titolo_accordion = get_sub_field('prodotto_uva_titolo_accordion_1', $page_id);
                         ?>
                             <div class="accordion-item">
-                                <div class="flex pb-[12px]">
+                                <div class="flex lg:py-0 py-[20px]">
                                     <img class="w-6 mr-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icona_accordion . '.svg'; ?>" alt="">
-                                    <p class="lg:text-2xl text-[22px] text-gray-950 py-4"><?php echo esc_html($titolo_accordion); ?></p>
+                                    <p class="lg:text-[30px] lg:leading-[34px] text-[22px] leading-[28px] text-gray-950"><?php echo esc_html($titolo_accordion); ?></p>
                                 </div>
                                 <div class="accordion-text">
                                     <?php the_sub_field('prodotto_uva_testo_accordion_1', $page_id); ?>
@@ -198,7 +198,7 @@ if ($titolo_sez_3) :
                         endwhile;
                         ?>
                     </div>
-                    <div class="accordion-box-img lg:w-1/2 w-full lg:h-[500px] h-[300px] relative overflow-hidden lg:order-2 order-1">
+                    <div class="accordion-box-img lg:w-1/2 w-full lg:h-[580px] h-[300px] relative overflow-hidden lg:order-2 order-1">
                         <div class="image-box absolute  top-0 left-0">
                             <?php
                             if (have_rows('prodotto_uva_accordion_sezione_3', $page_id)) :
@@ -221,13 +221,13 @@ if ($titolo_sez_3) :
 
 <!-- Gallery -->
 <?php if (have_rows('prodotto_uva_galleria_video')) : ?>
-    <section class="lg:mt-[150px] mt-[70px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+    <section class="lg:mt-[150px] mt-[70px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px] overflow-x-clip">
         <div class="swiper overflow-visible swiperGallery2">
             <ul class="swiper-wrapper">
                 <?php while (have_rows('prodotto_uva_galleria_video')) : the_row();
                     $gallery_sellector = get_sub_field('gallery_selector');
                     $gallery_image = get_sub_field('immagine_galleria');
-    
+
                     if ($gallery_sellector == 'Immagine') { ?>
                         <li class="swiper-slide">
                             <img src="<?php echo esc_url($gallery_image['url']); ?>" />
@@ -255,7 +255,7 @@ if ($titolo_sez_3) :
                         <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                     </svg>
                 </div>
-                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+                <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
             </div>
         </div>
     </section>
@@ -473,136 +473,70 @@ if ($titolo_sez_3) :
                 $scheda_optional_11 = get_sub_field('utilizzo_su_meleto', $page_id);
             ?>
                 <div class="w-full flex flex-wrap">
-                    <?php if ($scheda_optional_1) : ?>
+                    <?php if ($scheda_optional_1 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">JOYSTICK CON IMPIANTO INDIPENDENTE</p>
-                            <?php
-                            $template_path = get_template_directory_uri();
-                            if ($scheda_optional_1 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
-                    <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    <?php endif; ?>
+                    <?php if ($scheda_optional_2) : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">RADIATORE OLIO</p>
-                            <?php
-                            if ($scheda_optional_2 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                     <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    if ($scheda_optional_3 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">RADIATORE OLIO</p>
-                            <?php
-                            if ($scheda_optional_3 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                     <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    if ($scheda_optional_4 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">PIANTONE INCLINABILE</p>
-                            <?php
-                            if ($scheda_optional_4 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                     <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    if ($scheda_optional_5 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">PIANTONE LUNGHEZZA DIVERSA</p>
-                            <?php
-                            if ($scheda_optional_5 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                     <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    if ($scheda_optional_6 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">BRACCIO LUNGHEZZA DIVERSA</p>
-                            <?php
-                            if ($scheda_optional_6 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                     <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    if ($scheda_optional_7 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">TESTATA A 3 DISCHI E 3 DISCHI “SPEZZATI”</p>
-                            <?php
-                            if ($scheda_optional_7 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                     <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    if ($scheda_optional_8 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">TESTATA 2 DISCHI GRANDI (900MM)</p>
-                            <?php
-                            if ($scheda_optional_8 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                     <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    if ($scheda_optional_9 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">CARRELLO DI RIMESSAGGIO</p>
-                            <?php
-                            if ($scheda_optional_9 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                     <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    if ($scheda_optional_10 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">CARRELLO DI RIMESSAGGIO</p>
-                            <?php
-                            if ($scheda_optional_10 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                     <?php endif;
-                    if ($scheda_optional_1) : ?>
-
+                    if ($scheda_optional_11 == 'Si') : ?>
                         <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">UTILIZZO SU MELETO</p>
-                            <?php
-                            if ($scheda_optional_11 == 'Si') {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                            } else {
-                                echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                            }; ?>
+                            <img class="w-6 lg:mr-4 mb-[5px]" src="<?php echo get_template_directory_uri(); ?>/assets/img/acf/check.svg" alt="">
                         </div>
                         <?php endif;
                     // Check rows exists.
@@ -611,15 +545,17 @@ if ($titolo_sez_3) :
                         while (have_rows('optional_aggiuntivi')) : the_row();
                             // Load sub field value.
                             $extra_optional_title = get_sub_field('titolo_optional', $page_id);
-                            $extra_optional_value = get_sub_field('valore_optional', $page_id); ?>
+                            $extra_optional_value = get_sub_field('valore_optional', $page_id);
+
+                            $template_path = get_template_directory_uri();
+                        ?>
                             <div class="w-full flex flex-row items-center lg:justify-normal justify-between py-[10px] border-b  border-gray-950">
                                 <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium"><?php echo esc_html($extra_optional_title); ?></p>
                                 <?php
-                                if ($extra_optional_value == 'Si') {
+                                if ($extra_optional_value == 'Si') :
                                     echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/check.svg" alt="">';
-                                } else {
-                                    echo '<img class="w-6 lg:mr-4 mb-[5px]" src="' . $template_path . '/assets/img/acf/biohazard.svg" alt="">';
-                                }; ?>
+                                endif;
+                                ?>
                             </div>
                     <?php
                         endwhile;
@@ -653,11 +589,11 @@ if ($titolo_sez_6) :
     <section id="altre-configurazioni" class="w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
         <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
-            <p class="w-[14ch] lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_6); ?></p>
+            <p class="lg:w-8/12 w-full lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_6); ?></p>
             <span class="w-full h-px bg-gray-600"></span>
 
             <div class="w-full flex justify-between font-primary font-light pt-[25px]">
-                <div class="lg:w-2/5 w-full text-lg">
+                <div class="lg:w-1/2 w-full body-copy">
                     <?php the_field('prodotto_uva_testo_altre_configurazioni', $page_id); ?>
                 </div>
                 <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px]" href="#scheda-tecnica">
@@ -667,7 +603,7 @@ if ($titolo_sez_6) :
             </div>
             <?php if (have_rows('prodotto_uva_-_accordion_altre_configurazioni', $page_id)) : ?>
                 <!-- Accordion -->
-                <div class="accordion-section w-full flex lg:flex-row flex-col lg:pt-[90px] pt-[40px]">
+                <div class="accordion-section w-full flex lg:flex-row flex-col lg:justify-between lg:pt-16 pt-[34px]">
                     <div class="accordion-box flex flex-col justify-end lg:w-1/2 w-full lg:pr-[15%] lg:pt-0 pt-8 lg:order-1 order-2">
                         <?php while (have_rows('prodotto_uva_-_accordion_altre_configurazioni', $page_id)) : the_row();
 
@@ -675,9 +611,9 @@ if ($titolo_sez_6) :
                             $titolo_accordion = get_sub_field('prodotto_uva_titolo_accordion_1', $page_id);
                         ?>
                             <div class="accordion-item">
-                                <div class="flex pb-[12px]">
+                                <div class="flex lg:py-0 py-[20px]">
                                     <img class="w-6 mr-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icona_accordion . '.svg'; ?>" alt="">
-                                    <p class="lg:text-2xl text-[22px] text-gray-950 py-4"><?php echo esc_html($titolo_accordion); ?></p>
+                                    <p class="lg:text-[30px] lg:leading-[34px] text-[22px] leading-[28px] text-gray-950"><?php echo esc_html($titolo_accordion); ?></p>
                                 </div>
                                 <div class="accordion-text">
                                     <?php the_sub_field('prodotto_uva_testo_accordion_1', $page_id); ?>
@@ -688,7 +624,7 @@ if ($titolo_sez_6) :
                         endwhile;
                         ?>
                     </div>
-                    <div class="accordion-box-img lg:w-1/2 w-full lg:h-[500px] h-[300px] relative overflow-hidden lg:order-2 order-1">
+                    <div class="accordion-box-img lg:w-1/2 w-full lg:h-[580px] h-[300px] relative overflow-hidden lg:order-2 order-1">
                         <div class="image-box absolute  top-0 left-0">
                             <?php
                             if (have_rows('prodotto_uva_accordion_sezione_3', $page_id)) :

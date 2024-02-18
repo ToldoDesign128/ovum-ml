@@ -7,12 +7,12 @@ $page_id = get_queried_object_id(); ?>
     <section class="lg:max-w-screen-xl mx-auto flex flex-row flex-wrap font-primary font-light lg:px-10 px-[26px] lg:pt-[213px] pt-[124px]">
         <!-- Contatti -->
         <div class="lg:w-1/2 w-full flex flex-wrap items-start content-start">
-            <h1 class="w-full lg:text-[75px] text-[40px] lg:leading-[80px] leading-[45px] lg:mb-[50px] mb-[20px]"><?php echo the_title(); ?></h1>
+            <h1 class="w-full heading-2 lg:mb-[50px] mb-[20px]"><?php echo the_title(); ?></h1>
             <div class="lg:w-7/12 w-full">
                 <?php
                 $contatti_sede = get_field('contatti_sede');
                 if ($contatti_sede) : ?>
-                    <p class="max-w-[24ch] text-[16px] leading-[22px] mb-[10px]"><?php echo esc_html($contatti_sede); ?></p>
+                    <p class="max-w-[24ch] body-copy mb-[10px]"><?php echo esc_html($contatti_sede); ?></p>
                 <?php endif;
 
                 $contatti_telefono = get_field('contatti_telefono');
@@ -21,7 +21,7 @@ $page_id = get_queried_object_id(); ?>
                     $contatti_telefono_title = $contatti_telefono['title'];
                     $contatti_telefono_target = $contatti_telefono['target'] ? $contatti_telefono['target'] : '_self';
                 ?>
-                <div class="contatti-link flex text-[16px] leading-[22px]">
+                <div class="contatti-link flex body-copy">
                     <p>Telefono:</p>
                     <a class="ml-2 mb-[14px]" href="<?php echo esc_url($contatti_telefono_url); ?>" target="<?php echo esc_attr($contatti_telefono_target); ?>">
                         <?php echo esc_html($contatti_telefono_title); ?>
@@ -35,7 +35,7 @@ $page_id = get_queried_object_id(); ?>
                     $contatti_email_title = $contatti_email['title'];
                     $contatti_email_target = $contatti_email['target'] ? $contatti_email['target'] : '_self';
                 ?>
-                <div class="contatti-link flex text-[16px] leading-[22px] lg:mb-[35px] mb-[30px]">
+                <div class="contatti-link flex body-copy lg:mb-[35px] mb-[30px]">
                     <p>Email:</p>
                     <a class="ml-2" href="<?php echo esc_url($contatti_email_url); ?>" target="<?php echo esc_attr($contatti_email_target); ?>">
                         <?php echo esc_html($contatti_email_title); ?>
@@ -47,7 +47,7 @@ $page_id = get_queried_object_id(); ?>
                 $contatti_orari = get_field('contatti_orari');
                 if ($contatti_orari) : ?>
                     <h3 class="lg:text-[36px] text-[22px] leading-[28px] lg:mb-[20px]">Orari</h3>
-                    <p class="lg:mb-[35px] mb-[30px] text-[18px] leading-[24px]"><?php echo esc_html($contatti_orari); ?></p>
+                    <p class="lg:mb-[50px] mb-[30px] text-[18px] leading-[24px]"><?php echo esc_html($contatti_orari); ?></p>
                 <?php endif; ?>
 
                 <a class="block button lg:w-[190px] w-full font-medium text-gray-50 text-center lg:text-[18px] leading-[22px] bg-gray-950 px-[30px] pt-[17px] pb-[13px]">
@@ -62,7 +62,7 @@ $page_id = get_queried_object_id(); ?>
         <div class="lg:w-1/2 w-full flex flex-col lg:mt-0 mt-[60px]">
             <h2 class="lg:text-[36px] text-[28px] lg:leading-[44px] leading-[32px]">Richiedi informazioni</h2>
             <div>
-                <?php // gravity_form( 1, false, false, false, '', false );?>
+                <?php gravity_form( 1, false, false, false, '', false );?>
             </div>
         </div>
     </section>

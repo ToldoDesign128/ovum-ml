@@ -44,7 +44,7 @@
         </div>
         <div id="menu" class="absolute flex-col lg:justify-center justify-between top-0 right-0 w-full h-screen overflow-x-hidden bg-gray-950 z-30 transition-all duration-500">
             <!-- Menu Nav -->
-            <nav class="lg:max-w-screen-xl h-full w-full flex items-end mx-auto 3xl:pb-[147px] pb-[10vh] lg:px-10 px-[26px]">
+            <nav class="lg:max-w-screen-xl h-full w-full flex items-end mx-auto pb-[10vh] lg:px-10 px-[26px]">
                 <?php
                 wp_nav_menu(array(
                     'theme_location'    => 'primary',

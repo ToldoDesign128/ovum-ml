@@ -1,5 +1,5 @@
 <!-- scroller repeater mela -->
-<section class="lg:pt-[60px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+<section class="pt-[60px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px] overflow-x-clip">
     <div class="swiper overflow-visible swiperRepeater">
         <ul class="swiper-wrapper">
             <?php
@@ -10,9 +10,9 @@
                     $titolo_rep = get_sub_field('titolo_repeter_mele', 8);
                     $testo_rep = get_sub_field('testo_repeater_mele', 8); ?>
                     <li class="swiper-slide flex flex-col items-start font-primary font-light lg:pr-24 pr-0">
-                        <img class="max-h-8 my-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icona_rep . '.svg'; ?>" alt="">
-                        <p class="w-full text-3xl leading-[34px] my-4"><?php echo esc_html($titolo_rep); ?></p>
-                        <p class="w-full text-[16px] tracking-[0.32px] leading-[22px]"><?php echo esc_html($testo_rep); ?></p>
+                        <img class="max-h-[35px] mb-[15px]" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icona_rep . '.svg'; ?>" alt="">
+                        <p class="w-full heading-4"><?php echo esc_html($titolo_rep); ?></p>
+                        <p class="w-full body-light lg:pr-0 pr-4"><?php echo esc_html($testo_rep); ?></p>
                     </li>
             <?php
                 endwhile;
@@ -30,7 +30,7 @@
                     <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                 </svg>
             </div>
-            <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+            <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
         </div>
     </div>
 </section>

@@ -59,8 +59,8 @@
         <div class="w-full flex lg:flex-row flex-col justify-between lg:py-[120px] py-[40px]">
             <h6 class="lg:w-7/12 w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] font-light"><?php echo esc_html(get_field('footer_frase', 'option')); ?></h6>
             <!-- form -->
-            <div class="lg:w-4/12 w-full">
-                <?php // gravity_form( 2, false, false, false, '', false ); ?>
+            <div class="lg:w-4/12 w-full lg:mt-0 mt-[30px]">
+                <?php gravity_form( 2, false, false, false, '', false ); ?>
             </div>
         </div>
         <!-- Footer sezione 2 -->

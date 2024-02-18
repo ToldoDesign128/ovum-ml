@@ -13,9 +13,9 @@ $page_id = get_queried_object_id(); ?>
                 // Load sub field value.
                 $titolo_rep_hero = get_sub_field('repeater_titolo_hero');
         ?>
-                <div class="lg:w-2/3 w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px]">
+                <div class="lg:w-2/3 w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] mt-[60px]">
                     <p class="lg:w-4/12 w-full lg:text-[40px] lg:leading-[44px] text-[28px] leading-[32px]"><?php echo esc_html($titolo_rep_hero); ?></p>
-                    <div class="lg:w-6/12 w-full lg:text-20px lg:leading-[24px] text-16px leading-[20px]">
+                    <div class="lg:w-6/12 w-full body-copy">
                         <?php the_sub_field('repeater_testo_hero') ?>
                     </div>
                 </div>
@@ -37,9 +37,9 @@ $page_id = get_queried_object_id(); ?>
                 // Load sub field value.
                 $titolo_rep_sez_2 = get_sub_field('repeater_titolo_sezione_2');
                 $testo_rep_sez_2 = get_sub_field('repeater_testo_sezione_2'); ?>
-                <div class="lg:w-1/3 w-full font-primary font-light py-4 lg:pr-24 pr-4">
-                    <p class="max-w-[16ch] lg:text-4xl text-2xl"><?php echo esc_html($titolo_rep_sez_2); ?></p>
-                    <p class="lg:text-lg text-lg lg:py-8 py-4"><?php echo esc_html($testo_rep_sez_2); ?></p>
+                <div class="lg:w-1/3 w-full font-primary font-light lg:pt-0 pt-[40px] lg:pb-8 lg:first:pl-0 lg:pl-8">
+                    <p class="max-w-[16ch] lg:text-[40px] lg:leading-[50px] text-[22px] leading-[28px] lg:tracking-normal tracking-[.44px]"><?php echo esc_html($titolo_rep_sez_2); ?></p>
+                    <p class="body-copy lg:py-8 py-[15px]"><?php echo esc_html($testo_rep_sez_2); ?></p>
                 </div>
         <?php
             endwhile;
@@ -48,7 +48,7 @@ $page_id = get_queried_object_id(); ?>
 
 </section>
 <!-- Sezione le nostre promesse -->
-<section class="lg:max-w-screen-xl mx-auto">
+<section class="lg:max-w-screen-xl mx-auto overflow-x-clip">
     <!-- titolo sezione 3 -->
     <div class="w-full flex flex-col font-primary font-light lg:px-10 px-[26px]">
         <?php
@@ -89,8 +89,8 @@ $page_id = get_queried_object_id(); ?>
                         $titolo_rep_sez_3 = get_sub_field('repeater_titolo_sezione_2');
                         $testo_rep_sez_3 = get_sub_field('repeater_testo_sezione_2'); ?>
                         <li class="swiper-slide w-[90vw] py-4">
-                            <p class="max-w-[16ch] text-2xl"><?php echo esc_html($titolo_rep_sez_3); ?></p>
-                            <p class="max-w-[90vw] text-lg py-4"><?php echo esc_html($testo_rep_sez_3); ?></p>
+                            <p class="max-w-[16ch] text-[22px] leading-[28px] tracking-[.44px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
+                            <p class="max-w-[90vw] body-copy py-4"><?php echo esc_html($testo_rep_sez_3); ?></p>
                         </li>
                 <?php
                     endwhile;
@@ -108,13 +108,13 @@ $page_id = get_queried_object_id(); ?>
                         <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                     </svg>
                 </div>
-                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+                <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
             </div>
         </div>
     </div>
 </section>
 <!-- Sezione Defogliatrici -->
-<section class="lg:my-[120px] my-[60px]">
+<section class="lg:my-[120px] my-[60px] overflow-x-clip">
     <p class="w-full font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:px-10 px-[26px]">Le nostre defogliatrici</p>
     <!-- Loop Macchinari -->
     <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
@@ -265,7 +265,7 @@ $page_id = get_queried_object_id(); ?>
                         <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                     </svg>
                 </div>
-                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+                <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
             </div>
         </div>
     </div>

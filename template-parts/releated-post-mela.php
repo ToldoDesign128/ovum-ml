@@ -1,4 +1,4 @@
-<section class="w-full lg:py-[150px] py-[60px]">
+<section class="w-full lg:py-[150px] py-[60px] overflow-x-clip">
     <p class="font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] lg:mb-[90px] mb-[30px] lg:pl-10 pl-[26px]">Prodotti correlati</p>
     <div class="lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
         <div class="swiper overflow-visible swiperReleatedPost">
@@ -89,7 +89,7 @@
                         <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                     </svg>
                 </div>
-                <span id="arrowAnimation" class="absolute left-[21px] bottom-[12px] block bg-white h-5 w-3 z-10"></span>
+                <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
             </div>
         </div>
     </div>

@@ -494,17 +494,11 @@ video {
 .bottom-\[-10vh\]{
   bottom: -10vh;
 }
-.bottom-\[12px\]{
-  bottom: 12px;
-}
 .left-0{
   left: 0px;
 }
 .left-\[1px\]{
   left: 1px;
-}
-.left-\[21px\]{
-  left: 21px;
 }
 .left-\[32px\]{
   left: 32px;
@@ -726,6 +720,9 @@ video {
 .max-h-80{
   max-height: 20rem;
 }
+.max-h-\[35px\]{
+  max-height: 35px;
+}
 .max-h-\[60px\]{
   max-height: 60px;
 }
@@ -739,9 +736,6 @@ video {
 .w-14{
   width: 3.5rem;
 }
-.w-3{
-  width: 0.75rem;
-}
 .w-4{
   width: 1rem;
 }
@@ -754,11 +748,11 @@ video {
 .w-8{
   width: 2rem;
 }
+.w-8\/12{
+  width: 66.666667%;
+}
 .w-9\/12{
   width: 75%;
-}
-.w-\[14ch\]{
-  width: 14ch;
 }
 .w-\[30px\]{
   width: 30px;
@@ -786,9 +780,6 @@ video {
 }
 .max-w-\[16ch\]{
   max-width: 16ch;
-}
-.max-w-\[17ch\]{
-  max-width: 17ch;
 }
 .max-w-\[18ch\]{
   max-width: 18ch;
@@ -990,6 +981,10 @@ video {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.py-\[20px\]{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .py-\[40px\]{
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1004,9 +999,6 @@ video {
 }
 .pb-\[10vh\]{
   padding-bottom: 10vh;
-}
-.pb-\[12px\]{
-  padding-bottom: 12px;
 }
 .pb-\[13px\]{
   padding-bottom: 13px;
@@ -1131,18 +1123,6 @@ video {
 .text-\[8px\]{
   font-size: 8px;
 }
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
 .font-bold{
   font-weight: 700;
 }
@@ -1164,9 +1144,6 @@ video {
 .leading-\[16px\]{
   line-height: 16px;
 }
-.leading-\[20px\]{
-  line-height: 20px;
-}
 .leading-\[22px\]{
   line-height: 22px;
 }
@@ -1178,9 +1155,6 @@ video {
 }
 .leading-\[32px\]{
   line-height: 32px;
-}
-.leading-\[34px\]{
-  line-height: 34px;
 }
 .leading-\[45px\]{
   line-height: 45px;
@@ -1199,12 +1173,6 @@ video {
 }
 .tracking-\[\.44px\]{
   letter-spacing: .44px;
-}
-.tracking-\[\.4px\]{
-  letter-spacing: .4px;
-}
-.tracking-\[0\.32px\]{
-  letter-spacing: 0.32px;
 }
 .text-gray-400{
   --tw-text-opacity: 1;
@@ -1264,6 +1232,9 @@ video {
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 @media (min-width : 1024px) {
+  .accordion-section .accordion-box .accordion-item {
+    padding: 20px 0 8px 0;
+  }
   .accordion-section .accordion-box .accordion-item:hover::after,
   .accordion-section .accordion-box .accordion-item :focus::after,
   .accordion-section .accordion-box .accordion-item :active::after {
@@ -1271,10 +1242,21 @@ video {
   }
 }
 .accordion-section .accordion-box .accordion-item .accordion-text {
+  padding: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
   width: 100%;
   cursor: auto;
   transition: all 0.6s ease-out;
   max-height: 0;
+}
+@media (min-width : 1024px) {
+  .accordion-section .accordion-box .accordion-item .accordion-text {
+    padding: 12px 0;
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 .accordion-section .accordion-box .accordion-item span {
   position: absolute;
@@ -1294,12 +1276,18 @@ video {
   background: rgb(31, 41, 55);
 }
 .accordion-section .accordion-box .accordion-active .accordion-text {
-  padding: 1.6rem 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
   max-height: -moz-max-content;
   max-height: max-content;
   display: grid;
-  align-content: center;
+  align-content: baseline;
   height: 80%;
+}
+@media only-mobile {
+  .accordion-section .accordion-box .accordion-active .accordion-text {
+    padding-top: 20px;
+  }
 }
 .accordion-section .accordion-box .accordion-active span {
   position: absolute;
@@ -1780,7 +1768,7 @@ footer #FooterLink a::after, footer #credits a::after {
   width: 100%;
 }
 .swiper.swiperScrollerSingle .swiper-slide {
-  width: auto !important;
+  width: 100%;
 }
 
 .swiper.swiperScrollerSponsor {
@@ -1832,7 +1820,7 @@ footer #FooterLink a::after, footer #credits a::after {
   width: 100%;
 }
 .swiper.swiperGallery2 .swiper-wrapper {
-  height: 720px;
+  height: 715px;
 }
 .swiper.swiperGallery2 .swiper-wrapper .swiper-slide {
   width: auto !important;
@@ -1849,7 +1837,7 @@ footer #FooterLink a::after, footer #credits a::after {
     height: 350px;
   }
   .swiper.swiperGallery2 .swiper-wrapper {
-    height: 300px;
+    height: 320px;
   }
 }
 
@@ -1862,7 +1850,7 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 @media (max-width : 1024px) {
   .swiper.swiperRepeater {
-    height: 240px;
+    height: 200px;
   }
   .swiper.swiperRepeater .swiper-slide {
     width: 90vw !important;
@@ -1874,7 +1862,7 @@ footer #FooterLink a::after, footer #credits a::after {
   width: 100%;
 }
 .swiper.swiperReleatedPost .swiper-wrapper {
-  height: calc(100% - 60px);
+  height: calc(100% - 65px);
 }
 .swiper.swiperReleatedPost .swiper-wrapper .swiper-slide {
   height: 100%;
@@ -1886,10 +1874,13 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 @media (max-width : 1024px) {
   .swiper.swiperReleatedPost {
-    height: 580px;
+    height: 542px;
+  }
+  .swiper.swiperReleatedPost .swiper-wrapper {
+    height: 497px !important;
   }
   .swiper.swiperReleatedPost .swiper-wrapper .swiper-slide {
-    width: calc(100% - 26px) !important;
+    width: 100% !important;
     height: 495px !important;
   }
 }
@@ -1899,7 +1890,7 @@ footer #FooterLink a::after, footer #credits a::after {
   height: 670px;
 }
 .swiper.swiperHomeMele .swiper-wrapper {
-  height: calc(100% - 60px);
+  height: calc(100% - 65px);
 }
 .swiper.swiperHomeMele .swiper-wrapper .swiper-slide {
   height: 100%;
@@ -1913,8 +1904,11 @@ footer #FooterLink a::after, footer #credits a::after {
   .swiper.swiperHomeMele {
     height: 580px;
   }
+  .swiper.swiperHomeMele .swiper-wrapper {
+    height: calc(100% - 65px);
+  }
   .swiper.swiperHomeMele .swiper-wrapper .swiper-slide {
-    width: calc(100% - 26px) !important;
+    width: 100% !important;
     height: 495px !important;
   }
 }
@@ -1936,7 +1930,85 @@ footer #FooterLink a::after, footer #credits a::after {
   right: auto;
 }
 
+.heading-1 {
+  font-size: 50px;
+  line-height: 56px;
+}
 @media (min-width : 1024px) {
+  .heading-1 {
+    font-size: 100px;
+    line-height: 100px;
+  }
+}
+
+.heading-2 {
+  font-size: 40px;
+  line-height: 50px;
+}
+@media (min-width : 1024px) {
+  .heading-2 {
+    font-size: 75px;
+    line-height: 80px;
+  }
+}
+
+.heading-3 {
+  font-size: 28px;
+  line-height: 32px;
+}
+@media (min-width : 1024px) {
+  .heading-3 {
+    font-size: 50px;
+    line-height: 56px;
+  }
+}
+
+.heading-4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+@media (min-width : 1024px) {
+  .heading-4 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+
+.heading-5 {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.4px;
+}
+@media (min-width : 1024px) {
+  .heading-5 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.body-copy {
+  font-size: 18px;
+  line-height: 24px;
+}
+@media (min-width : 1024px) {
+  .body-copy {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.4px;
+  }
+}
+
+.body-light {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.32px;
+}
+@media (min-width : 1024px) {
+  .body-light {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
   .mla {
     margin-left: calc((100vw - 1280px) / 2);
   }
@@ -2034,6 +2106,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:mb-\[50px\]{
     margin-bottom: 50px;
   }
+  .lg\:mb-\[74px\]{
+    margin-bottom: 74px;
+  }
   .lg\:mb-\[90px\]{
     margin-bottom: 90px;
   }
@@ -2052,9 +2127,6 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:mt-\[120px\]{
     margin-top: 120px;
   }
-  .lg\:mt-\[130px\]{
-    margin-top: 130px;
-  }
   .lg\:mt-\[150px\]{
     margin-top: 150px;
   }
@@ -2069,6 +2141,9 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:mt-\[60px\]{
     margin-top: 60px;
+  }
+  .lg\:mt-\[88px\]{
+    margin-top: 88px;
   }
   .lg\:block{
     display: block;
@@ -2088,8 +2163,8 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:h-\[297px\]{
     height: 297px;
   }
-  .lg\:h-\[500px\]{
-    height: 500px;
+  .lg\:h-\[580px\]{
+    height: 580px;
   }
   .lg\:h-\[718px\]{
     height: 718px;
@@ -2112,14 +2187,14 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:w-2\/3{
     width: 66.666667%;
   }
-  .lg\:w-2\/5{
-    width: 40%;
-  }
   .lg\:w-3\/4{
     width: 75%;
   }
   .lg\:w-4\/12{
     width: 33.333333%;
+  }
+  .lg\:w-5\/12{
+    width: 41.666667%;
   }
   .lg\:w-6\/12{
     width: 50%;
@@ -2167,6 +2242,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:justify-center{
     justify-content: center;
   }
+  .lg\:justify-between{
+    justify-content: space-between;
+  }
   .lg\:px-0{
     padding-left: 0px;
     padding-right: 0px;
@@ -2209,6 +2287,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:pb-4{
     padding-bottom: 1rem;
   }
+  .lg\:pb-8{
+    padding-bottom: 2rem;
+  }
   .lg\:pb-\[22px\]{
     padding-bottom: 22px;
   }
@@ -2223,6 +2304,12 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:pl-10{
     padding-left: 2.5rem;
+  }
+  .lg\:pl-8{
+    padding-left: 2rem;
+  }
+  .lg\:pr-0{
+    padding-right: 0px;
   }
   .lg\:pr-24{
     padding-right: 6rem;
@@ -2284,26 +2371,15 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:pt-\[52px\]{
     padding-top: 52px;
   }
-  .lg\:pt-\[60px\]{
-    padding-top: 60px;
-  }
   .lg\:pt-\[90px\]{
     padding-top: 90px;
   }
   .lg\:text-left{
     text-align: left;
   }
-  .lg\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
   .lg\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-  .lg\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
   .lg\:text-5xl{
     font-size: 3rem;
@@ -2345,10 +2421,6 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:text-\[80px\]{
     font-size: 80px;
   }
-  .lg\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
   .lg\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2367,9 +2439,6 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:leading-\[22px\]{
     line-height: 22px;
-  }
-  .lg\:leading-\[24px\]{
-    line-height: 24px;
   }
   .lg\:leading-\[32px\]{
     line-height: 32px;
@@ -2395,6 +2464,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:tracking-normal{
     letter-spacing: 0em;
   }
+  .lg\:first\:pl-0:first-child{
+    padding-left: 0px;
+  }
   .lg\:hover\:text-gray-50:hover{
     --tw-text-opacity: 1;
     color: rgb(249 250 251 / var(--tw-text-opacity));
@@ -2412,9 +2484,6 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 
 @media (min-width: 1920px){
-  .\33xl\:pb-\[147px\]{
-    padding-bottom: 147px;
-  }
   .\33xl\:text-\[100px\]{
     font-size: 100px;
   }
