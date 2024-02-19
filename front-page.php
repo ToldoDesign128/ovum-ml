@@ -6,7 +6,7 @@ $page_id = get_queried_object_id(); ?>
 
 <section class="hero h-screen relative">
 
-    <video class="absolute top-0 left-0 w-full h-full object-cover" autoplay muted loop>
+    <video class="absolute top-0 left-0 w-full h-full object-cover" playsinline autoplay muted loop>
 
         <source src="<?php echo get_template_directory_uri() . '/assets/img/video.mp4'; ?>" type="video/mp4">
 
@@ -34,7 +34,7 @@ $page_id = get_queried_object_id(); ?>
 
             ?>
 
-                <a class="button font-primary font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px] lg:my-4 my-2 mx-2" href="<?php echo esc_url($pulsante_hero_url); ?>" target="<?php echo esc_attr($pulsante_hero_target); ?>">
+                <a class="button font-primary font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px] lg:my-4 my-2 mx-2" href="<?php echo esc_url($pulsante_hero_url); ?>" target="<?php echo esc_attr($pulsante_hero_target); ?>">
 
                     <?php echo esc_html($pulsante_hero_title); ?>
 
@@ -56,7 +56,7 @@ $page_id = get_queried_object_id(); ?>
 
             ?>
 
-                <a class="button font-primary font-medium text-gray-50 bg-gray-950 border-gray-950 border px-[30px] pt-[17px] pb-[13px] lg:my-4 my-2 mx-2" href="<?php echo esc_url($pulsante_hero2_url); ?>" target="<?php echo esc_attr($pulsante_hero2_target); ?>">
+                <a class="button font-primary font-medium text-gray-50 bg-gray-950 border-gray-950 border px-[30px] pt-[20px] pb-[16px] lg:my-4 my-2 mx-2" href="<?php echo esc_url($pulsante_hero2_url); ?>" target="<?php echo esc_attr($pulsante_hero2_target); ?>">
 
                     <?php echo esc_html($pulsante_hero2_title); ?>
 
@@ -396,7 +396,7 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
+            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
 
                 <?php echo esc_html($pulsante_sez_3_title); ?>
 
@@ -532,7 +532,7 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <a class="lg:w-auto w-full button h-fit font-medium text-gray-950 text-center body-copy bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
+            <a class="lg:w-auto w-full button h-fit font-medium text-gray-950 text-center body-copy bg-trasparent border-gray-950 border px-[30px] pt-[18px] pb-[18px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
 
                 <?php echo esc_html($pulsante_sez_3_title); ?>
 
@@ -566,7 +566,7 @@ $page_id = get_queried_object_id(); ?>
 
             </div>
 
-            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px]" href="mele">
+            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="mele">
 
                 Guarda tutto
 
@@ -584,7 +584,7 @@ $page_id = get_queried_object_id(); ?>
 
         <div class="swiper overflow-visible swiperHomeMele">
 
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper items-center">
 
                 <?php
 
@@ -604,7 +604,7 @@ $page_id = get_queried_object_id(); ?>
 
                 while ($loop->have_posts()) : $loop->the_post(); ?>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide lg:hover:h-[110%] transition-[height] duration-300">
 
                         <a href="<?php echo the_permalink(); ?>" class="h-full block img-clip relative group bg-gray-950 mb-[30px]">
 
@@ -776,7 +776,7 @@ $page_id = get_queried_object_id(); ?>
 
             </div>
 
-            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px]" href="uva">
+            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="uva">
 
                 Guarda tutto
 
@@ -794,7 +794,7 @@ $page_id = get_queried_object_id(); ?>
 
         <div class="swiper overflow-visible swiperHomeMele">
 
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper items-center">
 
                 <?php
 

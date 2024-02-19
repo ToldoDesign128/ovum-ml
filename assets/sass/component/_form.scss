@@ -1,99 +1,294 @@
-.gform_required_legend {
-  display: none;
-}
-
-#gform_2 {
-  max-width: 416px;
-
-  @media #{$only-mobile} {
-    max-width: 100%;
+#gform_wrapper_1 {
+  padding-top: 35px;
+  
+  & > div:nth-child(2) > p:nth-child(1) {
+    display: none;
   }
 
-  .gfield_label {
-    color: white;
-    font-family: "Paralucent";
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: medium;
+  #field_1_1 > legend {
+    color: $gray-950;
 
-    .gfield_required {
-      color: white;
+    & > span > span {
+      color: $gray-950;
     }
   }
-  input {
-    color: white;
-    font-weight: 200;
+
+  #input_1_1_3 {
+    height: 30px;
     background: transparent;
-    border-radius: 0;
+    color: $gray-800;
     border: 0;
-    border-bottom: 1px solid $gray-400;
-    width: 100%;
+    border-radius: 0;
+    border-bottom: 1px solid $gray-700;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none !important;
+    }
+  }
+
+  #field_1_3 > label {
+    color: $gray-950;
+    & > span > span {
+      color: $gray-950;
+    }
+  }
+  #input_1_3 {
+    height: 30px;
+    background: transparent;
+    color: $gray-700;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $gray-700;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none !important;
+    }
+  }
+  #input_1_4 {
+    height: 30px;
+    background: transparent;
+    color: $gray-700;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $gray-700;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none !important;
+    }
+  }
+
+  #input_1_6 {
+    min-block-size: 90px;
+    background: transparent;
+    color: $gray-700;
+    border-radius: 0;
+    border: 1px solid $gray-700;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none !important;
+    }
 
     @media #{$lg} {
-      &:hover,
-      &:focus,
-      &:active {
-        box-shadow: none !important;
-      }
-    
-      &:focus,
-      &:active {
-        box-shadow: none !important;
-        border-bottom: 2px solid $gray-400;
-      }
+      min-block-size: 130px;
     }
   }
 
-  #input_2_4_1 {
+  #field_1_7 > legend:nth-child(1) {
+    display: none;
+  }
+
+  #input_1_7_1 {
     background: transparent;
-    border: 1px solid white;
     border-radius: 0;
+    border: 1px solid $gray-300;
 
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none !important;
+    }
     &::before {
-      color: white;
+      color: $gray-950;
     }
   }
 
-  .gfield_consent_label {
-    color: white;
-    font-family: "Paralucent";
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 200;
-  }
-  .gform_footer .top_label {
-    margin-block-start: 35px !important;
-  }
-  #gform_submit_button_2 {
-    width: fit-content;
-    padding: 19px 41px 16px 41px;
-    color: $gray-950;
-    background-color: white;
-    border-radius: 0;
-  }
-  #input_2_1_3 {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  #field_1_8 {
+    .ginput_container_multiselect {
+      #input_1_8 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 0;
+        border: 0;
+        box-shadow: none;
+        option {
+          width: 48%;
+          background-color: transparent;
+          color: $gray-950;
+          border-radius: 0;
+          border: 1px solid $gray-950;
+          padding: 17px 30px 13px 30px;
+          transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 
+          @media #{$lg} {
+            &:hover {
+              background-color: $gray-300;
+            }
+          }
+          &:checked {
+            background-color: $gray-950;
+            color: $gray-50;
+          }
+        }
+      }
+    }
+  }
+
+  #input_1_1,
+  #field_1_3,
+  #field_1_4 {
+    position: relative;
+    overflow-x: hidden;
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
       left: -100%;
+      height: 2px;
+      background-color: $gray-950;
       width: 100%;
-      height: 1px;
-      background: $gray-50;
       transition: left 0.8s;
     }
+
     @media #{$lg} {
-      &:hover,
-      :focus,
-      :active {
+      &:hover {
         &::after {
-          left: 0;
+          left: 0%;
         }
+      }
+    }
+  }
+
+  #gform_submit_button_1 {
+    margin-block-start: 26px;
+    width: 100%;
+    background: $gray-950;
+    color: $gray-50;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 17px 30px 13px 30px;
+    border-radius: 0;
+    position: relative;
+    overflow-x: hidden;
+    transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    @media #{$lg} {
+      width: fit-content;
+      min-width: 190px;
+
+      &:hover {
+        background-color: $gray-700;
+      }
+    }
+  }
+}
+
+#gform_wrapper_2 {
+  & > div > p {
+    display: none;
+  }
+
+  #field_2_1 > legend {
+    color: $gray-50;
+
+    & > span > span {
+      color: $gray-50;
+    }
+  }
+  #input_2_1_3 {
+    height: 30px;
+    background: transparent;
+    color: $gray-200;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $gray-300;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none !important;
+    }
+  }
+  #field_2_3 > label {
+    color: $gray-50;
+    & > span > span {
+      color: $gray-50;
+    }
+  }
+  #input_2_3 {
+    height: 30px;
+    background: transparent;
+    color: $gray-200;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $gray-300;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none !important;
+    }
+  }
+  #input_2_4_1 {
+    background: transparent;
+    border-radius: 0;
+    border: 1px solid $gray-300;
+
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: none !important;
+    }
+    &::before {
+      color: $gray-50;
+    }
+  }
+  #field_2_4 > div > label {
+    color: $gray-50;
+  }
+
+  #input_2_1,
+  .ginput_container_email {
+    position: relative;
+    overflow-x: hidden;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      height: 2px;
+      background-color: $gray-50;
+      width: 100%;
+      transition: left 0.8s;
+    }
+
+    @media #{$lg} {
+      &:hover {
+        &::after {
+          left: 0%;
+        }
+      }
+    }
+  }
+
+  #gform_submit_button_2 {
+    margin-block-start: 26px;
+    width: 100%;
+    background: $gray-50;
+    color: $gray-950;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border-radius: 0;
+    position: relative;
+    overflow-x: hidden;
+    transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    @media #{$lg} {
+      width: fit-content;
+
+      &:hover {
+        background-color: $gray-300;
       }
     }
   }

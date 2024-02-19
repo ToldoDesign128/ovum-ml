@@ -23,7 +23,7 @@ get_header();
 
 <!-- Loop Prodotti -->
 <section class="lg:max-w-screen-xl w-full mx-auto lg:px-10 px-[26px] lg:mt-[120px] mt-[67px] lg:mb-[150px] mb-[60px]">
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-center">
         <?php
         $loop = new WP_Query(array(
             'post_type'         => 'mele',
@@ -35,7 +35,7 @@ get_header();
 
         while ($loop->have_posts()) : $loop->the_post(); ?>
 
-            <a href="<?php echo the_permalink(); ?>" class="inline-block img-clip card-post relative group bg-gray-950 lg:mb-[74px]">
+            <a href="<?php echo the_permalink(); ?>" class="inline-block img-clip card-post relative group bg-gray-950 lg:h-[90%] h-full lg:hover:h-[95%] transition-[height] duration-300 lg:mb-[74px]">
                 <div class="img-clip card-content bg-white group">
                     <div class="img-clip lg:h-[297px] h-[229px] overflow-hidden lg:mb-[26px] mb-[20px] mx-[10px]">
                         <?php the_post_thumbnail('post-thumb-small'); ?>

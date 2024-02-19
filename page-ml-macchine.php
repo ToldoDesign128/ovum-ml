@@ -2,33 +2,36 @@
 $page_id = get_queried_object_id(); ?>
 <!-- Hero -->
 <section class="relative">
-    <span class="sticky lg:block hidden top-0 left-0 w-full lg:h-[20vh] md:h-10 h-12 z-40" style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"></span>
+    <span class="sticky block top-0 left-0 w-full 3xl:h-[25vh] lg:h-[20vh] h-[20vh] z-40" style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"></span>
 
-    <div class="w-full flex flex-col items-center">
+    <div class="w-full flex flex-col items-center lg:mb-0 mb-[-40vh]">
 
-        <h1 class="max-w-[13ch] w-full font-primary lg:text-[100px] lg:leading-[100px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_titolo_hero')); ?></h1>
+        <h1 class="max-w-[13ch] w-full font-primary lg:text-[100px] lg:leading-[100px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 mb-[120px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_titolo_hero')); ?></h1>
         <?php
         if (have_rows('chi_siamo_repeater_hero')) :
             while (have_rows('chi_siamo_repeater_hero')) : the_row();
                 // Load sub field value.
                 $titolo_rep_hero = get_sub_field('repeater_titolo_hero');
         ?>
-                <div class="lg:w-2/3 w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] mt-[60px]">
-                    <p class="lg:w-4/12 w-full lg:text-[40px] lg:leading-[44px] text-[28px] leading-[32px]"><?php echo esc_html($titolo_rep_hero); ?></p>
-                    <div class="lg:w-6/12 w-full body-copy">
+                <div class="lg:w-2/3 w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] mt-[60px] ">
+                    <p class="lg:w-4/12 w-full lg:text-[40px] lg:leading-[44px] text-[28px] leading-[32px] lg:px-0 px-[26px]"><?php echo esc_html($titolo_rep_hero); ?></p>
+                    <div class="lg:w-6/12 w-full body-copy lg:mt-0 mt-[15px] lg:px-0 px-[26px]">
                         <?php the_sub_field('repeater_testo_hero') ?>
                     </div>
                 </div>
         <?php
             endwhile;
         endif; ?>
-        <h3 class="lg:w-2/3 w-full font-primary lg:text-[40px] lg:leading-[56px] text-[28px] leading-[32px] font-light text-center text-gray-950 lg:mt-[120px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_testo_hero')); ?></h3>
+        <h3 class="lg:w-2/3 w-full font-primary lg:text-[40px] lg:leading-[56px] text-[28px] leading-[32px] font-light text-center text-gray-950 lg:mt-[120px] mt-[60px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_testo_hero')); ?></h3>
     </div>
-    <img class="md:block hidden sticky bottom-[-10vh] w-full object-contain z-10" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF.svg'; ?>">
-    <img class="md:hidden block sticky bottom-0 w-full object-contain z-10" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_MOBILE.svg'; ?>">
+    <div class="sticky bottom-[-10vh] w-full z-10">
+        <img class="md:block hidden w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF.svg'; ?>">
+        <img class="md:hidden block w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_MOBILE.svg'; ?>">
+        <span class="absolute bottom-0 block w-full lg:h-full h-[65%] -z-10" style="background: linear-gradient(0deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);"></span>
+    </div>
 </section>
 <!-- Sezione 2 -->
-<section class="lg:max-w-screen-xl mx-auto lg:mt-[150px] mt-[60px] lg:mb-[110px] mb-[30px]">
+<section class="lg:max-w-screen-xl mx-auto lg:mt-[150px] lg:mb-[110px] mb-[30px]">
     <!-- Repeater sezione 2 -->
     <div class="w-full flex flex-row flex-wrap lg:px-10 px-[26px]">
         <?php
@@ -119,7 +122,7 @@ $page_id = get_queried_object_id(); ?>
     <!-- Loop Macchinari -->
     <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
         <div class="swiper overflow-visible swiperHomeMele">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper items-center">
                 <?php
                 $loop = new WP_Query(array(
                     'post_type'         => 'mele',

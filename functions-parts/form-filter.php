@@ -25,5 +25,5 @@ function input_to_button($button, $form)
     }
     $new_button->setAttribute('class', $btn_classes);
     $input->parentNode->replaceChild($new_button, $input);
-    return '<div class="wrapper-button">' . $dom->saveHtml($new_button) . '</div>';
+    return '<div class="wrapper-button">' . $dom->saveHtml( $new_button ) . '<span class="bg-gray-400 mix-blend-multiply"></span></div>';
 }

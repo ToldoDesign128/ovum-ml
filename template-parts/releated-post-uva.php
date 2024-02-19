@@ -13,7 +13,7 @@
 
             if ($related_query->have_posts()) { ?>
 
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper items-center">
 
                 <?php while ($related_query->have_posts()) { ?>
                     <?php $related_query->the_post(); ?>

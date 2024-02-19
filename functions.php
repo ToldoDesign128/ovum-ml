@@ -299,4 +299,4 @@ require dirname(__FILE__) . '/functions-parts/cpt-testimonials.php';
 
 // Gravity form filter
 
-require dirname(__FILE__) . '/functions-parts/form-filter.php';
+// require dirname(__FILE__) . '/functions-parts/form-filter.php';

@@ -50,7 +50,7 @@ $page_id = get_queried_object_id(); ?>
                     <p class="lg:mb-[50px] mb-[30px] text-[18px] leading-[24px]"><?php echo esc_html($contatti_orari); ?></p>
                 <?php endif; ?>
 
-                <a class="block button lg:w-[190px] w-full font-medium text-gray-50 text-center lg:text-[18px] leading-[22px] bg-gray-950 px-[30px] pt-[17px] pb-[13px]">
+                <a class="block button lg:w-[190px] w-full font-medium text-gray-50 text-center lg:text-[18px] leading-[22px] bg-gray-950 px-[30px] pt-[20px] pb-[16px]">
                     Rivenditori
                     <span class="bg-gray-800 mix-blend-lighten"></span>
                 </a>
@@ -75,7 +75,7 @@ $page_id = get_queried_object_id(); ?>
             </div>
         </div>
         <div class="w-full flex justify-end px-[26px] lg:pt-[50px] pt-[40px] lg:px-0">
-            <a href="<?php echo esc_url($contatti_email_url); ?>" class="button block lg:w-fit w-full font-medium text-gray-950 text-center lg:text-[18px] leading-[22px] bg-trasparent border-gray-950 border px-[30px] pt-[17px] pb-[13px]" target="_blank">
+            <a href="<?php echo esc_url($contatti_email_url); ?>" class="button block lg:w-fit w-full font-medium text-gray-950 text-center lg:text-[18px] leading-[22px] bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" target="_blank">
                 Diventa rivenditore
                 <span class="bg-gray-300 mix-blend-multiply"></span>
             </a>
