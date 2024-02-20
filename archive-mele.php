@@ -35,7 +35,7 @@ get_header();
 
         while ($loop->have_posts()) : $loop->the_post(); ?>
 
-            <a href="<?php echo the_permalink(); ?>" class="inline-block img-clip card-post relative group bg-gray-950 lg:h-[90%] h-full lg:hover:h-[95%] transition-[height] duration-300 lg:mb-[74px]">
+            <a href="<?php echo the_permalink(); ?>" class="animationReveal inline-block img-clip card-post relative group bg-gray-950 lg:h-[90%] h-full lg:hover:h-[95%] transition-[height] duration-300 lg:mb-[74px]">
                 <div class="img-clip card-content bg-white group">
                     <div class="img-clip lg:h-[297px] h-[229px] overflow-hidden lg:mb-[26px] mb-[20px] mx-[10px]">
                         <?php the_post_thumbnail('post-thumb-small'); ?>

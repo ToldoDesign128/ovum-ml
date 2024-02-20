@@ -275,12 +275,8 @@ function add_theme_scripts()
 	wp_enqueue_style('style', get_stylesheet_uri());
 
 
-
+	wp_enqueue_script("ML-scrollreveal", 'https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js', array(), null, true);
 	wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), 1.1, true);
-
-
-
-	// wp_enqueue_script('script', get_template_directory_uri() . '/main.min.js', array('jquery'), 1.1, true);
 
 	wp_enqueue_script('script', get_template_directory_uri() . '/main.js', array('jquery'), 1.1, true);
 }

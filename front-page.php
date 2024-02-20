@@ -88,7 +88,7 @@ $page_id = get_queried_object_id(); ?>
 
         <!-- sponsor -->
 
-        <div class="w-full flex flex-wrap justify-between font-primary py-8 lg:px-10 px-[26px]">
+        <div class="animationReveal w-full flex flex-wrap justify-between font-primary py-8 lg:px-10 px-[26px]">
 
             <?php
 
@@ -246,7 +246,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Blocco benefici -->
 
-    <div class="w-full flex flex-col font-primary font-light lg:px-10 px-[26px] lg:pt-16">
+    <div class="animationReveal w-full flex flex-col font-primary font-light lg:px-10 px-[26px] lg:pt-16">
 
         <?php
 
@@ -354,7 +354,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- titolo sezione 3 -->
 
-    <div class="w-full flex flex-col font-primary font-light lg:px-10 px-[26px] ">
+    <div class="animationReveal w-full flex flex-col font-primary font-light lg:px-10 px-[26px] ">
 
         <?php
 
@@ -428,7 +428,7 @@ $page_id = get_queried_object_id(); ?>
 
                 if ($titolo_rep_sez_3) : ?>
 
-                    <li class="lg:w-1/3 w-full lg:pb-8 lg:pr-[65px] pr-4">
+                    <li class="animationReveal lg:w-1/3 w-full lg:pb-8 lg:pr-[65px] pr-4">
 
                         <p class="max-w-[15ch] lg:text-[40px] lg:leading-[50px] text-[22px] leading-[28px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
 
@@ -466,7 +466,7 @@ $page_id = get_queried_object_id(); ?>
 
                         $testo_rep_sez_3 = get_sub_field('testo_repeater_sezione_3'); ?>
 
-                        <li class="swiper-slide w-[90vw] py-4">
+                        <li class="animationReveal swiper-slide w-[90vw] py-4">
 
                             <p class="max-w-[16ch] text-[22px] leading-[28px] tracking-[.44px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
 
@@ -516,7 +516,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Pulsante mobile -->
 
-    <div class="w-full lg:hidden flex px-[26px] py-8">
+    <div class="animationReveal w-full lg:hidden flex px-[26px] py-8">
 
         <?php
 
@@ -550,7 +550,7 @@ $page_id = get_queried_object_id(); ?>
 
 <section class="lg:mt-[88px] mt-[30px] overflow-x-clip">
 
-    <div class="lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
+    <div class="animationReveal lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
 
         <p class="w-8/12 lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Mele e meleti</p>
 
@@ -760,7 +760,7 @@ $page_id = get_queried_object_id(); ?>
 
 <section class="lg:my-[150px] my-[60px] overflow-x-clip">
 
-    <div class="lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
+    <div class="animationReveal lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
 
         <p class="w-8/12 lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Uva e vigneto</p>
 

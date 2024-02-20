@@ -124,7 +124,7 @@ $page_id = get_queried_object_id(); ?>
 <?php
 $gallery_sez_2 = get_field('prodotto_mela_galleria_sezione_2');
 if ($gallery_sez_2) : ?>
-    <section class="w-full lg:pt-[140px] pt-[60px]">
+    <section class="animationReveal w-full lg:pt-[140px] pt-[60px]">
         <!-- Gallery -->
         <div class="lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
             <div class="swiper w-full swiperGallery">
@@ -159,7 +159,7 @@ if ($gallery_sez_2) : ?>
 $titolo_sez_3 = get_field('prodotto_mela_titolo_sezione_3', $page_id);
 if ($titolo_sez_3) :
 ?>
-    <section class="w-full lg:pt-[120px] pt-[60px]">
+    <section class="animationReveal w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
         <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
             <p class="lg:w-8/12 w-full lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_3); ?></p>
@@ -220,7 +220,7 @@ if ($titolo_sez_3) :
 <?php endif; ?>
 <!-- Gallery -->
 <?php if (have_rows('prodotto_mela_galleria_video')) : ?>
-    <section class="lg:mt-[150px] mt-[70px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+    <section class="animationReveal lg:mt-[150px] mt-[70px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
         <div class="swiper lg:overflow-visible overflow-clip swiperGallery2">
             <ul class="swiper-wrapper">
                 <?php while (have_rows('prodotto_mela_galleria_video')) : the_row();
@@ -261,7 +261,7 @@ if ($titolo_sez_3) :
 <?php endif; ?>
 
 <!-- Scheda Tecnica -->
-<section id="scheda-tecnica" class="w-full lg:mt-[120px] mt-[70px]">
+<section id="scheda-tecnica" class="animationReveal w-full lg:mt-[120px] mt-[70px]">
     <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
         <h5 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] border-b border-gray-950 lg:pb-4 pb-[20px]"><?php echo esc_html(get_field('prodotto_mela_titolo_scheda_tecnica')); ?></h5>
         <div class="flex flex-row justify-end lg:pt-8">
@@ -585,7 +585,7 @@ if ($titolo_sez_3) :
 $titolo_sez_6 = get_field('prodotto_mela_titolo_altre_configurazioni', $page_id);
 if ($titolo_sez_6) :
 ?>
-    <section id="altre-configurazioni" class="w-full lg:pt-[120px] pt-[60px]">
+    <section id="altre-configurazioni" class="animationReveal w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
         <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
             <p class="lg:w-8/12 w-full lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_6); ?></p>

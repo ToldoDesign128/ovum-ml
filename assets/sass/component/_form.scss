@@ -1,6 +1,6 @@
 #gform_wrapper_1 {
   padding-top: 35px;
-  
+
   & > div:nth-child(2) > p:nth-child(1) {
     display: none;
   }
@@ -63,6 +63,89 @@
     }
   }
 
+  // Titolo sezione checkbox
+  #field_1_12 > legend:nth-child(1) {
+    margin-bottom: 20px;
+    font-family: "Anybody", sans-serif;
+    font-size: 10px;
+    line-height: 10px;
+    text-transform: uppercase;
+
+    @media #{$lg} {
+      font-size: 12px;
+      line-height: 13px;
+    }
+  }
+  // Sezione checkbox
+  #field_1_12{
+    #input_1_12{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .gchoice{
+        width: 100%;
+        display: block;
+        position: relative;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        @media #{$lg} {
+          width: calc(50% - 2.5rem);
+        }
+
+        input{
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          cursor: pointer;
+          accent-color: $gray-950;
+          background-color: white;
+          display: block;
+          border: 1px solid $gray-950;
+          box-shadow: none;
+          block-size: unset;
+          inline-size: unset;
+          min-block-size: unset;
+          width: 100%;
+          height: 58px;
+          border-radius: 0;
+          transition: all .6s cubic-bezier(.215, .61, .355, 1);
+
+          &::before{
+            display: none;
+          }
+
+          &:hover{
+            background-color: $gray-300;
+          }
+          &:checked{
+            background-color: $gray-950;
+
+            & + label{
+              color: $gray-50;
+            }
+          }
+        }
+        label{
+          margin: 0;
+          font-size: 18px;
+          font-weight: 400;
+          color: $gray-950;
+          text-align: center;
+          white-space: nowrap;
+          position: absolute;
+          pointer-events: none;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          transition: all .6s cubic-bezier(.215, .61, .355, 1);
+        }
+      }
+    }
+  }
+
+  // Text Area
   #input_1_6 {
     min-block-size: 90px;
     background: transparent;
@@ -81,10 +164,10 @@
     }
   }
 
+  // Checkbox Privacy
   #field_1_7 > legend:nth-child(1) {
     display: none;
   }
-
   #input_1_7_1 {
     background: transparent;
     border-radius: 0;
@@ -100,38 +183,7 @@
     }
   }
 
-  #field_1_8 {
-    .ginput_container_multiselect {
-      #input_1_8 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px 0;
-        border: 0;
-        box-shadow: none;
-        option {
-          width: 48%;
-          background-color: transparent;
-          color: $gray-950;
-          border-radius: 0;
-          border: 1px solid $gray-950;
-          padding: 17px 30px 13px 30px;
-          transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-
-          @media #{$lg} {
-            &:hover {
-              background-color: $gray-300;
-            }
-          }
-          &:checked {
-            background-color: $gray-950;
-            color: $gray-50;
-          }
-        }
-      }
-    }
-  }
-
+  // Animazione al hover
   #input_1_1,
   #field_1_3,
   #field_1_4 {
@@ -157,6 +209,7 @@
     }
   }
 
+  // Pulsante di invio
   #gform_submit_button_1 {
     margin-block-start: 26px;
     width: 100%;
@@ -182,6 +235,7 @@
   }
 }
 
+// Form Footer
 #gform_wrapper_2 {
   & > div > p {
     display: none;
@@ -228,6 +282,8 @@
       box-shadow: none !important;
     }
   }
+
+  // Checkbox privacy
   #input_2_4_1 {
     background: transparent;
     border-radius: 0;
@@ -246,6 +302,7 @@
     color: $gray-50;
   }
 
+  // Animazione hover
   #input_2_1,
   .ginput_container_email {
     position: relative;
@@ -270,6 +327,7 @@
     }
   }
 
+  // Pulsante di invio
   #gform_submit_button_2 {
     margin-block-start: 26px;
     width: 100%;
