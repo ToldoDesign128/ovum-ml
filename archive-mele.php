@@ -22,7 +22,7 @@ get_header();
 <?php get_template_part("template-parts/repeater-mela"); ?>
 
 <!-- Loop Prodotti -->
-<section class="lg:max-w-screen-xl w-full mx-auto lg:px-10 px-[26px] lg:mt-[120px] mt-[67px] lg:mb-[150px] mb-[60px]">
+<section class="lg:max-w-screen-xl w-full mx-auto lg:px-0 px-[26px] lg:mt-[120px] mt-[67px] lg:mb-[150px] mb-[60px]">
     <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-center">
         <?php
         $loop = new WP_Query(array(

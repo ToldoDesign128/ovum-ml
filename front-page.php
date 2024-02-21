@@ -18,7 +18,7 @@ $page_id = get_queried_object_id(); ?>
 
         <h1 class="font-primary xl:w-1/2 lg:w-2/3 lg:text-[100px] lg:leading-[100px] text-[50px] leading-[56px] font-light text-center text-gray-950 z-10 py-6 lg:px-0 px-[26px]"><?php echo esc_html(get_field('home_titolo_sezione_1', $page_id)); ?></h1>
 
-        <div class="lg:w-fit w-full flex lg:flex-row flex-col justify-between text-center body-copy py-6 lg:px-0 px-[26px] lg:mb-0 mb-12">
+        <div class="lg:w-fit w-full flex lg:flex-row flex-col justify-between text-center body-copy py-6 lg:px-0 px-[26px] mb-12">
 
             <?php
 
@@ -36,7 +36,9 @@ $page_id = get_queried_object_id(); ?>
 
                 <a class="button font-primary font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px] lg:my-4 my-2 mx-2" href="<?php echo esc_url($pulsante_hero_url); ?>" target="<?php echo esc_attr($pulsante_hero_target); ?>">
 
-                    <?php echo esc_html($pulsante_hero_title); ?>
+                    <p class="min-w-[130px] text-center">
+                        <?php echo esc_html($pulsante_hero_title); ?>
+                    </p>
 
                     <span class="bg-gray-300 mix-blend-multiply"></span>
 
@@ -57,8 +59,9 @@ $page_id = get_queried_object_id(); ?>
             ?>
 
                 <a class="button font-primary font-medium text-gray-50 bg-gray-950 border-gray-950 border px-[30px] pt-[20px] pb-[16px] lg:my-4 my-2 mx-2" href="<?php echo esc_url($pulsante_hero2_url); ?>" target="<?php echo esc_attr($pulsante_hero2_target); ?>">
-
-                    <?php echo esc_html($pulsante_hero2_title); ?>
+                    <p class="min-w-[130px] text-center">
+                        <?php echo esc_html($pulsante_hero2_title); ?>
+                    </p>
 
                     <span class="bg-gray-700 mix-blend-lighten"></span>
 
@@ -88,7 +91,7 @@ $page_id = get_queried_object_id(); ?>
 
         <!-- sponsor -->
 
-        <div class="animationReveal w-full flex flex-wrap justify-between font-primary py-8 lg:px-10 px-[26px]">
+        <div class="animationReveal w-full flex flex-wrap justify-between font-primary pt-[60px] lg:px-0 px-[26px]">
 
             <?php
 
@@ -246,105 +249,106 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Blocco benefici -->
 
-    <div class="animationReveal w-full flex flex-col font-primary font-light lg:px-10 px-[26px] lg:pt-16">
+    <?php
 
-        <?php
+    $titolo_2_sez_2 = get_field('home_titolo_2_sezione_2', $page_id);
 
-        $titolo_2_sez_2 = get_field('home_titolo_2_sezione_2', $page_id);
+    if ($titolo_2_sez_2) :
 
-        if ($titolo_2_sez_2) :
+    ?>
+        <div class="animationReveal w-full flex flex-col font-primary font-light lg:px-0 px-[26px] lg:pt-[120px] pt-[60px]">
 
-        ?>
 
-            <p class="w-full heading-3 text-gray-950 lg:py-12 py-6 pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_2_sez_2); ?></p>
+            <p class="w-full heading-3 text-gray-950 lg:pb-[30px] pb-[20px] pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_2_sez_2); ?></p>
 
             <span class="w-full h-px bg-gray-600"></span>
 
-        <?php endif; ?>
 
-        <?php if (have_rows('home_accordion_sezione_2', $page_id)) : ?>
+            <?php if (have_rows('home_accordion_sezione_2', $page_id)) : ?>
 
-            <div class="accordion-section w-full flex lg:flex-row flex-col lg:justify-between lg:pt-16 pt-[34px]">
+                <div class="accordion-section w-full flex lg:flex-row flex-col lg:justify-between lg:pt-[90px] pt-[30px]">
 
-                <div class="accordion-box flex flex-col justify-end lg:w-5/12 w-full lg:py-0 py-8 lg:order-1 order-2">
-
-                    <?php
-
-
-                    while (have_rows('home_accordion_sezione_2', $page_id)) : the_row();
-
-
-
-                        $icona_accordion = get_sub_field('icona_accordion_sezione_2', $page_id);
-
-                        $titolo_accordion = get_sub_field('titolo_accordion_sezione_2', $page_id);
-
-                    ?>
-
-                        <div class="accordion-item">
-
-                            <div class="flex lg:py-0 py-[20px]">
-
-                                <img class="w-6 mr-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icona_accordion . '.svg'; ?>" alt="">
-
-                                <p class="lg:text-[30px] lg:leading-[34px] text-[22px] leading-[28px] text-gray-950"><?php echo esc_html($titolo_accordion); ?></p>
-
-                            </div>
-
-                            <div class="accordion-text">
-
-                                <?php the_sub_field('testo_accordion_sezione_3', $page_id); ?>
-
-                            </div>
-
-                            <span class="h-px w-full bg-gray-400"></span>
-
-                        </div>
-
-                    <?php
-
-                    endwhile;
-
-                    ?>
-
-                </div>
-
-                <div class="accordion-box-img lg:w-1/2 w-full lg:h-[580px] h-[300px] relative overflow-hidden lg:order-2 order-1">
-
-                    <div class="image-box absolute top-0 left-0">
+                    <div class="accordion-box flex flex-col justify-end lg:w-5/12 w-full lg:py-0 py-[30px] lg:order-1 order-2">
 
                         <?php
 
-                        if (have_rows('home_accordion_sezione_2', $page_id)) :
 
-                            while (have_rows('home_accordion_sezione_2', $page_id)) : the_row();
+                        while (have_rows('home_accordion_sezione_2', $page_id)) : the_row();
 
-                                $img_accordion = get_sub_field('immagine_accordion_sezione_3', $page_id);
+
+
+                            $icona_accordion = get_sub_field('icona_accordion_sezione_2', $page_id);
+
+                            $titolo_accordion = get_sub_field('titolo_accordion_sezione_2', $page_id);
 
                         ?>
 
-                                <img class="image-box-item" src="<?php echo esc_url($img_accordion['url']); ?>" alt="<?php echo esc_attr($img_accordion['alt']); ?>" />
+                            <div class="accordion-item">
+
+                                <div class="flex lg:py-0 py-[20px]">
+
+                                    <img class="w-6 mr-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icona_accordion . '.svg'; ?>" alt="">
+
+                                    <p class="font-light lg:text-[30px] lg:leading-[34px] text-[22px] leading-[28px] text-gray-950"><?php echo esc_html($titolo_accordion); ?></p>
+
+                                </div>
+
+                                <div class="accordion-text">
+
+                                    <?php the_sub_field('testo_accordion_sezione_3', $page_id); ?>
+
+                                </div>
+
+                                <span class="h-px w-full bg-gray-950"></span>
+
+                            </div>
 
                         <?php
 
-                            endwhile;
-
-                        endif;
+                        endwhile;
 
                         ?>
 
                     </div>
 
+                    <?php
+                    if (have_rows('home_accordion_sezione_2', $page_id)) : ?>
 
+                        <div class="accordion-box-img lg:w-1/2 w-full lg:h-[580px] h-[300px] relative overflow-hidden lg:order-2 order-1">
+
+                            <div class="image-box absolute top-0 left-0">
+
+                                <?php
+
+                                while (have_rows('home_accordion_sezione_2', $page_id)) : the_row();
+
+                                    $img_accordion = get_sub_field('immagine_accordion_sezione_3', $page_id);
+
+                                ?>
+
+                                    <img class="image-box-item" src="<?php echo esc_url($img_accordion['url']); ?>" alt="<?php echo esc_attr($img_accordion['alt']); ?>" />
+
+                                <?php
+
+                                endwhile;
+
+                                ?>
+
+                            </div>
+
+
+
+                        </div>
+                    <?php endif; ?>
 
                 </div>
-
-            </div>
-        <?php endif; ?>
+            <?php endif; ?>
 
 
 
-    </div>
+        </div>
+    <?php endif; ?>
+
 
 </section>
 
@@ -354,7 +358,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- titolo sezione 3 -->
 
-    <div class="animationReveal w-full flex flex-col font-primary font-light lg:px-10 px-[26px] ">
+    <div class="animationReveal w-full flex flex-col font-primary font-light lg:px-0 px-[26px] ">
 
         <?php
 
@@ -364,7 +368,7 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <p class="lg:w-8/12 w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 pr-4 lg:mb-[25px] mb-[15px]" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
+            <p class="lg:w-8/12 font-light w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 pr-4 lg:mb-[30px] mb-[20px]" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
 
             <span class="w-full h-px bg-gray-600"></span>
 
@@ -374,7 +378,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- testo sezione 3 -->
 
-    <div class="w-full flex justify-between font-primary font-light lg:px-10 px-[26px] lg:mt-[45px] mt-[20px]">
+    <div class="w-full flex justify-between font-primary font-light lg:px-0 px-[26px] lg:mt-[50px] mt-[30px]">
 
         <div class="lg:w-1/2 w-full body-copy">
 
@@ -398,8 +402,9 @@ $page_id = get_queried_object_id(); ?>
 
             <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
 
-                <?php echo esc_html($pulsante_sez_3_title); ?>
-
+                <p class="min-w-[130px] text-center">
+                    <?php echo esc_html($pulsante_sez_3_title); ?>
+                </p>
                 <span class="bg-gray-300 mix-blend-multiply"></span>
 
             </a>
@@ -410,7 +415,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Repeater sezione 3 -->
 
-    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-10 px-[26px] lg:pt-[90px] pt-[40px]">
+    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-0 px-[26px] lg:pt-[90px] pt-[40px]">
 
         <?php
 
@@ -428,7 +433,7 @@ $page_id = get_queried_object_id(); ?>
 
                 if ($titolo_rep_sez_3) : ?>
 
-                    <li class="animationReveal lg:w-1/3 w-full lg:pb-8 lg:pr-[65px] pr-4">
+                    <li class="animationReveal lg:w-1/3 w-full lg:pb-[32px] lg:pr-[65px] pr-4">
 
                         <p class="max-w-[15ch] lg:text-[40px] lg:leading-[50px] text-[22px] leading-[28px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
 
@@ -516,7 +521,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Pulsante mobile -->
 
-    <div class="animationReveal w-full lg:hidden flex px-[26px] py-8">
+    <div class="animationReveal w-full lg:hidden flex px-[26px] pt-[40px]">
 
         <?php
 
@@ -532,7 +537,7 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <a class="lg:w-auto w-full button h-fit font-medium text-gray-950 text-center body-copy bg-trasparent border-gray-950 border px-[30px] pt-[18px] pb-[18px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
+            <a class="lg:w-auto w-full button h-fit font-primary font-medium text-gray-950 text-center body-copy bg-trasparent border-gray-950 border px-[30px] pt-[18px] pb-[18px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
 
                 <?php echo esc_html($pulsante_sez_3_title); ?>
 
@@ -550,15 +555,15 @@ $page_id = get_queried_object_id(); ?>
 
 <section class="lg:mt-[88px] mt-[30px] overflow-x-clip">
 
-    <div class="animationReveal lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
+    <div class="lg:max-w-screen-xl font-primary font-light mx-auto lg:px-0 px-[26px]">
 
-        <p class="w-8/12 lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Mele e meleti</p>
+        <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pt-[20px]">Mele e meleti</p>
 
         <span class="block w-full h-px bg-gray-600"></span>
 
 
 
-        <div class="w-full flex justify-between font-primary font-light pt-[25px]">
+        <div class="w-full flex justify-between font-primary font-light lg:pt-[50px] pt-[30px]">
 
             <div class="lg:w-1/2 w-full body-copy">
 
@@ -568,8 +573,9 @@ $page_id = get_queried_object_id(); ?>
 
             <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="mele">
 
-                Guarda tutto
-
+                <p class="min-w-[130px] text-center">
+                    Guarda tutto
+                </p>
                 <span class="bg-gray-300 mix-blend-multiply"></span>
 
             </a>
@@ -580,7 +586,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Loop Mele -->
 
-    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-0 px-[26px]">
 
         <div class="swiper overflow-visible swiperHomeMele">
 
@@ -616,12 +622,12 @@ $page_id = get_queried_object_id(); ?>
 
                                 </div>
 
-                                <div class="absolute lg:block hidden top-[285px] right-[10px] h-[30px] w-[30px] rotate-[135deg] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <div class="absolute lg:block hidden top-[292px] right-0 h-[30px] w-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
-
-                                        <path d="m19,11.5H6.265l4.617-4.617-.707-.707-4.717,4.717c-.61.61-.61,1.604,0,2.214l4.718,4.718.707-.707-4.617-4.617h12.734v-1Z" />
-
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.854" height="15.854" viewBox="0 0 15.854 15.854">
+                                        <g id="Icon_feather-arrow-down-right" data-name="Icon feather-arrow-down-right" transform="translate(0.354 15.5) rotate(-90)">
+                                            <path id="Unione_4" data-name="Unione 4" d="M1911.354-9034.176v-1h13.791L1911-9049.323l.706-.706,14.148,14.146v-13.791h1v15.5Z" transform="translate(-1911.354 9049.676)" />
+                                        </g>
                                     </svg>
 
                                 </div>
@@ -638,7 +644,7 @@ $page_id = get_queried_object_id(); ?>
 
                                         $sottotitolo_hero = get_field('prodotto_mela_sottotitolo_hero') ?>
 
-                                        <p class="font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px]"><?php echo esc_html($sottotitolo_hero) ?></p>
+                                        <p class="font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.4px]"><?php echo esc_html($sottotitolo_hero) ?></p>
 
                                     <?php endif; ?>
 
@@ -760,15 +766,15 @@ $page_id = get_queried_object_id(); ?>
 
 <section class="lg:my-[150px] my-[60px] overflow-x-clip">
 
-    <div class="animationReveal lg:max-w-screen-xl font-primary font-light mx-auto lg:px-10 px-[26px]">
+    <div class="animationReveal lg:max-w-screen-xl font-primary font-light mx-auto lg:px-0 px-[26px]">
 
-        <p class="w-8/12 lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 pb-[25px]">Uva e vigneto</p>
+        <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pt-[20px]">Uva e vigneto</p>
 
         <span class="block w-full h-px bg-gray-600"></span>
 
 
 
-        <div class="w-full flex justify-between font-primary font-light pt-[25px]">
+        <div class="w-full flex justify-between font-primary font-light lg:pt-[50px] pt-[30px]">
 
             <div class="lg:w-1/2 w-full body-copy">
 
@@ -777,9 +783,9 @@ $page_id = get_queried_object_id(); ?>
             </div>
 
             <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="uva">
-
-                Guarda tutto
-
+                <p class="min-w-[130px] text-center">
+                    Guarda tutto
+                </p>
                 <span class="bg-gray-300 mix-blend-multiply"></span>
 
             </a>
@@ -790,7 +796,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Loop Uva -->
 
-    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-0 px-[26px]">
 
         <div class="swiper overflow-visible swiperHomeMele">
 
@@ -848,7 +854,7 @@ $page_id = get_queried_object_id(); ?>
 
                                         $sottotitolo_uva = get_field('prodotto_uva_sottotitolo_hero') ?>
 
-                                        <p class="font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px]"><?php echo esc_html($sottotitolo_uva) ?></p>
+                                        <p class="font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.4px]"><?php echo esc_html($sottotitolo_uva) ?></p>
 
                                     <?php endif; ?>
 

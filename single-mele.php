@@ -4,7 +4,7 @@
 $page_id = get_queried_object_id(); ?>
 <!-- hero -->
 <section class="hero lg:pt-[230px] pt-[94px] overflow-x-clip">
-    <div class="h-full max-h-min lg:max-w-screen-xl flex flex-wrap justify-between items-center mx-auto lg:px-10 px-[26px]">
+    <div class="h-full max-h-min lg:max-w-screen-xl flex flex-wrap justify-between items-center mx-auto lg:px-0 px-[26px]">
         <div class="lg:w-1/2 w-full font-primary lg:pr-24 lg:order-1 order-2">
             <p class="uppercase lg:text-[12px] lg:leading-[13px] text-[10px] leading-[10px] font-secondary font-medium pb-[15px]">Mele</p>
             <h1 class="lg:text-[75px] lg:leading-[80px] text-[40px] leading-[50px] font-light"><?php the_title(); ?></h1>
@@ -42,7 +42,7 @@ $page_id = get_queried_object_id(); ?>
         </div>
     </div>
     <!-- Indicatori Desktop -->
-    <ul class="lg:max-w-screen-xl lg:flex hidden justify-between font-secondary mx-auto lg:pt-[144px] pt-[60px] lg:px-10 px-[26px]">
+    <ul class="lg:max-w-screen-xl lg:flex hidden justify-between font-secondary mx-auto lg:pt-[144px] pt-[60px] lg:px-0 px-[26px]">
         <?php if ('prodotto_mela_pressione_hero') :
             $pressione = get_field('prodotto_mela_pressione_hero', $page_id) ?>
             <li class="w-auto uppercase">
@@ -126,7 +126,7 @@ $gallery_sez_2 = get_field('prodotto_mela_galleria_sezione_2');
 if ($gallery_sez_2) : ?>
     <section class="animationReveal w-full lg:pt-[140px] pt-[60px]">
         <!-- Gallery -->
-        <div class="lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+        <div class="lg:max-w-screen-xl mx-auto lg:px-0 px-[26px]">
             <div class="swiper w-full swiperGallery">
                 <!-- Slider lg:max-w-screen-xl -->
                 <ul class="swiper-wrapper">
@@ -161,7 +161,7 @@ if ($titolo_sez_3) :
 ?>
     <section class="animationReveal w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
-        <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
+        <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-0 px-[26px]">
             <p class="lg:w-8/12 w-full lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_3); ?></p>
             <span class="w-full h-px bg-gray-600"></span>
 
@@ -220,7 +220,7 @@ if ($titolo_sez_3) :
 <?php endif; ?>
 <!-- Gallery -->
 <?php if (have_rows('prodotto_mela_galleria_video')) : ?>
-    <section class="animationReveal lg:mt-[150px] mt-[70px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+    <section class="animationReveal lg:mt-[150px] mt-[70px] lg:max-w-screen-xl mx-auto lg:px-0 px-[26px]">
         <div class="swiper lg:overflow-visible overflow-clip swiperGallery2">
             <ul class="swiper-wrapper">
                 <?php while (have_rows('prodotto_mela_galleria_video')) : the_row();
@@ -262,7 +262,7 @@ if ($titolo_sez_3) :
 
 <!-- Scheda Tecnica -->
 <section id="scheda-tecnica" class="animationReveal w-full lg:mt-[120px] mt-[70px]">
-    <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
+    <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-0 px-[26px]">
         <h5 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] border-b border-gray-950 lg:pb-4 pb-[20px]"><?php echo esc_html(get_field('prodotto_mela_titolo_scheda_tecnica')); ?></h5>
         <div class="flex flex-row justify-end lg:pt-8">
             <?php
@@ -587,7 +587,7 @@ if ($titolo_sez_6) :
 ?>
     <section id="altre-configurazioni" class="animationReveal w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
-        <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-10 px-[26px]">
+        <div class="lg:max-w-screen-xl w-full flex flex-col mx-auto font-primary font-light lg:px-0 px-[26px]">
             <p class="lg:w-8/12 w-full lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_6); ?></p>
             <span class="w-full h-px bg-gray-600"></span>
 

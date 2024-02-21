@@ -4,7 +4,7 @@
 get_header();
 $page_id = get_queried_object_id(); ?>
 <main class="contatti">
-    <section class="lg:max-w-screen-xl mx-auto flex flex-row flex-wrap font-primary font-light lg:px-10 px-[26px] lg:pt-[213px] pt-[124px]">
+    <section class="lg:max-w-screen-xl mx-auto flex flex-row flex-wrap font-primary font-light lg:px-0 px-[26px] lg:pt-[213px] pt-[124px]">
         <!-- Contatti -->
         <div class="lg:w-1/2 w-full flex flex-wrap items-start content-start">
             <h1 class="w-full heading-2 lg:mb-[50px] mb-[20px]"><?php echo the_title(); ?></h1>

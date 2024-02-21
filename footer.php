@@ -11,7 +11,9 @@
 
     ?>
     <a class="min-w-[130px] block text-gray-50 bg-gray-950 px-[30px] pt-[20px] pb-[16px] lg:my-4 my-0" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
-        <?php echo esc_html($footer_cta_button_title); ?>
+        <p class="min-w-[130px] text-center">
+            <?php echo esc_html($footer_cta_button_title); ?>
+        </p>
         <span class="bg-gray-800 mix-blend-multiply"></span>
     </a>
 </div>
@@ -26,7 +28,7 @@
     <!-- CTA -->
     <section class="font-primary w-full lg:mb-[175px] mb-[40px]">
         <div class="lg:max-w-screen-xl mx-auto lg:px-10 px-[10px]">
-            <div class="cta flex flex-col justify-center items-center text-gray-50 bg-gray-950 lg:text-left text-center lg:pt-[50px] pt-[60px] lg:pb-[55px] pb-[52px] lg:px-0 px-11">
+            <div class="cta flex flex-col justify-center items-center text-gray-50 bg-gray-950 lg:text-left text-center lg:pt-[50px] pt-[60px] lg:pb-[55px] pb-[60px] lg:px-0 px-[45px]">
                 <?php
 
                 $footer_cta = get_field('footer_cta', 'option');
@@ -40,9 +42,9 @@
                 $footer_cta_button_target = $footer_cta_button['target'] ? $footer_cta_button['target'] : '_self';
 
                 ?>
-                <h6 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] font-light py-4"><?php echo esc_html($footer_cta_title); ?></h6>
-                <p class="lg:text-[20px] lg:leading-[32px] text-[18px] leading-[24px] font-light py-4"><?php echo esc_html($footer_cta_testo); ?></p>
-                <a class="min-w-[130px] button font-medium lg:w-fit w-full text-gray-950 bg-gray-100 px-[30px] pt-[20px] pb-[16px] my-4" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
+                <h6 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] font-light pb-[20px]"><?php echo esc_html($footer_cta_title); ?></h6>
+                <p class="font-primary lg:text-[20px] lg:leading-[32px] text-[18px] leading-[24px] tracking-[.4px] font-light lg:pb-[35px] pb-[30px]"><?php echo esc_html($footer_cta_testo); ?></p>
+                <a class="min-w-[130px] button font-medium lg:w-fit w-full text-gray-950 bg-gray-100 px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
                     <?php echo esc_html($footer_cta_button_title); ?>
                     <span class="bg-gray-400 mix-blend-multiply"></span>
                 </a>
@@ -54,17 +56,17 @@
 }; ?>
 
 <footer id="footer" class="font-primary font-light relative w-full bg-gray-950 z-40">
-    <section class="relative lg:max-w-screen-xl flex flex-col text-gray-50 mx-auto lg:px-10 px-[26px]">
+    <section class="relative lg:max-w-screen-xl flex flex-col text-gray-50 mx-auto lg:px-0 px-[26px]">
         <!-- Footer sezione 1 -->
         <div class="w-full flex lg:flex-row flex-col justify-between lg:py-[120px] py-[40px]">
             <h6 class="lg:w-7/12 w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] font-light"><?php echo esc_html(get_field('footer_frase', 'option')); ?></h6>
             <!-- form -->
-            <div class="lg:w-4/12 w-full lg:mt-0 mt-[30px]">
+            <div class="lg:w-4/12 w-full lg:mt-0 mt-[40px]">
                 <?php gravity_form( 2, false, false, false, '', false ); ?>
             </div>
         </div>
         <!-- Footer sezione 2 -->
-        <div id="FooterLink" class="w-full flex flex-wrap lg:pb-16 lg:py-0 py-4">
+        <div id="FooterLink" class="w-full flex flex-wrap lg:pb-[60px] pb-[30px] lg:pt-0 pt-[60px]">
             <!-- collonna 1 -->
             <div class="lg:w-1/4 w-1/2">
                 <!-- titolo colonna -->
@@ -174,7 +176,7 @@
         </div>
         <!-- Credits -->
         <div id="credits" class="w-full border-t-2 border-gray-600 font-light py-6">
-            <p class="flex text-gray-400">
+            <p class="flex lg:text-[16px] text-[13px] text-gray-400">
                 Website by
                 <a href="#" class="ml-2 lg:hover:text-gray-50">Ovum</a>
                 <span class="inline-block mx-2">

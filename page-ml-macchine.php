@@ -33,7 +33,7 @@ $page_id = get_queried_object_id(); ?>
 <!-- Sezione 2 -->
 <section class="lg:max-w-screen-xl mx-auto lg:mt-[150px] lg:mb-[110px] mb-[30px]">
     <!-- Repeater sezione 2 -->
-    <div class="w-full flex flex-row flex-wrap lg:px-10 px-[26px]">
+    <div class="w-full flex flex-row flex-wrap lg:px-0 px-[26px]">
         <?php
         if (have_rows('chi_siamo_repeater_sezione_2')) :
             while (have_rows('chi_siamo_repeater_sezione_2')) : the_row();
@@ -53,7 +53,7 @@ $page_id = get_queried_object_id(); ?>
 <!-- Sezione le nostre promesse -->
 <section class="lg:max-w-screen-xl mx-auto overflow-x-clip">
     <!-- titolo sezione 3 -->
-    <div class="w-full flex flex-col font-primary font-light lg:px-10 px-[26px]">
+    <div class="w-full flex flex-col font-primary font-light lg:px-0 px-[26px]">
         <?php
         $titolo_sez_3 = get_field('chi_siamo_titolo_sezione_3', $page_id);
         if ($titolo_sez_3) :
@@ -63,7 +63,7 @@ $page_id = get_queried_object_id(); ?>
         <?php endif; ?>
     </div>
     <!-- Repeater sezione 3 -->
-    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-10 px-[26px] lg:pt-[52px] pt-[40px]">
+    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-0 px-[26px] lg:pt-[52px] pt-[40px]">
         <?php
         if (have_rows('chi_siamo_repeater_sezione_3')) :
             while (have_rows('chi_siamo_repeater_sezione_3')) : the_row();
@@ -118,9 +118,9 @@ $page_id = get_queried_object_id(); ?>
 </section>
 <!-- Sezione Defogliatrici -->
 <section class="lg:my-[120px] my-[60px] overflow-x-clip">
-    <p class="w-full font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:px-10 px-[26px]">Le nostre defogliatrici</p>
+    <p class="w-full font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:px-0 px-[26px]">Le nostre defogliatrici</p>
     <!-- Loop Macchinari -->
-    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-0 px-[26px]">
         <div class="swiper overflow-visible swiperHomeMele">
             <div class="swiper-wrapper items-center">
                 <?php

@@ -1,5 +1,5 @@
 <!-- scroller repeater uva -->
-<section class="pt-[60px] lg:max-w-screen-xl mx-auto lg:px-10 px-[26px]">
+<section class="pt-[60px] lg:max-w-screen-xl mx-auto lg:px-0 px-[26px]">
     <div class="swiper lg:overflow-visible overflow-clip swiperRepeater">
         <ul class="swiper-wrapper">
             <?php

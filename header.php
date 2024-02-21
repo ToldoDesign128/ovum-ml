@@ -23,11 +23,11 @@
 
     <header class="font-primary font-light w-full absolute z-50">
         <div class="relative z-40">
-            <div class="lg:max-w-screen-xl flex mx-auto py-5 lg:px-10 px-[26px] justify-between items-center">
+            <div class="lg:max-w-screen-xl flex mx-auto py-5 lg:px-0 px-[26px] justify-between items-center">
                 <!-- Logo -->
                 <?php
                 echo    '<a id="logo-header" href="' . home_url() . '" class="flex">
-                            <img src="' . get_template_directory_uri() . '/assets/img/logo.svg" alt="' . get_bloginfo('name') . '" class="h-full w-full max-h-[60px]">
+                            <img src="' . get_template_directory_uri() . '/assets/img/logo.svg" alt="' . get_bloginfo('name') . '" class="h-full w-full lg:max-h-[60px] max-h-[45px]">
                             <img src="' . get_template_directory_uri() . '/assets/img/payoff.svg" alt="' . get_bloginfo('name') . '" class="logo-payoff h-full w-full max-h-8 ml-4">
                         </a>';
                 ?>
@@ -44,7 +44,7 @@
         </div>
         <div id="menu" class="absolute flex-col lg:justify-center justify-between top-0 right-0 w-full h-screen overflow-x-hidden bg-gray-950 z-30 transition-all duration-500">
             <!-- Menu Nav -->
-            <nav class="lg:max-w-screen-xl h-full w-full flex items-end mx-auto pb-[10vh] lg:px-10 px-[26px]">
+            <nav class="lg:max-w-screen-xl h-full w-full flex items-end mx-auto pb-[10vh] lg:px-0 px-[26px]">
                 <?php
                 wp_nav_menu(array(
                     'theme_location'    => 'primary',

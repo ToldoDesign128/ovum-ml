@@ -117,7 +117,7 @@ header {
         list-style-type: none;
 
         li {
-          padding: 35px 0 22px 0;
+          padding: 33px 0 25px 0;
           color: $gray-700;
           position: relative;
           overflow: hidden;
@@ -127,7 +127,11 @@ header {
 
           a {
             padding: 1rem 0;
-            margin-left: 30px;
+            margin-left: 25px;
+
+            @media #{$lg} {
+              margin-left: 30px;              
+            }
           }
 
           &::after {
@@ -152,7 +156,7 @@ header {
             }
           }
           @media #{$big} {
-            padding: 50px 0 38px 0;
+            padding: 47px 0 40px 0;
           }
         }
         li:before {

@@ -1,6 +1,6 @@
 <section class="lg:max-w-screen-xl mx-auto px-[26px] lg:mb-[150px] mb-[60px]">
 
-    <p class="w-full text-center lg:text-[50px] text-[28px] lg:leading-[56px] leading-[32px] font-primary font-light lg:mb-[50px] mb-[60px]">Cosa dicono i nostri clienti</p>
+    <p class="w-full text-center lg:text-[50px] text-[28px] lg:leading-[56px] leading-[32px] font-primary font-light lg:mb-[50px] mb-[30px]">Cosa dicono i nostri clienti</p>
 
     <div class="swiper swiperTestimonial">
 
@@ -38,7 +38,7 @@
 
                     ?>
 
-                        <p class="text-center lg:text-[40px] text-[22px] lg:leading-[50px] leading-[28px] lg:tracking-normal tracking-[.44px] border-b-2 border-gray-300 lg:pb-[25px] pb-[30px]"><?php echo esc_html($recensione_testo) ?></p>
+                        <p class="text-center lg:text-[40px] text-[22px] lg:leading-[50px] leading-[28px] lg:tracking-normal tracking-[.44px] border-b-2 border-gray-300 lg:pb-[35px] pb-[30px]"><?php echo esc_html($recensione_testo) ?></p>
 
                     <?php endif;
 
@@ -48,7 +48,7 @@
 
                     ?>
 
-                        <p class="self-end body-copy font-medium pt-8 mr-1"><?php echo esc_html($recensione_nome) ?></p>
+                        <p class="self-end lg:text-[18px] lg:leading-[22px] text-[16px] leading-[22px] font-medium pt-[35px] mr-1"><?php echo esc_html($recensione_nome) ?></p>
 
                     <?php endif;
 

@@ -1,6 +1,10 @@
 #gform_wrapper_1 {
   padding-top: 35px;
 
+  #gform_1_validation_container{
+    display: none;
+  }
+
   & > div:nth-child(2) > p:nth-child(1) {
     display: none;
   }
@@ -183,6 +187,11 @@
     }
   }
 
+  input{
+    padding: 0;
+    font-size: 16px;
+  }
+
   // Animazione al hover
   #input_1_1,
   #field_1_3,
@@ -237,6 +246,15 @@
 
 // Form Footer
 #gform_wrapper_2 {
+  #gform_2_validation_container{
+    display: none;
+  }
+
+  #input_2_1{
+    scrollbar-width: none;
+    padding: 0;
+  }
+
   & > div > p {
     display: none;
   }
@@ -249,6 +267,7 @@
     }
   }
   #input_2_1_3 {
+    padding: 0;
     height: 30px;
     background: transparent;
     color: $gray-200;
@@ -269,6 +288,7 @@
     }
   }
   #input_2_3 {
+    padding: 0;
     height: 30px;
     background: transparent;
     color: $gray-200;
