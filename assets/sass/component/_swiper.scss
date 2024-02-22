@@ -29,31 +29,27 @@
 .swiper.swiperScroller {
   height: 100%;
 
-  .swiper-wrapper{
+  .swiper-wrapper {
     height: calc(100% - 38px);
   }
 }
 .swiper.swiperScroller2 {
   height: 100%;
 
-  .swiper-wrapper{
+  .swiper-wrapper {
     height: calc(100% - 38px);
   }
 }
 
 .swiper.swiperScrollerSingle {
-  margin-left: 26px;
   height: 180px;
   width: 100%;
-  .swiper-slide {
-    width: 100%;
-  }
 }
 
 .swiper.swiperScrollerSponsor {
   height: 100px;
 
-  .swiper-wrapper{
+  .swiper-wrapper {
     height: calc(100% - 38px);
   }
 }
@@ -121,32 +117,37 @@
     height: 350px;
     .swiper-wrapper {
       height: 320px;
+      .swiper-slide {
+        width: 100% !important;
+        overflow: hidden;
+        img,
+        iframe {
+          display: block;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 }
 
 .swiper.swiperRepeater {
-  height: 280px;
+  height: calc(170px + 63px);
   width: 100%;
 
-  .swiper-wrapper{
-    height: 220px;
+  .swiper-wrapper {
+    height: 170px;
 
     .swiper-slide {
       height: 100%;
-      width: 33% !important;
     }
   }
 
-
   @media #{$only-mobile} {
-    height: 245px;
-    
-    .swiper-wrapper{
-      
-      .swiper-slide {
-        width: 100% !important;
-      }
+    height: calc(200px + 38px);
+
+    .swiper-wrapper {
+      height: 200px;
     }
   }
 }
@@ -158,13 +159,12 @@
     height: calc(100% - 65px);
     .swiper-slide {
       height: 100%;
-      width: calc((1280px / 3) - 40px) !important;
-      transition: height .6s cubic-bezier(.215, .61, .355, 1);
+      transition: height 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 
       img {
         object-fit: cover;
       }
-      &:hover{
+      &:hover {
         height: 110%;
       }
     }
@@ -173,9 +173,7 @@
     height: calc(497px + 45px);
     .swiper-wrapper {
       height: 497px !important;
-
       .swiper-slide {
-        width: 100% !important;
         height: 495px !important;
       }
     }
@@ -189,14 +187,13 @@
     height: calc(100% - 65px);
     .swiper-slide {
       height: 100%;
-      width: calc((1280px / 3) - 40px) !important;
-      transition: height .6s cubic-bezier(.215, .61, .355, 1);
+      transition: height 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 
       img {
         object-fit: cover;
       }
 
-      &:hover{
+      &:hover {
         height: 110%;
       }
     }
@@ -207,7 +204,6 @@
       height: calc(100% - 38px);
 
       .swiper-slide {
-        width: 100% !important;
         height: 495px !important;
       }
     }

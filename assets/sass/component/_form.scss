@@ -1,7 +1,7 @@
 #gform_wrapper_1 {
   padding-top: 35px;
 
-  #gform_1_validation_container{
+  #gform_1_validation_container {
     display: none;
   }
 
@@ -81,13 +81,13 @@
     }
   }
   // Sezione checkbox
-  #field_1_12{
-    #input_1_12{
+  #field_1_12 {
+    #input_1_12 {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
 
-      .gchoice{
+      .gchoice {
         width: 100%;
         display: block;
         position: relative;
@@ -98,7 +98,7 @@
           width: calc(50% - 2.5rem);
         }
 
-        input{
+        input {
           appearance: none;
           -webkit-appearance: none;
           -moz-appearance: none;
@@ -114,24 +114,24 @@
           width: 100%;
           height: 58px;
           border-radius: 0;
-          transition: all .6s cubic-bezier(.215, .61, .355, 1);
+          transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-          &::before{
+          &::before {
             display: none;
           }
 
-          &:hover{
+          &:hover {
             background-color: $gray-300;
           }
-          &:checked{
+          &:checked {
             background-color: $gray-950;
 
-            & + label{
+            & + label {
               color: $gray-50;
             }
           }
         }
-        label{
+        label {
           margin: 0;
           font-size: 18px;
           font-weight: 400;
@@ -143,28 +143,46 @@
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
-          transition: all .6s cubic-bezier(.215, .61, .355, 1);
+          transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
+      }
+
+      @media #{$lg} {
+        flex-direction: row;
       }
     }
   }
 
-  // Text Area
-  #input_1_6 {
-    min-block-size: 90px;
-    background: transparent;
-    color: $gray-700;
-    border-radius: 0;
-    border: 1px solid $gray-700;
+  #field_1_6 {
+    position: relative;
+    // Titolo Text Area
+    label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
 
-    &:hover,
-    &:focus,
-    &:active {
-      box-shadow: none !important;
+      span:nth-child(1) {
+        color: $gray-950;
+      }
     }
+    // Text Area
+    #input_1_6 {
+      padding: 36px 12px 0 12px;
+      min-block-size: 90px;
+      background: transparent;
+      color: $gray-700;
+      border-radius: 0;
+      border: 1px solid $gray-700;
 
-    @media #{$lg} {
-      min-block-size: 130px;
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: none !important;
+      }
+
+      @media #{$lg} {
+        min-block-size: 130px;
+      }
     }
   }
 
@@ -172,10 +190,33 @@
   #field_1_7 > legend:nth-child(1) {
     display: none;
   }
+  #field_1_7 > div:nth-child(2) > label:nth-child(2) > a{
+    position: relative;
+    overflow-x: clip;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -100%;
+      height: 1px;
+      background-color: $gray-950;
+      width: 100%;
+      transition: left 0.8s;
+    }
+
+    @media #{$lg} {
+      &:hover {
+        &::after {
+          left: 0%;
+        }
+      }
+    }
+
+  }
   #input_1_7_1 {
     background: transparent;
     border-radius: 0;
-    border: 1px solid $gray-300;
+    border: 1px solid $gray-950;
 
     &:hover,
     &:focus,
@@ -187,9 +228,17 @@
     }
   }
 
-  input{
+  input, textarea {
     padding: 0;
     font-size: 16px;
+    line-height: 18px;
+    font-weight: 300;
+    box-shadow: none !important;
+
+    @media #{$lg} {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   // Animazione al hover
@@ -197,7 +246,7 @@
   #field_1_3,
   #field_1_4 {
     position: relative;
-    overflow-x: hidden;
+    overflow-x: clip;
     &::after {
       content: "";
       position: absolute;
@@ -230,7 +279,7 @@
     padding: 17px 30px 13px 30px;
     border-radius: 0;
     position: relative;
-    overflow-x: hidden;
+    overflow-x: clip;
     transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 
     @media #{$lg} {
@@ -242,15 +291,39 @@
       }
     }
   }
+
+  #gform_confirmation_wrapper_1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #gform_confirmation_message_1{
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 24px;
+
+      @media #{$lg} {
+        font-size: 30px;
+        line-height: 34px;
+      }
+    }
+  }
 }
 
 // Form Footer
 #gform_wrapper_2 {
-  #gform_2_validation_container{
+  margin-right: 0;
+
+  @media #{$lg} {
+    margin-right: 20px;
+  }
+
+  #gform_2_validation_container {
     display: none;
   }
 
-  #input_2_1{
+  #input_2_1 {
     scrollbar-width: none;
     padding: 0;
   }
@@ -304,6 +377,33 @@
   }
 
   // Checkbox privacy
+  #field_2_4 {
+    div:nth-child(2) > label:nth-child(2) > a {
+      position: relative;
+      overflow-x: clip;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        height: 2px;
+        background-color: $gray-50;
+        width: 100%;
+        transition: left 0.8s;
+      }
+
+      @media #{$lg} {
+        &:hover {
+          &::after {
+            left: 0%;
+          }
+        }
+      }
+    }
+    span.gfield_required:nth-child(2) {
+      color: $gray-50;
+    }
+  }
   #input_2_4_1 {
     background: transparent;
     border-radius: 0;
@@ -317,16 +417,32 @@
     &::before {
       color: $gray-50;
     }
+    span.gfield_required:nth-child(2) {
+      color: $gray-50;
+    }
   }
   #field_2_4 > div > label {
     color: $gray-50;
+  }
+
+  input {
+    padding: 0;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 300;
+    box-shadow: none !important;
+
+    @media #{$lg} {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   // Animazione hover
   #input_2_1,
   .ginput_container_email {
     position: relative;
-    overflow-x: hidden;
+    overflow-x: clip;
     &::after {
       content: "";
       position: absolute;
@@ -359,7 +475,7 @@
     padding: 15px 30px;
     border-radius: 0;
     position: relative;
-    overflow-x: hidden;
+    overflow-x: clip;
     transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 
     @media #{$lg} {
@@ -367,6 +483,26 @@
 
       &:hover {
         background-color: $gray-300;
+      }
+    }
+  }
+
+  // Conferma
+  #gform_confirmation_wrapper_2 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #gform_confirmation_message_2 {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 24px;
+
+      @media #{$lg} {
+        font-size: 30px;
+        line-height: 34px;
       }
     }
   }

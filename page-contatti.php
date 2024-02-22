@@ -4,7 +4,7 @@
 get_header();
 $page_id = get_queried_object_id(); ?>
 <main class="contatti">
-    <section class="lg:max-w-screen-xl mx-auto flex flex-row flex-wrap font-primary font-light lg:px-0 px-[26px] lg:pt-[213px] pt-[124px]">
+    <section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto flex flex-row flex-wrap font-primary font-light lg:px-0 px-[26px] lg:pt-[213px] pt-[124px]">
         <!-- Contatti -->
         <div class="lg:w-1/2 w-full flex flex-wrap items-start content-start">
             <h1 class="w-full heading-2 lg:mb-[50px] mb-[20px]"><?php echo the_title(); ?></h1>
@@ -12,7 +12,7 @@ $page_id = get_queried_object_id(); ?>
                 <?php
                 $contatti_sede = get_field('contatti_sede');
                 if ($contatti_sede) : ?>
-                    <p class="max-w-[24ch] body-copy mb-[10px]"><?php echo esc_html($contatti_sede); ?></p>
+                    <p class="max-w-[24ch] lg:text-[20px] lg:leading-[32px] text-[16px] leading-[22px] tracking-[.4px] mb-[10px]"><?php echo esc_html($contatti_sede); ?></p>
                 <?php endif;
 
                 $contatti_telefono = get_field('contatti_telefono');
@@ -21,7 +21,7 @@ $page_id = get_queried_object_id(); ?>
                     $contatti_telefono_title = $contatti_telefono['title'];
                     $contatti_telefono_target = $contatti_telefono['target'] ? $contatti_telefono['target'] : '_self';
                 ?>
-                <div class="contatti-link flex body-copy">
+                <div class="contatti-link flex lg:text-[20px] lg:leading-[32px] text-[16px] leading-[22px] tracking-[.4px]">
                     <p>Telefono:</p>
                     <a class="ml-2 mb-[14px]" href="<?php echo esc_url($contatti_telefono_url); ?>" target="<?php echo esc_attr($contatti_telefono_target); ?>">
                         <?php echo esc_html($contatti_telefono_title); ?>
@@ -35,7 +35,7 @@ $page_id = get_queried_object_id(); ?>
                     $contatti_email_title = $contatti_email['title'];
                     $contatti_email_target = $contatti_email['target'] ? $contatti_email['target'] : '_self';
                 ?>
-                <div class="contatti-link flex body-copy lg:mb-[35px] mb-[30px]">
+                <div class="contatti-link flex lg:text-[20px] lg:leading-[32px] text-[16px] leading-[22px] tracking-[.4px] lg:mb-[35px] mb-[30px]">
                     <p>Email:</p>
                     <a class="ml-2" href="<?php echo esc_url($contatti_email_url); ?>" target="<?php echo esc_attr($contatti_email_target); ?>">
                         <?php echo esc_html($contatti_email_title); ?>
@@ -46,8 +46,8 @@ $page_id = get_queried_object_id(); ?>
 
                 $contatti_orari = get_field('contatti_orari');
                 if ($contatti_orari) : ?>
-                    <h3 class="lg:text-[36px] text-[22px] leading-[28px] lg:mb-[20px]">Orari</h3>
-                    <p class="lg:mb-[50px] mb-[30px] text-[18px] leading-[24px]"><?php echo esc_html($contatti_orari); ?></p>
+                    <h3 class="lg:text-[36px] text-[22px] leading-[28px] lg:mb-[10px]">Orari</h3>
+                    <p class="lg:mb-[50px] mb-[30px] lg:text-[20px] lg:leading-[32px] text-[16px] leading-[22px] tracking-[.4px]"><?php echo esc_html($contatti_orari); ?></p>
                 <?php endif; ?>
 
                 <a class="block button lg:w-[190px] w-full font-medium text-gray-50 text-center lg:text-[18px] leading-[22px] bg-gray-950 px-[30px] pt-[20px] pb-[16px]">
@@ -67,7 +67,7 @@ $page_id = get_queried_object_id(); ?>
         </div>
     </section>
     <!-- Rivenditori -->
-    <section class="lg:max-w-screen-xl mx-auto flex flex-col font-primary font-light lg:px-10 lg:pt-[114px] pt-[70px] lg:mb-[120px] mb-[60px]">
+    <section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto flex flex-col font-primary font-light lg:px-0 lg:pt-[114px] pt-[70px] lg:mb-[120px] mb-[60px]">
         <h5 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] border-gray-800 border-b pb-[20px] lg:mx-0 mx-[26px]">I nostri Rivenditori</h5>
         <div class="lg:mt-8 mt-[30px] lg:px-0 px-[10px]">
             <div class="img-clip w-full lg:h-[720px] h-[580px] relative bg-gray-950">

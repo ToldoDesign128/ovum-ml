@@ -14,6 +14,7 @@ jQuery("#hamburgerButton").click(function () {
     jQuery("#hamburgerButton").toggleClass("is-active");
     jQuery("#logo-header").toggleClass("hide-logo");
     jQuery("#menu").toggleClass("open");
+    jQuery("body").toggleClass("overflow-hidden");
   });
 var btn = jQuery('#ScrollTopBtn');
 
@@ -82,6 +83,19 @@ jQuery(document).ready(function () {
 // Mobile Sroller
 const swiperScroller = new Swiper('.swiperScroller', {
 
+  slidesPerView: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+
   loop: false,
 
   navigation: {
@@ -91,6 +105,18 @@ const swiperScroller = new Swiper('.swiperScroller', {
 });
 // Mobile Sroller Pagina Chi siamo
 const swiperScroller2 = new Swiper('.swiperScroller2', {
+  slidesPerView: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 
   loop: false,
 
@@ -101,8 +127,18 @@ const swiperScroller2 = new Swiper('.swiperScroller2', {
 });
 // Mobile Sroller Single
 const swiperScrollerSingle = new Swiper('.swiperScrollerSingle', {
-  slidesPerView: "auto",
-  spaceBetween: 20,
+  slidesPerView: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -112,7 +148,18 @@ const swiperScrollerSingle = new Swiper('.swiperScrollerSingle', {
 // Mobile Sroller Sponsor
 const swiperScrollerSponsor = new Swiper('.swiperScrollerSponsor', {
 
-  loop: true,
+  slidesPerView: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -120,8 +167,6 @@ const swiperScrollerSponsor = new Swiper('.swiperScrollerSponsor', {
   }
 });
 // Testimonial
-
-
 
 const swiperTestimonial = new Swiper(".swiperTestimonial", {
 
@@ -173,9 +218,18 @@ const swiperGallery2 = new Swiper('.swiperGallery2', {
 });
 // Single Repeater
 const swiperRepeater = new Swiper('.swiperRepeater', {
-  // Optional parameters
-  slidesPerView: "auto",
-  spaceBetween: 20,
+  slidesPerView: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 
   // Navigation arrows
   navigation: {
@@ -185,9 +239,18 @@ const swiperRepeater = new Swiper('.swiperRepeater', {
 });
 // Single Releated Post
 const swiperReleatedPost = new Swiper('.swiperReleatedPost', {
-  // Optional parameters
-  slidesPerView: "auto",
-  spaceBetween: 20,
+  slidesPerView: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 
   // Navigation arrows
   navigation: {
@@ -198,8 +261,18 @@ const swiperReleatedPost = new Swiper('.swiperReleatedPost', {
 
 // Single Home Mele
 const swiperHomeMele = new Swiper('.swiperHomeMele', {
-  slidesPerView: "auto",
-  spaceBetween: 20,
+  slidesPerView: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
 
   // Navigation arrows
   navigation: {

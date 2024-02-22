@@ -1,8 +1,8 @@
 <?php get_header();
 $page_id = get_queried_object_id(); ?>
 <!-- Hero -->
-<section class="relative">
-    <span class="sticky block top-0 left-0 w-full 3xl:h-[25vh] lg:h-[20vh] h-[20vh] z-40" style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"></span>
+<section id="heroAbout" class="relative">
+    <span class="topGradient sticky block top-0 left-0 w-full z-40" style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"></span>
 
     <div class="w-full flex flex-col items-center lg:mb-0 mb-[-40vh]">
 
@@ -13,25 +13,26 @@ $page_id = get_queried_object_id(); ?>
                 // Load sub field value.
                 $titolo_rep_hero = get_sub_field('repeater_titolo_hero');
         ?>
-                <div class="lg:w-2/3 w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] mt-[60px] ">
-                    <p class="lg:w-4/12 w-full lg:text-[40px] lg:leading-[44px] text-[28px] leading-[32px] lg:px-0 px-[26px]"><?php echo esc_html($titolo_rep_hero); ?></p>
-                    <div class="lg:w-6/12 w-full body-copy lg:mt-0 mt-[15px] lg:px-0 px-[26px]">
+                <div class="lg:max-w-[1280px] lg:w-2/3 w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] mt-[60px] ">
+                    <p class="lg:max-w-[1280px] lg:w-4/12 w-full lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] lg:px-0 px-[26px]"><?php echo esc_html($titolo_rep_hero); ?></p>
+                    <div class="lg:max-w-[1280px] lg:w-6/12 w-full body-copy lg:mt-0 mt-[15px] lg:px-0 px-[26px]">
                         <?php the_sub_field('repeater_testo_hero') ?>
                     </div>
                 </div>
         <?php
             endwhile;
         endif; ?>
-        <h3 class="lg:w-2/3 w-full font-primary lg:text-[40px] lg:leading-[56px] text-[28px] leading-[32px] font-light text-center text-gray-950 lg:mt-[120px] mt-[60px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_testo_hero')); ?></h3>
+        <h3 class="lg:max-w-[1280px] lg:w-2/3 w-full font-primary lg:text-[40px] lg:leading-[56px] text-[22px] leading-[28px] font-light text-center text-gray-950 lg:mt-[120px] mt-[60px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_testo_hero')); ?></h3>
     </div>
-    <div class="sticky bottom-[-10vh] w-full z-10">
-        <img class="md:block hidden w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF.svg'; ?>">
+    <div class="sticky bottom-0 w-full z-10">
+        <img class="lg:block hidden w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF.svg'; ?>">
+        <img class="lg:hidden md:block hidden w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_TABLET.svg'; ?>">
         <img class="md:hidden block w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_MOBILE.svg'; ?>">
-        <span class="absolute bottom-0 block w-full lg:h-full h-[65%] -z-10" style="background: linear-gradient(0deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);"></span>
+        <span class="absolute bottom-0 block w-full md:h-full h-[65%] -z-10" style="background: linear-gradient(0deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);"></span>
     </div>
 </section>
 <!-- Sezione 2 -->
-<section class="lg:max-w-screen-xl mx-auto lg:mt-[150px] lg:mb-[110px] mb-[30px]">
+<section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:mt-[120px] mt-[60px] lg:mb-[120px] mb-[20px]">
     <!-- Repeater sezione 2 -->
     <div class="w-full flex flex-row flex-wrap lg:px-0 px-[26px]">
         <?php
@@ -42,7 +43,7 @@ $page_id = get_queried_object_id(); ?>
                 $testo_rep_sez_2 = get_sub_field('repeater_testo_sezione_2'); ?>
                 <div class="lg:w-1/3 w-full font-primary font-light lg:pt-0 pt-[40px] lg:pb-8 lg:first:pl-0 lg:pl-8">
                     <p class="max-w-[16ch] lg:text-[40px] lg:leading-[50px] text-[22px] leading-[28px] lg:tracking-normal tracking-[.44px]"><?php echo esc_html($titolo_rep_sez_2); ?></p>
-                    <p class="body-copy lg:py-8 py-[15px]"><?php echo esc_html($testo_rep_sez_2); ?></p>
+                    <p class="body-copy lg:pt-[35px] pt-[15px] lg:pb-0 pb-[40px]"><?php echo esc_html($testo_rep_sez_2); ?></p>
                 </div>
         <?php
             endwhile;
@@ -51,19 +52,19 @@ $page_id = get_queried_object_id(); ?>
 
 </section>
 <!-- Sezione le nostre promesse -->
-<section class="lg:max-w-screen-xl mx-auto overflow-x-clip">
+<section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto overflow-x-clip">
     <!-- titolo sezione 3 -->
     <div class="w-full flex flex-col font-primary font-light lg:px-0 px-[26px]">
         <?php
         $titolo_sez_3 = get_field('chi_siamo_titolo_sezione_3', $page_id);
         if ($titolo_sez_3) :
         ?>
-            <p class="max-w-[18ch] lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 lg:pb-[22px] pb-[15px] pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
+            <p class="font-light max-w-[18ch] lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pb-[20px] pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
             <span class="w-full h-px bg-gray-600"></span>
         <?php endif; ?>
     </div>
     <!-- Repeater sezione 3 -->
-    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-0 px-[26px] lg:pt-[52px] pt-[40px]">
+    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-0 px-[26px] lg:pt-[90px] pt-[40px]">
         <?php
         if (have_rows('chi_siamo_repeater_sezione_3')) :
             while (have_rows('chi_siamo_repeater_sezione_3')) : the_row();
@@ -117,10 +118,10 @@ $page_id = get_queried_object_id(); ?>
     </div>
 </section>
 <!-- Sezione Defogliatrici -->
-<section class="lg:my-[120px] my-[60px] overflow-x-clip">
+<section class="lg:mt-[88px] mt-[60px] lg:mb-[150px] mb-[60px] overflow-x-clip">
     <p class="w-full font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:px-0 px-[26px]">Le nostre defogliatrici</p>
     <!-- Loop Macchinari -->
-    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-0 px-[26px]">
+    <div class="lg:pt-[90px] pt-[30px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
         <div class="swiper overflow-visible swiperHomeMele">
             <div class="swiper-wrapper items-center">
                 <?php
@@ -138,10 +139,14 @@ $page_id = get_queried_object_id(); ?>
                                 <div class="img-clip lg:h-[297px] h-[229px] overflow-hidden lg:mb-[26px] mb-[20px] mx-[10px] mt-[10px]">
                                     <?php the_post_thumbnail('post-thumb-small'); ?>
                                 </div>
-                                <div class="absolute lg:block hidden top-[285px] right-[10px] h-[30px] w-[30px] rotate-[135deg] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
-                                        <path d="m19,11.5H6.265l4.617-4.617-.707-.707-4.717,4.717c-.61.61-.61,1.604,0,2.214l4.718,4.718.707-.707-4.617-4.617h12.734v-1Z" />
+                                <div class="absolute lg:block hidden top-[292px] right-0 h-[30px] w-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.854" height="15.854" viewBox="0 0 15.854 15.854">
+                                        <g id="Icon_feather-arrow-down-right" data-name="Icon feather-arrow-down-right" transform="translate(0.354 15.5) rotate(-90)">
+                                            <path id="Unione_4" data-name="Unione 4" d="M1911.354-9034.176v-1h13.791L1911-9049.323l.706-.706,14.148,14.146v-13.791h1v15.5Z" transform="translate(-1911.354 9049.676)" />
+                                        </g>
                                     </svg>
+
                                 </div>
                                 <div class="lg:px-[26px] px-[20px]">
                                     <div class="lg:text-[36px] text-[22px] lg:leading-[44px] leading-[28px]">
@@ -156,25 +161,25 @@ $page_id = get_queried_object_id(); ?>
                                             <?php while (have_rows('prodotto_mela_gruppo_scheda_tecnica')) : the_row();
                                                 $scheda_releated_1 = get_sub_field('numero_testate');
                                                 $scheda_releated_2 = get_sub_field('dischi_per_testata');
-                                                $scheda_releated_3 = get_sub_field('larghezza_testata');
+                                                $scheda_releated_3 = get_sub_field('larghezza_telaio');
                                                 $scheda_releated_4 = get_sub_field('movimenti_idraulici');
                                             ?>
                                                 <div class="w-full flex flex-wrap">
                                                     <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
                                                         <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">NUMERO TESTATE</p>
-                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_1); ?></p>
+                                                        <p class="font-primary font-light w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_1); ?></p>
                                                     </div>
                                                     <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
                                                         <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">DISCHI PER TESTATA</p>
-                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_2); ?></p>
+                                                        <p class="font-primary font-light w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_2); ?></p>
                                                     </div>
                                                     <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
-                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TESTATA</p>
-                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_3); ?></p>
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TELAIO</p>
+                                                        <p class="font-primary font-light w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_3); ?></p>
                                                     </div>
                                                     <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
                                                         <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">MOVIMENTI IDRAULICI</p>
-                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_4); ?></p>
+                                                        <p class="font-primary font-light w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_4); ?></p>
                                                     </div>
                                                 </div>
                                         <?php

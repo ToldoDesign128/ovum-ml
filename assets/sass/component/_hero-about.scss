@@ -1,0 +1,14 @@
+#heroAbout{
+    .topGradient{
+        height: 20vh;
+
+        @media #{$md} {
+        height: 10vh;
+            
+        }
+        @media #{$lg} {
+        height: 20vh;
+            
+        }
+    }
+}

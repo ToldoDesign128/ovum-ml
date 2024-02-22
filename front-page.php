@@ -12,7 +12,7 @@ $page_id = get_queried_object_id(); ?>
 
     </video>
 
-    <div class="lg:max-w-screen-xl h-screen mx-auto flex flex-col lg:justify-center justify-between items-center">
+    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md h-screen mx-auto flex flex-col lg:justify-center justify-between items-center">
 
         <span class="w-full h-28"></span>
 
@@ -79,7 +79,7 @@ $page_id = get_queried_object_id(); ?>
 
 <!-- Sezione 2 -->
 
-<section class="lg:max-w-screen-xl mx-auto">
+<section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto">
 
 
 
@@ -354,7 +354,7 @@ $page_id = get_queried_object_id(); ?>
 
 <!-- Sezione 3 -->
 
-<section class="lg:max-w-screen-xl mx-auto lg:mt-[150px] mt-[60px]">
+<section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:mt-[150px] mt-[60px]">
 
     <!-- titolo sezione 3 -->
 
@@ -471,7 +471,7 @@ $page_id = get_queried_object_id(); ?>
 
                         $testo_rep_sez_3 = get_sub_field('testo_repeater_sezione_3'); ?>
 
-                        <li class="animationReveal swiper-slide w-[90vw] py-4">
+                        <li class="animationReveal swiper-slide py-4">
 
                             <p class="max-w-[16ch] text-[22px] leading-[28px] tracking-[.44px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
 
@@ -553,9 +553,9 @@ $page_id = get_queried_object_id(); ?>
 
 <!-- Sezione Mele -->
 
-<section class="lg:mt-[88px] mt-[30px] overflow-x-clip">
+<section class="lg:mt-[88px] mt-[40px] overflow-x-clip">
 
-    <div class="lg:max-w-screen-xl font-primary font-light mx-auto lg:px-0 px-[26px]">
+    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md font-primary font-light mx-auto lg:px-0 px-[26px]">
 
         <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pt-[20px]">Mele e meleti</p>
 
@@ -586,7 +586,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Loop Mele -->
 
-    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-0 px-[26px]">
+    <div class="lg:pt-[90px] pt-[40px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
 
         <div class="swiper overflow-visible swiperHomeMele">
 
@@ -766,7 +766,7 @@ $page_id = get_queried_object_id(); ?>
 
 <section class="lg:my-[150px] my-[60px] overflow-x-clip">
 
-    <div class="animationReveal lg:max-w-screen-xl font-primary font-light mx-auto lg:px-0 px-[26px]">
+    <div class="animationReveal xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md font-primary font-light mx-auto lg:px-0 px-[26px]">
 
         <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pt-[20px]">Uva e vigneto</p>
 
@@ -796,7 +796,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Loop Uva -->
 
-    <div class="lg:pt-[90px] pt-[40px] lg:max-w-screen-xl mx-auto lg:px-0 px-[26px]">
+    <div class="lg:pt-[90px] pt-[40px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
 
         <div class="swiper overflow-visible swiperHomeMele">
 
@@ -832,12 +832,12 @@ $page_id = get_queried_object_id(); ?>
 
                                 </div>
 
-                                <div class="absolute lg:block hidden top-[285px] right-[10px] h-[30px] w-[30px] rotate-[135deg] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <div class="absolute lg:block hidden top-[292px] right-0 h-[30px] w-[30px] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
-
-                                        <path d="m19,11.5H6.265l4.617-4.617-.707-.707-4.717,4.717c-.61.61-.61,1.604,0,2.214l4.718,4.718.707-.707-4.617-4.617h12.734v-1Z" />
-
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.854" height="15.854" viewBox="0 0 15.854 15.854">
+                                        <g id="Icon_feather-arrow-down-right" data-name="Icon feather-arrow-down-right" transform="translate(0.354 15.5) rotate(-90)">
+                                            <path id="Unione_4" data-name="Unione 4" d="M1911.354-9034.176v-1h13.791L1911-9049.323l.706-.706,14.148,14.146v-13.791h1v15.5Z" transform="translate(-1911.354 9049.676)" />
+                                        </g>
                                     </svg>
 
                                 </div>
