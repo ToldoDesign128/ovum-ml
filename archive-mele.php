@@ -5,8 +5,8 @@ get_header();
 
 <!-- Hero -->
 <section class="hero h-screen relative">
-    <img class="absolute lg:block hidden lg:top-0 top-[50px] left-0 w-auto h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_mele-header.jpg'; ?>" loading="lazy">
-    <img class="absolute lg:hidden block lg:top-0 top-[50px] left-0 w-auto h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/mele_2.jpg'; ?>" loading="lazy">
+    <img class="absolute lg:block hidden lg:top-0 top-[50px] left-0 w-auto h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_mele-header.jpg'; ?>">
+    <img class="absolute lg:hidden block lg:top-0 top-[50px] left-0 w-auto h-full object-cover" src="<?php echo get_template_directory_uri() . '/assets/img/hero/mele_2.jpg'; ?>">
 
     <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md h-screen mx-auto flex flex-col lg:justify-center justify-start items-center">
         <h1 class="font-primary font-light lg:w-[632px] w-[322px] lg:text-[75px] lg:leading-[80px] text-[40px] leading-[45px] text-center text-gray-950 z-10 lg:mt-0 mt-[124px]">

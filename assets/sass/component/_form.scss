@@ -190,7 +190,7 @@
   #field_1_7 > legend:nth-child(1) {
     display: none;
   }
-  #field_1_7 > div:nth-child(2) > label:nth-child(2) > a{
+  #field_1_7 > div:nth-child(2) > label:nth-child(2) > a {
     position: relative;
     overflow-x: clip;
     &::after {
@@ -211,7 +211,6 @@
         }
       }
     }
-
   }
   #input_1_7_1 {
     background: transparent;
@@ -228,7 +227,8 @@
     }
   }
 
-  input, textarea {
+  input,
+  textarea {
     padding: 0;
     font-size: 16px;
     line-height: 18px;
@@ -292,13 +292,13 @@
     }
   }
 
-  #gform_confirmation_wrapper_1{
+  #gform_confirmation_wrapper_1 {
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    #gform_confirmation_message_1{
+    #gform_confirmation_message_1 {
       font-size: 20px;
       font-weight: 300;
       line-height: 24px;

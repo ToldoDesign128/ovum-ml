@@ -2,6 +2,7 @@
 const swiperScroller = new Swiper('.swiperScroller', {
 
   slidesPerView: 1,
+  spaceBetween: 20,
 
   breakpoints: {
     768: {
@@ -24,6 +25,7 @@ const swiperScroller = new Swiper('.swiperScroller', {
 // Mobile Sroller Pagina Chi siamo
 const swiperScroller2 = new Swiper('.swiperScroller2', {
   slidesPerView: 1,
+  spaceBetween: 20,
 
   breakpoints: {
     768: {
@@ -46,6 +48,7 @@ const swiperScroller2 = new Swiper('.swiperScroller2', {
 // Mobile Sroller Single
 const swiperScrollerSingle = new Swiper('.swiperScrollerSingle', {
   slidesPerView: 1,
+  spaceBetween: 20,
 
   breakpoints: {
     768: {
@@ -67,6 +70,7 @@ const swiperScrollerSingle = new Swiper('.swiperScrollerSingle', {
 const swiperScrollerSponsor = new Swiper('.swiperScrollerSponsor', {
 
   slidesPerView: 1,
+  spaceBetween: 20,
 
   breakpoints: {
     768: {
@@ -137,6 +141,7 @@ const swiperGallery2 = new Swiper('.swiperGallery2', {
 // Single Repeater
 const swiperRepeater = new Swiper('.swiperRepeater', {
   slidesPerView: 1,
+  spaceBetween: 20,
 
   breakpoints: {
     768: {
@@ -158,6 +163,7 @@ const swiperRepeater = new Swiper('.swiperRepeater', {
 // Single Releated Post
 const swiperReleatedPost = new Swiper('.swiperReleatedPost', {
   slidesPerView: 1,
+  spaceBetween: 20,
 
   breakpoints: {
     768: {
@@ -180,6 +186,7 @@ const swiperReleatedPost = new Swiper('.swiperReleatedPost', {
 // Single Home Mele
 const swiperHomeMele = new Swiper('.swiperHomeMele', {
   slidesPerView: 1,
+  spaceBetween: 20,
 
   breakpoints: {
     768: {

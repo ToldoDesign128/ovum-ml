@@ -4,7 +4,7 @@ $page_id = get_queried_object_id(); ?>
 <section id="heroAbout" class="relative">
     <span class="topGradient sticky block top-0 left-0 w-full z-40" style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"></span>
 
-    <div class="w-full flex flex-col items-center lg:mb-0 mb-[-40vh]">
+    <div class="w-full flex flex-col items-center md:mb-0 mb-[-40vh]">
 
         <h1 class="max-w-[13ch] w-full font-primary lg:text-[100px] lg:leading-[100px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 mb-[120px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_titolo_hero')); ?></h1>
         <?php
@@ -13,16 +13,16 @@ $page_id = get_queried_object_id(); ?>
                 // Load sub field value.
                 $titolo_rep_hero = get_sub_field('repeater_titolo_hero');
         ?>
-                <div class="lg:max-w-[1280px] lg:w-2/3 w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] mt-[60px] ">
-                    <p class="lg:max-w-[1280px] lg:w-4/12 w-full lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] lg:px-0 px-[26px]"><?php echo esc_html($titolo_rep_hero); ?></p>
-                    <div class="lg:max-w-[1280px] lg:w-6/12 w-full body-copy lg:mt-0 mt-[15px] lg:px-0 px-[26px]">
+                <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] mt-[60px] ">
+                    <p class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-4/12 w-full lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] lg:px-0 px-[26px]"><?php echo esc_html($titolo_rep_hero); ?></p>
+                    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-6/12 w-full body-copy lg:mt-0 mt-[15px] lg:px-0 px-[26px]">
                         <?php the_sub_field('repeater_testo_hero') ?>
                     </div>
                 </div>
         <?php
             endwhile;
         endif; ?>
-        <h3 class="lg:max-w-[1280px] lg:w-2/3 w-full font-primary lg:text-[40px] lg:leading-[56px] text-[22px] leading-[28px] font-light text-center text-gray-950 lg:mt-[120px] mt-[60px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_testo_hero')); ?></h3>
+        <h3 class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-2/3 w-full font-primary lg:text-[40px] lg:leading-[56px] text-[22px] leading-[28px] font-light text-center text-gray-950 lg:mt-[120px] mt-[60px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_testo_hero')); ?></h3>
     </div>
     <div class="sticky bottom-0 w-full z-10">
         <img class="lg:block hidden w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF.svg'; ?>">

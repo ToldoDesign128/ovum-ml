@@ -521,7 +521,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Pulsante mobile -->
 
-    <div class="animationReveal w-full lg:hidden flex px-[26px] pt-[40px]">
+    <div class="w-full lg:hidden flex px-[26px] pt-[40px]">
 
         <?php
 

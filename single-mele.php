@@ -3,7 +3,7 @@
 <?php get_header();
 $page_id = get_queried_object_id(); ?>
 <!-- hero -->
-<section class="hero xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:pt-[150px] pt-[94px] overflow-x-clip lg:px-0 px-[26px]">
+<section class="hero xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:pt-[150px] pt-[94px] lg:pb-[60px] overflow-x-clip lg:px-0 px-[26px]">
     <div class="h-full max-h-min flex flex-wrap justify-between items-center">
         <div class="lg:w-1/2 w-full font-primary lg:pr-24 lg:order-1 order-2">
             <p class="uppercase lg:text-[12px] lg:leading-[13px] text-[10px] leading-[10px] font-secondary font-medium pb-[10px]">Mele</p>
@@ -34,7 +34,7 @@ $page_id = get_queried_object_id(); ?>
                 </ul>
         </div>
         <div class="lg:w-1/2 w-full lg:order-2 order-1 lg:my-0 mb-[40px]">
-            <div class="h-full lg:max-h-[560px] max-h-80 overflow-y-hidden img-clip">
+            <div class="h-full lg:max-h-[560px] md:max-h-[420px] max-h-[320px] overflow-y-hidden img-clip">
                 <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail(); ?>
                 <?php endif; ?>
@@ -124,7 +124,7 @@ $page_id = get_queried_object_id(); ?>
 <?php
 $gallery_sez_2 = get_field('prodotto_mela_galleria_sezione_2');
 if ($gallery_sez_2) : ?>
-    <section class="animationReveal w-full lg:pt-[140px] pt-[60px]">
+    <section class="animationReveal w-full lg:pt-[80px] pt-[60px] lg:pb-[60px]">
         <!-- Gallery -->
         <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
             <div class="swiper w-full swiperGallery">
@@ -138,15 +138,44 @@ if ($gallery_sez_2) : ?>
                     <?php endforeach; ?>
                 </ul>
                 <!-- Slider button -->
-                <div class="swiper-button-prev rotate-180">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                        <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-                    </svg>
+                <div class="lg:block hidden">
+                    <div class="swiper-button-prev rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                            <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+                            <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+                        </svg>
+                    </div>
                 </div>
-                <div class="swiper-button-next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
-                        <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
-                    </svg>
+
+                <!-- Slider button mobile -->
+                <div class="arrow-container lg:hidden block">
+
+                    <div class="swiper-button-prev rotate-180">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+
+                            <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+
+                        </svg>
+
+                    </div>
+
+                    <div class="swiper-button-next">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
+
+                            <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
+
+                        </svg>
+
+                    </div>
+
+                    <span id="arrowAnimation" class="absolute left-[32px] bottom-0 block bg-white h-5 w-5 z-10"></span>
+
                 </div>
             </div>
         </div>
@@ -162,15 +191,17 @@ if ($titolo_sez_3) :
     <section class="animationReveal w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
         <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-col mx-auto font-primary font-light lg:px-0 px-[26px]">
-            <p class="lg:w-8/12 w-full lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_3); ?></p>
+            <p class="w-full heading-3 text-gray-950 lg:pb-[30px] pb-[20px] pr-4"><?php echo esc_html($titolo_sez_3); ?></p>
             <span class="w-full h-px bg-gray-600"></span>
 
-            <div class="w-full flex justify-between font-primary font-light pt-[25px]">
+            <div class="w-full flex justify-between font-primary font-light lg:mt-[50px] mt-[30px]">
                 <div class="lg:w-1/2 w-full body-copy">
                     <?php the_field('prodotto_mela_testo_sezione_3', $page_id); ?>
                 </div>
                 <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="#scheda-tecnica">
-                    Scheda tecnica
+                    <p class="min-w-[130px] text-center">
+                        Scheda tecnica
+                    </p>
                     <span class="bg-gray-300 mix-blend-multiply"></span>
                 </a>
             </div>
@@ -222,7 +253,7 @@ if ($titolo_sez_3) :
 <?php if (have_rows('prodotto_mela_galleria_video')) : ?>
     <section class="animationReveal lg:mt-[150px] mt-[70px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
         <div class="swiper lg:overflow-visible overflow-clip swiperGallery2">
-            <ul class="swiper-wrapper">
+            <ul class="swiper-wrapper flex items-baseline">
                 <?php while (have_rows('prodotto_mela_galleria_video')) : the_row();
                     $gallery_sellector = get_sub_field('gallery_selector');
                     $gallery_image = get_sub_field('immagine_galleria');
@@ -234,7 +265,7 @@ if ($titolo_sez_3) :
                     <?php
                     } else {
                     ?>
-                        <li class="swiper-slide">
+                        <li class="swiper-slide flex flex-col justify-end">
                             <?php the_sub_field('video_galleria'); ?>
                         </li>
                     <?php
@@ -263,8 +294,8 @@ if ($titolo_sez_3) :
 <!-- Scheda Tecnica -->
 <section id="scheda-tecnica" class="animationReveal w-full lg:mt-[120px] mt-[70px]">
     <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-col mx-auto font-primary font-light lg:px-0 px-[26px]">
-        <h5 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] border-b border-gray-950 lg:pb-4 pb-[20px]"><?php echo esc_html(get_field('prodotto_mela_titolo_scheda_tecnica')); ?></h5>
-        <div class="flex flex-row justify-end lg:pt-8">
+        <h5 class="w-full heading-3 text-gray-950 lg:pb-[30px] pb-[20px] border-b border-gray-950"><?php echo esc_html(get_field('prodotto_mela_titolo_scheda_tecnica')); ?></h5>
+        <div class="flex flex-row justify-end lg:mt-[50px] mt-[30px]">
             <?php
             $scheda_pulsante = get_field('prodotto_mela_pulsante_1_scheda_tecnica');
             if ($scheda_pulsante) :
@@ -273,7 +304,9 @@ if ($titolo_sez_3) :
                 $scheda_pulsante_target = $scheda_pulsante['target'] ? $scheda_pulsante['target'] : '_self';
             ?>
                 <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px] mr-4" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
-                    <?php echo esc_html($scheda_pulsante_title); ?>
+                    <p class="min-w-[130px] text-center">
+                        <?php echo esc_html($scheda_pulsante_title); ?>
+                    </p>
                     <span class="bg-gray-300 mix-blend-multiply"></span>
                 </a>
             <?php endif;
@@ -284,7 +317,9 @@ if ($titolo_sez_3) :
                 $scheda_pulsante_2_target = $scheda_pulsante_2['target'] ? $scheda_pulsante_2['target'] : '_self';
             ?>
                 <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($scheda_pulsante_2_url); ?>" target="<?php echo esc_attr($scheda_pulsante_2_target); ?>">
-                    <?php echo esc_html($scheda_pulsante_2_title); ?>
+                    <p class="min-w-[130px] text-center">
+                        <?php echo esc_html($scheda_pulsante_2_title); ?>
+                    </p>
                     <span class="bg-gray-300 mix-blend-multiply"></span>
                 </a>
             <?php endif; ?>
@@ -321,97 +356,97 @@ if ($titolo_sez_3) :
                     <?php if ($scheda_valore_1) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">PRESSIONE LAVORO</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_1); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_1); ?></p>
                         </div>
                     <?php endif; ?>
                     <?php if ($scheda_valore_2) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">IMPULSI AL MINUTO</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_2); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_2); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_3) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">POTENZA TRATTRICE RICHIESTA</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_3); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_3); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_4) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">PORTATA COMPRESSORE</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_4); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_4); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_5) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">PORTATA MIN. IMPIANTO IDRAULICO</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_5); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_5); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_6) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">VELOCITÀ AVANZAMENTO</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_6); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_6); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_7) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">NUMERO TESTATE</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_7); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_7); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_8) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">DISCHI PER TESTATA</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_8); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_8); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_9) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">ALTEZZA TESTATA</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_9); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_9); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_10) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TELAIO</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_10); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_10); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_11) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LUNGHEZZA TELAIO</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_11); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_11); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_12) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">MOVIMENTI IDRAULICI</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_12); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_12); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_13) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">CORSA PIANTONE PRINCIPALE</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_13); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_13); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_14) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">INCLIANZIONE PIANTONE PRINCIPALE</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_14); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_14); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_15) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">NODO SECONDA PORZIONE</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_15); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_15); ?></p>
                         </div>
                     <?php endif;
                     if ($scheda_valore_16) : ?>
                         <div class="w-full flex flex-row items-center justify-between py-[10px] border-b  border-gray-950">
                             <p class="lg:w-1/2 w-9/12 lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">SFILO SECONDO BRACCIO</p>
-                            <p class="lg:w-1/2 w-auto text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_16); ?></p>
+                            <p class="lg:w-1/2 w-auto lg:text-left text-right lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_valore_16); ?></p>
                         </div>
                         <?php endif;
 
@@ -551,7 +586,9 @@ if ($titolo_sez_3) :
                 $scheda_pulsante_target = $scheda_pulsante['target'] ? $scheda_pulsante['target'] : '_self';
             ?>
                 <a class="lg:hidden w-full text-center block button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
-                    <?php echo esc_html($scheda_pulsante_title); ?>
+                    <p class="min-w-[130px] text-center">
+                        <?php echo esc_html($scheda_pulsante_title); ?>
+                    </p>
                     <span class="bg-gray-300 mix-blend-multiply"></span>
                 </a>
             <?php endif; ?>
@@ -564,18 +601,21 @@ if ($titolo_sez_3) :
 $titolo_sez_6 = get_field('prodotto_mela_titolo_altre_configurazioni', $page_id);
 if ($titolo_sez_6) :
 ?>
-    <section id="altre-configurazioni" class="animationReveal w-full lg:pt-[120px] pt-[60px]">
+    <section id="altre-configurazioni" class="animationReveal xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
-        <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-col mx-auto font-primary font-light lg:px-0 px-[26px]">
-            <p class="lg:w-8/12 w-full lg:text-5xl text-4xl text-gray-950 pb-[25px]"><?php echo esc_html($titolo_sez_6); ?></p>
+        <div class="w-full flex flex-col font-primary font-light lg:px-0 px-[26px]">
+            <p class="w-full heading-3 text-gray-950 lg:pb-[30px] pb-[20px]"><?php echo esc_html($titolo_sez_6); ?></p>
             <span class="w-full h-px bg-gray-600"></span>
 
-            <div class="w-full flex justify-between font-primary font-light pt-[25px]">
+            <div class="w-full flex justify-between font-primary font-light lg:mt-[50px] mt-[30px]">
                 <div class="lg:w-1/2 w-full body-copy">
                     <?php the_field('prodotto_mela_testo_altre_configurazioni', $page_id); ?>
                 </div>
                 <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="#scheda-tecnica">
-                    Scheda tecnica
+
+                    <p class="min-w-[130px] text-center">
+                        Scheda tecnica
+                    </p>
                     <span class="bg-gray-300 mix-blend-multiply"></span>
                 </a>
             </div>
@@ -629,7 +669,9 @@ if ($titolo_sez_6) :
                     $scheda_pulsante_target = $scheda_pulsante['target'] ? $scheda_pulsante['target'] : '_self';
                 ?>
                     <a class="lg:hidden w-full text-center block button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
-                        <?php echo esc_html($scheda_pulsante_title); ?>
+                        <p class="min-w-[130px] text-center">
+                            <?php echo esc_html($scheda_pulsante_title); ?>
+                        </p>
                         <span class="bg-gray-300 mix-blend-multiply"></span>
                     </a>
                 <?php endif; ?>

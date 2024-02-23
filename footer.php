@@ -27,7 +27,7 @@
 ?>
     <!-- CTA -->
     <section class="font-primary w-full lg:mb-[175px] mb-[40px]">
-        <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-10 px-[10px]">
+        <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[10px]">
             <div class="cta flex flex-col justify-center items-center text-gray-50 bg-gray-950 lg:text-left text-center lg:pt-[50px] pt-[60px] lg:pb-[55px] pb-[60px] lg:px-0 px-[45px]">
                 <?php
 
