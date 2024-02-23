@@ -134,6 +134,16 @@
     height: 480px;
     .swiper-wrapper {
       height: 442px;
+      .swiper-slide {
+        width: 100% !important;
+        img,
+        iframe {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 
@@ -142,7 +152,14 @@
     .swiper-wrapper {
       height: 717px;
       .swiper-slide {
-        width: auto !important;
+        width: 100% !important;
+        img,
+        iframe {
+          display: block;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
       }
     }
   }

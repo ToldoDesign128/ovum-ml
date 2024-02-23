@@ -4,37 +4,37 @@ $page_id = get_queried_object_id(); ?>
 <section id="heroAbout" class="relative">
     <span class="topGradient sticky block top-0 left-0 w-full z-40" style="background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);"></span>
 
-    <div class="w-full flex flex-col items-center md:mb-0 mb-[-40vh]">
+    <div class="w-full flex flex-col items-center lg:mb-[10vh] mb-[-25vh]">
 
-        <h1 class="max-w-[13ch] w-full font-primary lg:text-[100px] lg:leading-[100px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 mb-[120px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_titolo_hero')); ?></h1>
+        <h1 class="max-w-[13ch] w-full font-primary lg:text-[100px] lg:leading-[100px] text-[40px] leading-[45px] font-light text-center text-gray-950 z-10 mb-[120px] px-[26px]"><?php echo esc_html(get_field('chi_siamo_titolo_hero')); ?></h1>
         <?php
         if (have_rows('chi_siamo_repeater_hero')) :
             while (have_rows('chi_siamo_repeater_hero')) : the_row();
                 // Load sub field value.
                 $titolo_rep_hero = get_sub_field('repeater_titolo_hero');
         ?>
-                <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] mt-[60px] ">
-                    <p class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-4/12 w-full lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] lg:px-0 px-[26px]"><?php echo esc_html($titolo_rep_hero); ?></p>
-                    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-6/12 w-full body-copy lg:mt-0 mt-[15px] lg:px-0 px-[26px]">
+                <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] md:mt-[140px] mt-[100px] ">
+                    <p class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-4/12 w-full lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] px-[26px]"><?php echo esc_html($titolo_rep_hero); ?></p>
+                    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-6/12 w-full body-copy lg:mt-0 mt-[15px] px-[26px]">
                         <?php the_sub_field('repeater_testo_hero') ?>
                     </div>
                 </div>
         <?php
             endwhile;
         endif; ?>
-        <h3 class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-2/3 w-full font-primary lg:text-[40px] lg:leading-[56px] text-[22px] leading-[28px] font-light text-center text-gray-950 lg:mt-[120px] mt-[60px] lg:px-0 px-[26px]"><?php echo esc_html(get_field('chi_siamo_testo_hero')); ?></h3>
+        <h3 class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-2/3 w-full font-primary lg:text-[40px] lg:leading-[56px] text-[22px] leading-[28px] font-light text-center text-gray-950 lg:mt-[120px] md:mt-[140px] mt-[100px] px-[26px]"><?php echo esc_html(get_field('chi_siamo_testo_hero')); ?></h3>
     </div>
     <div class="sticky bottom-0 w-full z-10">
         <img class="lg:block hidden w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF.svg'; ?>">
         <img class="lg:hidden md:block hidden w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_TABLET.svg'; ?>">
-        <img class="md:hidden block w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_MOBILE.svg'; ?>">
-        <span class="absolute bottom-0 block w-full md:h-full h-[65%] -z-10" style="background: linear-gradient(0deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);"></span>
+        <img class="md:hidden block w-full object-contain z-40" src="<?php echo get_template_directory_uri() . '/assets/img/hero/ML_Illustrazione_DEF_MOBILE_02.svg'; ?>">
+        <span class="absolute bottom-0 block w-full lg:h-full md:h-[75%] h-[70%] -z-10" style="background: linear-gradient(0deg, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);"></span>
     </div>
 </section>
 <!-- Sezione 2 -->
 <section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:mt-[120px] mt-[60px] lg:mb-[120px] mb-[20px]">
     <!-- Repeater sezione 2 -->
-    <div class="w-full flex flex-row flex-wrap lg:px-0 px-[26px]">
+    <div class="w-full flex flex-row flex-wrap px-[26px]">
         <?php
         if (have_rows('chi_siamo_repeater_sezione_2')) :
             while (have_rows('chi_siamo_repeater_sezione_2')) : the_row();
@@ -54,7 +54,7 @@ $page_id = get_queried_object_id(); ?>
 <!-- Sezione le nostre promesse -->
 <section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto overflow-x-clip">
     <!-- titolo sezione 3 -->
-    <div class="w-full flex flex-col font-primary font-light lg:px-0 px-[26px]">
+    <div class="w-full flex flex-col font-primary font-light px-[26px]">
         <?php
         $titolo_sez_3 = get_field('chi_siamo_titolo_sezione_3', $page_id);
         if ($titolo_sez_3) :
@@ -64,7 +64,7 @@ $page_id = get_queried_object_id(); ?>
         <?php endif; ?>
     </div>
     <!-- Repeater sezione 3 -->
-    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-0 px-[26px] lg:pt-[90px] pt-[40px]">
+    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light px-[26px] lg:pt-[90px] pt-[40px]">
         <?php
         if (have_rows('chi_siamo_repeater_sezione_3')) :
             while (have_rows('chi_siamo_repeater_sezione_3')) : the_row();
@@ -119,9 +119,9 @@ $page_id = get_queried_object_id(); ?>
 </section>
 <!-- Sezione Defogliatrici -->
 <section class="lg:mt-[88px] mt-[60px] lg:mb-[150px] mb-[60px] overflow-x-clip">
-    <p class="w-full font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:px-0 px-[26px]">Le nostre defogliatrici</p>
+    <p class="w-full font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 px-[26px]">Le nostre defogliatrici</p>
     <!-- Loop Macchinari -->
-    <div class="lg:pt-[90px] pt-[30px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
+    <div class="lg:pt-[90px] pt-[30px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto px-[26px]">
         <div class="swiper overflow-visible swiperHomeMele">
             <div class="swiper-wrapper items-center">
                 <?php

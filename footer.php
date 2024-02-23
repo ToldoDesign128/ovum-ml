@@ -27,7 +27,7 @@
 ?>
     <!-- CTA -->
     <section class="font-primary w-full lg:mb-[175px] mb-[40px]">
-        <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[10px]">
+        <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-26px px-[10px]">
             <div class="cta flex flex-col justify-center items-center text-gray-50 bg-gray-950 lg:text-left text-center lg:pt-[50px] pt-[60px] lg:pb-[55px] pb-[60px] lg:px-0 px-[45px]">
                 <?php
 
@@ -56,13 +56,14 @@
 }; ?>
 
 <footer id="footer" class="font-primary font-light relative w-full bg-gray-950 z-40">
-    <section class="relative xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md flex flex-col text-gray-50 mx-auto lg:px-0 px-[26px]">
+    <section class="relative xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md flex flex-col text-gray-50 mx-auto px-[26px]">
         <!-- Footer sezione 1 -->
         <div class="w-full flex lg:flex-row flex-col justify-between lg:py-[120px] py-[40px]">
             <h6 class="lg:w-7/12 w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] font-light"><?php echo esc_html(get_field('footer_frase', 'option')); ?></h6>
             <!-- form -->
             <div class="lg:w-4/12 w-full lg:mt-0 mt-[40px]">
-                <?php gravity_form( 2, false, false, false, '', false ); ?>
+                <?php gravity_form( 2, false, false, false, '', true, 12 ); ?>
+                
             </div>
         </div>
         <!-- Footer sezione 2 -->

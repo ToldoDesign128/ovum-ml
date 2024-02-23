@@ -16,9 +16,9 @@ $page_id = get_queried_object_id(); ?>
 
         <span class="w-full h-28"></span>
 
-        <h1 class="font-primary xl:w-1/2 lg:w-2/3 lg:text-[100px] lg:leading-[100px] text-[50px] leading-[56px] font-light text-center text-gray-950 z-10 py-6 lg:px-0 px-[26px]"><?php echo esc_html(get_field('home_titolo_sezione_1', $page_id)); ?></h1>
+        <h1 class="font-primary xl:w-1/2 lg:w-2/3 lg:text-[100px] lg:leading-[100px] text-[50px] leading-[56px] font-light text-center text-gray-950 z-10 py-6 px-[26px]"><?php echo esc_html(get_field('home_titolo_sezione_1', $page_id)); ?></h1>
 
-        <div class="lg:w-fit w-full flex lg:flex-row flex-col justify-between text-center body-copy py-6 lg:px-0 px-[26px] mb-12">
+        <div class="lg:w-fit w-full flex lg:flex-row flex-col justify-between text-center body-copy py-6 px-[26px] mb-12">
 
             <?php
 
@@ -91,7 +91,7 @@ $page_id = get_queried_object_id(); ?>
 
         <!-- sponsor -->
 
-        <div class="animationReveal w-full flex flex-wrap justify-between font-primary pt-[60px] lg:px-0 px-[26px]">
+        <div class="animationReveal w-full flex flex-wrap justify-between font-primary pt-[60px] px-[26px]">
 
             <?php
 
@@ -256,7 +256,7 @@ $page_id = get_queried_object_id(); ?>
     if ($titolo_2_sez_2) :
 
     ?>
-        <div class="animationReveal w-full flex flex-col font-primary font-light lg:px-0 px-[26px] lg:pt-[120px] pt-[60px]">
+        <div class="animationReveal w-full flex flex-col font-primary font-light px-[26px] lg:pt-[120px] pt-[60px]">
 
 
             <p class="w-full heading-3 text-gray-950 lg:pb-[30px] pb-[20px] pr-4" style="line-height: 1.1;"><?php echo esc_html($titolo_2_sez_2); ?></p>
@@ -358,7 +358,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- titolo sezione 3 -->
 
-    <div class="animationReveal w-full flex flex-col font-primary font-light lg:px-0 px-[26px] ">
+    <div class="animationReveal w-full flex flex-col font-primary font-light px-[26px] ">
 
         <?php
 
@@ -378,7 +378,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- testo sezione 3 -->
 
-    <div class="w-full flex justify-between font-primary font-light lg:px-0 px-[26px] lg:mt-[50px] mt-[30px]">
+    <div class="w-full flex justify-between font-primary font-light px-[26px] lg:mt-[50px] mt-[30px]">
 
         <div class="lg:w-1/2 w-full body-copy">
 
@@ -415,7 +415,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Repeater sezione 3 -->
 
-    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light lg:px-0 px-[26px] lg:pt-[90px] pt-[40px]">
+    <ol class="repeater w-full lg:flex hidden flex-wrap justify-between font-primary font-light px-[26px] lg:pt-[90px] pt-[40px]">
 
         <?php
 
@@ -471,7 +471,7 @@ $page_id = get_queried_object_id(); ?>
 
                         $testo_rep_sez_3 = get_sub_field('testo_repeater_sezione_3'); ?>
 
-                        <li class="animationReveal swiper-slide py-4">
+                        <li class="swiper-slide py-4">
 
                             <p class="max-w-[16ch] text-[22px] leading-[28px] tracking-[.44px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
 
@@ -555,7 +555,7 @@ $page_id = get_queried_object_id(); ?>
 
 <section class="lg:mt-[88px] mt-[40px] overflow-x-clip">
 
-    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md font-primary font-light mx-auto lg:px-0 px-[26px]">
+    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md font-primary font-light mx-auto px-[26px]">
 
         <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pt-[20px]">Mele e meleti</p>
 
@@ -586,7 +586,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Loop Mele -->
 
-    <div class="lg:pt-[90px] pt-[40px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
+    <div class="lg:pt-[90px] pt-[40px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto px-[26px]">
 
         <div class="swiper overflow-visible swiperHomeMele">
 
@@ -658,7 +658,7 @@ $page_id = get_queried_object_id(); ?>
 
                                                 $scheda_releated_2 = get_sub_field('dischi_per_testata');
 
-                                                $scheda_releated_3 = get_sub_field('larghezza_testata');
+                                                $scheda_releated_3 = get_sub_field('larghezza_telaio');
 
                                                 $scheda_releated_4 = get_sub_field('movimenti_idraulici');
 
@@ -684,7 +684,7 @@ $page_id = get_queried_object_id(); ?>
 
                                                     <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
 
-                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TESTATA</p>
+                                                        <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TELAIO</p>
 
                                                         <p class="w-auto font-primary font-light lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_releated_3); ?></p>
 
@@ -766,7 +766,7 @@ $page_id = get_queried_object_id(); ?>
 
 <section class="lg:my-[150px] my-[60px] overflow-x-clip">
 
-    <div class="animationReveal xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md font-primary font-light mx-auto lg:px-0 px-[26px]">
+    <div class="animationReveal xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md font-primary font-light mx-auto px-[26px]">
 
         <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pt-[20px]">Uva e vigneto</p>
 
@@ -796,7 +796,7 @@ $page_id = get_queried_object_id(); ?>
 
     <!-- Loop Uva -->
 
-    <div class="lg:pt-[90px] pt-[40px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
+    <div class="lg:pt-[90px] pt-[40px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto px-[26px]">
 
         <div class="swiper overflow-visible swiperHomeMele">
 

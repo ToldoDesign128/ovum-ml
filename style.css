@@ -592,8 +592,8 @@ video {
 .mb-12{
   margin-bottom: 3rem;
 }
-.mb-\[-40vh\]{
-  margin-bottom: -40vh;
+.mb-\[-25vh\]{
+  margin-bottom: -25vh;
 }
 .mb-\[10px\]{
   margin-bottom: 10px;
@@ -636,6 +636,9 @@ video {
 }
 .mr-4{
   margin-right: 1rem;
+}
+.mt-\[100px\]{
+  margin-top: 100px;
 }
 .mt-\[10px\]{
   margin-top: 10px;
@@ -706,8 +709,8 @@ video {
 .h-\[580px\]{
   height: 580px;
 }
-.h-\[65\%\]{
-  height: 65%;
+.h-\[70\%\]{
+  height: 70%;
 }
 .h-auto{
   height: auto;
@@ -1671,6 +1674,9 @@ footer #FooterLink a::after, footer #credits a::after {
 #gform_wrapper_1 {
   padding-top: 35px;
 }
+#gform_wrapper_1 .gform_heading .gform_required_legend {
+  display: none;
+}
 #gform_wrapper_1 #gform_1_validation_container {
   display: none;
 }
@@ -1832,11 +1838,13 @@ footer #FooterLink a::after, footer #credits a::after {
   display: none;
 }
 #gform_wrapper_1 #field_1_7 > div:nth-child(2) > label:nth-child(2) > a {
+  display: inline-flex;
   position: relative;
   overflow-x: clip;
 }
 #gform_wrapper_1 #field_1_7 > div:nth-child(2) > label:nth-child(2) > a::after {
   content: "";
+  opacity: 0;
   position: absolute;
   bottom: 0;
   left: -100%;
@@ -1846,6 +1854,9 @@ footer #FooterLink a::after, footer #credits a::after {
   transition: left 0.8s;
 }
 @media (min-width : 1024px) {
+  #gform_wrapper_1 #field_1_7 > div:nth-child(2) > label:nth-child(2) > a::after {
+    opacity: 1;
+  }
   #gform_wrapper_1 #field_1_7 > div:nth-child(2) > label:nth-child(2) > a:hover::after {
     left: 0%;
   }
@@ -1877,13 +1888,13 @@ footer #FooterLink a::after, footer #credits a::after {
   }
 }
 #gform_wrapper_1 #input_1_1,
-#gform_wrapper_1 #field_1_3,
+#gform_wrapper_1 #field_1_3 > div.ginput_container.ginput_container_email,
 #gform_wrapper_1 #field_1_4 {
   position: relative;
   overflow-x: clip;
 }
 #gform_wrapper_1 #input_1_1::after,
-#gform_wrapper_1 #field_1_3::after,
+#gform_wrapper_1 #field_1_3 > div.ginput_container.ginput_container_email::after,
 #gform_wrapper_1 #field_1_4::after {
   content: "";
   position: absolute;
@@ -1896,7 +1907,7 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 @media (min-width : 1024px) {
   #gform_wrapper_1 #input_1_1:hover::after,
-  #gform_wrapper_1 #field_1_3:hover::after,
+  #gform_wrapper_1 #field_1_3 > div.ginput_container.ginput_container_email:hover::after,
   #gform_wrapper_1 #field_1_4:hover::after {
     left: 0%;
   }
@@ -1925,20 +1936,18 @@ footer #FooterLink a::after, footer #credits a::after {
     background-color: rgb(55, 65, 81);
   }
 }
-#gform_wrapper_1 #gform_confirmation_wrapper_1 {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#gform_wrapper_1 #gform_confirmation_wrapper_1 #gform_confirmation_message_1 {
+
+#gform_confirmation_wrapper_1 #gform_confirmation_message_1 {
+  margin-top: 30px;
+  border: 1px solid rgb(3, 7, 18);
+  padding: 30px;
   font-size: 20px;
   font-weight: 300;
   line-height: 24px;
 }
 @media (min-width : 1024px) {
-  #gform_wrapper_1 #gform_confirmation_wrapper_1 #gform_confirmation_message_1 {
+  #gform_confirmation_wrapper_1 #gform_confirmation_message_1 {
+    margin-top: 80px;
     font-size: 30px;
     line-height: 34px;
   }
@@ -1999,11 +2008,13 @@ footer #FooterLink a::after, footer #credits a::after {
   box-shadow: none !important;
 }
 #gform_wrapper_2 #field_2_4 div:nth-child(2) > label:nth-child(2) > a {
+  display: inline-flex;
   position: relative;
   overflow-x: clip;
 }
 #gform_wrapper_2 #field_2_4 div:nth-child(2) > label:nth-child(2) > a::after {
   content: "";
+  opacity: 0;
   position: absolute;
   bottom: 0;
   left: -100%;
@@ -2013,6 +2024,9 @@ footer #FooterLink a::after, footer #credits a::after {
   transition: left 0.8s;
 }
 @media (min-width : 1024px) {
+  #gform_wrapper_2 #field_2_4 div:nth-child(2) > label:nth-child(2) > a::after {
+    opacity: 1;
+  }
   #gform_wrapper_2 #field_2_4 div:nth-child(2) > label:nth-child(2) > a:hover::after {
     left: 0%;
   }
@@ -2095,20 +2109,16 @@ footer #FooterLink a::after, footer #credits a::after {
     background-color: rgb(209, 213, 219);
   }
 }
-#gform_wrapper_2 #gform_confirmation_wrapper_2 {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#gform_wrapper_2 #gform_confirmation_wrapper_2 #gform_confirmation_message_2 {
+
+#gform_confirmation_wrapper_2 {
+  border: 1px solid rgb(249, 250, 251);
+  padding: 30px;
   font-size: 20px;
   font-weight: 300;
   line-height: 24px;
 }
 @media (min-width : 1024px) {
-  #gform_wrapper_2 #gform_confirmation_wrapper_2 #gform_confirmation_message_2 {
+  #gform_confirmation_wrapper_2 {
     font-size: 30px;
     line-height: 34px;
   }
@@ -2119,12 +2129,12 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 @media (min-width : 768px) {
   #heroAbout .topGradient {
-    height: 10vh;
+    height: 20vh;
   }
 }
 @media (min-width : 1024px) {
   #heroAbout .topGradient {
-    height: 20vh;
+    height: 15vh;
   }
 }
 
@@ -2282,6 +2292,17 @@ footer #FooterLink a::after, footer #credits a::after {
   .swiper.swiperGallery2 .swiper-wrapper {
     height: 442px;
   }
+  .swiper.swiperGallery2 .swiper-wrapper .swiper-slide {
+    width: 100% !important;
+  }
+  .swiper.swiperGallery2 .swiper-wrapper .swiper-slide img,
+  .swiper.swiperGallery2 .swiper-wrapper .swiper-slide iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 @media (min-width : 1024px) {
   .swiper.swiperGallery2 {
@@ -2291,7 +2312,15 @@ footer #FooterLink a::after, footer #credits a::after {
     height: 717px;
   }
   .swiper.swiperGallery2 .swiper-wrapper .swiper-slide {
-    width: auto !important;
+    width: 100% !important;
+  }
+  .swiper.swiperGallery2 .swiper-wrapper .swiper-slide img,
+  .swiper.swiperGallery2 .swiper-wrapper .swiper-slide iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -2483,8 +2512,8 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 
 @media (min-width: 768px){
-  .md\:mb-0{
-    margin-bottom: 0px;
+  .md\:mt-\[140px\]{
+    margin-top: 140px;
   }
   .md\:block{
     display: block;
@@ -2495,8 +2524,8 @@ footer #FooterLink a::after, footer #credits a::after {
   .md\:h-10{
     height: 2.5rem;
   }
-  .md\:h-full{
-    height: 100%;
+  .md\:h-\[75\%\]{
+    height: 75%;
   }
   .md\:max-h-\[420px\]{
     max-height: 420px;
@@ -2545,11 +2574,11 @@ footer #FooterLink a::after, footer #credits a::after {
     margin-top: 150px;
     margin-bottom: 150px;
   }
-  .lg\:mb-0{
-    margin-bottom: 0px;
-  }
   .lg\:mb-\[10px\]{
     margin-bottom: 10px;
+  }
+  .lg\:mb-\[10vh\]{
+    margin-bottom: 10vh;
   }
   .lg\:mb-\[120px\]{
     margin-bottom: 120px;
@@ -2592,9 +2621,6 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:mt-0{
     margin-top: 0px;
-  }
-  .lg\:mt-8{
-    margin-top: 2rem;
   }
   .lg\:mt-\[120px\]{
     margin-top: 120px;
@@ -2643,6 +2669,9 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:h-\[90\%\]{
     height: 90%;
+  }
+  .lg\:h-full{
+    height: 100%;
   }
   .lg\:max-h-\[560px\]{
     max-height: 560px;
@@ -2698,9 +2727,6 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:w-full{
     width: 100%;
-  }
-  .lg\:max-w-\[1280px\]{
-    max-width: 1280px;
   }
   .lg\:max-w-\[18ch\]{
     max-width: 18ch;
@@ -2952,11 +2978,23 @@ footer #FooterLink a::after, footer #credits a::after {
 }
 
 @media (min-width: 1280px){
+  .xl\:flex{
+    display: flex;
+  }
+  .xl\:hidden{
+    display: none;
+  }
   .xl\:w-1\/2{
     width: 50%;
   }
   .xl\:max-w-screen-xl{
     max-width: 1280px;
+  }
+  .xl\:text-\[50px\]{
+    font-size: 50px;
+  }
+  .xl\:leading-\[41px\]{
+    line-height: 41px;
   }
 }
 

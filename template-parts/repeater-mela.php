@@ -1,5 +1,5 @@
 <!-- scroller repeater mela -->
-<section class="pt-[60px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
+<section class="pt-[60px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto px-[26px]">
     <div class="swiper lg:overflow-visible overflow-clip swiperRepeater">
         <ul class="swiper-wrapper">
             <?php

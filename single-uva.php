@@ -3,7 +3,7 @@
 <?php get_header();
 $page_id = get_queried_object_id(); ?>
 <!-- hero -->
-<section class="hero xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:pt-[230px] pt-[94px] overflow-x-clip lg:px-0 px-[26px]">
+<section class="hero xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:pt-[230px] pt-[94px] overflow-x-clip px-[26px]">
     <div class="h-full max-h-min flex flex-wrap justify-between items-center">
         <div class="lg:w-1/2 w-full font-primary lg:pr-24 lg:order-1 order-2">
             <p class="uppercase lg:text-[12px] lg:leading-[13px] text-[10px] leading-[10px] font-secondary font-medium pb-[15px]">Uva</p>
@@ -42,7 +42,7 @@ $page_id = get_queried_object_id(); ?>
         </div>
     </div>
     <!-- Indicatori Desktop -->
-    <ul class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:flex hidden justify-between font-secondary mx-auto lg:pt-[144px] pt-[60px] lg:px-0 px-[26px]">
+    <ul class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md xl:flex hidden justify-between font-secondary mx-auto lg:pt-[144px] pt-[60px]">
         <?php if ('prodotto_uva_pressione_hero') :
             $pressione = get_field('prodotto_uva_pressione_hero', $page_id) ?>
             <li class="w-auto uppercase">
@@ -73,7 +73,7 @@ $page_id = get_queried_object_id(); ?>
         <?php endif; ?>
     </ul>
     <!-- Indicatori Mobile -->
-    <div class="md:max-w-screen-md mx-auto swiper w-full lg:hidden flex pt-[60px] swiperScrollerSingle">
+    <div class="lg:max-w-screen-lg md:max-w-screen-md mx-auto swiper w-full xl:hidden flex pt-[60px] swiperScrollerSingle">
         <ul class="swiper-wrapper w-full font-secondary font-medium uppercase">
             <?php if ('prodotto_uva_pressione_hero') :
                 $pressione = get_field('prodotto_uva_pressione_hero', $page_id) ?>
@@ -126,7 +126,7 @@ $gallery_sez_2 = get_field('prodotto_uva_galleria_sezione_2');
 if ($gallery_sez_2) : ?>
     <section class="animationReveal w-full lg:pt-[150px] pt-[60px]">
         <!-- Gallery -->
-        <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
+        <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto px-[26px]">
             <div class="swiper w-full swiperGallery">
                 <!-- Slider xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md -->
                 <ul class="swiper-wrapper">
@@ -190,7 +190,7 @@ if ($titolo_sez_3) :
 ?>
     <section class="animationReveal w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
-        <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-col mx-auto font-primary font-light lg:px-0 px-[26px]">
+        <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-col mx-auto font-primary font-light px-[26px]">
             <p class="w-full heading-3 text-gray-950 lg:pb-[30px] pb-[20px] pr-4"><?php echo esc_html($titolo_sez_3); ?></p>
             <span class="w-full h-px bg-gray-600"></span>
 
@@ -254,7 +254,7 @@ if ($titolo_sez_3) :
 
 <!-- Gallery -->
 <?php if (have_rows('prodotto_uva_galleria_video')) : ?>
-    <section class="animationReveal lg:mt-[150px] mt-[70px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px]">
+    <section class="animationReveal lg:mt-[150px] mt-[70px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto px-[26px]">
         <div class="swiper lg:overflow-visible overflow-clip swiperGallery2">
             <ul class="swiper-wrapper flex items-baseline">
                 <?php while (have_rows('prodotto_uva_galleria_video')) : the_row();
@@ -296,8 +296,8 @@ if ($titolo_sez_3) :
 
 <!-- Scheda Tecnica -->
 <section id="scheda-tecnica" class="animationReveal w-full lg:mt-[120px] mt-[70px]">
-    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-col mx-auto font-primary font-light lg:px-0 px-[26px]">
-        <h5 class="font-primary font-light lg:px-0 px-[26px] lg:mt-[50px] mt-[30px] border-b border-gray-950"><?php echo esc_html(get_field('prodotto_uva_titolo_scheda_tecnica')); ?></h5>
+    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-col mx-auto font-primary font-light px-[26px]">
+        <h5 class="w-full heading-3 text-gray-950 lg:pb-[30px] pb-[20px] border-b border-gray-950"><?php echo esc_html(get_field('prodotto_uva_titolo_scheda_tecnica')); ?></h5>
         <div class="flex flex-row justify-end lg:mt-[50px] mt-[30px]">
             <?php
             $scheda_pulsante = get_field('prodotto_uva_pulsante_1_scheda_tecnica');
@@ -601,7 +601,7 @@ if ($titolo_sez_3) :
         <?php
             endwhile;
         endif; ?>
-        <div class="flex flex-row justify-end lg:pt-8 pt-[40px]">
+        <div class="flex flex-col justify-end lg:pt-8 pt-[40px]">
             <?php
             $scheda_pulsante = get_field('prodotto_uva_pulsante_1_scheda_tecnica');
             if ($scheda_pulsante) :
@@ -609,9 +609,22 @@ if ($titolo_sez_3) :
                 $scheda_pulsante_title = $scheda_pulsante['title'];
                 $scheda_pulsante_target = $scheda_pulsante['target'] ? $scheda_pulsante['target'] : '_self';
             ?>
-                <a class="lg:hidden w-full text-center block button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
+                <a class="lg:hidden w-full text-center block button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px] mb-[10px]" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
                     <p class="min-w-[130px] text-center">
                         <?php echo esc_html($scheda_pulsante_title); ?>
+                    </p>
+                    <span class="bg-gray-300 mix-blend-multiply"></span>
+                </a>
+            <?php endif;
+            $scheda_pulsante_2 = get_field('prodotto_uva_pulsante_2_scheda_tecnica');
+            if ($scheda_pulsante_2) :
+                $scheda_pulsante_2_url = $scheda_pulsante_2['url'];
+                $scheda_pulsante_2_title = $scheda_pulsante_2['title'];
+                $scheda_pulsante_2_target = $scheda_pulsante_2['target'] ? $scheda_pulsante_2['target'] : '_self';
+            ?>
+                <a class="lg:hidden w-full text-center block button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($scheda_pulsante_2_url); ?>" target="<?php echo esc_attr($scheda_pulsante_2_target); ?>">
+                    <p class="min-w-[130px] text-center">
+                        <?php echo esc_html($scheda_pulsante_2_title); ?>
                     </p>
                     <span class="bg-gray-300 mix-blend-multiply"></span>
                 </a>
@@ -625,7 +638,7 @@ $titolo_sez_6 = get_field('prodotto_uva_titolo_altre_configurazioni', $page_id);
 if ($titolo_sez_6) :
 ?>
     <!-- Altre configurazioni -->
-    <section id="altre-configurazioni" class="animationReveal xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:px-0 px-[26px] w-full lg:pt-[120px] pt-[60px]">
+    <section id="altre-configurazioni" class="animationReveal xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto px-[26px] w-full lg:pt-[120px] pt-[60px]">
         <!--Cosa distingue il modello -->
         <div class="w-full flex flex-col font-primary font-light">
             <p class="w-full heading-3 text-gray-950 lg:pb-[30px] pb-[20px]"><?php echo esc_html($titolo_sez_6); ?></p>
