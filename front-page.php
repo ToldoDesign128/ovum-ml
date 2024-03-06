@@ -368,7 +368,7 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <p class="lg:w-8/12 font-light w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 pr-4 lg:mb-[30px] mb-[20px]" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
+            <p class="xl:w-8/12 font-light w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 pr-4 lg:mb-[30px] mb-[20px]" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
 
             <span class="w-full h-px bg-gray-600"></span>
 
@@ -433,7 +433,7 @@ $page_id = get_queried_object_id(); ?>
 
                 if ($titolo_rep_sez_3) : ?>
 
-                    <li class="animationReveal lg:w-1/3 w-full lg:pb-[32px] lg:pr-[65px] pr-4">
+                    <li class="animationReveal xl:w-1/3 lg:w-1/2 w-full lg:pb-[32px] lg:pr-[65px] pr-4">
 
                         <p class="max-w-[15ch] lg:text-[40px] lg:leading-[50px] text-[22px] leading-[28px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
 
@@ -557,7 +557,7 @@ $page_id = get_queried_object_id(); ?>
 
     <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md font-primary font-light mx-auto px-[26px]">
 
-        <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pt-[20px]">Mele e meleti</p>
+        <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pb-[20px]">Mele e meleti</p>
 
         <span class="block w-full h-px bg-gray-600"></span>
 
@@ -768,7 +768,7 @@ $page_id = get_queried_object_id(); ?>
 
     <div class="animationReveal xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md font-primary font-light mx-auto px-[26px]">
 
-        <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pt-[20px]">Uva e vigneto</p>
+        <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pb-[20px]">Uva e vigneto</p>
 
         <span class="block w-full h-px bg-gray-600"></span>
 
@@ -787,7 +787,6 @@ $page_id = get_queried_object_id(); ?>
                     Guarda tutto
                 </p>
                 <span class="bg-gray-300 mix-blend-multiply"></span>
-
             </a>
 
         </div>

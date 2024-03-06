@@ -1,5 +1,5 @@
 <section class="w-full lg:py-[150px] py-[60px] overflow-x-clip">
-    <p class="font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] lg:mb-[90px] mb-[30px] lg:pl-10 pl-[26px]">Prodotti correlati</p>
+    <p class="font-primary font-light text-center lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] lg:mb-[90px] mb-[30px]">Prodotti correlati</p>
     <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto px-[26px]">
         <div class="swiper overflow-visible swiperReleatedPost">
             <?php

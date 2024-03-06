@@ -1028,8 +1028,8 @@ video {
 .pb-\[10px\]{
   padding-bottom: 10px;
 }
-.pb-\[10vh\]{
-  padding-bottom: 10vh;
+.pb-\[11vh\]{
+  padding-bottom: 11vh;
 }
 .pb-\[15px\]{
   padding-bottom: 15px;
@@ -1054,9 +1054,6 @@ video {
 }
 .pl-6{
   padding-left: 1.5rem;
-}
-.pl-\[26px\]{
-  padding-left: 26px;
 }
 .pr-0{
   padding-right: 0px;
@@ -1542,6 +1539,10 @@ header #hamburgerButton button .ButtonBg {
 header #hamburgerButton.is-active {
   border: none;
 }
+header #hamburgerButton.is-active button {
+  padding-left: 0;
+  padding-right: 0;
+}
 header #hamburgerButton.is-active button #menuOpen {
   display: none;
 }
@@ -1633,6 +1634,7 @@ header #menu nav ol li:before {
   }
 }
 header #menu.open {
+  position: fixed;
   transform: translateY(0%);
 }
 header .hide-logo {
@@ -1644,14 +1646,14 @@ header .hide-logo {
   clip-path: polygon(0 50px, 0 100%, calc(100% - 50px) 100%, 100% calc(100% - 50px), 100% 0, 50px 0);
 }
 
-footer #FooterLink a, footer #credits a {
+footer #FooterLink a, footer #FooterLink button, footer #credits a, footer #credits button {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-footer #FooterLink a::after, footer #credits a::after {
+footer #FooterLink a::after, footer #FooterLink button::after, footer #credits a::after, footer #credits button::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1664,9 +1666,13 @@ footer #FooterLink a::after, footer #credits a::after {
 @media (min-width : 1024px) {
   footer #FooterLink a:hover::after,
   footer #FooterLink a :focus::after,
-  footer #FooterLink a :active::after, footer #credits a:hover::after,
+  footer #FooterLink a :active::after, footer #FooterLink button:hover::after,
+  footer #FooterLink button :focus::after,
+  footer #FooterLink button :active::after, footer #credits a:hover::after,
   footer #credits a :focus::after,
-  footer #credits a :active::after {
+  footer #credits a :active::after, footer #credits button:hover::after,
+  footer #credits button :focus::after,
+  footer #credits button :active::after {
     left: 0;
   }
 }
@@ -2420,6 +2426,14 @@ footer #FooterLink a::after, footer #credits a::after {
   right: auto;
 }
 
+@media (min-width : 1024px) {
+  .mla {
+    margin-left: calc((100vw - 1280px) / 2);
+  }
+  .mlap {
+    margin-left: calc((100vw - 1280px) / 2 + 40px);
+  }
+}
 .heading-1 {
   font-size: 50px;
   line-height: 56px;
@@ -2499,18 +2513,10 @@ footer #FooterLink a::after, footer #credits a::after {
     line-height: 22px;
     letter-spacing: 0.32px;
   }
-  .mla {
-    margin-left: calc((100vw - 1280px) / 2);
-  }
-  .mlap {
-    margin-left: calc((100vw - 1280px) / 2 + 40px);
-  }
 }
-
 .group:hover .group-hover\:opacity-100{
   opacity: 1;
 }
-
 @media (min-width: 768px){
   .md\:mt-\[140px\]{
     margin-top: 140px;
@@ -2537,7 +2543,6 @@ footer #FooterLink a::after, footer #credits a::after {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 @media (min-width: 1024px){
   .lg\:bottom-\[26px\]{
     bottom: 26px;
@@ -2553,10 +2558,6 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:order-2{
     order: 2;
-  }
-  .lg\:mx-0{
-    margin-left: 0px;
-    margin-right: 0px;
   }
   .lg\:mx-4{
     margin-left: 1rem;
@@ -2700,14 +2701,14 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:w-5\/12{
     width: 41.666667%;
   }
-  .lg\:w-6\/12{
-    width: 50%;
-  }
   .lg\:w-7\/12{
     width: 58.333333%;
   }
   .lg\:w-8\/12{
     width: 66.666667%;
+  }
+  .lg\:w-9\/12{
+    width: 75%;
   }
   .lg\:w-\[190px\]{
     width: 190px;
@@ -2733,9 +2734,6 @@ footer #FooterLink a::after, footer #credits a::after {
   }
   .lg\:max-w-screen-lg{
     max-width: 1024px;
-  }
-  .lg\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .lg\:flex-row{
     flex-direction: row;
@@ -2797,20 +2795,23 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:pb-\[55px\]{
     padding-bottom: 55px;
   }
+  .lg\:pb-\[5vh\]{
+    padding-bottom: 5vh;
+  }
   .lg\:pb-\[60px\]{
     padding-bottom: 60px;
   }
   .lg\:pl-0{
     padding-left: 0px;
   }
-  .lg\:pl-10{
-    padding-left: 2.5rem;
-  }
   .lg\:pl-8{
     padding-left: 2rem;
   }
   .lg\:pr-0{
     padding-right: 0px;
+  }
+  .lg\:pr-12{
+    padding-right: 3rem;
   }
   .lg\:pr-24{
     padding-right: 6rem;
@@ -2961,6 +2962,9 @@ footer #FooterLink a::after, footer #credits a::after {
   .lg\:first\:pl-0:first-child{
     padding-left: 0px;
   }
+  .lg\:last\:pl-0:last-child{
+    padding-left: 0px;
+  }
   .lg\:hover\:h-\[110\%\]:hover{
     height: 110%;
   }
@@ -2976,7 +2980,6 @@ footer #FooterLink a::after, footer #credits a::after {
     color: rgb(75 85 99 / var(--tw-text-opacity));
   }
 }
-
 @media (min-width: 1280px){
   .xl\:flex{
     display: flex;
@@ -2987,8 +2990,26 @@ footer #FooterLink a::after, footer #credits a::after {
   .xl\:w-1\/2{
     width: 50%;
   }
+  .xl\:w-1\/3{
+    width: 33.333333%;
+  }
+  .xl\:w-4\/12{
+    width: 33.333333%;
+  }
+  .xl\:w-6\/12{
+    width: 50%;
+  }
+  .xl\:w-7\/12{
+    width: 58.333333%;
+  }
+  .xl\:w-8\/12{
+    width: 66.666667%;
+  }
   .xl\:max-w-screen-xl{
     max-width: 1280px;
+  }
+  .xl\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .xl\:text-\[50px\]{
     font-size: 50px;
@@ -2996,8 +3017,10 @@ footer #FooterLink a::after, footer #credits a::after {
   .xl\:leading-\[41px\]{
     line-height: 41px;
   }
+  .xl\:last\:pl-8:last-child{
+    padding-left: 2rem;
+  }
 }
-
 @media (min-width: 1536px){
   .\32xl\:text-\[100px\]{
     font-size: 100px;

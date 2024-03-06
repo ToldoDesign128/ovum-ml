@@ -8,7 +8,7 @@ $page_id = get_queried_object_id(); ?>
         <!-- Contatti -->
         <div class="lg:w-1/2 w-full flex flex-wrap items-start content-start">
             <h1 class="w-full heading-2 lg:mb-[50px] mb-[20px]"><?php echo the_title(); ?></h1>
-            <div class="lg:w-7/12 w-full">
+            <div class="xl:w-7/12 lg:w-9/12 w-full">
                 <?php
                 $contatti_sede = get_field('contatti_sede');
                 if ($contatti_sede) : ?>
@@ -50,8 +50,10 @@ $page_id = get_queried_object_id(); ?>
                     <p class="lg:mb-[50px] mb-[30px] lg:text-[20px] lg:leading-[32px] text-[16px] leading-[22px] tracking-[.4px]"><?php echo esc_html($contatti_orari); ?></p>
                 <?php endif; ?>
 
-                <a class="block button lg:w-[190px] w-full font-medium text-gray-50 text-center lg:text-[18px] leading-[22px] bg-gray-950 px-[30px] pt-[20px] pb-[16px]">
-                    Rivenditori
+                <a href="#rivenditori" class="block button lg:w-[190px] w-full font-medium text-gray-50 text-center lg:text-[18px] leading-[22px] bg-gray-950 px-[30px] pt-[20px] pb-[16px]">
+                    <p class="min-w-[130px] text-center">
+                        Rivenditori
+                    </p>
                     <span class="bg-gray-800 mix-blend-lighten"></span>
                 </a>
 
@@ -67,16 +69,18 @@ $page_id = get_queried_object_id(); ?>
         </div>
     </section>
     <!-- Rivenditori -->
-    <section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto flex flex-col font-primary font-light lg:px-0 lg:pt-[114px] pt-[70px] lg:mb-[120px] mb-[60px]">
-        <h5 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] border-gray-800 border-b pb-[20px] lg:mx-0 mx-[26px]">I nostri Rivenditori</h5>
-        <div class="lg:mt-[60px] mt-[30px] lg:px-0 px-[10px]">
+    <section id="rivenditori" class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto flex flex-col font-primary font-light lg:px-0 lg:pt-[114px] pt-[70px] lg:mb-[120px] mb-[60px]">
+        <h5 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] border-gray-800 border-b pb-[20px] mx-[26px]">I nostri Rivenditori</h5>
+        <div class="lg:mt-[60px] mt-[30px] lg:px-[26px] px-[10px]">
             <div class="img-clip w-full lg:h-[720px] h-[580px] relative bg-gray-950">
                 <iframe class="img-clip absolute top-[1px] left-[1px] lg:h-[718px] h-[578px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44193.54065284812!2d11.136452322718045!3d46.18864249097047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782792f2ee23ff7%3A0x1c07098a6aa06790!2s38034%20Cembra%20Lisignago%20TN!5e0!3m2!1sit!2sit!4v1708706324290!5m2!1sit!2sit" style="border:0; width: calc(100% - 2px);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-        <div class="w-full flex justify-end px-[26px] lg:pt-[50px] pt-[40px] lg:px-0">
+        <div class="w-full flex justify-end px-[26px] lg:pt-[50px] pt-[40px]">
             <a href="<?php echo esc_url($contatti_email_url); ?>" class="button block lg:w-fit w-full font-medium text-gray-950 text-center lg:text-[18px] leading-[22px] bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" target="_blank">
-                Diventa rivenditore
+                <p class="min-w-[130px] text-center">
+                    Diventa rivenditore
+                </p>
                 <span class="bg-gray-300 mix-blend-multiply"></span>
             </a>
         </div>

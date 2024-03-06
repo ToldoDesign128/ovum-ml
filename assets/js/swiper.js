@@ -170,7 +170,7 @@ const swiperReleatedPost = new Swiper('.swiperReleatedPost', {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    1024: {
+    1280: {
       slidesPerView: 3,
       spaceBetween: 30,
     },
@@ -193,7 +193,7 @@ const swiperHomeMele = new Swiper('.swiperHomeMele', {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    1024: {
+    1280: {
       slidesPerView: 3,
       spaceBetween: 30,
     },

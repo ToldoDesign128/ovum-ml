@@ -24,7 +24,7 @@ $page_id = get_queried_object_id(); ?>
                         $icon_rep_hero = get_sub_field('repeater_hero_icona', $page_id);
                         $titolo_rep_hero = get_sub_field('repeater_hero_testo', $page_id); ?>
 
-                        <li class="lg:w-full font-light body-copy flex lg:pt-[14px] pt-[10px] lg:pr-24">
+                        <li class="lg:w-full font-light body-copy flex lg:pt-[14px] pt-[10px] lg:pr-12">
                             <img class="w-4 mr-4" src="<?php echo get_template_directory_uri() . '/assets/img/acf/' . $icon_rep_hero . '.svg'; ?>" alt="">
                             <?php echo esc_html($titolo_rep_hero) ?>
                         </li>

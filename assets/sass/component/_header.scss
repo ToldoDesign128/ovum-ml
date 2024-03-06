@@ -84,6 +84,9 @@ header {
       border: none;
 
       button {
+        padding-left: 0;
+        padding-right: 0;
+        
         #menuOpen {
           display: none;
         }
@@ -182,6 +185,7 @@ header {
   }
 
   #menu.open {
+    position: fixed;
     transform: translateY(0%);
   }
 

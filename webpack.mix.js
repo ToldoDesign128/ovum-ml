@@ -12,8 +12,7 @@ mix.combine(
   'assets/js/scrollTop.js', 
   'assets/js/infoBtn.js', 
   'assets/js/accordion.js', 
-  'assets/js/swiper.js', 
-  'assets/js/heroScroll.js' ],
+  'assets/js/swiper.js' ],
   'main.js')
   .minify('main.js');
 

@@ -14,8 +14,8 @@ $page_id = get_queried_object_id(); ?>
                 $titolo_rep_hero = get_sub_field('repeater_titolo_hero');
         ?>
                 <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md w-full flex flex-row flex-wrap justify-between font-primary font-light lg:mt-[120px] md:mt-[140px] mt-[100px] ">
-                    <p class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-4/12 w-full lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] px-[26px]"><?php echo esc_html($titolo_rep_hero); ?></p>
-                    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md lg:w-6/12 w-full body-copy lg:mt-0 mt-[15px] px-[26px]">
+                    <p class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md xl:w-4/12 lg:w-5/12  w-full lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] px-[26px]"><?php echo esc_html($titolo_rep_hero); ?></p>
+                    <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md xl:w-6/12 lg:w-5/12  w-full body-copy lg:mt-0 mt-[15px] px-[26px]">
                         <?php the_sub_field('repeater_testo_hero') ?>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ $page_id = get_queried_object_id(); ?>
                 // Load sub field value.
                 $titolo_rep_sez_2 = get_sub_field('repeater_titolo_sezione_2');
                 $testo_rep_sez_2 = get_sub_field('repeater_testo_sezione_2'); ?>
-                <div class="lg:w-1/3 w-full font-primary font-light lg:pt-0 pt-[40px] lg:pb-8 lg:first:pl-0 lg:pl-8">
+                <div class="xl:w-1/3 lg:w-1/2 w-full font-primary font-light lg:pt-0 pt-[40px] lg:pb-8 lg:first:pl-0 xl:last:pl-8 lg:last:pl-0 lg:pl-8">
                     <p class="max-w-[16ch] lg:text-[40px] lg:leading-[50px] text-[22px] leading-[28px] lg:tracking-normal tracking-[.44px]"><?php echo esc_html($titolo_rep_sez_2); ?></p>
                     <p class="body-copy lg:pt-[35px] pt-[15px] lg:pb-0 pb-[40px]"><?php echo esc_html($testo_rep_sez_2); ?></p>
                 </div>
@@ -73,7 +73,7 @@ $page_id = get_queried_object_id(); ?>
                 $testo_rep_sez_3 = get_sub_field('repeater_testo_sezione_2');
 
                 if ($titolo_rep_sez_3) : ?>
-                    <li class="lg:w-1/3 w-full py-4 lg:pr-[65px] pr-4">
+                    <li class="xl:w-1/3 lg:w-1/2 w-full py-4 lg:pr-[65px] pr-4">
                         <p class="max-w-[15ch] lg:text-[40px] lg:leading-[50px] text-[22px] leading-[28px]"><?php echo esc_html($titolo_rep_sez_3); ?></p>
                         <p class="lg:text-[20px] lg:leading-[32px] text-[18px] leading-[24px] lg:py-[30px] py-[15px]"><?php echo esc_html($testo_rep_sez_3); ?></p>
                     </li>
@@ -149,12 +149,12 @@ $page_id = get_queried_object_id(); ?>
 
                                 </div>
                                 <div class="lg:px-[26px] px-[20px]">
-                                    <div class="lg:text-[36px] text-[22px] lg:leading-[44px] leading-[28px]">
+                                    <div class="font-primary font-light lg:text-[36px] text-[22px] lg:leading-[44px] leading-[28px]">
                                         <?php the_title() ?>
                                     </div>
                                     <?php if ('prodotto_mela_sottotitolo_hero') :
                                         $sottotitolo_hero = get_field('prodotto_mela_sottotitolo_hero') ?>
-                                        <p class="lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] font-light"><?php echo esc_html($sottotitolo_hero) ?></p>
+                                        <p class="lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] font-primary font-light"><?php echo esc_html($sottotitolo_hero) ?></p>
                                     <?php endif; ?>
                                     <div class="lg:mt-[26px] mt-[23px]">
                                         <?php if (have_rows('prodotto_mela_gruppo_scheda_tecnica')) : ?>
@@ -215,12 +215,12 @@ $page_id = get_queried_object_id(); ?>
                                     </svg>
                                 </div>
                                 <div class="lg:px-[26px] px-[20px]">
-                                    <div class="lg:text-[36px] text-[22px] lg:leading-[44px] leading-[28px]">
+                                    <div class="font-primary font-light lg:text-[36px] text-[22px] lg:leading-[44px] leading-[28px]">
                                         <?php the_title() ?>
                                     </div>
                                     <?php if ('prodotto_uva_sottotitolo_hero') :
                                         $sottotitolo_uva = get_field('prodotto_uva_sottotitolo_hero') ?>
-                                        <p class="lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] font-light"><?php echo esc_html($sottotitolo_uva) ?></p>
+                                        <p class="lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] font-primary font-light"><?php echo esc_html($sottotitolo_uva) ?></p>
                                     <?php endif; ?>
                                     <div class="lg:mt-[26px] mt-[23px]">
                                         <?php if (have_rows('prodotto_uva_gruppo_scheda_tecnica')) : ?>
@@ -233,19 +233,19 @@ $page_id = get_queried_object_id(); ?>
                                                 <div class="w-full flex flex-wrap">
                                                     <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
                                                         <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">NUMERO TESTATE</p>
-                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_1); ?></p>
+                                                        <p class="font-primary font-light w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_1); ?></p>
                                                     </div>
                                                     <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
                                                         <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">DISCHI PER TESTATA</p>
-                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_2); ?></p>
+                                                        <p class="font-primary font-light w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_2); ?></p>
                                                     </div>
                                                     <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
                                                         <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">LARGHEZZA TESTATA</p>
-                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_3); ?></p>
+                                                        <p class="font-primary font-light w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_3); ?></p>
                                                     </div>
                                                     <div class="w-full flex flex-row items-center justify-between py-[4px] border-b  border-gray-300">
                                                         <p class="w-auto lg:text-[10px] text-[8px] lg:leading-[10px] leading-[8px] font-secondary uppercase font-medium">MOVIMENTI IDRAULICI</p>
-                                                        <p class="w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_4); ?></p>
+                                                        <p class="font-primary font-light w-auto lg:text-[16px] text-[13px] lg:leading-[22px] leading-[16px] tracking-[.32px]"><?php echo esc_html($scheda_uva_4); ?></p>
                                                     </div>
                                                 </div>
                                         <?php
