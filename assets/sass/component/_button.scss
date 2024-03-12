@@ -1,7 +1,11 @@
 .button {
+  font-family: $primary-font;
+  font-weight: 500;
   cursor: pointer;
   overflow-x: hidden;
   position: relative;
+  padding: 20px 30px 16px 30px;
+  margin: .5rem;
 
   font-size: 18px;
   line-height: 22px;
@@ -19,6 +23,7 @@
   }
 
   @media #{$lg} {
+    margin: 1rem .5rem;
     &:hover {
       span {
         transform: translateX(0%);
@@ -27,9 +32,12 @@
   }
 }
 #infoBtn {
+  font-family: $primary-font;
+  font-weight: 500;
   transition: all 0.8s ease;
   bottom: -150px;
   a {
+    padding: 20px 30px 16px 30px;
     font-size: 18px;
     line-height: 22px;
     overflow-x: hidden;
@@ -79,4 +87,7 @@
       bottom: 0;
     }
   }
+}
+#ScrollTopBtn{
+  padding: 15px;
 }

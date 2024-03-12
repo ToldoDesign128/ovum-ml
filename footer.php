@@ -1,5 +1,5 @@
 <!-- Button Info -->
-<div id="infoBtn" class="font-primary font-medium hideBtn fixed right-10 z-30">
+<div id="infoBtn" class="hideBtn fixed right-10 z-30">
     <?php
     $footer_cta = get_field('footer_cta', 'option');
     // Get sub field values.
@@ -10,7 +10,7 @@
     $footer_cta_button_target = $footer_cta_button['target'] ? $footer_cta_button['target'] : '_self';
 
     ?>
-    <a class="min-w-[130px] block text-gray-50 bg-gray-950 px-[30px] pt-[20px] pb-[16px] lg:my-4 my-0" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
+    <a class="min-w-[130px] block text-gray-50 bg-gray-950 lg:my-4 my-0" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
         <p class="min-w-[130px] text-center">
             <?php echo esc_html($footer_cta_button_title); ?>
         </p>
@@ -44,7 +44,7 @@
                 ?>
                 <h6 class="lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] font-light pb-[20px]"><?php echo esc_html($footer_cta_title); ?></h6>
                 <p class="font-primary lg:text-[20px] lg:leading-[32px] text-[18px] leading-[24px] tracking-[.4px] font-light lg:pb-[35px] pb-[30px]"><?php echo esc_html($footer_cta_testo); ?></p>
-                <a class="min-w-[130px] button font-medium lg:w-fit w-full text-gray-950 bg-gray-100 px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
+                <a class="min-w-[130px] button lg:w-fit w-full text-gray-950 bg-gray-100" href="<?php echo esc_url($footer_cta_button_url); ?>" target="<?php echo esc_attr($footer_cta_button_target); ?>">
                     <?php echo esc_html($footer_cta_button_title); ?>
                     <span class="bg-gray-400 mix-blend-multiply"></span>
                 </a>
@@ -192,7 +192,7 @@
     </section>
     <!-- Return top button -->
     <div class="absolute lg:block hidden top-[120px] right-20">
-        <a id="ScrollTopBtn" class="button block h-14 w-14 text-gray-950 bg-gray-100 p-[15px]">
+        <a id="ScrollTopBtn" class="button block h-14 w-14 text-gray-950 bg-gray-100">
             <img class="rotate-90 w-full h-full" src="<?php echo get_template_directory_uri() . '/assets/img/acf/arrow-small-left.svg'; ?>" alt="">
             <span class="bg-gray-400 mix-blend-multiply"></span>
         </a>

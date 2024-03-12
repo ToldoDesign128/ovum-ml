@@ -198,7 +198,7 @@ if ($titolo_sez_3) :
                 <div class="lg:w-1/2 w-full body-copy">
                     <?php the_field('prodotto_uva_testo_sezione_3', $page_id); ?>
                 </div>
-                <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="#scheda-tecnica">
+                <a class="lg:block hidden button h-fit text-gray-950 bg-trasparent border-gray-950 border" href="#scheda-tecnica">
                     <p class="min-w-[130px] text-center">
                         Scheda tecnica
                     </p>
@@ -306,7 +306,7 @@ if ($titolo_sez_3) :
                 $scheda_pulsante_title = $scheda_pulsante['title'];
                 $scheda_pulsante_target = $scheda_pulsante['target'] ? $scheda_pulsante['target'] : '_self';
             ?>
-                <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px] mr-4" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
+                <a class="lg:block hidden button h-fit text-gray-950 bg-trasparent border-gray-950 border mr-4" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
                     <p class="min-w-[130px] text-center">
                         <?php echo esc_html($scheda_pulsante_title); ?>
                     </p>
@@ -319,7 +319,7 @@ if ($titolo_sez_3) :
                 $scheda_pulsante_2_title = $scheda_pulsante_2['title'];
                 $scheda_pulsante_2_target = $scheda_pulsante_2['target'] ? $scheda_pulsante_2['target'] : '_self';
             ?>
-                <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($scheda_pulsante_2_url); ?>" target="<?php echo esc_attr($scheda_pulsante_2_target); ?>">
+                <a class="lg:block hidden button h-fit text-gray-950 bg-trasparent border-gray-950 border" href="<?php echo esc_url($scheda_pulsante_2_url); ?>" target="<?php echo esc_attr($scheda_pulsante_2_target); ?>">
                     <p class="min-w-[130px] text-center">
                         <?php echo esc_html($scheda_pulsante_2_title); ?>
                     </p>
@@ -609,7 +609,7 @@ if ($titolo_sez_3) :
                 $scheda_pulsante_title = $scheda_pulsante['title'];
                 $scheda_pulsante_target = $scheda_pulsante['target'] ? $scheda_pulsante['target'] : '_self';
             ?>
-                <a class="lg:hidden w-full text-center block button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px] mb-[10px]" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
+                <a class="lg:hidden w-full text-center block button h-fit text-gray-950 bg-trasparent border-gray-950 border mb-[10px]" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
                     <p class="min-w-[130px] text-center">
                         <?php echo esc_html($scheda_pulsante_title); ?>
                     </p>
@@ -622,7 +622,7 @@ if ($titolo_sez_3) :
                 $scheda_pulsante_2_title = $scheda_pulsante_2['title'];
                 $scheda_pulsante_2_target = $scheda_pulsante_2['target'] ? $scheda_pulsante_2['target'] : '_self';
             ?>
-                <a class="lg:hidden w-full text-center block button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($scheda_pulsante_2_url); ?>" target="<?php echo esc_attr($scheda_pulsante_2_target); ?>">
+                <a class="lg:hidden w-full text-center block button h-fit text-gray-950 bg-trasparent border-gray-950 border" href="<?php echo esc_url($scheda_pulsante_2_url); ?>" target="<?php echo esc_attr($scheda_pulsante_2_target); ?>">
                     <p class="min-w-[130px] text-center">
                         <?php echo esc_html($scheda_pulsante_2_title); ?>
                     </p>
@@ -648,7 +648,7 @@ if ($titolo_sez_6) :
                 <div class="lg:w-1/2 w-full body-copy">
                     <?php the_field('prodotto_uva_testo_altre_configurazioni', $page_id); ?>
                 </div>
-                <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="#scheda-tecnica">
+                <a class="lg:block hidden button h-fit text-gray-950 bg-trasparent border-gray-950 border" href="#scheda-tecnica">
                     <p class="min-w-[130px] text-center">
                         Scheda tecnica
                     </p>
@@ -704,7 +704,7 @@ if ($titolo_sez_6) :
                     $scheda_pulsante_title = $scheda_pulsante['title'];
                     $scheda_pulsante_target = $scheda_pulsante['target'] ? $scheda_pulsante['target'] : '_self';
                 ?>
-                    <a class="lg:hidden w-full text-center block button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
+                    <a class="lg:hidden w-full text-center block button h-fit text-gray-950 bg-trasparent border-gray-950 border" href="<?php echo esc_url($scheda_pulsante_url); ?>" target="<?php echo esc_attr($scheda_pulsante_target); ?>">
                         <p class="min-w-[130px] text-center">
                             <?php echo esc_html($scheda_pulsante_title); ?>
                         </p>

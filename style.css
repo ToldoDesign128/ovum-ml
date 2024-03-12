@@ -581,10 +581,6 @@ video {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
 .my-\[60px\]{
   margin-top: 60px;
   margin-bottom: 60px;
@@ -958,9 +954,6 @@ video {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.p-\[15px\]{
-  padding: 15px;
-}
 .px-\[10px\]{
   padding-left: 10px;
   padding-right: 10px;
@@ -972,10 +965,6 @@ video {
 .px-\[26px\]{
   padding-left: 26px;
   padding-right: 26px;
-}
-.px-\[30px\]{
-  padding-left: 30px;
-  padding-right: 30px;
 }
 .px-\[45px\]{
   padding-left: 45px;
@@ -1034,12 +1023,6 @@ video {
 .pb-\[15px\]{
   padding-bottom: 15px;
 }
-.pb-\[16px\]{
-  padding-bottom: 16px;
-}
-.pb-\[18px\]{
-  padding-bottom: 18px;
-}
 .pb-\[20px\]{
   padding-bottom: 20px;
 }
@@ -1072,9 +1055,6 @@ video {
 }
 .pt-\[15px\]{
   padding-top: 15px;
-}
-.pt-\[18px\]{
-  padding-top: 18px;
 }
 .pt-\[20px\]{
   padding-top: 20px;
@@ -1360,9 +1340,13 @@ video {
 }
 
 .button {
+  font-family: "Paralucent";
+  font-weight: 500;
   cursor: pointer;
   overflow-x: hidden;
   position: relative;
+  padding: 20px 30px 16px 30px;
+  margin: 0.5rem;
   font-size: 18px;
   line-height: 22px;
 }
@@ -1378,16 +1362,22 @@ video {
   transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 @media (min-width : 1024px) {
+  .button {
+    margin: 1rem 0.5rem;
+  }
   .button:hover span {
     transform: translateX(0%);
   }
 }
 
 #infoBtn {
+  font-family: "Paralucent";
+  font-weight: 500;
   transition: all 0.8s ease;
   bottom: -150px;
 }
 #infoBtn a {
+  padding: 20px 30px 16px 30px;
   font-size: 18px;
   line-height: 22px;
   overflow-x: hidden;
@@ -1431,6 +1421,10 @@ video {
   #infoBtn.revealed {
     bottom: 0;
   }
+}
+
+#ScrollTopBtn {
+  padding: 15px;
 }
 
 .card-post .card-content {

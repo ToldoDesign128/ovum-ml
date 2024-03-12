@@ -34,7 +34,7 @@ $page_id = get_queried_object_id(); ?>
 
             ?>
 
-                <a class="button font-primary font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px] lg:my-4 my-2 mx-2" href="<?php echo esc_url($pulsante_hero_url); ?>" target="<?php echo esc_attr($pulsante_hero_target); ?>">
+                <a class="button text-gray-950 bg-trasparent border-gray-950 border" href="<?php echo esc_url($pulsante_hero_url); ?>" target="<?php echo esc_attr($pulsante_hero_target); ?>">
 
                     <p class="min-w-[130px] text-center">
                         <?php echo esc_html($pulsante_hero_title); ?>
@@ -58,7 +58,7 @@ $page_id = get_queried_object_id(); ?>
 
             ?>
 
-                <a class="button font-primary font-medium text-gray-50 bg-gray-950 border-gray-950 border px-[30px] pt-[20px] pb-[16px] lg:my-4 my-2 mx-2" href="<?php echo esc_url($pulsante_hero2_url); ?>" target="<?php echo esc_attr($pulsante_hero2_target); ?>">
+                <a class="button text-gray-50 bg-gray-950 border-gray-950 border" href="<?php echo esc_url($pulsante_hero2_url); ?>" target="<?php echo esc_attr($pulsante_hero2_target); ?>">
                     <p class="min-w-[130px] text-center">
                         <?php echo esc_html($pulsante_hero2_title); ?>
                     </p>
@@ -75,10 +75,7 @@ $page_id = get_queried_object_id(); ?>
 
 </section>
 
-
-
 <!-- Sezione 2 -->
-
 <section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto">
 
 
@@ -353,21 +350,14 @@ $page_id = get_queried_object_id(); ?>
 </section>
 
 <!-- Sezione 3 -->
-
 <section class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto lg:mt-[150px] mt-[60px]">
 
     <!-- titolo sezione 3 -->
-
     <div class="animationReveal w-full flex flex-col font-primary font-light px-[26px] ">
-
         <?php
-
         $titolo_sez_3 = get_field('home_titolo_sezione_3', $page_id);
-
         if ($titolo_sez_3) :
-
         ?>
-
             <p class="xl:w-8/12 font-light w-full lg:text-[75px] lg:leading-[80px] text-[28px] leading-[32px] text-gray-950 pr-4 lg:mb-[30px] mb-[20px]" style="line-height: 1.1;"><?php echo esc_html($titolo_sez_3); ?></p>
 
             <span class="w-full h-px bg-gray-600"></span>
@@ -400,7 +390,7 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
+            <a class="lg:block hidden button h-fit text-gray-950 bg-trasparent border-gray-950 border" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
 
                 <p class="min-w-[130px] text-center">
                     <?php echo esc_html($pulsante_sez_3_title); ?>
@@ -537,7 +527,7 @@ $page_id = get_queried_object_id(); ?>
 
         ?>
 
-            <a class="lg:w-auto w-full button h-fit font-primary font-medium text-gray-950 text-center body-copy bg-trasparent border-gray-950 border px-[30px] pt-[18px] pb-[18px]" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
+            <a class="lg:w-auto w-full button h-fit text-gray-950 text-center body-copy bg-trasparent border-gray-950 border" href="<?php echo esc_url($pulsante_sez_3_url); ?>" target="<?php echo esc_attr($pulsante_sez_3_target); ?>">
 
                 <?php echo esc_html($pulsante_sez_3_title); ?>
 
@@ -552,60 +542,36 @@ $page_id = get_queried_object_id(); ?>
 </section>
 
 <!-- Sezione Mele -->
-
 <section class="lg:mt-[88px] mt-[40px] overflow-x-clip">
-
     <div class="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md font-primary font-light mx-auto px-[26px]">
-
         <p class="w-8/12 font-light lg:text-[50px] lg:leading-[56px] text-[28px] leading-[32px] text-gray-950 lg:pb-[30px] pb-[20px]">Mele e meleti</p>
-
         <span class="block w-full h-px bg-gray-600"></span>
 
-
-
         <div class="w-full flex justify-between font-primary font-light lg:pt-[50px] pt-[30px]">
-
             <div class="lg:w-1/2 w-full body-copy">
-
                 <p>Una linea per le mele, sviluppata insieme ai produttori sulle loro esigenze economiche e funzionali. Alte prestazioni, consumi bassi, maneggevolezza e personalizzazione grazie al sistema brevettato, alla struttura dei telai e alla costruzione modulare.</p>
-
             </div>
-
-            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="mele">
-
+            <a class="lg:block hidden button h-fit text-gray-950 bg-trasparent border-gray-950 border" href="mele">
                 <p class="min-w-[130px] text-center">
                     Guarda tutto
                 </p>
                 <span class="bg-gray-300 mix-blend-multiply"></span>
-
             </a>
-
         </div>
-
     </div>
 
     <!-- Loop Mele -->
 
     <div class="lg:pt-[90px] pt-[40px] xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md mx-auto px-[26px]">
-
         <div class="swiper overflow-visible swiperHomeMele">
-
             <div class="swiper-wrapper items-center">
-
                 <?php
-
                 $loop = new WP_Query(array(
-
                     'post_type'         => 'mele',
-
                     'post_status'       => 'publish',
-
                     'orderby'           => 'date',
-
                     'order'             => 'DESC',
-
                     'posts_per_page'    => 999,
-
                 ));
 
                 while ($loop->have_posts()) : $loop->the_post(); ?>
@@ -782,7 +748,7 @@ $page_id = get_queried_object_id(); ?>
 
             </div>
 
-            <a class="lg:block hidden button h-fit font-medium text-gray-950 bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" href="uva">
+            <a class="lg:block hidden button h-fit text-gray-950 bg-trasparent border-gray-950 border" href="uva">
                 <p class="min-w-[130px] text-center">
                     Guarda tutto
                 </p>

@@ -50,7 +50,7 @@ $page_id = get_queried_object_id(); ?>
                     <p class="lg:mb-[50px] mb-[30px] lg:text-[20px] lg:leading-[32px] text-[16px] leading-[22px] tracking-[.4px]"><?php echo esc_html($contatti_orari); ?></p>
                 <?php endif; ?>
 
-                <a href="#rivenditori" class="block button lg:w-[190px] w-full font-medium text-gray-50 text-center lg:text-[18px] leading-[22px] bg-gray-950 px-[30px] pt-[20px] pb-[16px]">
+                <a href="#rivenditori" class="block button lg:w-[190px] w-full text-gray-50 text-center bg-gray-950">
                     <p class="min-w-[130px] text-center">
                         Rivenditori
                     </p>
@@ -77,7 +77,7 @@ $page_id = get_queried_object_id(); ?>
             </div>
         </div>
         <div class="w-full flex justify-end px-[26px] lg:pt-[50px] pt-[40px]">
-            <a href="<?php echo esc_url($contatti_email_url); ?>" class="button block lg:w-fit w-full font-medium text-gray-950 text-center lg:text-[18px] leading-[22px] bg-trasparent border-gray-950 border px-[30px] pt-[20px] pb-[16px]" target="_blank">
+            <a href="<?php echo esc_url($contatti_email_url); ?>" class="button block lg:w-fit w-full text-gray-950 text-center bg-trasparent border-gray-950 border" target="_blank">
                 <p class="min-w-[130px] text-center">
                     Diventa rivenditore
                 </p>
