@@ -139,12 +139,12 @@ if ($gallery_sez_2) : ?>
                 </ul>
                 <!-- Slider button -->
                 <div class="lg:block hidden">
-                    <div class="swiper-button-prev rotate-180">
+                    <div class="swiper-button-prev gallery-freccia-prev rotate-180">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                             <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                         </svg>
                     </div>
-                    <div class="swiper-button-next">
+                    <div class="swiper-button-next gallery-freccia-next">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
                             <path id="Unione_3" data-name="Unione 3" d="M27.964,11.314l4.8-4.8H0v-1H32.766l-4.8-4.8L28.67,0l6.01,6.011-6.01,6.01Z" />
                         </svg>
@@ -154,7 +154,7 @@ if ($gallery_sez_2) : ?>
                 <!-- Slider button mobile -->
                 <div class="arrow-container lg:hidden block">
 
-                    <div class="swiper-button-prev rotate-180">
+                    <div class="swiper-button-prev gallery-freccia-prev rotate-180">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
 
@@ -164,7 +164,7 @@ if ($gallery_sez_2) : ?>
 
                     </div>
 
-                    <div class="swiper-button-next">
+                    <div class="swiper-button-next gallery-freccia-next">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="34.681" height="12.021" viewBox="0 0 34.681 12.021">
 

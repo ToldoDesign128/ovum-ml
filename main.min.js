@@ -171,7 +171,6 @@ const swiperScrollerSponsor = new Swiper('.swiperScrollerSponsor', {
   }
 });
 // Testimonial
-
 const swiperTestimonial = new Swiper(".swiperTestimonial", {
 
   loop: true,
@@ -204,8 +203,8 @@ const swiperGallery = new Swiper('.swiperGallery', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.gallery-freccia-next',
+    prevEl: '.gallery-freccia-prev',
   }
 });
 // Single Gallery Video
